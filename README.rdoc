@@ -1,0 +1,16 @@
+== README
+
+##What is it?
+
+This is a Slack bot that will let the GDS Core team know when Pull Requests need to be reviewed, and send them a reminder when there are Pull Requests that have been sitting there for too long. It is my first 20% project at GDS.
+
+
+## Diary of how this app was built
+10th April: 
+- Finalised what the app does:
+		- Hourly, checks if any pull requests are over 6 hours old (angry seal)
+		- at 9.45am prepares an overview of all pull requests that need reviewing (informative seal)
+		- when a team member posts a new pull request, publishes it on slack (notification seal)
+
+- Researched what technologies and gems I could use and what the app structure would be like
+- Started the Rails app
