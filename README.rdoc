@@ -6,7 +6,8 @@ This is a Slack bot that will let the GDS Core team know when Pull Requests need
 
 
 ## Diary of how this app was built
-10th April: 
+
+10th April:
 - Finalised what the app does:
 		- Hourly, checks if any pull requests are over 6 hours old (angry seal)
 		- at 9.45am prepares an overview of all pull requests that need reviewing (informative seal)
@@ -14,3 +15,9 @@ This is a Slack bot that will let the GDS Core team know when Pull Requests need
 
 - Researched what technologies and gems I could use and what the app structure would be like
 - Started the Rails app
+
+17th April:
+- researched github_api
+
+24th April:
+- got github_api working, first test passing
