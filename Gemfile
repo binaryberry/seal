@@ -6,6 +6,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem "factory_girl_rails", "~> 4.0"
 gem "github_api"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
@@ -25,6 +26,8 @@ gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
 gem 'whenever', :require => false
+
+# gem 'webmock'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

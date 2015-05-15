@@ -20,4 +20,28 @@ This is a Slack bot that will let the GDS Core team know when Pull Requests need
 - researched github_api
 
 24th April:
-- got github_api working, first test passing
+- got github_api working, first test with dummy data passing
+
+1st of May
+- got github_listener to take into account organisations
+
+8th of May:
+- tried stubbing Github API
+
+15th of May:
+- Github listener can now return the list of repos of an organisation
+- further attempts to stub GithubAPI using these methods: https://robots.thoughtbot.com/how-to-stub-external-services-in-tests.
+
+
+## CRC
+
+Github listener:
+- queries Github's API
+
+Message builder
+- produces message from Github API's content
+
+Slack Poster:
+- posts message to Slack
+
+[methods]:
