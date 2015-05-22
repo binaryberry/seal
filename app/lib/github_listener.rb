@@ -17,8 +17,8 @@ class Github_listener
 
 	def list_repos(organisation)
 		for i in 1..10
-		response = @github.repos.list org: '#{organisation}', PARAM_PAGE: i
-		add_repo_names(response)
+			response = @github.repos.list org: "#{organisation}", PARAM_PAGE: i
+			add_repo_names(response)
 		end
 		@org_repos_list
 	end
