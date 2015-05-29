@@ -50,4 +50,4 @@ Slack Poster:
 - produces message from Github API's content
 - posts message to Slack
 
-[methods]:
+Trello board: https://trello.com/b/sgakJmlY/moody-seal
