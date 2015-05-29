@@ -32,6 +32,12 @@ This is a Slack bot that will let the GDS Core team know when Pull Requests need
 - Github listener can now return the list of repos of an organisation
 - further attempts to stub GithubAPI using these methods: https://robots.thoughtbot.com/how-to-stub-external-services-in-tests.
 
+21st of May:
+- Building Sinatra app for stubbing
+- Attempts to filter the 3,400 repo list by date the repo was modified - tests (and app) are still very slow
+
+28th of May:
+- Due to new team structure that assigns a list of repos to each team, decided the manually enter the list of repos that belong to a team instead of scanning through all of them. That should sort the speed problem, the stubbing problem, a lot of things.
 
 ## CRC
 

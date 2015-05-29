@@ -1,45 +1,29 @@
 require 'github_api'
 
-class Github_listener
+class GithubListener
 
-	TEAM_ACCOUNTS = ["binaryberry", "evilstreak", "jennyd", "alicebartlett", "issyl0", "jackscotti"]
-	ORGANISATION_ACCOUNT = "alphagov"
+	TEAM_MEMBERS_ACCOUNTS = ["binaryberry", "jamiecobbett", "boffbowsh", "alicebartlett", "benilovj", "fofr", "russellthorn"]
+	TEAM_REPOS = %w(maslow signonotron2 short-url-manager support feedback frontend specialist-publisher publisher whitehall govuk_content_api release metadata-api travel-advice-publisher info-frontend government-frontend support-api external-link-tracker specialist-frontend static asset-manager content-store url-arbiter content-register)
 
-	attr_accessor :accounts, :list_pull_requests, :organisation, :org_repos_list
+	attr_accessor :people, :repos, :pull_requests
 
-	def initialize(accounts, organisation)
+	def initialize(team_members_accounts, team_repos)
 		@github = Github.new oauth_token: ENV['GITHUB_TOKEN'], auto_pagination: true
-		@organisation = organisation
-		@accounts = accounts
-		@list_pull_requests = []
-		@org_repos_list = []
+		@people = team_members_accounts
+		@repos = team_repos
+		@pull_requests = []
 	end
 
-	def list_repos(organisation)
-		for i in 1..10
-			response = @github.repos.list org: "#{organisation}", PARAM_PAGE: i
-			add_repo_names(response)
+	def list_pull_requests
+		@repos.each do |repo|
+			@people.each do |person|
+				response = @github.pull_requests.list user: "#{person}", repo: "#{repo}"
+				response.body.each{|pull_request| @pull_requests << pull_request.title if pull_request.merged? == false}
+			end
 		end
-		@org_repos_list
+		@pull_requests
 	end
 
 
-
-	def check_pr
-		list_repos(@organisation)
-		@org_repos_list.each do |repo|
-			pull_request = @github.pull_requests.list user: "#{organisation}", repo: repo
-			@list_pull_requests << pull_request
-		end
-		@list_pull_requests
-	end
-
-private
-
-	def add_repo_names(response)
-		response_body = response.body
-		response_body.each{|repo| @org_repos_list << repo.name}
-		@org_repos_list
-	end
 
 end

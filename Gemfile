@@ -27,7 +27,6 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'whenever', :require => false
 
-# gem 'webmock'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -45,6 +44,7 @@ group :development, :test do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
+
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
@@ -52,6 +52,9 @@ end
 group :test do
   gem 'rspec-rails'
   gem 'rspec-core'
+  gem 'sinatra-base', '~> 1.4.0'
   gem 'timecop'
+  gem 'pry'
+	# gem 'webmock'
 end
 

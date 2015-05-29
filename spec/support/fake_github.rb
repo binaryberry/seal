@@ -1,7 +1,7 @@
 require 'sinatra/base'
 
 class FakeGitHub < Sinatra::Base
-  get '/orgs/alphagov/repos' do
+  get '/repos/alphagov' do
     json_response 200, 'contributors.json'
   end
 
