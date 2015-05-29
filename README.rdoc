@@ -38,16 +38,16 @@ This is a Slack bot that will let the GDS Core team know when Pull Requests need
 
 28th of May:
 - Due to new team structure that assigns a list of repos to each team, decided the manually enter the list of repos that belong to a team instead of scanning through all of them. That should sort the speed problem, the stubbing problem, a lot of things.
+- moved to a non-Rails app to make it lighter
+- got Github to list repos; works for my personal pull requests, but doesn't work with the GOV.UK stuff yet, need to figure out why
 
 ## CRC
 
-Github listener:
+Github fetcher:
 - queries Github's API
 
-Message builder
-- produces message from Github API's content
-
 Slack Poster:
+- produces message from Github API's content
 - posts message to Slack
 
 [methods]:
