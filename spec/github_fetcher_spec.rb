@@ -3,8 +3,8 @@ require './lib/github_fetcher'
 
 describe 'github_listener' do
 
-	let(:team_members_accounts) {["binaryberry"]}
-	let(:team_repos) {["CV", "bookmark-collector"]}
+	let(:team_members_accounts) {["binaryberry", "boffbowsh"]}
+	let(:team_repos) {["CV", "bookmark-collector", "whitehall"]}
 	let(:github_fetcher) { GithubFetcher.new(team_members_accounts, team_repos) }
 
 	context "list_pull_requests" do
@@ -12,6 +12,4 @@ describe 'github_listener' do
 			expect(github_fetcher.list_pull_requests).to eq(["testing things", "minor change"])
 		end
 	end
-
-
 end

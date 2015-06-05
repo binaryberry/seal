@@ -17,13 +17,15 @@ class GithubFetcher
 	def list_pull_requests
 		@repos.each do |repo|
 			@people.each do |person|
-				response = @github.pull_requests.list user: "#{person}", repo: "#{repo}"
-				response.body.each{|pull_request| @pull_requests << pull_request.title if pull_request.merged? == false}
+				error = "no" #this is very ugly - ask tech person for advice
+				begin
+					response = @github.pull_requests.list user: "#{person}", repo: "#{repo}"
+				rescue
+					error = "yes"
+				end
+				response.body.each{|pull_request| @pull_requests << pull_request.title if pull_request.merged? == false} unless error == "yes"
 			end
 		end
 		@pull_requests
 	end
-
-
-
 end
