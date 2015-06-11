@@ -3,6 +3,8 @@ GEM
   specs:
     addressable (2.3.8)
     coderay (1.1.0)
+    crack (0.4.2)
+      safe_yaml (~> 1.0.0)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     diff-lcs (1.2.5)
@@ -49,9 +51,13 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.2.0)
     rspec-support (3.2.2)
+    safe_yaml (1.0.4)
     slop (3.6.0)
     thread_safe (0.3.5)
     timecop (0.7.3)
+    webmock (1.21.0)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
 
 PLATFORMS
   ruby
@@ -61,3 +67,4 @@ DEPENDENCIES
   pry
   rspec
   timecop
+  webmock (~> 1.21.0)

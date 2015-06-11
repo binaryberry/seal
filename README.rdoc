@@ -9,9 +9,9 @@ This is a Slack bot that will let the GDS Core team know when Pull Requests need
 
 10th April:
 - Finalised what the app does:
-		- Hourly, checks if any pull requests are over 6 hours old (angry seal)
-		- at 9.45am prepares an overview of all pull requests that need reviewing (informative seal)
-		- when a team member posts a new pull request, publishes it on slack (notification seal)
+    - Hourly, checks if any pull requests are over 6 hours old (angry seal)
+    - at 9.45am prepares an overview of all pull requests that need reviewing (informative seal)
+    - when a team member posts a new pull request, publishes it on slack (notification seal)
 
 - Researched what technologies and gems I could use and what the app structure would be like
 - Started the Rails app
@@ -40,6 +40,12 @@ This is a Slack bot that will let the GDS Core team know when Pull Requests need
 - Due to new team structure that assigns a list of repos to each team, decided the manually enter the list of repos that belong to a team instead of scanning through all of them. That should sort the speed problem, the stubbing problem, a lot of things.
 - moved to a non-Rails app to make it lighter
 - got Github to list repos; works for my personal pull requests, but doesn't work with the GOV.UK stuff yet, need to figure out why
+
+5th of June:
+- Github fetcher class now works with organisations, hence GOV.UK stuff
+
+11th of June:
+- Stubbed Github API
 
 ## CRC
 

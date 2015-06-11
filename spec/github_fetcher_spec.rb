@@ -1,17 +1,18 @@
 require 'spec_helper'
 require './lib/github_fetcher'
+require 'rubygems'
 
-describe 'github_listener' do
+	describe 'github_listener' do
 
-	let(:team_members_accounts) {["binaryberry"]}
-	let(:team_repos) {["CV", "bookmark-collector"]}
-	let(:github_fetcher) { GithubFetcher.new(team_members_accounts, team_repos) }
+		let(:team_members_accounts) {["binaryberry", "jamiecobbett", "boffbowsh", "alicebartlett", "benilovj", "fofr", "russellthorn", "tekin"]}
+		let(:team_repos) {["whitehall"]}
+		let(:github_fetcher) { GithubFetcher.new(team_members_accounts, team_repos) }
 
-	context "list_pull_requests" do
-		it "should display open pull requests open on the team's repos by a team member" do
-			expect(github_fetcher.list_pull_requests).to eq(["testing things", "minor change"])
+		context "list_pull_requests" do
+			it "should display open pull requests open on the team's repos by a team member" do
+				expect(github_fetcher.list_pull_requests).to eq(["Upgrade Ruby to 2.2.2"])
+			end
 		end
+
 	end
 
-
-end
