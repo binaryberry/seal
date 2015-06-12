@@ -16,16 +16,13 @@
 # users commonly want.
 #
 
-require 'webmock/rspec'
-WebMock.disable_net_connect!(allow_localhost: true)
 
 RSpec.configure do |config|
-  config.before(:each) do
-    stub_request(:get, "https://api.github.com/repos/alphagov/whitehall/pulls?access_token=81d35949f3b2215a194c9b6a2e7c689d7fab3a38").
-         with(:headers => {'Accept'=>'application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1', 'Accept-Charset'=>'utf-8', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Authorization'=>'token 81d35949f3b2215a194c9b6a2e7c689d7fab3a38', 'User-Agent'=>'Github API Ruby Gem 0.12.3'}).
-         to_return(:status => 200, :body => File.read(File.join(__dir__, "../fixtures/api_response.json")), :headers => {})
-
-  end
+  # config.before(:each) do
+  #   stub_request(:get, "https://api.github.com/repos/alphagov/whitehall/pulls?access_token=" + ENV["GITHUB_TOKEN"]).
+  #        with(:headers => {'Accept'=>'application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1', 'Accept-Charset'=>'utf-8', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Authorization'=>'token' + ENV["GITHUB_TOKEN"], 'User-Agent'=>'Github API Ruby Gem 0.12.3'}).
+  #        to_return(:status => 200, :body => File.read(File.join(__dir__, "../fixtures/api_response.json")), :headers => {})
+  # end
 
 
   config.expect_with :rspec do |expectations|
