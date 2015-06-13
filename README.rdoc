@@ -52,10 +52,18 @@ This is a Slack bot that will let the GDS Core team know when Pull Requests need
 - Started Slackbot poster class, it can post to Slack
 - Started Message builder class, not finished
 
+13th of June:
+- finished Slackbot poster class
+- finished Message builder class
+- added name of repo to info sent by GithubFetcher
+- added options to the Slackbot poster class so each post comes from informative seal
+- Works locally in test room. YEAY!
+
 To be done:
-- add options to the Slackbot poster class to allow to post from angry seal
 - change message if there are no open pull requests
+- display [DO NOT MERGE] pull requests?
 - push to Heroku with Heroku scheduler
+- add to core room
 
 ## CRC
 

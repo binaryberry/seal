@@ -3,11 +3,14 @@ require 'slack-poster'
 class SlackPoster
 
 
-	attr_accessor :github_response, :webhook_url, :poster
+	attr_accessor :webhook_url, :poster
 
 	def initialize(webhook_url)
-		@poster = Slack::Poster.new("#{webhook_url}")
-		@github_response = github_response
+		@poster = Slack::Poster.new("#{webhook_url}", options = {
+  		icon_emoji: ':informative_seal:',
+  		username: 'Informative Seal',
+  		channel: '#angry-seal-bot-test'
+		})
 		@webhook_url = webhook_url
 	end
 

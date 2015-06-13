@@ -2,9 +2,7 @@ require 'github_api'
 
 class GithubFetcher
 
-	TEAM_MEMBERS_ACCOUNTS = ["binaryberry", "jamiecobbett", "boffbowsh", "alicebartlett", "benilovj", "fofr", "russellthorn", "edds"]
 	ORGANISATION = "alphagov"
-	TEAM_REPOS = %w(maslow signonotron2 short-url-manager support feedback frontend specialist-publisher publisher whitehall govuk_content_api release metadata-api travel-advice-publisher info-frontend government-frontend support-api external-link-tracker specialist-frontend static asset-manager content-store url-arbiter content-register)
 
 	attr_accessor :people, :repos, :pull_requests
 
@@ -19,7 +17,7 @@ class GithubFetcher
 		@repos.each do |repo|
 			response = @github.pull_requests.list user: "#{ORGANISATION}", repo: "#{repo}"
 			response.body.each do |pull_request|
-				@pull_requests[pull_request.title] = [pull_request.html_url, repo] if pull_request_valid?(pull_request)
+				@pull_requests[pull_request.title] = [pull_request.html_url, repo] if pull_request_valid?(pull_request) #I know it would be better to have an options hask to put in the url and repo, but couldn't find how to deal with it in the message builder afterwards. to be revisited.
 			end
 		end
 		@pull_requests
@@ -27,7 +25,7 @@ class GithubFetcher
 
 private
 	def pull_request_valid?(pull_request)
-		return true if TEAM_MEMBERS_ACCOUNTS.include?("#{pull_request.user.login}") && pull_request.merged? == false
+		return true if @people.include?("#{pull_request.user.login}") && pull_request.merged? == false
 		return false
 	end
 end
