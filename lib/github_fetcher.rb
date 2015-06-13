@@ -18,7 +18,9 @@ class GithubFetcher
 	def list_pull_requests
 		@repos.each do |repo|
 			response = @github.pull_requests.list user: "#{ORGANISATION}", repo: "#{repo}"
-			response.body.each{|pull_request| @pull_requests[pull_request.title] = pull_request.url if pull_request_valid?(pull_request)}
+			response.body.each do |pull_request|
+				@pull_requests[pull_request.title] = [pull_request.html_url, repo] if pull_request_valid?(pull_request)
+			end
 		end
 		@pull_requests
 	end
