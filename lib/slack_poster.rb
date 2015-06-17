@@ -9,7 +9,7 @@ class SlackPoster
 		@poster = Slack::Poster.new("#{webhook_url}", options = {
   		icon_emoji: ':informative_seal:',
   		username: 'Informative Seal',
-  		channel: '#angry-seal-bot-test'
+  		channel: '#core-formats'
 		})
 		@webhook_url = webhook_url
 	end

@@ -17,7 +17,12 @@ class GithubFetcher
 		@repos.each do |repo|
 			response = @github.pull_requests.list user: "#{ORGANISATION}", repo: "#{repo}"
 			response.body.each do |pull_request|
-				@pull_requests[pull_request.title] = [pull_request.html_url, repo] if pull_request_valid?(pull_request) #I know it would be better to have an options hask to put in the url and repo, but couldn't find how to deal with it in the message builder afterwards. to be revisited.
+				if pull_request_valid?(pull_request)
+					@pull_requests[pull_request.title] = {}
+					@pull_requests[pull_request.title]["title"] = pull_request.title
+					@pull_requests[pull_request.title]["link"] = pull_request.html_url
+					@pull_requests[pull_request.title]["repo"] = repo
+				end
 			end
 		end
 		@pull_requests
