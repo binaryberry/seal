@@ -23,7 +23,7 @@ class MessageBuilder
 
 
 		@pull_requests.each_key do |pull_request|
-			@list = @list + pull_requests[pull_request][1] + " | <" + pull_requests[pull_request][0] + "|" + pull_request + ">\n"
+			@list = @list + pull_requests[pull_request]["repo"] + " | <" + pull_requests[pull_request]["link"] + "|" + pull_requests[pull_request]["title"] + ">\n"
 		end
 		@list
 	end
