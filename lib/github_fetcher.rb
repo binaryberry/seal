@@ -21,6 +21,7 @@ class GithubFetcher
 					@pull_requests[pull_request.title] = {}
 					@pull_requests[pull_request.title]["title"] = pull_request.title
 					@pull_requests[pull_request.title]["link"] = pull_request.html_url
+					@pull_requests[pull_request.title]["author"] = pull_request.user.login
 					@pull_requests[pull_request.title]["repo"] = repo
 				end
 			end

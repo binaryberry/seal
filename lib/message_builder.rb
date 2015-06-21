@@ -15,15 +15,15 @@ class MessageBuilder
 	private
 
 	def intro
-		"Good morning team! Here are the pull requests that need to be reviewed today:\n"
+		"Good morning team! Here are the pull requests that need to be reviewed today:\n\n"
 	end
 
 	def list_pull_requests
 		@list = ""
-
-
+		n = 0
 		@pull_requests.each_key do |pull_request|
-			@list = @list + pull_requests[pull_request]["repo"] + " | <" + pull_requests[pull_request]["link"] + "|" + pull_requests[pull_request]["title"] + ">\n"
+			n += 1
+			@list = @list + "#{n}) _" + pull_requests[pull_request]["repo"] + " | " + pull_requests[pull_request]["author"] + "_\n<" + pull_requests[pull_request]["link"] + "|" + pull_requests[pull_request]["title"]  + ">\n"
 		end
 		@list
 	end

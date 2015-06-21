@@ -61,9 +61,10 @@ This is a Slack bot that will let the GDS Core team know when Pull Requests need
 
 17th of June:
 - refactoring of Github fetcher
+- pushed to Heroku
 
 18th of June:
-- pushed to Heroku and launched on core-formats team!
+- started Heroku scheduler and launched on core-formats team room!
 
 To be done:
 - fix API stubbing
