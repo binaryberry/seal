@@ -26,7 +26,7 @@ class MessageBuilder
       @list = @list + "#{n}) *" + pull_requests[pull_request]["repo"] + "* | " +
                                   pull_requests[pull_request]["author"] +
                                   "\n<" + pull_requests[pull_request]["link"] + "|" + pull_requests[pull_request]["title"]  + "> - " +
-                                  pull_requests[pull_request]["comments_count"] + " comments\n"
+                                  pull_requests[pull_request]["comments_count"] + comments(pull_request) + "\n"
     end
     @list
   end
@@ -35,4 +35,9 @@ class MessageBuilder
     "\nMerry reviewing!"
   end
 
+  def comments(pull_request)
+    # require 'pry';binding.pullry
+    return " comment" if @pull_requests[pull_request]["comments_count"] == "1"
+    " comments"
+  end
 end
