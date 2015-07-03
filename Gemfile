@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem "github_api"
 gem 'slack-poster', '~> 1.0.1'
+gem "octokit", "~> 3.0"
 
 group :test do
   gem 'rspec'

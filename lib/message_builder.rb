@@ -23,13 +23,16 @@ class MessageBuilder
     n = 0
     @pull_requests.each_key do |pull_request|
       n += 1
-      @list = @list + "#{n}) _" + pull_requests[pull_request]["repo"] + " | " + pull_requests[pull_request]["author"] + "_\n<" + pull_requests[pull_request]["link"] + "|" + pull_requests[pull_request]["title"]  + ">\n"
+      @list = @list + "#{n}) *" + pull_requests[pull_request]["repo"] + "* | " +
+                                  pull_requests[pull_request]["author"] +
+                                  "\n<" + pull_requests[pull_request]["link"] + "|" + pull_requests[pull_request]["title"]  + "> - " +
+                                  pull_requests[pull_request]["comments_count"] + " comments\n"
     end
     @list
   end
 
   def conclusion
-    "Merry reviewing!"
+    "\nMerry reviewing!"
   end
 
 end

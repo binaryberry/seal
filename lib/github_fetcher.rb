@@ -1,4 +1,4 @@
-require 'github_api'
+require 'octokit'
 
 class GithubFetcher
 
@@ -7,7 +7,10 @@ class GithubFetcher
   attr_accessor :people, :repos, :pull_requests
 
   def initialize(team_members_accounts, team_repos)
-    @github = Github.new oauth_token: ENV['GITHUB_TOKEN'], auto_pagination: true
+    @github = Octokit::Client.new(:access_token => ENV['GITHUB_TOKEN'])
+    @github.user.login
+    Octokit.auto_paginate = true
+
     @people = team_members_accounts
     @repos = team_repos
     @pull_requests = {}
@@ -15,12 +18,10 @@ class GithubFetcher
 
   def list_pull_requests
     @repos.each do |repo|
-      response = @github.pull_requests.list user: "#{ORGANISATION}", repo: "#{repo}"
-      response.body.each do |pull_request|
+      response = @github.pull_requests("#{ORGANISATION}/#{repo}", state: "open")
+      response.each do |pull_request|
         if pull_request_valid?(pull_request)
-        	# p "#{pull_request}"
-        	# p "comment"
-        	# p "#{pull_request.review_comment}"
+        	p "#{pull_request}"
           @pull_requests[pull_request.title] = {}
           @pull_requests[pull_request.title]["title"] = pull_request.title
           @pull_requests[pull_request.title]["link"] = pull_request.html_url
@@ -35,14 +36,14 @@ class GithubFetcher
 
 private
   def pull_request_valid?(pull_request)
-    return true if @people.include?("#{pull_request.user.login}") && pull_request.merged? == false
+    return true if @people.include?("#{pull_request.user.login}")
     return false
   end
 
   def count_comments(pull_request, repo)
-  	p pull_request.id
-  	# comments = @github.pull_requests.comments.list user: "#{ORGANISATION}", repo: "#{repo}", number: pull_request.id
-  	# p comments
+    review_comments = @github.pull_request("#{ORGANISATION}/#{repo}", pull_request.number).review_comments
+    comments = @github.pull_request("#{ORGANISATION}/#{repo}", pull_request.number).comments
+  	@total_comments = (review_comments + comments).to_s
   end
 
 end
