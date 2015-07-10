@@ -12,7 +12,7 @@ class GithubFetcher
     Octokit.auto_paginate = true
 
     @people = team_members_accounts
-    @repos = team_repos
+    @repos = team_repos.sort!
     @pull_requests = {}
   end
 

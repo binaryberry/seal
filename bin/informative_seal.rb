@@ -6,7 +6,7 @@ require "./lib/slack_poster.rb"
 
 CONFIG = YAML.load_file( "./config/config.yml" )[ARGV[0]]
 
-git = GithubFetcher.new(TEAM_MEMBERS_ACCOUNTS,TEAM_REPOS)
+git = GithubFetcher.new(CONFIG["members"],CONFIG["repos"])
 
 list = git.list_pull_requests
 
@@ -14,6 +14,6 @@ message_builder = MessageBuilder.new(list)
 
 message = message_builder.build
 
-slack = SlackPoster.new(ENV["SLACK_WEBHOOK"], TEAM_CHANNEL, "Angry")
+slack = SlackPoster.new(ENV["SLACK_WEBHOOK"], CONFIG["channel"], "Informative")
 
 slack.send_request(message)
