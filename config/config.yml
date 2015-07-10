@@ -1,4 +1,4 @@
-"core-formats":
+core-formats:
   members:
     - binaryberry
     - jamiecobbett
@@ -34,7 +34,7 @@
     - panopticon
 
   channel:
-    "#testing"
+    "#core-formats"
 
 custom:
   members:
