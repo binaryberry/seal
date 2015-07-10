@@ -15,7 +15,7 @@ class MessageBuilder
   private
 
   def intro
-    "Good morning team! \n\n Sorry I was offline! When your slack channel changed names I got a bit confused but all is good now.\n\n I'll be back to posting at 9.30am from next week.\n In the meantime, here are the pull requests that need to be reviewed today:\n\n"
+    "Good morning team! \n\n Here are the pull requests that need to be reviewed today:\n\n"
   end
 
   def list_pull_requests
