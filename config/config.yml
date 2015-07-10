@@ -1,4 +1,4 @@
-"core-formats":
+core-formats:
   members:
     - binaryberry
     - jamiecobbett
@@ -33,7 +33,7 @@
     - content-register
 
   channel:
-    "#testing"
+    "#core-formats"
 
 custom:
   members:
