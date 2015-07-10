@@ -10,10 +10,10 @@ class GithubFetcher
     @github = Octokit::Client.new(:access_token => ENV['GITHUB_TOKEN'])
     @github.user.login
     Octokit.auto_paginate = true
-
     @people = team_members_accounts
     @repos = team_repos.sort!
     @pull_requests = {}
+    @old_pull_requests = []
   end
 
   def list_pull_requests
@@ -33,6 +33,22 @@ class GithubFetcher
     @pull_requests
   end
 
+  def old_pull_requests
+    @repos.each do |repo|
+      response = @github.pull_requests("#{ORGANISATION}/#{repo}", state: "open")
+      response.each do |pull_request|
+        if pull_request_valid?(pull_request)
+            require 'pry'
+            binding.pry if repo == "whitehall"
+          comments = @github.pull_request_comments("#{ORGANISATION}/#{repo}", pull_request.number) #this returns an empty array, not sure why
+            comments.each do |comment|
+            comment.updated_at
+            end
+        end
+      end
+    end
+  end
+
 private
   def pull_request_valid?(pull_request)
     return true if @people.include?("#{pull_request.user.login}")
@@ -40,9 +56,9 @@ private
   end
 
   def count_comments(pull_request, repo)
-    review_comments = @github.pull_request("#{ORGANISATION}/#{repo}", pull_request.number).review_comments
-    comments = @github.pull_request("#{ORGANISATION}/#{repo}", pull_request.number).comments
-  	@total_comments = (review_comments + comments).to_s
+    @review_comments = @github.pull_request("#{ORGANISATION}/#{repo}", pull_request.number).review_comments
+    @comments = @github.pull_request("#{ORGANISATION}/#{repo}", pull_request.number).comments
+  	@total_comments = (@review_comments + @comments).to_s
   end
 
 end
