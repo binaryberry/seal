@@ -17,6 +17,6 @@ message_builder = MessageBuilder.new(list)
 
 message = message_builder.build
 
-slack = SlackPoster.new(ENV["SLACK_WEBHOOK"], TEAM_CHANNEL)
+slack = SlackPoster.new(ENV["SLACK_WEBHOOK"], TEAM_CHANNEL, "Informative")
 
 slack.send_request(message)

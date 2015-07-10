@@ -28,12 +28,13 @@ class SlackPoster
   private
 
   def mood_hash
-    @mood_hash = []
+    @mood_hash = {}
     if @mood == "Informative"
-      # @mood_hash[:icon_emoji]= ":send_request:"
-      mood_hash[:username]= "Informative Seal"
+      @mood_hash[:icon_emoji]= ":informative_seal:"
+      @mood_hash[:username]= "Informative Seal"
     elsif @mood == "Angry"
-      puts "yeay"
+      @mood_hash[:icon_emoji]= ":angry_seal:"
+      @mood_hash[:username]= "Angry Seal"
     else
       raise "bad mood"
     end

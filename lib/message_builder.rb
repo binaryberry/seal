@@ -15,11 +15,11 @@ class MessageBuilder
   private
 
   def intro
-    "Good morning team! Here are the pull requests that need to be reviewed today:\n\n"
+    "Good morning team! \n Sorry I was on strike! I'll be back to posting at 9.30am from next week.\n In the meantime, here are the pull requests that need to be reviewed today:\n\n"
   end
 
   def list_pull_requests
-    @list = ""
+  @list = ""
     n = 0
     @pull_requests.each_key do |pull_request|
       n += 1
@@ -28,7 +28,7 @@ class MessageBuilder
                                   "\n<" + pull_requests[pull_request]["link"] + "|" + pull_requests[pull_request]["title"]  + "> - " +
                                   pull_requests[pull_request]["comments_count"] + comments(pull_request) + "\n"
     end
-    @list
+  @list
   end
 
   def conclusion
@@ -36,7 +36,6 @@ class MessageBuilder
   end
 
   def comments(pull_request)
-    # require 'pry';binding.pullry
     return " comment" if @pull_requests[pull_request]["comments_count"] == "1"
     " comments"
   end

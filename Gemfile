@@ -6,7 +6,7 @@ gem "octokit", "~> 3.0"
 group :test do
   gem 'rspec'
   gem 'timecop'
-  gem 'pry'
+  gem 'pry-byebug'
   gem 'webmock', '~> 1.21.0'
 end
 

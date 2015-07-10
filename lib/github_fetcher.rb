@@ -21,7 +21,6 @@ class GithubFetcher
       response = @github.pull_requests("#{ORGANISATION}/#{repo}", state: "open")
       response.each do |pull_request|
         if pull_request_valid?(pull_request)
-        	p "#{pull_request}"
           @pull_requests[pull_request.title] = {}
           @pull_requests[pull_request.title]["title"] = pull_request.title
           @pull_requests[pull_request.title]["link"] = pull_request.html_url
