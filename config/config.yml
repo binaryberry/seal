@@ -32,6 +32,7 @@ core-formats:
     - url-arbiter
     - content-register
     - panopticon
+    - govuk-content-schemas
 
   channel:
     "#core-formats"
@@ -54,6 +55,7 @@ custom:
     - content-store
     - courts-api
     - courts-frontend
+    - govuk-content-schemas
     - hmrc-manuals-api
     - imminence
     - licence-finder
