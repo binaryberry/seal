@@ -7,9 +7,12 @@ class MessageBuilder
   end
 
   def build
-    list_pull_requests
-    intro + @list + conclusion
-
+    if @pull_requests == {}
+      no_pull_requests
+    else
+      list_pull_requests
+      intro + @list + conclusion
+    end
   end
 
   private
@@ -29,6 +32,10 @@ class MessageBuilder
                                   pull_requests[pull_request]["comments_count"] + comments(pull_request) + "\n"
     end
   @list
+  end
+
+  def no_pull_requests
+    "Good morning team! It's a beautiful day! :happyseal: :happyseal: :happyseal:\n\nNo pull requests to review today! :rainbow: :sunny: :metal: :tada:"
   end
 
   def conclusion
