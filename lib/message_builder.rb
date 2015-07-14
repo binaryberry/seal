@@ -8,7 +8,7 @@ class MessageBuilder
   end
 
   def informative
-    if @pull_requests == {}
+   if @pull_requests == {}
       no_pull_requests
     else
       list_pull_requests
