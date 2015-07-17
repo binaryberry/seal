@@ -6,8 +6,6 @@ GEM
       columnize (= 0.9.0)
     coderay (1.1.0)
     columnize (0.9.0)
-    crack (0.4.2)
-      safe_yaml (~> 1.0.0)
     diff-lcs (1.2.5)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
@@ -40,7 +38,6 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.2.0)
     rspec-support (3.2.2)
-    safe_yaml (1.0.4)
     sawyer (0.6.0)
       addressable (~> 2.3.5)
       faraday (~> 0.8, < 0.10)
@@ -48,9 +45,6 @@ GEM
       httparty (~> 0.12)
     slop (3.6.0)
     timecop (0.7.3)
-    webmock (1.21.0)
-      addressable (>= 2.3.6)
-      crack (>= 0.3.2)
 
 PLATFORMS
   ruby
@@ -61,4 +55,3 @@ DEPENDENCIES
   rspec
   slack-poster (~> 1.0.1)
   timecop
-  webmock (~> 1.21.0)

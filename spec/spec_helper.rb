@@ -16,14 +16,7 @@
 # users commonly want.
 #
 
-
 RSpec.configure do |config|
-  # config.before(:each) do
-  #   stub_request(:get, "https://api.github.com/repos/alphagov/whitehall/pulls?access_token=" + ENV["GITHUB_TOKEN"]).
-  #        with(:headers => {'Accept'=>'application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1', 'Accept-Charset'=>'utf-8', 'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3', 'Authorization'=>'token' + ENV["GITHUB_TOKEN"], 'User-Agent'=>'Github API Ruby Gem 0.12.3'}).
-  #        to_return(:status => 200, :body => File.read(File.join(__dir__, "../fixtures/api_response.json")), :headers => {})
-  # end
-
 
   config.expect_with :rspec do |expectations|
     # This option will default to `true` in RSpec 4. It makes the `description`
@@ -43,6 +36,10 @@ RSpec.configure do |config|
     # a real object. This is generally recommended, and will default to
     # `true` in RSpec 4.
     mocks.verify_partial_doubles = true
+  end
+
+  config.after(:each) do
+    Timecop.return
   end
 
 # The settings below are suggested to provide a good initial experience

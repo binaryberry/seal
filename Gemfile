@@ -7,6 +7,5 @@ group :test do
   gem 'rspec'
   gem 'timecop'
   gem 'pry-byebug'
-  gem 'webmock', '~> 1.21.0'
 end
 

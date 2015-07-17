@@ -27,6 +27,7 @@ class GithubFetcher
           @pull_requests[pull_request.title]["author"] = pull_request.user.login
           @pull_requests[pull_request.title]["repo"] = repo
           @pull_requests[pull_request.title]["comments_count"] = count_comments(pull_request, repo)
+          @pull_requests[pull_request.title]["updated"] = Date.parse(pull_request.updated_at.to_s)
         end
       end
     end
@@ -38,12 +39,10 @@ class GithubFetcher
       response = @github.pull_requests("#{ORGANISATION}/#{repo}", state: "open")
       response.each do |pull_request|
         if pull_request_valid?(pull_request)
-            require 'pry'
-            binding.pry if repo == "whitehall"
           comments = @github.pull_request_comments("#{ORGANISATION}/#{repo}", pull_request.number) #this returns an empty array, not sure why
-            comments.each do |comment|
+          comments.each do |comment|
             comment.updated_at
-            end
+          end
         end
       end
     end
@@ -56,9 +55,9 @@ private
   end
 
   def count_comments(pull_request, repo)
-    @review_comments = @github.pull_request("#{ORGANISATION}/#{repo}", pull_request.number).review_comments
-    @comments = @github.pull_request("#{ORGANISATION}/#{repo}", pull_request.number).comments
-  	@total_comments = (@review_comments + @comments).to_s
+    review_comments = @github.pull_request("#{ORGANISATION}/#{repo}", pull_request.number).review_comments
+    comments = @github.pull_request("#{ORGANISATION}/#{repo}", pull_request.number).comments
+    @total_comments = (review_comments + comments).to_s
   end
 
 end
