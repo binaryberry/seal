@@ -28,11 +28,6 @@ describe MessageBuilder do
 
     context "no old PRs" do
       it "produces an empty string" do
-<<<<<<< HEAD
-=======
-        require 'pry'
-        # binding.pry
->>>>>>> message builder now can produce angry message
         message_builder = MessageBuilder.new(empty_pull_request, "angry")
         expect(message_builder.angry).to eq("")
       end
