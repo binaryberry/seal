@@ -4,6 +4,9 @@
 
 This is a Slack bot that will let the GDS Core team know when Pull Requests need to be reviewed, and send them a reminder when there are Pull Requests that have been sitting there for too long. It is my first 20% project at GDS.
 
+![image](https://github.com/binaryberry/seal/blob/master/images/informative.png)
+![image](https://github.com/binaryberry/seal/blob/master/images/angry.png)
+
 ##How to use it?
 Fork the repo, and change the config file to put: your team's name, the github names of your team members, the list of repos to follow, and the Slack channel you want to post to.
 
