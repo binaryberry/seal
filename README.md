@@ -1,4 +1,4 @@
-== README
+# README
 
 ##What is it?
 
@@ -9,12 +9,12 @@ Fork the repo, and change the config file to put: your team's name, the github n
 
 In lib/github_fetcher.rb, specify the name of your organisation.
 
-In your bash profile, put in:  
+In your bash profile, put in:
 ```
 export GITHUB_TOKEN="get_your_github_token_from_yourgithub_settings"
 export SLACK_WEBHOOK="get_your_incoming_webhook_link_for_your_slack_group_channel"
 ```
-To test the script locally, go to Slack and create a channel or private group called "#angry-seal-bot-test". Then run ./bin/informative_seal team_name in your command line, and you should see the post in the #angry-seal-bot-test channel.
+To test the script locally, go to Slack and create a channel or private group called "#angry-seal-bot-test". Then run ./bin/informative_seal your_team_name in your command line, and you should see the post in the #angry-seal-bot-test channel.
 
 When that works, you can push the app to Heroku, add the GITHUB_TOKEN and SLACK_WEBHOOK environment variables to heroku, and use the Heroku scheduler add-on to create repeated rasks - I set Informative Seal to run at 9.30am every morning (the seal won't post on weekends), and will set Angry Seal to run every afternoon.
 
