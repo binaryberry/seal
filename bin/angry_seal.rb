@@ -11,7 +11,7 @@ git = GithubFetcher.new(CONFIG["members"],CONFIG["repos"])
 
 list = git.list_pull_requests
 
-message_builder = MessageBuilder.new(list)
+message_builder = MessageBuilder.new(list, 'angry')
 
 message = message_builder.build
 
