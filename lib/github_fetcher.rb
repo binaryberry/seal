@@ -1,8 +1,7 @@
 require 'octokit'
 
 class GithubFetcher
-
-  ORGANISATION = "alphagov"
+  ORGANISATION ||= ENV['SEAL_ORGANISATION']
 
   attr_accessor :people, :repos, :pull_requests
 
