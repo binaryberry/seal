@@ -15,6 +15,6 @@ message_builder = MessageBuilder.new(list, 'angry')
 
 message = message_builder.build
 
-slack = SlackPoster.new(ENV["SLACK_WEBHOOK"], CONFIG["channel"], "Informative")
+slack = SlackPoster.new(ENV["SLACK_WEBHOOK"], CONFIG["channel"], 'Angry')
 
 slack.send_request(message)
