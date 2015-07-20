@@ -7,6 +7,17 @@ class MessageBuilder
     @mood = mood
   end
 
+  def build
+    case mood
+    when 'informative'
+      informative
+    when 'angry'
+      angry
+    else
+      fail("This seal does not understand '#{mood}']")
+    end
+  end
+
   def informative
    if @pull_requests == {}
       no_pull_requests
