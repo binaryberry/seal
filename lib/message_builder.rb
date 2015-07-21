@@ -67,11 +67,15 @@ class MessageBuilder
 
   def present(pull_request, index)
     pr = pull_requests[pull_request]
-    days = (Date.today - pr['updated']).to_i
+    days = age_in_days(pr)
     <<-EOF.gsub(/^\s+/, '')
     #{index}\) *#{pr["repo"]}* | #{pr["author"]} (#{days} days ago)
     <#{pr["link"]}|#{pr["title"]}> - #{pr["comments_count"]}#{comments(pull_request)}
     EOF
+  end
+
+  def age_in_days(pull_request)
+    (Date.today - pull_request['updated']).to_i
   end
 
   def informative
