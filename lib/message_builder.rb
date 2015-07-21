@@ -30,8 +30,7 @@ class MessageBuilder
   end
 
   def rotten?(pull_request)
-    return true if pull_request["updated"] + 2 < Date.today
-    false
+    age_in_days(pull_request) > 2
   end
 
   private
