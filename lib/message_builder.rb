@@ -67,8 +67,9 @@ class MessageBuilder
 
   def present(pull_request, index)
     pr = pull_requests[pull_request]
+    days = (Date.today - pr['updated']).to_i
     <<-EOF.gsub(/^\s+/, '')
-    #{index}\) *#{pr["repo"]}* | #{pr["author"]}
+    #{index}\) *#{pr["repo"]}* | #{pr["author"]} (#{days} days ago)
     <#{pr["link"]}|#{pr["title"]}> - #{pr["comments_count"]}#{comments(pull_request)}
     EOF
   end
