@@ -34,13 +34,8 @@ class MessageBuilder
   end
 
   def list_pull_requests
-  @report = "Good morning team! \n\n Here are the pull requests that need to be reviewed today:\n\n"
-    n = 0
-    @pull_requests.each_key do |pull_request|
-      n += 1
-      @report = @report + present(pull_request, n)
-    end
-  @report = @report + "\nMerry reviewing!"
+    msg = @pull_requests.keys.each_with_index.map { |title, n| present(title, n + 1) }
+    "Good morning team! \n\n Here are the pull requests that need to be reviewed today:\n\n#{msg.join}\nMerry reviewing!"
   end
 
   def no_pull_requests
@@ -90,11 +85,10 @@ class MessageBuilder
   end
 
   def informative
-   if @pull_requests == {}
+   if @pull_requests.empty?
       no_pull_requests
     else
       list_pull_requests
-      @report
     end
   end
 
