@@ -2,6 +2,9 @@ envato-market:
   members: []
   repos:
     - marketplace
+    - marketplace-puppet
+    - webuild.envato.com
+    - new-coding-test
 
-  channel:
-    '#angry-seal-bot-test'
+  channel: '#angry-seal-bot-test'
+
