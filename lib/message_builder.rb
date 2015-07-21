@@ -18,17 +18,17 @@ class MessageBuilder
     end
   end
 
-  def check_old_pull_requests
-    @old_pull_requests = @pull_requests.reject { |title, pr| !rotten?(pr) }
-    msg = @old_pull_requests.keys.each_with_index.map { |title, n| present(title, n + 1) }
-    @alert = "AAAAAAARGH! #{these} #{pr_plural} not been updated in over 2 days.\n\n#{msg.join}\n\n Remember each time you time you forget to review your pull requests, a baby seal dies."
-  end
-
   def rotten?(pull_request)
     age_in_days(pull_request) > 2
   end
 
   private
+
+  def check_old_pull_requests
+    @old_pull_requests = @pull_requests.reject { |title, pr| !rotten?(pr) }
+    msg = @old_pull_requests.keys.each_with_index.map { |title, n| present(title, n + 1) }
+    @alert = "AAAAAAARGH! #{these} #{pr_plural} not been updated in over 2 days.\n\n#{msg.join}\n\n Remember each time you time you forget to review your pull requests, a baby seal dies."
+  end
 
   def list_pull_requests
   @report = "Good morning team! \n\n Here are the pull requests that need to be reviewed today:\n\n"
