@@ -1,9 +1,5 @@
 envato-market:
-  members:
-    - jacobbednarz
-    - johnsyweb
-    - rabidcarrot
-
+  members: []
   repos:
     - marketplace
 
