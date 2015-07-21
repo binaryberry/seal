@@ -84,7 +84,7 @@ class MessageBuilder
   def present(pull_request, index)
     pr = pull_requests[pull_request]
     <<-EOF.gsub(/^\s+/, '')
-    #{index}\) *#{pr["repo"]}* | #{pr["author"]}
+    #{index}\) *#{pr["repo"]}* | @#{pr["author"]}
     <#{pr["link"]}|#{pr["title"]}> - #{pr["comments_count"]}#{comments(pull_request)}
     EOF
   end

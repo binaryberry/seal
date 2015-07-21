@@ -9,7 +9,7 @@ describe MessageBuilder do
   context "informative" do
     it "builds message" do
       message_builder = MessageBuilder.new(pull_requests, "informative")
-      expect(message_builder.informative).to eq("Good morning team! \n\n Here are the pull requests that need to be reviewed today:\n\n1) *whitehall* | mattbostock\n<https://github.com/alphagov/whitehall/pull/2266|[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host> - 1 comment\n2) *whitehall* | tekin\n<https://github.com/alphagov/whitehall/pull/2248|Remove all Import-related code> - 5 comments\n\nMerry reviewing!")
+      expect(message_builder.informative).to eq("Good morning team! \n\n Here are the pull requests that need to be reviewed today:\n\n1) *whitehall* | @mattbostock\n<https://github.com/alphagov/whitehall/pull/2266|[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host> - 1 comment\n2) *whitehall* | @tekin\n<https://github.com/alphagov/whitehall/pull/2248|Remove all Import-related code> - 5 comments\n\nMerry reviewing!")
     end
 
     it "builds happy message" do
@@ -22,7 +22,7 @@ describe MessageBuilder do
     context "old PRs" do
       it "builds message" do
         message_builder = MessageBuilder.new(pull_requests, "angry")
-        expect(message_builder.angry).to eq("AAAAAAARGH! These pull requests have not been updated in over 2 days.\n\n1) *whitehall* | mattbostock\n<https://github.com/alphagov/whitehall/pull/2266|[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host> - 1 comment\n2) *whitehall* | tekin\n<https://github.com/alphagov/whitehall/pull/2248|Remove all Import-related code> - 5 comments\n\n\n Remember each time you time you forget to review your pull requests, a baby seal dies.")
+        expect(message_builder.angry).to eq("AAAAAAARGH! These pull requests have not been updated in over 2 days.\n\n1) *whitehall* | @mattbostock\n<https://github.com/alphagov/whitehall/pull/2266|[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host> - 1 comment\n2) *whitehall* | @tekin\n<https://github.com/alphagov/whitehall/pull/2248|Remove all Import-related code> - 5 comments\n\n\n Remember each time you time you forget to review your pull requests, a baby seal dies.")
       end
     end
 
