@@ -18,22 +18,6 @@ class MessageBuilder
     end
   end
 
-  def informative
-   if @pull_requests == {}
-      no_pull_requests
-    else
-      list_pull_requests
-      @report
-    end
-  end
-
-  def angry
-    @alert = ""
-    check_old_pull_requests
-    return @alert if @old_pull_requests.length > 0
-    ""
-  end
-
   def check_old_pull_requests
     @old_pull_requests = []
     n = 0
@@ -87,6 +71,22 @@ class MessageBuilder
     #{index}\) *#{pr["repo"]}* | @#{pr["author"]}
     <#{pr["link"]}|#{pr["title"]}> - #{pr["comments_count"]}#{comments(pull_request)}
     EOF
+  end
+
+  def informative
+   if @pull_requests == {}
+      no_pull_requests
+    else
+      list_pull_requests
+      @report
+    end
+  end
+
+  def angry
+    @alert = ""
+    check_old_pull_requests
+    return @alert if @old_pull_requests.length > 0
+    ""
   end
 
 end

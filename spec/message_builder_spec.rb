@@ -15,7 +15,7 @@ describe MessageBuilder do
       let(:pull_requests) { old_pull_requests }
 
       it 'builds message' do
-        expect(message_builder.informative).to eq("Good morning team! \n\n Here are the pull requests that need to be reviewed today:\n\n1) *whitehall* | @mattbostock\n<https://github.com/alphagov/whitehall/pull/2266|[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host> - 1 comment\n2) *whitehall* | @tekin\n<https://github.com/alphagov/whitehall/pull/2248|Remove all Import-related code> - 5 comments\n\nMerry reviewing!")
+        expect(message_builder.build).to eq("Good morning team! \n\n Here are the pull requests that need to be reviewed today:\n\n1) *whitehall* | @mattbostock\n<https://github.com/alphagov/whitehall/pull/2266|[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host> - 1 comment\n2) *whitehall* | @tekin\n<https://github.com/alphagov/whitehall/pull/2248|Remove all Import-related code> - 5 comments\n\nMerry reviewing!")
       end
     end
 
@@ -23,7 +23,7 @@ describe MessageBuilder do
       let(:pull_requests) { no_pull_requests }
 
       it 'builds happy message' do
-        expect(message_builder.informative).to eq("Good morning team! It's a beautiful day! :happyseal: :happyseal: :happyseal:\n\nNo pull requests to review today! :rainbow: :sunny: :metal: :tada:")
+        expect(message_builder.build).to eq("Good morning team! It's a beautiful day! :happyseal: :happyseal: :happyseal:\n\nNo pull requests to review today! :rainbow: :sunny: :metal: :tada:")
       end
     end
   end
@@ -35,7 +35,7 @@ describe MessageBuilder do
       let(:pull_requests) { old_pull_requests }
 
       it 'builds message' do
-        expect(message_builder.angry).to eq("AAAAAAARGH! These pull requests have not been updated in over 2 days.\n\n1) *whitehall* | @mattbostock\n<https://github.com/alphagov/whitehall/pull/2266|[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host> - 1 comment\n2) *whitehall* | @tekin\n<https://github.com/alphagov/whitehall/pull/2248|Remove all Import-related code> - 5 comments\n\n\n Remember each time you time you forget to review your pull requests, a baby seal dies.")
+        expect(message_builder.build).to eq("AAAAAAARGH! These pull requests have not been updated in over 2 days.\n\n1) *whitehall* | @mattbostock\n<https://github.com/alphagov/whitehall/pull/2266|[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host> - 1 comment\n2) *whitehall* | @tekin\n<https://github.com/alphagov/whitehall/pull/2248|Remove all Import-related code> - 5 comments\n\n\n Remember each time you time you forget to review your pull requests, a baby seal dies.")
       end
     end
 
@@ -43,7 +43,7 @@ describe MessageBuilder do
       let(:pull_requests) { no_pull_requests }
 
       it 'produces an empty string' do
-        expect(message_builder.angry).to be_empty
+        expect(message_builder.build).to be_empty
       end
     end
 
