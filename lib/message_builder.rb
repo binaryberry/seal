@@ -85,7 +85,7 @@ class MessageBuilder
   end
 
   def informative
-   if @pull_requests.empty?
+    if @pull_requests.empty?
       no_pull_requests
     else
       list_pull_requests
@@ -99,5 +99,4 @@ class MessageBuilder
       bark_about_old_pull_requests
     end
   end
-
 end
