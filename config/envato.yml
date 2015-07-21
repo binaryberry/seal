@@ -1,0 +1,11 @@
+envato-market:
+  members:
+    - jacobbednarz
+    - johnsyweb
+    - rabidcarrot
+
+  repos:
+    - marketplace
+
+  channel:
+    '#angry-seal-bot-test'
