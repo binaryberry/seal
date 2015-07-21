@@ -9,6 +9,7 @@ describe MessageBuilder do
   let(:old_pull_requests)   { { '[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host' => { 'title' => '[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host', 'link' => 'https://github.com/alphagov/whitehall/pull/2266', 'author' => 'mattbostock', 'repo' => 'whitehall', 'comments_count' => '1', 'updated' => Date.parse('2015-07-13 ((2457217j,0s,0n),+0s,2299161j)') }, 'Remove all Import-related code' => { 'title' => 'Remove all Import-related code', 'link' => 'https://github.com/alphagov/whitehall/pull/2248', 'author' => 'tekin', 'repo' => 'whitehall', 'comments_count' => '5', 'updated' => Date.parse('2015-07-17 ((2457221j,0s,0n),+0s,2299161j)') } } }
 
   before { Timecop.freeze(Time.local(2015, 07, 18)) }
+  after { Timecop.return }
 
   context 'informative' do
     let(:mood) { 'informative' }
@@ -63,10 +64,6 @@ describe MessageBuilder do
 
         it 'is rotten' do
           expect(message_builder).to be_rotten(pull_request)
-        end
-
-        after do
-          Timecop.return
         end
       end
 
