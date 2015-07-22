@@ -38,7 +38,7 @@ describe MessageBuilder do
       let(:pull_requests) { old_pull_requests }
 
       it 'builds message' do
-        expect(message_builder.build).to eq("AAAAAAARGH! These pull requests have not been updated in over 2 days.\n\n1) *whitehall* | mattbostock (5 days ago)\n<https://github.com/alphagov/whitehall/pull/2266|[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host> - 1 comment\n2) *whitehall* | tekin (1 day ago)\n<https://github.com/alphagov/whitehall/pull/2248|Remove all Import-related code> - 5 comments\n\n\n Remember each time you time you forget to review your pull requests, a baby seal dies.")
+        expect(message_builder.build).to eq("AAAAAAARGH! These pull requests have not been updated in over 2 days.\n\n1) *whitehall* | mattbostock (5 days ago)\n<https://github.com/alphagov/whitehall/pull/2266|[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host> - 1 comment\n\n\n Remember each time you time you forget to review your pull requests, a baby seal dies.")
       end
     end
 

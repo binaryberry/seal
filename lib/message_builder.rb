@@ -19,12 +19,11 @@ class MessageBuilder
   end
 
   def check_old_pull_requests
-    @old_pull_requests = []
+    @old_pull_requests = @pull_requests.reject { |title, pr| !rotten?(pr) }
     n = 0
-    @pull_requests.each do |title, pull_request|
+    @old_pull_requests.each do |title, pull_request|
       n += 1
       @alert = @alert + present(title, n)
-      @old_pull_requests << pull_request if rotten?(pull_request)
     end
     @alert = "AAAAAAARGH! #{these} #{pr_plural} not been updated in over 2 days.\n\n" + @alert + "\n\n Remember each time you time you forget to review your pull requests, a baby seal dies."
   end
