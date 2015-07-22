@@ -1,6 +1,6 @@
 class MessageBuilder
 
-  attr_accessor :pull_requests, :report, :mood, :old_pull_requests
+  attr_accessor :pull_requests, :report, :mood
 
   def initialize(pull_requests, mood)
     @pull_requests = pull_requests
@@ -24,10 +24,13 @@ class MessageBuilder
 
   private
 
-  def check_old_pull_requests
-    @old_pull_requests = @pull_requests.reject { |title, pr| !rotten?(pr) }
-    msg = @old_pull_requests.keys.each_with_index.map { |title, n| present(title, n + 1) }
-    @alert = "AAAAAAARGH! #{these} #{pr_plural} not been updated in over 2 days.\n\n#{msg.join}\n\n Remember each time you time you forget to review your pull requests, a baby seal dies."
+  def old_pull_requests
+    @old_pull_requests ||= @pull_requests.reject { |title, pr| !rotten?(pr) }
+  end
+
+  def bark_about_old_pull_requests
+    msg = old_pull_requests.keys.each_with_index.map { |title, n| present(title, n + 1) }
+    "AAAAAAARGH! #{these(old_pull_requests.length)} #{pr_plural(old_pull_requests.length)} not been updated in over 2 days.\n\n#{msg.join}\n\n Remember each time you time you forget to review your pull requests, a baby seal dies."
   end
 
   def list_pull_requests
@@ -49,14 +52,20 @@ class MessageBuilder
     " comments"
   end
 
-  def these
-    return "This" if @old_pull_requests == "1"
-    "These"
+  def these(items)
+    if items == 1
+      'This'
+    else
+      'These'
+    end
   end
 
-  def pr_plural
-    return "pull request has" if @old_pull_requests == "1"
-    "pull requests have"
+  def pr_plural(prs)
+    if prs == 1
+      'pull request has'
+    else
+      'pull requests have'
+    end
   end
 
   def present(pull_request, index)
@@ -90,10 +99,11 @@ class MessageBuilder
   end
 
   def angry
-    @alert = ""
-    check_old_pull_requests
-    return @alert if @old_pull_requests.length > 0
-    ""
+    if old_pull_requests.empty?
+      ''
+    else
+      bark_about_old_pull_requests
+    end
   end
 
 end
