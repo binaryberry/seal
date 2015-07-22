@@ -7,20 +7,15 @@ class MessageBuilder
     @mood = mood
   end
 
-  def informative
-   if @pull_requests == {}
-      no_pull_requests
+  def build
+    case mood
+    when 'informative'
+      informative
+    when 'angry'
+      angry
     else
-      list_pull_requests
-      @report
+      fail("This seal does not understand '#{mood}']")
     end
-  end
-
-  def angry
-    @alert = ""
-    check_old_pull_requests
-    return @alert if @old_pull_requests.length > 0
-    ""
   end
 
   def check_old_pull_requests
@@ -71,10 +66,27 @@ class MessageBuilder
   end
 
   def present(pull_request, index)
-    "#{index}) *" + @pull_requests[pull_request]["repo"] + "* | " +
-    @pull_requests[pull_request]["author"] +
-    "\n<" + @pull_requests[pull_request]["link"] + "|" + pull_requests[pull_request]["title"]  + "> - " +
-    @pull_requests[pull_request]["comments_count"] + comments(pull_request) + "\n"
+    pr = pull_requests[pull_request]
+    <<-EOF.gsub(/^\s+/, '')
+    #{index}\) *#{pr["repo"]}* | #{pr["author"]}
+    <#{pr["link"]}|#{pr["title"]}> - #{pr["comments_count"]}#{comments(pull_request)}
+    EOF
+  end
+
+  def informative
+   if @pull_requests == {}
+      no_pull_requests
+    else
+      list_pull_requests
+      @report
+    end
+  end
+
+  def angry
+    @alert = ""
+    check_old_pull_requests
+    return @alert if @old_pull_requests.length > 0
+    ""
   end
 
 end

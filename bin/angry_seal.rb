@@ -1,20 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'yaml'
-require "./lib/github_fetcher.rb"
-require "./lib/message_builder.rb"
-require "./lib/slack_poster.rb"
+require './lib/seal'
 
-CONFIG = YAML.load_file( "./config/config.yml" )[ARGV[0]]
-
-git = GithubFetcher.new(CONFIG["members"],CONFIG["repos"])
-
-list = git.list_pull_requests
-
-message_builder = MessageBuilder.new(list)
-
-message = message_builder.build
-
-slack = SlackPoster.new(ENV["SLACK_WEBHOOK"], CONFIG["channel"], "Informative")
-
-slack.send_request(message)
+Seal.new(ARGV[0], 'angry').bark

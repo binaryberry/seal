@@ -1,8 +1,7 @@
 require 'octokit'
 
 class GithubFetcher
-
-  ORGANISATION = "alphagov"
+  ORGANISATION ||= ENV['SEAL_ORGANISATION']
 
   attr_accessor :people, :repos, :pull_requests
 
@@ -48,10 +47,16 @@ class GithubFetcher
     end
   end
 
-private
+  private
+
   def pull_request_valid?(pull_request)
-    return true if @people.include?("#{pull_request.user.login}")
-    return false
+    if people.empty?
+      true
+    elsif people.include?("#{pull_request.user.login}")
+      true
+    else
+      false
+    end
   end
 
   def count_comments(pull_request, repo)

@@ -1,0 +1,10 @@
+envato-market:
+  members: []
+  repos:
+    - marketplace
+    - marketplace-puppet
+    - webuild.envato.com
+    - new-coding-test
+
+  channel: '#marketplacedev'
+
