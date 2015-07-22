@@ -60,6 +60,7 @@ custom:
     - imminence
     - licence-finder
     - manuals-frontend
+    - mapit
     - optic14n
     - pre-transition-stats
     - publishing-api
