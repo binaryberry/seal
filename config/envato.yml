@@ -1,10 +1,13 @@
 envato-market:
   members: []
   repos:
+    - docs
+    - envato.com
     - marketplace
     - marketplace-puppet
-    - webuild.envato.com
     - new-coding-test
+    - our-boxen
+    - webuild.envato.com
 
   channel: '#marketplacedev'
 
