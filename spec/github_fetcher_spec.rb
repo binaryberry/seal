@@ -31,6 +31,21 @@ describe 'GithubFetcher' do
             )
     end
 
+    let(:labels_for_2248) do
+      [
+        {
+          :url => 'https://api.github.com/repos/alphagov/whitehall/labels/blocked',
+          :name => 'blocked',
+          :color => 'e11d21'
+        },
+        {
+          :url => 'https://api.github.com/repos/alphagov/whitehall/labels/wip',
+          :name => 'wip',
+          :color => 'fbca04'
+        }
+      ]
+    end
+
     before do
       REPO_NAME = "#{GithubFetcher::ORGANISATION}/whitehall"
       expect(Octokit::Client).to receive(:new).and_return(fake_octokit_client)
@@ -38,6 +53,8 @@ describe 'GithubFetcher' do
       expect(fake_octokit_client).to receive(:pull_requests).and_return([pull_2266, pull_2248])
       expect(fake_octokit_client).to receive(:pull_request).at_least(:once).with(REPO_NAME, 2248).and_return(pull_2248)
       expect(fake_octokit_client).to receive(:pull_request).at_least(:once).with(REPO_NAME, 2266).and_return(pull_2266)
+      expect(fake_octokit_client).to receive(:labels_for_issue).at_least(:once).with(REPO_NAME, 2248).and_return(labels_for_2248)
+      expect(fake_octokit_client).to receive(:labels_for_issue).at_least(:once).with(REPO_NAME, 2266).and_return([])
     end
 
     it "displays open pull requests open on the team's repos by a team member" do
@@ -49,7 +66,8 @@ describe 'GithubFetcher' do
           'author' => 'mattbostock',
           'repo' => 'whitehall',
           'comments_count' => '1',
-          'updated' => Date.parse('2015-07-13 ((2457217j,0s,0n),+0s,2299161j)')
+          'updated' => Date.parse('2015-07-13 ((2457217j,0s,0n),+0s,2299161j)'),
+          'labels' => []
         },
 
         'Remove all Import-related code' =>
@@ -59,7 +77,8 @@ describe 'GithubFetcher' do
           'author' => 'tekin',
           'repo' => 'whitehall',
           'comments_count' => '5',
-          'updated' => Date.parse('2015-07-17 ((2457221j,0s,0n),+0s,2299161j)')
+          'updated' => Date.parse('2015-07-17 ((2457221j,0s,0n),+0s,2299161j)'),
+          'labels' => labels_for_2248
         }
       }
 

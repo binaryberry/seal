@@ -27,6 +27,7 @@ class GithubFetcher
           @pull_requests[pull_request.title]["repo"] = repo
           @pull_requests[pull_request.title]["comments_count"] = count_comments(pull_request, repo)
           @pull_requests[pull_request.title]["updated"] = Date.parse(pull_request.updated_at.to_s)
+          @pull_requests[pull_request.title]['labels'] = labels(pull_request, repo)
         end
       end
     end
@@ -65,4 +66,7 @@ class GithubFetcher
     @total_comments = (review_comments + comments).to_s
   end
 
+  def labels(pull_request, repo)
+    @github.labels_for_issue("#{ORGANISATION}/#{repo}", pull_request.number)
+  end
 end
