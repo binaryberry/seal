@@ -33,6 +33,7 @@ core-formats:
     - content-register
     - panopticon
     - govuk-content-schemas
+    - Accessible-Media-Player
 
   channel:
     "#core-formats"
