@@ -86,6 +86,9 @@ Just run `rspec` in the command line
 18th of June:
 - started Heroku scheduler and launched on core-formats team room!
 
+22nd of June
+- Ensure Angry seal doesn't get triggered at the weekend
+
 26th of June:
 - launched on finding-stuff team
 - investigated adding comments
@@ -102,14 +105,14 @@ Just run `rspec` in the command line
 17th of July
 - Angry Seal!
 
-To be done:
-- ensure Angry seal doesn't get triggered at the weekend
+21st of July
 - fix API stubbing
-- do not display [DO NOT MERGE] pull requests?
 
-Potential additional features:
-- angry seal post when PRs forgotten about
-- add age of pull requests
+22nd of July
+- Add age of pull requests
+
+To be done:
+- do not display [DO NOT MERGE] pull requests?
 
 How to find out list of alphagov repos modified within the last year:
 In irb, from the folder of the project, run:
