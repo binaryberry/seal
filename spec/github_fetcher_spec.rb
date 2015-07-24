@@ -2,7 +2,15 @@ require 'spec_helper'
 require './lib/github_fetcher'
 
 describe 'GithubFetcher' do
-  subject(:github_fetcher) { GithubFetcher.new(team_members_accounts, team_repos, use_labels, exclude_labels) }
+  subject(:github_fetcher) do
+    GithubFetcher.new(team_members_accounts,
+                      team_repos,
+                      use_labels,
+                      exclude_labels,
+                      exclude_titles
+                     )
+  end
+
   let(:fake_octokit_client) { double(Octokit::Client) }
   let(:repo_name) { "#{GithubFetcher::ORGANISATION}/whitehall" }
   let(:blocked_and_wip) do
@@ -46,6 +54,7 @@ describe 'GithubFetcher' do
     }
   end
   let(:exclude_labels) { nil }
+  let(:exclude_titles) { nil }
   let(:team_members_accounts) { %w(binaryberry boffbowsh jackscotti tekin elliotcm tommyp mattbostock) }
   let(:team_repos) { %w(whitehall) }
   let(:pull_2266) do
@@ -121,5 +130,26 @@ describe 'GithubFetcher' do
     let(:use_labels) { false }
 
     it_behaves_like 'fetching from GitHub'
+
+    context 'title exclusions' do
+      context 'excluding no titles' do
+        it_behaves_like 'fetching from GitHub'
+      end
+
+      context 'excluding "BLAH BLAH BLAH" title' do
+        let(:exclude_titles) { ['BLAH BLAH BLAH'] }
+
+        it_behaves_like 'fetching from GitHub'
+      end
+
+      context 'excluding "DISCUSSION" title' do
+        let(:exclude_titles) { ['FOR DISCUSSION ONLY'] }
+
+        it 'filters out the DISCUSSION' do
+          expect(github_fetcher.list_pull_requests.keys).not_to include '[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host'
+          expect(github_fetcher.list_pull_requests.keys).to include 'Remove all Import-related code'
+        end
+      end
+    end
   end
 end
