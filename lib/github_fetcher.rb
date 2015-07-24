@@ -3,7 +3,7 @@ require 'octokit'
 class GithubFetcher
   ORGANISATION ||= ENV['SEAL_ORGANISATION']
 
-  attr_accessor :people, :repos, :pull_requests
+  attr_accessor :people, :repos
 
   def initialize(team_members_accounts, team_repos, use_labels, exclude_labels)
     @github = Octokit::Client.new(:access_token => ENV['GITHUB_TOKEN'])
@@ -35,20 +35,6 @@ class GithubFetcher
       end
     end
     @pull_requests
-  end
-
-  def old_pull_requests
-    @repos.each do |repo|
-      response = @github.pull_requests("#{ORGANISATION}/#{repo}", state: "open")
-      response.each do |pull_request|
-        if person_subscribed?(pull_request)
-          comments = @github.pull_request_comments("#{ORGANISATION}/#{repo}", pull_request.number) #this returns an empty array, not sure why
-          comments.each do |comment|
-            comment.updated_at
-          end
-        end
-      end
-    end
   end
 
   private
