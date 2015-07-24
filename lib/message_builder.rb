@@ -25,7 +25,7 @@ class MessageBuilder
   private
 
   def old_pull_requests
-    @old_pull_requests ||= @pull_requests.reject { |title, pr| !rotten?(pr) }
+    @old_pull_requests ||= @pull_requests.reject { |_title, pr| !rotten?(pr) }
   end
 
   def bark_about_old_pull_requests
