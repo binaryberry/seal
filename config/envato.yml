@@ -1,4 +1,5 @@
 envato-market:
+  channel: '#marketplacedev'
   members: []
   repos:
     - docs
@@ -8,6 +9,6 @@ envato-market:
     - new-coding-test
     - our-boxen
     - webuild.envato.com
+  use_labels: true
 
-  channel: '#marketplacedev'
 
