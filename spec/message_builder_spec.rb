@@ -30,7 +30,6 @@ describe MessageBuilder do
   end
 
   before { Timecop.freeze(Time.local(2015, 07, 18)) }
-  after { Timecop.return }
 
   context 'with labels' do
     let(:mood) { 'informative' }
