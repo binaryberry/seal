@@ -5,7 +5,7 @@ class GithubFetcher
 
   attr_accessor :people, :repos, :pull_requests
 
-  def initialize(team_members_accounts, team_repos, use_labels)
+  def initialize(team_members_accounts, team_repos, use_labels, exclude_labels)
     @github = Octokit::Client.new(:access_token => ENV['GITHUB_TOKEN'])
     @github.user.login
     Octokit.auto_paginate = true
@@ -14,12 +14,13 @@ class GithubFetcher
     @pull_requests = {}
     @old_pull_requests = []
     @use_labels = use_labels
+    @exclude_labels = exclude_labels
   end
 
   def list_pull_requests
     @repos.each do |repo|
       response = @github.pull_requests("#{ORGANISATION}/#{repo}", state: "open")
-      response.each do |pull_request|
+      response.reject { |pr| hidden_labels(pr, repo) }.each do |pull_request|
         if pull_request_valid?(pull_request)
           @pull_requests[pull_request.title] = {}
           @pull_requests[pull_request.title]["title"] = pull_request.title
@@ -51,7 +52,7 @@ class GithubFetcher
 
   private
 
-  attr_reader :use_labels
+  attr_reader :use_labels, :exclude_labels
 
   def pull_request_valid?(pull_request)
     if people.empty?
@@ -72,5 +73,10 @@ class GithubFetcher
   def labels(pull_request, repo)
     return [] unless use_labels
     @github.labels_for_issue("#{ORGANISATION}/#{repo}", pull_request.number)
+  end
+
+  def hidden_labels(pull_request, repo)
+    return false unless exclude_labels
+    !(exclude_labels & labels(pull_request, repo).map { |l| l['name'] }).empty?
   end
 end

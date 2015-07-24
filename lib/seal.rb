@@ -31,7 +31,7 @@ class Seal
   end
 
   def pull_requests
-    git = GithubFetcher.new(config['members'], config['repos'], config['use_labels'])
+    git = GithubFetcher.new(config['members'], config['repos'], config['use_labels'], config['exclude_labels'])
     git.list_pull_requests
   end
 end
