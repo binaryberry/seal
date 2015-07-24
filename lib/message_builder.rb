@@ -81,7 +81,7 @@ class MessageBuilder
     when 0
       'today'
     when 1
-      "#{days} day ago"
+      "yesterday"
     else
       "#{days} days ago"
     end
