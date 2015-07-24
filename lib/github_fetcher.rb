@@ -5,7 +5,7 @@ class GithubFetcher
 
   attr_accessor :people, :repos, :pull_requests
 
-  def initialize(team_members_accounts, team_repos)
+  def initialize(team_members_accounts, team_repos, use_labels)
     @github = Octokit::Client.new(:access_token => ENV['GITHUB_TOKEN'])
     @github.user.login
     Octokit.auto_paginate = true
@@ -13,6 +13,7 @@ class GithubFetcher
     @repos = team_repos.sort!
     @pull_requests = {}
     @old_pull_requests = []
+    @use_labels = use_labels
   end
 
   def list_pull_requests
@@ -50,6 +51,8 @@ class GithubFetcher
 
   private
 
+  attr_reader :use_labels
+
   def pull_request_valid?(pull_request)
     if people.empty?
       true
@@ -67,6 +70,7 @@ class GithubFetcher
   end
 
   def labels(pull_request, repo)
+    return [] unless use_labels
     @github.labels_for_issue("#{ORGANISATION}/#{repo}", pull_request.number)
   end
 end
