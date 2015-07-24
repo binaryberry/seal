@@ -21,10 +21,7 @@ class GithubFetcher
   def list_pull_requests
     @repos.each do |repo|
       response = @github.pull_requests("#{ORGANISATION}/#{repo}", state: "open")
-      response.reject { |pr| hidden_labels(pr, repo) }
-        .reject { |pr| hidden_titles(pr.title) }
-        .select { |pr| person_subscribed?(pr) }
-        .each do |pull_request|
+      response.reject { |pr| hidden?(pr, repo) }.each do |pull_request|
         @pull_requests[pull_request.title] = {}.tap do |pr|
           pr['title'] = pull_request.title
           pr['link'] = pull_request.html_url
@@ -56,6 +53,10 @@ class GithubFetcher
   def labels(pull_request, repo)
     return [] unless use_labels
     @github.labels_for_issue("#{ORGANISATION}/#{repo}", pull_request.number)
+  end
+
+  def hidden?(pull_request, repo)
+    hidden_labels(pull_request, repo) || hidden_titles(pull_request.title) || !person_subscribed?(pull_request)
   end
 
   def hidden_labels(pull_request, repo)
