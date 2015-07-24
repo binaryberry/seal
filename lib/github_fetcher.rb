@@ -21,7 +21,7 @@ class GithubFetcher
     @repos.each do |repo|
       response = @github.pull_requests("#{ORGANISATION}/#{repo}", state: "open")
       response.reject { |pr| hidden_labels(pr, repo) }
-        .select { |pr| pull_request_valid?(pr) }
+        .select { |pr| person_subscribed?(pr) }
         .each do |pull_request|
         @pull_requests[pull_request.title] = {}.tap do |pr|
           pr['title'] = pull_request.title
@@ -41,7 +41,7 @@ class GithubFetcher
     @repos.each do |repo|
       response = @github.pull_requests("#{ORGANISATION}/#{repo}", state: "open")
       response.each do |pull_request|
-        if pull_request_valid?(pull_request)
+        if person_subscribed?(pull_request)
           comments = @github.pull_request_comments("#{ORGANISATION}/#{repo}", pull_request.number) #this returns an empty array, not sure why
           comments.each do |comment|
             comment.updated_at
@@ -55,14 +55,8 @@ class GithubFetcher
 
   attr_reader :use_labels, :exclude_labels
 
-  def pull_request_valid?(pull_request)
-    if people.empty?
-      true
-    elsif people.include?("#{pull_request.user.login}")
-      true
-    else
-      false
-    end
+  def person_subscribed?(pull_request)
+    people.empty? || people.include?("#{pull_request.user.login}")
   end
 
   def count_comments(pull_request, repo)
