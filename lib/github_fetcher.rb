@@ -20,17 +20,17 @@ class GithubFetcher
   def list_pull_requests
     @repos.each do |repo|
       response = @github.pull_requests("#{ORGANISATION}/#{repo}", state: "open")
-      response.reject { |pr| hidden_labels(pr, repo) }.each do |pull_request|
-        if pull_request_valid?(pull_request)
-          @pull_requests[pull_request.title] = {}
-          @pull_requests[pull_request.title]["title"] = pull_request.title
-          @pull_requests[pull_request.title]["link"] = pull_request.html_url
-          @pull_requests[pull_request.title]["author"] = pull_request.user.login
-          @pull_requests[pull_request.title]["repo"] = repo
-          @pull_requests[pull_request.title]["comments_count"] = count_comments(pull_request, repo)
-          @pull_requests[pull_request.title]["updated"] = Date.parse(pull_request.updated_at.to_s)
-          @pull_requests[pull_request.title]['labels'] = labels(pull_request, repo)
-        end
+      response.reject { |pr| hidden_labels(pr, repo) }
+        .select { |pr| pull_request_valid?(pr) }
+        .each do |pull_request|
+        @pull_requests[pull_request.title] = {}
+        @pull_requests[pull_request.title]["title"] = pull_request.title
+        @pull_requests[pull_request.title]["link"] = pull_request.html_url
+        @pull_requests[pull_request.title]["author"] = pull_request.user.login
+        @pull_requests[pull_request.title]["repo"] = repo
+        @pull_requests[pull_request.title]["comments_count"] = count_comments(pull_request, repo)
+        @pull_requests[pull_request.title]["updated"] = Date.parse(pull_request.updated_at.to_s)
+        @pull_requests[pull_request.title]['labels'] = labels(pull_request, repo)
       end
     end
     @pull_requests
