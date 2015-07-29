@@ -1,4 +1,4 @@
-# README
+# Seal [![Build Status](https://travis-ci.org/envato/seal.svg)](https://travis-ci.org/envato/seal)
 
 ##What is it?
 
