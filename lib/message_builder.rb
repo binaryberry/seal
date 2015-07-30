@@ -25,7 +25,7 @@ class MessageBuilder
   private
 
   def old_pull_requests
-    @old_pull_requests ||= @pull_requests.reject { |title, pr| !rotten?(pr) }
+    @old_pull_requests ||= @pull_requests.select { |_title, pr| rotten?(pr) }
   end
 
   def bark_about_old_pull_requests
@@ -68,7 +68,7 @@ class MessageBuilder
     days = age_in_days(pr)
     <<-EOF.gsub(/^\s+/, '')
     #{index}\) *#{pr["repo"]}* | #{pr["author"]} | updated #{days_plural(days)}
-    <#{pr["link"]}|#{pr["title"]}> - #{pr["comments_count"]}#{comments(pull_request)}
+    #{labels(pr)} <#{pr["link"]}|#{pr["title"]}> - #{pr["comments_count"]}#{comments(pull_request)}
     EOF
   end
 
@@ -101,5 +101,11 @@ class MessageBuilder
     else
       bark_about_old_pull_requests
     end
+  end
+
+  def labels(pull_request)
+    pull_request['labels']
+      .map { |label| "[#{label['name']}]" }
+      .join(' ')
   end
 end

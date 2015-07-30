@@ -3,9 +3,9 @@ require 'octokit'
 class GithubFetcher
   ORGANISATION ||= ENV['SEAL_ORGANISATION']
 
-  attr_accessor :people, :repos, :pull_requests
+  attr_accessor :people, :repos
 
-  def initialize(team_members_accounts, team_repos)
+  def initialize(team_members_accounts, team_repos, use_labels, exclude_labels, exclude_titles)
     @github = Octokit::Client.new(:access_token => ENV['GITHUB_TOKEN'])
     @github.user.login
     Octokit.auto_paginate = true
@@ -13,50 +13,35 @@ class GithubFetcher
     @repos = team_repos.sort!
     @pull_requests = {}
     @old_pull_requests = []
+    @use_labels = use_labels
+    @exclude_labels = exclude_labels
+    @exclude_titles = exclude_titles
   end
 
   def list_pull_requests
     @repos.each do |repo|
       response = @github.pull_requests("#{ORGANISATION}/#{repo}", state: "open")
-      response.each do |pull_request|
-        if pull_request_valid?(pull_request)
-          @pull_requests[pull_request.title] = {}
-          @pull_requests[pull_request.title]["title"] = pull_request.title
-          @pull_requests[pull_request.title]["link"] = pull_request.html_url
-          @pull_requests[pull_request.title]["author"] = pull_request.user.login
-          @pull_requests[pull_request.title]["repo"] = repo
-          @pull_requests[pull_request.title]["comments_count"] = count_comments(pull_request, repo)
-          @pull_requests[pull_request.title]["updated"] = Date.parse(pull_request.updated_at.to_s)
+      response.reject { |pr| hidden?(pr, repo) }.each do |pull_request|
+        @pull_requests[pull_request.title] = {}.tap do |pr|
+          pr['title'] = pull_request.title
+          pr['link'] = pull_request.html_url
+          pr['author'] = pull_request.user.login
+          pr['repo'] = repo
+          pr['comments_count'] = count_comments(pull_request, repo)
+          pr['updated'] = Date.parse(pull_request.updated_at.to_s)
+          pr['labels'] = labels(pull_request, repo)
         end
       end
     end
     @pull_requests
   end
 
-  def old_pull_requests
-    @repos.each do |repo|
-      response = @github.pull_requests("#{ORGANISATION}/#{repo}", state: "open")
-      response.each do |pull_request|
-        if pull_request_valid?(pull_request)
-          comments = @github.pull_request_comments("#{ORGANISATION}/#{repo}", pull_request.number) #this returns an empty array, not sure why
-          comments.each do |comment|
-            comment.updated_at
-          end
-        end
-      end
-    end
-  end
-
   private
 
-  def pull_request_valid?(pull_request)
-    if people.empty?
-      true
-    elsif people.include?("#{pull_request.user.login}")
-      true
-    else
-      false
-    end
+  attr_reader :use_labels, :exclude_labels, :exclude_titles
+
+  def person_subscribed?(pull_request)
+    people.empty? || people.include?("#{pull_request.user.login}")
   end
 
   def count_comments(pull_request, repo)
@@ -65,4 +50,22 @@ class GithubFetcher
     @total_comments = (review_comments + comments).to_s
   end
 
+  def labels(pull_request, repo)
+    return [] unless use_labels
+    @github.labels_for_issue("#{ORGANISATION}/#{repo}", pull_request.number)
+  end
+
+  def hidden?(pull_request, repo)
+    hidden_labels(pull_request, repo) || hidden_titles(pull_request.title) || !person_subscribed?(pull_request)
+  end
+
+  def hidden_labels(pull_request, repo)
+    return false unless exclude_labels
+    !(exclude_labels & labels(pull_request, repo).map { |l| l['name'] }).empty?
+  end
+
+  def hidden_titles(title)
+    return false unless exclude_titles
+    exclude_titles.any? { |t| title.include?(t) }
+  end
 end

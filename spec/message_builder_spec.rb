@@ -6,10 +6,56 @@ describe MessageBuilder do
   subject(:message_builder) { MessageBuilder.new(pull_requests, mood) }
 
   let(:no_pull_requests) { {} }
-  let(:old_pull_requests)   { { '[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host' => { 'title' => '[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host', 'link' => 'https://github.com/alphagov/whitehall/pull/2266', 'author' => 'mattbostock', 'repo' => 'whitehall', 'comments_count' => '1', 'updated' => Date.parse('2015-07-13 ((2457217j,0s,0n),+0s,2299161j)') }, 'Remove all Import-related code' => { 'title' => 'Remove all Import-related code', 'link' => 'https://github.com/alphagov/whitehall/pull/2248', 'author' => 'tekin', 'repo' => 'whitehall', 'comments_count' => '5', 'updated' => Date.parse('2015-07-17 ((2457221j,0s,0n),+0s,2299161j)') } } }
+  let(:old_pull_requests) do
+    {
+      '[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host' => {
+        'title' => '[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host',
+        'link' => 'https://github.com/alphagov/whitehall/pull/2266',
+        'author' => 'mattbostock',
+        'repo' => 'whitehall',
+        'comments_count' => '1',
+        'updated' => Date.parse('2015-07-13 ((2457217j, 0s, 0n), +0s, 2299161j)'),
+        'labels' => []
+      },
+      'Remove all Import-related code' => {
+        'title' => 'Remove all Import-related code',
+        'link' => 'https://github.com/alphagov/whitehall/pull/2248',
+        'author' => 'tekin',
+        'repo' => 'whitehall',
+        'comments_count' => '5',
+        'updated' => Date.parse('2015-07-17 ((2457221j, 0s, 0n), +0s, 2299161j)'),
+        'labels' => []
+      }
+    }
+  end
 
   before { Timecop.freeze(Time.local(2015, 07, 18)) }
-  after { Timecop.return }
+
+  context 'with labels' do
+    let(:mood) { 'informative' }
+    let(:pull_requests) do
+      {
+        'My WIP' => {
+          'title' => 'My WIP',
+          'link' => 'https://github.com/org/repo/pull/42',
+          'author' => 'Agatha Christie',
+          'repo' => 'repo',
+          'comments_count' => '0',
+          'updated' => Date.today,
+          'labels' => [
+            { 'name' => 'wip' },
+            { 'name' => 'blocked' }
+          ]
+        }
+      }
+    end
+
+    it 'includes the labels in the built message' do
+      expect(message_builder.build).to include(
+        '[wip] [blocked] <https://github.com/org/repo/pull/42|My WIP> - 0 comments'
+      )
+    end
+  end
 
   context 'informative' do
     let(:mood) { 'informative' }

@@ -111,8 +111,12 @@ Just run `rspec` in the command line
 22nd of July
 - Add age of pull requests
 
-To be done:
-- do not display [DO NOT MERGE] pull requests?
+24th of July
+- Optionally display labels for a pull request, if they exist (`use_labels` config option)
+- Optionally hide pull requests with certain labels (`exclude_labels` config
+  list)
+- Optionally hid pull requests with certain phrases in the title
+  (`exclude_titles` config list)
 
 How to find out list of alphagov repos modified within the last year:
 In irb, from the folder of the project, run:
