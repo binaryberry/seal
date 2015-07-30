@@ -1,4 +1,4 @@
-# README
+# Seal [![Build Status](https://travis-ci.org/binaryberry/seal.svg)](https://travis-ci.org/binaryberry/seal)
 
 ##What is it?
 
