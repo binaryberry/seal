@@ -116,7 +116,7 @@ Just run `rspec` in the command line
 - Optionally display labels for a pull request, if they exist (`use_labels` config option)
 - Optionally hide pull requests with certain labels (`exclude_labels` config
   list)
-- Optionally hid pull requests with certain phrases in the title
+- Optionally hide pull requests with certain phrases in the title
   (`exclude_titles` config list)
 
 How to find out list of alphagov repos modified within the last year:
