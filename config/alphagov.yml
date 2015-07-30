@@ -221,6 +221,7 @@ testing:
     - content-register
     - panopticon
     - govuk-content-schemas
+    - Accessible-Media-Player
 
   channel:
     "#testing"
