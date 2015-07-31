@@ -182,6 +182,7 @@ finding-things:
     - govuk-lint
     - situation-room
     - situation-room-dashboard
+    - recommended-links
 
   channel:
     "#finding-things"
