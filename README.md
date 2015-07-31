@@ -119,20 +119,19 @@ Just run `rspec` in the command line
 - Optionally hide pull requests with certain phrases in the title
   (`exclude_titles` config list)
 
-How to find out list of alphagov repos modified within the last year:
-In irb, from the folder of the project, run:
+## Tips
+
+How to list your organisation's repositories modified within the last year:
+
+In `irb`, from the folder of the project, run:
+
+```ruby
+require 'octokit'
+github = Octokit::Client.new(:access_token => ENV['GITHUB_TOKEN'], auto_pagination: true)
+response = github.repos(org: ENV['SEAL_ORGANISATION'])
+repo_names = response.select { |repo| Date.parse(repo.updated_at.to_s) > (Date.today - 365) }.map(&:name)
 ```
-require "./lib/github_fetcher.rb"
-@github = Github.new oauth_token: ENV['GITHUB_TOKEN'], auto_pagination: true
-response = @github.repos.list org:"alphagov"
-array = []
-repos_response.each do |repo|
-date = repo.updated_at
-array << repo.name if Date.parse(date) > Date.new(2015,5,5)
-end
-array
-```
-`array` returns the value of the repos modified since the 5th of May.
+
 ## CRC
 
 Github fetcher:
