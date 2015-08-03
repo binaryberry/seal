@@ -19,7 +19,16 @@ class MessageBuilder
   end
 
   def rotten?(pull_request)
-    age_in_days(pull_request) > 2
+    today = Date.today
+    actual_age = (today - pull_request['updated']).to_i
+    if today.monday?
+      weekdays_age = actual_age - 2
+    elsif today.tuesday?
+      weekdays_age = actual_age - 1
+    else
+      weekdays_age = actual_age
+    end
+    weekdays_age > 2
   end
 
   private
