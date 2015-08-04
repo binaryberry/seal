@@ -2,11 +2,15 @@ envato-market:
   channel: '#marketplacedev'
   members: []
   repos:
+    - db_backup
     - docs
     - envato.com
+    - front-end-coding-test
+    - market-dev-expectations
     - marketplace
     - marketplace-puppet
     - new-coding-test
+    - ops-coding-test
     - our-boxen
     - webuild.envato.com
   use_labels: true
