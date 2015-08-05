@@ -12,7 +12,6 @@ class GithubFetcher
     @people = team_members_accounts
     @repos = team_repos.sort!
     @pull_requests = {}
-    @old_pull_requests = []
     @use_labels = use_labels
     @exclude_labels = exclude_labels
     @exclude_titles = exclude_titles
