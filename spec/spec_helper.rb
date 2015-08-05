@@ -15,6 +15,7 @@
 # The `.rspec` file also contains a few flags that are not defaults but that
 # users commonly want.
 #
+require 'timecop'
 
 RSpec.configure do |config|
 
