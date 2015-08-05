@@ -81,11 +81,12 @@ describe 'GithubFetcher' do
   end
 
   before do
-    allow(Octokit::Client).to receive(:new).and_return(fake_octokit_client)
-    allow(fake_octokit_client).to receive_message_chain('user.login')
-    allow(fake_octokit_client).to receive(:pull_requests).and_return([pull_2266, pull_2248])
-    allow(fake_octokit_client).to receive(:pull_request).at_least(:once).with(repo_name, 2248).and_return(pull_2248)
-    allow(fake_octokit_client).to receive(:pull_request).at_least(:once).with(repo_name, 2266).and_return(pull_2266)
+    expect(Octokit::Client).to receive(:new).and_return(fake_octokit_client)
+    expect(fake_octokit_client).to receive_message_chain('user.login')
+    expect(fake_octokit_client).to receive(:pull_requests).with(repo_name, :state => 'open').and_return([pull_2266, pull_2248])
+
+    allow(fake_octokit_client).to receive(:pull_request).with(repo_name, 2248).and_return(pull_2248)
+    allow(fake_octokit_client).to receive(:pull_request).with(repo_name, 2266).and_return(pull_2266)
   end
 
   shared_examples_for 'fetching from GitHub' do
@@ -100,8 +101,8 @@ describe 'GithubFetcher' do
     let(:use_labels) { true }
 
     before do
-      expect(fake_octokit_client).to receive(:labels_for_issue).at_least(:once).with(repo_name, 2248).and_return(blocked_and_wip)
-      expect(fake_octokit_client).to receive(:labels_for_issue).at_least(:once).with(repo_name, 2266).and_return([])
+      expect(fake_octokit_client).to receive(:labels_for_issue).with(repo_name, 2248).and_return(blocked_and_wip)
+      expect(fake_octokit_client).to receive(:labels_for_issue).with(repo_name, 2266).and_return([])
 
       expected_open_prs['Remove all Import-related code']['labels'] = blocked_and_wip if expected_open_prs['Remove all Import-related code']
     end
@@ -120,8 +121,10 @@ describe 'GithubFetcher' do
       let(:exclude_labels) { ['wip'] }
 
       it 'filters out the WIP' do
-        expect(github_fetcher.list_pull_requests.keys).to include '[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host'
-        expect(github_fetcher.list_pull_requests.keys).not_to include 'Remove all Import-related code'
+        titles = github_fetcher.list_pull_requests.keys
+
+        expect(titles).not_to include 'Remove all Import-related code'
+        expect(titles).to include '[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host'
       end
     end
   end
@@ -146,8 +149,10 @@ describe 'GithubFetcher' do
         let(:exclude_titles) { ['FOR DISCUSSION ONLY'] }
 
         it 'filters out the DISCUSSION' do
-          expect(github_fetcher.list_pull_requests.keys).not_to include '[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host'
-          expect(github_fetcher.list_pull_requests.keys).to include 'Remove all Import-related code'
+          titles = github_fetcher.list_pull_requests.keys
+
+          expect(titles).not_to include '[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host'
+          expect(titles).to include 'Remove all Import-related code'
         end
       end
     end
