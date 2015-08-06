@@ -1,6 +1,5 @@
 require 'spec_helper'
 require './lib/message_builder'
-require 'timecop'
 
 describe MessageBuilder do
   subject(:message_builder) { MessageBuilder.new(pull_requests, mood) }

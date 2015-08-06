@@ -12,10 +12,10 @@ class GithubFetcher
     @people = team_members_accounts
     @repos = team_repos.sort!
     @pull_requests = {}
-    @old_pull_requests = []
     @use_labels = use_labels
     @exclude_labels = exclude_labels
     @exclude_titles = exclude_titles
+    @labels = {}
   end
 
   def list_pull_requests
@@ -45,14 +45,14 @@ class GithubFetcher
   end
 
   def count_comments(pull_request, repo)
-    review_comments = @github.pull_request("#{ORGANISATION}/#{repo}", pull_request.number).review_comments
-    comments = @github.pull_request("#{ORGANISATION}/#{repo}", pull_request.number).comments
-    @total_comments = (review_comments + comments).to_s
+    pr = @github.pull_request("#{ORGANISATION}/#{repo}", pull_request.number)
+    (pr.review_comments + pr.comments).to_s
   end
 
   def labels(pull_request, repo)
     return [] unless use_labels
-    @github.labels_for_issue("#{ORGANISATION}/#{repo}", pull_request.number)
+    key = "#{ORGANISATION}/#{repo}/#{pull_request.number}".to_sym
+    @labels[key] ||= @github.labels_for_issue("#{ORGANISATION}/#{repo}", pull_request.number)
   end
 
   def hidden?(pull_request, repo)
