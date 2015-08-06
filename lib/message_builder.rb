@@ -39,7 +39,7 @@ class MessageBuilder
 
   def bark_about_old_pull_requests
     msg = old_pull_requests.keys.each_with_index.map { |title, n| present(title, n + 1) }
-    "AAAAAAARGH! #{these(old_pull_requests.length)} #{pr_plural(old_pull_requests.length)} not been updated in over 2 days.\n\n#{msg.join}\n\n Remember each time you time you forget to review your pull requests, a baby seal dies."
+    "AAAAAAARGH! #{these(old_pull_requests.length)} #{pr_plural(old_pull_requests.length)} not been updated in over 2 days.\n\n#{msg.join}\nRemember each time you time you forget to review your pull requests, a baby seal dies."
   end
 
   def list_pull_requests
