@@ -16,7 +16,7 @@ GEM
     method_source (0.8.2)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
-    octokit (3.8.0)
+    octokit (4.0.1)
       sawyer (~> 0.6.0, >= 0.5.3)
     pry (0.10.1)
       coderay (~> 1.1.0)
@@ -51,7 +51,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  octokit (~> 3.0)
+  octokit (~> 4.0)
   pry-byebug
   rake
   rspec
