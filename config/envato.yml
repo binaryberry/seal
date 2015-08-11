@@ -31,7 +31,6 @@ discovery:
     - build.envato.com
     - search_public_api
     - discovery_users
-  use_labels: true
-  exclude_labels:
-    - wip
-    - WIP
+    - ami-builder
+    - discovery-docker
+  use_labels: false
