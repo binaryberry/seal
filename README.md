@@ -12,7 +12,8 @@ This is a Slack bot that publishes a team's pull requests to their Slack Channel
 Fork the repo, and change the config file to put: your team's name, the github names of your team members, the list of repos to follow, and the Slack channel you want to post to.
 
 In your shell profile, put in:
-```
+
+```sh
 export SEAL_ORGANISATION="your_github_organisation"
 export GITHUB_TOKEN="get_your_github_token_from_yourgithub_settings"
 export SLACK_WEBHOOK="get_your_incoming_webhook_link_for_your_slack_group_channel"
