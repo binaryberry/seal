@@ -1,6 +1,6 @@
 class MessageBuilder
 
-  attr_accessor :pull_requests, :report, :mood
+  attr_accessor :pull_requests, :report, :mood, :poster_mood
 
   def initialize(pull_requests, mood)
     @pull_requests = pull_requests
@@ -98,13 +98,16 @@ class MessageBuilder
 
   def informative
     if @pull_requests.empty?
+      @poster_mood = "approval"
       no_pull_requests
     else
+      @poster_mood = "informative"
       list_pull_requests
     end
   end
 
   def angry
+    @poster_mood = "angry"
     if old_pull_requests.empty?
       ''
     else
