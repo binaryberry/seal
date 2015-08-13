@@ -38,6 +38,15 @@ core-formats:
   channel:
     "#core-formats"
 
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - "[Do not merge]"
+    - "[Do Not Merge]"
+    - "[do not merge]"
+    - WIP
+    - wip
+    - Wip
+
 custom:
   members:
     - jennyd
@@ -80,6 +89,15 @@ custom:
 
   channel:
     "#custom"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - "[Do not merge]"
+    - "[Do Not Merge]"
+    - "[do not merge]"
+    - WIP
+    - wip
+    - Wip
 
 finding-things:
   members:
@@ -187,6 +205,15 @@ finding-things:
   channel:
     "#finding-things"
 
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - "[Do not merge]"
+    - "[Do Not Merge]"
+    - "[do not merge]"
+    - WIP
+    - wip
+    - Wip
+
 testing:
   members:
     - binaryberry
@@ -226,3 +253,12 @@ testing:
 
   channel:
     "#testing"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - "[Do not merge]"
+    - "[Do Not Merge]"
+    - "[do not merge]"
+    - WIP
+    - wip
+    - Wip
