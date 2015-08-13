@@ -38,6 +38,15 @@ core-formats:
   channel:
     "#core-formats"
 
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - "[Do not merge]"
+    - "[Do Not Merge]"
+    - "[do not merge]"
+    - WIP
+    - wip
+    - Wip
+
 custom:
   members:
     - jennyd
@@ -80,6 +89,15 @@ custom:
 
   channel:
     "#custom"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - "[Do not merge]"
+    - "[Do Not Merge]"
+    - "[do not merge]"
+    - WIP
+    - wip
+    - Wip
 
 finding-things:
   members:
@@ -187,6 +205,15 @@ finding-things:
   channel:
     "#finding-things"
 
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - "[Do not merge]"
+    - "[Do Not Merge]"
+    - "[do not merge]"
+    - WIP
+    - wip
+    - Wip
+
 testing:
   members:
     - binaryberry
@@ -198,31 +225,15 @@ testing:
 
   repos:
     - maslow
-    - signonotron2
-    - short-url-manager
-    - support
-    - feedback
-    - frontend
-    - specialist-publisher
-    - publisher
-    - whitehall
-    - govuk_content_api
-    - release
-    - metadata-api
-    - travel-advice-publisher
-    - info-frontend
-    - government-frontend
-    - support-api
-    - external-link-tracker
-    - specialist-frontend
-    - static
-    - asset-manager
-    - content-store
-    - url-arbiter
-    - content-register
-    - panopticon
-    - govuk-content-schemas
-    - Accessible-Media-Player
 
   channel:
     "#testing"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - "[Do not merge]"
+    - "[Do Not Merge]"
+    - "[do not merge]"
+    - WIP
+    - wip
+    - Wip
