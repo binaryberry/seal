@@ -16,7 +16,6 @@ envato-market:
   use_labels: true
   exclude_labels:
     - wip
-    - WIP
 discovery:
   channel: '#discovery-notify'
   members: []
