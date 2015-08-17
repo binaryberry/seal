@@ -117,10 +117,21 @@ describe 'GithubFetcher' do
       it_behaves_like 'fetching from GitHub'
     end
 
+    context 'excluding "WIP" label' do
+      let(:exclude_labels) { ['WIP'] }
+
+      it 'filters out the WIP' do
+        titles = github_fetcher.list_pull_requests.keys
+
+        expect(titles).not_to include 'Remove all Import-related code'
+        expect(titles).to include '[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host'
+      end
+    end
+
     context 'excluding "wip" label' do
       let(:exclude_labels) { ['wip'] }
 
-      it 'filters out the WIP' do
+      it 'filters out the wip' do
         titles = github_fetcher.list_pull_requests.keys
 
         expect(titles).not_to include 'Remove all Import-related code'
@@ -149,6 +160,17 @@ describe 'GithubFetcher' do
         let(:exclude_titles) { ['FOR DISCUSSION ONLY'] }
 
         it 'filters out the DISCUSSION' do
+          titles = github_fetcher.list_pull_requests.keys
+
+          expect(titles).not_to include '[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host'
+          expect(titles).to include 'Remove all Import-related code'
+        end
+      end
+
+      context 'excluding "discussion" title' do
+        let(:exclude_titles) { ['for discussion only'] }
+
+        it 'filters out the discussion' do
           titles = github_fetcher.list_pull_requests.keys
 
           expect(titles).not_to include '[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host'
