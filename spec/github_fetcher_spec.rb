@@ -155,6 +155,17 @@ describe 'GithubFetcher' do
           expect(titles).to include 'Remove all Import-related code'
         end
       end
+
+      context 'excluding "discussion" title' do
+        let(:exclude_titles) { ['for discussion only'] }
+
+        it 'filters out the discussion' do
+          titles = github_fetcher.list_pull_requests.keys
+
+          expect(titles).not_to include '[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host'
+          expect(titles).to include 'Remove all Import-related code'
+        end
+      end
     end
   end
 end

@@ -14,7 +14,7 @@ class GithubFetcher
     @pull_requests = {}
     @use_labels = use_labels
     @exclude_labels = exclude_labels
-    @exclude_titles = exclude_titles
+    @exclude_titles = exclude_titles.map(&:downcase).uniq if exclude_titles
     @labels = {}
   end
 
@@ -66,6 +66,6 @@ class GithubFetcher
 
   def hidden_titles(title)
     return false unless exclude_titles
-    exclude_titles.any? { |t| title.include?(t) }
+    exclude_titles.any? { |t| title.downcase.include?(t) }
   end
 end
