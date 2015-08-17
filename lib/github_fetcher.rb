@@ -56,7 +56,7 @@ class GithubFetcher
   end
 
   def hidden?(pull_request, repo)
-    hidden_labels(pull_request, repo) || hidden_titles(pull_request.title) || !person_subscribed?(pull_request)
+    hidden_labels(pull_request, repo) || excluded_title?(pull_request.title) || !person_subscribed?(pull_request)
   end
 
   def hidden_labels(pull_request, repo)
@@ -64,7 +64,7 @@ class GithubFetcher
     !(exclude_labels & labels(pull_request, repo).map { |l| l['name'] }).empty?
   end
 
-  def hidden_titles(title)
+  def excluded_title?(title)
     exclude_titles && exclude_titles.any? { |t| title.downcase.include?(t) }
   end
 end
