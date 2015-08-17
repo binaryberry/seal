@@ -56,10 +56,10 @@ class GithubFetcher
   end
 
   def hidden?(pull_request, repo)
-    hidden_labels(pull_request, repo) || excluded_title?(pull_request.title) || !person_subscribed?(pull_request)
+    excluded_label?(pull_request, repo) || excluded_title?(pull_request.title) || !person_subscribed?(pull_request)
   end
 
-  def hidden_labels(pull_request, repo)
+  def excluded_label?(pull_request, repo)
     return false unless exclude_labels
     lowercase_label_names = labels(pull_request, repo).map { |l| l['name'].downcase }
     exclude_labels.any? { |e| lowercase_label_names.include?(e) }
