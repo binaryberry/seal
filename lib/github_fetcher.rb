@@ -65,7 +65,6 @@ class GithubFetcher
   end
 
   def hidden_titles(title)
-    return false unless exclude_titles
-    exclude_titles.any? { |t| title.downcase.include?(t) }
+    exclude_titles && exclude_titles.any? { |t| title.downcase.include?(t) }
   end
 end
