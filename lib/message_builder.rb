@@ -1,6 +1,6 @@
 class MessageBuilder
 
-  attr_accessor :pull_requests, :report, :mood
+  attr_accessor :pull_requests, :report, :mood, :poster_mood
 
   def initialize(pull_requests, mood)
     @pull_requests = pull_requests
@@ -39,7 +39,7 @@ class MessageBuilder
 
   def bark_about_old_pull_requests
     msg = old_pull_requests.keys.each_with_index.map { |title, n| present(title, n + 1) }
-    "AAAAAAARGH! #{these(old_pull_requests.length)} #{pr_plural(old_pull_requests.length)} not been updated in over 2 days.\n\n#{msg.join}\n\n Remember each time you time you forget to review your pull requests, a baby seal dies."
+    "AAAAAAARGH! #{these(old_pull_requests.length)} #{pr_plural(old_pull_requests.length)} not been updated in over 2 days.\n\n#{msg.join}\nRemember each time you time you forget to review your pull requests, a baby seal dies."
   end
 
   def list_pull_requests
@@ -98,13 +98,16 @@ class MessageBuilder
 
   def informative
     if @pull_requests.empty?
+      @poster_mood = "approval"
       no_pull_requests
     else
+      @poster_mood = "informative"
       list_pull_requests
     end
   end
 
   def angry
+    @poster_mood = "angry"
     if old_pull_requests.empty?
       ''
     else

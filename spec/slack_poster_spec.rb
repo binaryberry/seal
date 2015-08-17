@@ -7,7 +7,7 @@ describe 'slack_poster' do
   let(:webhook_url) { 'https://slack/webhook' }
   let(:team_channel) { '#angry-seal-bot-test' }
   let(:message) { 'test running!' }
-  let(:mood) { 'Informative' }
+  let(:mood) { 'informative' }
   let(:fake_slack_poster) { instance_double(Slack::Poster) }
 
   context 'send_request' do

@@ -17,8 +17,9 @@ class Seal
 
   def bark
     message_builder = MessageBuilder.new(pull_requests, mood)
+    # require 'pry';binding.pry
     message = message_builder.build
-    slack = SlackPoster.new(ENV['SLACK_WEBHOOK'], config['channel'], mood.capitalize)
+    slack = SlackPoster.new(ENV['SLACK_WEBHOOK'], config['channel'], message_builder.poster_mood)
     slack.send_request(message)
   end
 
