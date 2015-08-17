@@ -12,11 +12,16 @@ This is a Slack bot that publishes a team's pull requests to their Slack Channel
 Fork the repo, and change the config file to put: your team's name, the github names of your team members, the list of repos to follow, and the Slack channel you want to post to.
 
 In your shell profile, put in:
-```
+
+```sh
 export SEAL_ORGANISATION="your_github_organisation"
 export GITHUB_TOKEN="get_your_github_token_from_yourgithub_settings"
 export SLACK_WEBHOOK="get_your_incoming_webhook_link_for_your_slack_group_channel"
 ```
+
+- To get a new `GITHUB_TOKEN`, head to: https://github.com/settings/tokens
+- To get a new `SLACK_WEBHOOK`, head to: https://<your_organisation_here>.slack.com/services/new/incoming-webhook
+
 To test the script locally, go to Slack and create a channel or private group called "#angry-seal-bot-test". Then run `./bin/informative_seal.rb your_team_name` in your command line, and you should see the post in the #angry-seal-bot-test channel.
 
 When that works, you can push the app to Heroku, add the GITHUB_TOKEN and SLACK_WEBHOOK environment variables to heroku, and use the Heroku scheduler add-on to create repeated rasks - I set Informative Seal to run at 9.30am every morning (the seal won't post on weekends), and will set Angry Seal to run every afternoon.

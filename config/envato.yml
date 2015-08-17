@@ -17,5 +17,20 @@ envato-market:
   exclude_labels:
     - wip
     - WIP
-
-
+discovery:
+  channel: '#discovery-notify'
+  members: []
+  repos:
+    - discovery
+    - solid_octane
+    - solid_octane_service
+    - dewey
+    - discovery-scheduler
+    - recommender-api
+    - api-gateway
+    - build.envato.com
+    - search_public_api
+    - discovery_users
+    - ami-builder
+    - discovery-docker
+  use_labels: false
