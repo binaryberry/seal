@@ -10,7 +10,6 @@ envato-market:
     - marketplace
     - marketplace-puppet
     - new-coding-test
-    - ops-coding-test
     - our-boxen
     - webuild.envato.com
   use_labels: true
@@ -34,3 +33,16 @@ discovery:
     - ami-builder
     - discovery-docker
   use_labels: false
+
+site-reliability:
+  channel: '#mp-site-reliability'
+  members: []
+  repos:
+    - envato-cloud-management
+    - lua-deflector
+    - marketplace-ansible
+    - ops-coding-test
+    - toolbox
+  use_labels: true
+  exclude_labels:
+    - wip
