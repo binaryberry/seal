@@ -13,8 +13,8 @@ class GithubFetcher
     @repos = team_repos.sort!
     @pull_requests = {}
     @use_labels = use_labels
-    @exclude_labels = exclude_labels
-    @exclude_titles = exclude_titles
+    @exclude_labels = exclude_labels.map(&:downcase).uniq if exclude_labels
+    @exclude_titles = exclude_titles.map(&:downcase).uniq if exclude_titles
     @labels = {}
   end
 
@@ -56,16 +56,16 @@ class GithubFetcher
   end
 
   def hidden?(pull_request, repo)
-    hidden_labels(pull_request, repo) || hidden_titles(pull_request.title) || !person_subscribed?(pull_request)
+    excluded_label?(pull_request, repo) || excluded_title?(pull_request.title) || !person_subscribed?(pull_request)
   end
 
-  def hidden_labels(pull_request, repo)
+  def excluded_label?(pull_request, repo)
     return false unless exclude_labels
-    !(exclude_labels & labels(pull_request, repo).map { |l| l['name'] }).empty?
+    lowercase_label_names = labels(pull_request, repo).map { |l| l['name'].downcase }
+    exclude_labels.any? { |e| lowercase_label_names.include?(e) }
   end
 
-  def hidden_titles(title)
-    return false unless exclude_titles
-    exclude_titles.any? { |t| title.include?(t) }
+  def excluded_title?(title)
+    exclude_titles && exclude_titles.any? { |t| title.downcase.include?(t) }
   end
 end

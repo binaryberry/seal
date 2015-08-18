@@ -40,12 +40,7 @@ core-formats:
 
   exclude_titles:
     - "[DO NOT MERGE]"
-    - "[Do not merge]"
-    - "[Do Not Merge]"
-    - "[do not merge]"
     - WIP
-    - wip
-    - Wip
 
 custom:
   members:
@@ -92,12 +87,7 @@ custom:
 
   exclude_titles:
     - "[DO NOT MERGE]"
-    - "[Do not merge]"
-    - "[Do Not Merge]"
-    - "[do not merge]"
     - WIP
-    - wip
-    - Wip
 
 finding-things:
   members:
@@ -207,12 +197,7 @@ finding-things:
 
   exclude_titles:
     - "[DO NOT MERGE]"
-    - "[Do not merge]"
-    - "[Do Not Merge]"
-    - "[do not merge]"
     - WIP
-    - wip
-    - Wip
 
 testing:
   members:
@@ -256,9 +241,4 @@ testing:
 
   exclude_titles:
     - "[DO NOT MERGE]"
-    - "[Do not merge]"
-    - "[Do Not Merge]"
-    - "[do not merge]"
     - WIP
-    - wip
-    - Wip
