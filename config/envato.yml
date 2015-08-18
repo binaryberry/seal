@@ -1,3 +1,13 @@
+boxen:
+  channel: '#boxen'
+  members: []
+  repos:
+    - boxen-web
+    - our-boxen
+  use_labels: true
+  exclude_labels:
+    - wip
+
 envato-market:
   channel: '#marketplacedev'
   members: []
