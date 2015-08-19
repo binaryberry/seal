@@ -124,6 +124,11 @@ Just run `rspec` in the command line
 - Optionally hide pull requests with certain phrases in the title
   (`exclude_titles` config list)
 
+19th of August
+- Seal will bark at all teams in the config if no team is specified as an
+  argument to `./bin/{angry,informative}_seal.rb`, making Heroku scheduling
+  easier.
+
 ## Tips
 
 How to list your organisation's repositories modified within the last year:
