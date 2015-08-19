@@ -16,22 +16,34 @@ class Seal
   end
 
   def bark
-    message_builder = MessageBuilder.new(pull_requests, mood)
-    # require 'pry';binding.pry
-    message = message_builder.build
-    slack = SlackPoster.new(ENV['SLACK_WEBHOOK'], config['channel'], message_builder.poster_mood)
-    slack.send_request(message)
+    teams.each { |team| bark_at(team) }
   end
 
   private
 
-  attr_accessor :team, :mood
+  attr_accessor :mood
 
-  def config
-    @config ||= YAML.load_file("./config/#{ORGANISATION}.yml")[team]
+  def teams
+    if @team.nil?
+      org_config.keys
+    else
+      [@team]
+    end
   end
 
-  def pull_requests
+  def bark_at(team)
+    message_builder = MessageBuilder.new(pull_requests(team), mood)
+    message = message_builder.build
+    slack = SlackPoster.new(ENV['SLACK_WEBHOOK'], team_config(team)['channel'], message_builder.poster_mood)
+    slack.send_request(message)
+  end
+
+  def org_config
+    @org_config ||= YAML.load_file("./config/#{ORGANISATION}.yml")
+  end
+
+  def pull_requests(team)
+    config = team_config(team)
     git = GithubFetcher.new(config['members'],
                             config['repos'],
                             config['use_labels'],
@@ -39,5 +51,9 @@ class Seal
                             config['exclude_titles']
                            )
     git.list_pull_requests
+  end
+
+  def team_config(team)
+    org_config[team]
   end
 end
