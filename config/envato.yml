@@ -51,6 +51,7 @@ site-reliability:
     - envato-cloud-management
     - lua-deflector
     - marketplace-ansible
+    - marketplace-puppet
     - ops-coding-test
     - toolbox
   use_labels: true
