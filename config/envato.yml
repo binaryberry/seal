@@ -19,6 +19,7 @@ envato-market:
     - market-dev-expectations
     - marketplace
     - marketplace-puppet
+    - marketplace_debian_package_build_scripts
     - new-coding-test
     - our-boxen
     - webuild.envato.com
