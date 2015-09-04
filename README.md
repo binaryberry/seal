@@ -129,6 +129,10 @@ Just run `rspec` in the command line
   argument to `./bin/{angry,informative}_seal.rb`, making Heroku scheduling
   easier.
 
+4th of September
+- Seal now displays thumbs up when present in comments
+- Angry seal now looks angrier
+
 ## Tips
 
 How to list your organisation's repositories modified within the last year:
