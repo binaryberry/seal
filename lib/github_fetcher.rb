@@ -28,6 +28,7 @@ class GithubFetcher
           pr['author'] = pull_request.user.login
           pr['repo'] = repo
           pr['comments_count'] = count_comments(pull_request, repo)
+          pr['thumbs_up'] = count_thumbs_up(pull_request, repo)
           pr['updated'] = Date.parse(pull_request.updated_at.to_s)
           pr['labels'] = labels(pull_request, repo)
         end
@@ -47,6 +48,12 @@ class GithubFetcher
   def count_comments(pull_request, repo)
     pr = @github.pull_request("#{ORGANISATION}/#{repo}", pull_request.number)
     (pr.review_comments + pr.comments).to_s
+  end
+
+  def count_thumbs_up(pull_request, repo)
+    response = @github.issue_comments("#{ORGANISATION}/#{repo}", pull_request.number)
+    comments_string = response.map {|comment| comment.body}.join
+    thumbs_up = comments_string.scan(/:\+1:/).count.to_s
   end
 
   def labels(pull_request, repo)
