@@ -207,6 +207,7 @@ testing:
     - benilovj
     - fofr
     - edds
+    - ajlanghorn
 
   repos:
     - maslow
