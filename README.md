@@ -5,8 +5,8 @@
 
 This is a Slack bot that publishes a team's pull requests to their Slack Channel, once provided the organisation name, the team members' github names, and a list of repos to follow. It is my first 20% project at GDS.
 
-![image](https://github.com/binaryberry/seal/blob/master/images/informative.png)
-![image](https://github.com/binaryberry/seal/blob/master/images/angry.png)
+![image](https://github.com/binaryberry/seal/blob/master/images/readme/informative.png)
+![image](https://github.com/binaryberry/seal/blob/master/images/readme/angry.png)
 
 ##How to use it?
 Fork the repo, and change the config file to put: your team's name, the github names of your team members, the list of repos to follow, and the Slack channel you want to post to.
@@ -23,6 +23,12 @@ export SLACK_WEBHOOK="get_your_incoming_webhook_link_for_your_slack_group_channe
 - To get a new `SLACK_WEBHOOK`, head to: https://<your_organisation_here>.slack.com/services/new/incoming-webhook
 
 To test the script locally, go to Slack and create a channel or private group called "#angry-seal-bot-test". Then run `./bin/informative_seal.rb your_team_name` in your command line, and you should see the post in the #angry-seal-bot-test channel.
+
+You should also set up the following custom emojis in Slack:
+- :informative_seal:
+- :angrier_seal:
+- :seal_of_approval:
+You can use the images in images/emojis that have the corresponding names.
 
 When that works, you can push the app to Heroku, add the GITHUB_TOKEN and SLACK_WEBHOOK environment variables to heroku, and use the Heroku scheduler add-on to create repeated rasks - I set Informative Seal to run at 9.30am every morning (the seal won't post on weekends), and will set Angry Seal to run every afternoon.
 
@@ -123,6 +129,15 @@ Just run `rspec` in the command line
   list)
 - Optionally hide pull requests with certain phrases in the title
   (`exclude_titles` config list)
+
+19th of August
+- Seal will bark at all teams in the config if no team is specified as an
+  argument to `./bin/{angry,informative}_seal.rb`, making Heroku scheduling
+  easier.
+
+4th of September
+- Seal now displays thumbs up when present in comments
+- Angry seal now looks angrier
 
 ## Tips
 

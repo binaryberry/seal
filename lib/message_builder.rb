@@ -75,8 +75,10 @@ class MessageBuilder
   def present(pull_request, index)
     pr = pull_requests[pull_request]
     days = age_in_days(pr)
+    thumbs_up = ''
+    thumbs_up = " | #{pr["thumbs_up"].to_i} :+1:" if pr["thumbs_up"].to_i > 0
     <<-EOF.gsub(/^\s+/, '')
-    #{index}\) *#{pr["repo"]}* | #{pr["author"]} | updated #{days_plural(days)}
+    #{index}\) *#{pr["repo"]}* | #{pr["author"]} | updated #{days_plural(days)}#{thumbs_up}
     #{labels(pr)} <#{pr["link"]}|#{pr["title"]}> - #{pr["comments_count"]}#{comments(pull_request)}
     EOF
   end

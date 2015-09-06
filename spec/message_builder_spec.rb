@@ -13,6 +13,7 @@ describe MessageBuilder do
         'author' => 'mattbostock',
         'repo' => 'whitehall',
         'comments_count' => '1',
+        'thumbs_up' => '1',
         'updated' => Date.parse('2015-07-13 ((2457217j, 0s, 0n), +0s, 2299161j)'),
         'labels' => []
       },
@@ -22,6 +23,7 @@ describe MessageBuilder do
         'author' => 'tekin',
         'repo' => 'whitehall',
         'comments_count' => '5',
+        'thumbs_up' => '0',
         'updated' => Date.parse('2015-07-17 ((2457221j, 0s, 0n), +0s, 2299161j)'),
         'labels' => []
       }
@@ -40,6 +42,7 @@ describe MessageBuilder do
           'author' => 'Agatha Christie',
           'repo' => 'repo',
           'comments_count' => '0',
+          'thumbs_up' => '0',
           'updated' => Date.today,
           'labels' => [
             { 'name' => 'wip' },
@@ -63,7 +66,7 @@ describe MessageBuilder do
       let(:pull_requests) { old_pull_requests }
 
       it 'builds message' do
-        expect(message_builder.build).to eq("Good morning team! \n\n Here are the pull requests that need to be reviewed today:\n\n1) *whitehall* | mattbostock | updated 5 days ago\n<https://github.com/alphagov/whitehall/pull/2266|[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host> - 1 comment\n2) *whitehall* | tekin | updated yesterday\n<https://github.com/alphagov/whitehall/pull/2248|Remove all Import-related code> - 5 comments\n\nMerry reviewing!")
+        expect(message_builder.build).to eq("Good morning team! \n\n Here are the pull requests that need to be reviewed today:\n\n1) *whitehall* | mattbostock | updated 5 days ago | 1 :+1:\n<https://github.com/alphagov/whitehall/pull/2266|[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host> - 1 comment\n2) *whitehall* | tekin | updated yesterday\n<https://github.com/alphagov/whitehall/pull/2248|Remove all Import-related code> - 5 comments\n\nMerry reviewing!")
       end
     end
 
@@ -83,7 +86,7 @@ describe MessageBuilder do
       let(:pull_requests) { old_pull_requests }
 
       it 'builds message' do
-        expect(message_builder.build).to eq("AAAAAAARGH! This pull request has not been updated in over 2 days.\n\n1) *whitehall* | mattbostock | updated 5 days ago\n<https://github.com/alphagov/whitehall/pull/2266|[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host> - 1 comment\n\nRemember each time you time you forget to review your pull requests, a baby seal dies.")
+        expect(message_builder.build).to eq("AAAAAAARGH! This pull request has not been updated in over 2 days.\n\n1) *whitehall* | mattbostock | updated 5 days ago | 1 :+1:\n<https://github.com/alphagov/whitehall/pull/2266|[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host> - 1 comment\n\nRemember each time you time you forget to review your pull requests, a baby seal dies.")
       end
     end
 
@@ -97,7 +100,7 @@ describe MessageBuilder do
 
     context 'rotting' do
       let(:pull_request) do
-        { 'title' => '[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host', 'link' => 'https://github.com/alphagov/whitehall/pull/2266', 'author' => 'mattbostock', 'repo' => 'whitehall', 'comments_count' => '1', 'updated' => Date.parse('2015-07-13 ((2457217j,0s,0n),+0s,2299161j)') }
+        { 'title' => '[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host', 'link' => 'https://github.com/alphagov/whitehall/pull/2266', 'author' => 'mattbostock', 'repo' => 'whitehall', 'comments_count' => '1', 'thumbs_up' => '0', 'updated' => Date.parse('2015-07-13 ((2457217j,0s,0n),+0s,2299161j)') }
       end
 
       let(:pull_requests) { [pull_request] }
