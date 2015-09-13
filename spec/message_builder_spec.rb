@@ -102,47 +102,52 @@ describe MessageBuilder do
 
   end
 
-  context 'there are some PR that are over 2 days old' do
+  context 'there are some PRs that are over 2 days old' do
     let(:mood) { 'angry' }
-
-    context 'old pull requests' do
-      let(:pull_requests) { old_and_new_pull_requests }
-
-      it 'builds message' do
-        expect(message_builder.build).to eq("AAAAAAARGH! This pull request has not been updated in over 2 days.\n\n1) *whitehall* | mattbostock | updated 5 days ago | 1 :+1:\n<https://github.com/alphagov/whitehall/pull/2266|[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host> - 1 comment\n\nRemember each time you time you forget to review your pull requests, a baby seal dies.")
+    let(:pull_requests) { old_and_new_pull_requests }
+      context "and some recent ones" do
+        before { Timecop.freeze(Time.local(2015, 07, 18)) }
+        it 'builds message' do
+          expect(message_builder.build).to eq("AAAAAAARGH! This pull request has not been updated in over 2 days.\n\n1) *whitehall* | mattbostock | updated 5 days ago | 1 :+1:\n<https://github.com/alphagov/whitehall/pull/2266|[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host> - 1 comment\n\nRemember each time you time you forget to review your pull requests, a baby seal dies.\n    \n\nThere are also these pull requests that need to be reviewed today:\n\n1) *whitehall* | tekin | updated yesterday\n<https://github.com/alphagov/whitehall/pull/2248|Remove all Import-related code> - 5 comments\n ")
+        end
       end
 
-      it 'has an angry poster mood' do
-        message_builder.build
-        expect(message_builder.poster_mood).to eq("angry")
+      context "but no recent ones" do
+        before { Timecop.freeze(Time.local(2015, 07, 16)) }
+        it 'builds message' do
+          expect(message_builder.build).to eq("AAAAAAARGH! This pull request has not been updated in over 2 days.\n\n1) *whitehall* | mattbostock | updated 3 days ago | 1 :+1:\n<https://github.com/alphagov/whitehall/pull/2266|[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host> - 1 comment\n\nRemember each time you time you forget to review your pull requests, a baby seal dies.\n    \n\nThere are also these pull requests that need to be reviewed today:\n\n1) *whitehall* | tekin | updated -1 days ago\n<https://github.com/alphagov/whitehall/pull/2248|Remove all Import-related code> - 5 comments\n ")
+        end
+      end
+    it 'has an angry poster mood' do
+      message_builder.build
+      expect(message_builder.poster_mood).to eq("angry")
+    end
+  end
+
+  context 'rotting' do
+    let(:pull_request) do
+      { 'title' => '[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host', 'link' => 'https://github.com/alphagov/whitehall/pull/2266', 'author' => 'mattbostock', 'repo' => 'whitehall', 'comments_count' => '1', 'thumbs_up' => '0', 'updated' => Date.parse('2015-07-13 ((2457217j,0s,0n),+0s,2299161j)') }
+    end
+
+    let(:pull_requests) { [pull_request] }
+
+    context 'old PR' do
+      before do
+        Timecop.freeze(Time.local(2015, 07, 16))
+      end
+
+      it 'is rotten' do
+        expect(message_builder).to be_rotten(pull_request)
       end
     end
 
-    context 'rotting' do
-      let(:pull_request) do
-        { 'title' => '[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host', 'link' => 'https://github.com/alphagov/whitehall/pull/2266', 'author' => 'mattbostock', 'repo' => 'whitehall', 'comments_count' => '1', 'thumbs_up' => '0', 'updated' => Date.parse('2015-07-13 ((2457217j,0s,0n),+0s,2299161j)') }
+    context 'recent PR' do
+      before do
+        Timecop.freeze(Time.local(2015, 07, 15))
       end
 
-      let(:pull_requests) { [pull_request] }
-
-      context 'old PR' do
-        before do
-          Timecop.freeze(Time.local(2015, 07, 16))
-        end
-
-        it 'is rotten' do
-          expect(message_builder).to be_rotten(pull_request)
-        end
-      end
-
-      context 'recent PR' do
-        before do
-          Timecop.freeze(Time.local(2015, 07, 15))
-        end
-
-        it 'is not rotten' do
-          expect(message_builder).to_not be_rotten(pull_request)
-        end
+      it 'is not rotten' do
+        expect(message_builder).to_not be_rotten(pull_request)
       end
     end
   end

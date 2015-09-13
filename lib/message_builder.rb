@@ -39,13 +39,17 @@ class MessageBuilder
   end
 
   def bark_about_old_pull_requests
-    msg = old_pull_requests.keys.each_with_index.map { |title, n| present(title, n + 1) }
-    "AAAAAAARGH! #{these(old_pull_requests.length)} #{pr_plural(old_pull_requests.length)} not been updated in over 2 days.\n\n#{msg.join}\nRemember each time you time you forget to review your pull requests, a baby seal dies."
+    angry_bark = old_pull_requests.keys.each_with_index.map { |title, n| present(title, n + 1) }
+    recent_pull_requests = @pull_requests.reject { |_title, pr| rotten?(pr) }
+    list_recent_pull_requests = recent_pull_requests.keys.each_with_index.map { |title, n| present(title, n + 1) }
+    informative_bark = "There are also these pull requests that need to be reviewed today:\n\n#{list_recent_pull_requests.join} " if !recent_pull_requests.empty?
+    "AAAAAAARGH! #{these(old_pull_requests.length)} #{pr_plural(old_pull_requests.length)} not been updated in over 2 days.\n\n#{angry_bark.join}\nRemember each time you time you forget to review your pull requests, a baby seal dies.
+    \n\n#{informative_bark}"
   end
 
   def list_pull_requests
-    msg = @pull_requests.keys.each_with_index.map { |title, n| present(title, n + 1) }
-    "Good morning team! \n\n Here are the pull requests that need to be reviewed today:\n\n#{msg.join}\nMerry reviewing!"
+    message = @pull_requests.keys.each_with_index.map { |title, n| present(title, n + 1) }
+    "Good morning team! \n\n Here are the pull requests that need to be reviewed today:\n\n#{message.join}\nMerry reviewing!"
   end
 
   def no_pull_requests
