@@ -2,19 +2,20 @@ class MessageBuilder
 
   attr_accessor :pull_requests, :report, :mood, :poster_mood
 
-  def initialize(pull_requests, mood)
+  def initialize(pull_requests)
     @pull_requests = pull_requests
-    @mood = mood
   end
 
   def build
-    case mood
-    when 'informative'
-      informative
-    when 'angry'
-      angry
+    if !old_pull_requests.empty?
+      @poster_mood = "angry"
+      bark_about_old_pull_requests
+    elsif @pull_requests.empty?
+      @poster_mood = "approval"
+      no_pull_requests
     else
-      fail("This seal does not understand '#{mood}']")
+      @poster_mood = "informative"
+      list_pull_requests
     end
   end
 
@@ -95,25 +96,6 @@ class MessageBuilder
       "yesterday"
     else
       "#{days} days ago"
-    end
-  end
-
-  def informative
-    if @pull_requests.empty?
-      @poster_mood = "approval"
-      no_pull_requests
-    else
-      @poster_mood = "informative"
-      list_pull_requests
-    end
-  end
-
-  def angry
-    @poster_mood = "angry"
-    if old_pull_requests.empty?
-      ''
-    else
-      bark_about_old_pull_requests
     end
   end
 

@@ -2,7 +2,7 @@ require 'spec_helper'
 require './lib/seal'
 
 describe Seal do
-  subject(:seal) { described_class.new(team, mood) }
+  subject(:seal) { described_class.new(team) }
   let(:mood) { 'angry' }
 
   describe '#bark' do

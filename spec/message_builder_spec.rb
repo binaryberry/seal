@@ -2,10 +2,25 @@ require 'spec_helper'
 require './lib/message_builder'
 
 describe MessageBuilder do
-  subject(:message_builder) { MessageBuilder.new(pull_requests, mood) }
+  subject(:message_builder) { MessageBuilder.new(pull_requests) }
 
   let(:no_pull_requests) { {} }
-  let(:old_pull_requests) do
+  let(:recent_pull_requests) do
+    {
+      'Remove all Import-related code' => {
+        'title' => 'Remove all Import-related code',
+        'link' => 'https://github.com/alphagov/whitehall/pull/2248',
+        'author' => 'tekin',
+        'repo' => 'whitehall',
+        'comments_count' => '5',
+        'thumbs_up' => '0',
+        'updated' => Date.parse('2015-07-17 ((2457221j, 0s, 0n), +0s, 2299161j)'),
+        'labels' => []
+      }
+    }
+  end
+
+  let(:old_and_new_pull_requests) do
     {
       '[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host' => {
         'title' => '[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host',
@@ -59,42 +74,47 @@ describe MessageBuilder do
     end
   end
 
-  context 'informative' do
-    let(:mood) { 'informative' }
+  context 'pull requests are recent' do
+    let(:pull_requests) { recent_pull_requests }
 
-    context 'old pull requests' do
-      let(:pull_requests) { old_pull_requests }
-
-      it 'builds message' do
-        expect(message_builder.build).to eq("Good morning team! \n\n Here are the pull requests that need to be reviewed today:\n\n1) *whitehall* | mattbostock | updated 5 days ago | 1 :+1:\n<https://github.com/alphagov/whitehall/pull/2266|[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host> - 1 comment\n2) *whitehall* | tekin | updated yesterday\n<https://github.com/alphagov/whitehall/pull/2248|Remove all Import-related code> - 5 comments\n\nMerry reviewing!")
-      end
+    it 'builds informative message' do
+      expect(message_builder.build).to eq("Good morning team! \n\n Here are the pull requests that need to be reviewed today:\n\n1) *whitehall* | tekin | updated yesterday\n<https://github.com/alphagov/whitehall/pull/2248|Remove all Import-related code> - 5 comments\n\nMerry reviewing!")
     end
 
-    context 'no PRs' do
-      let(:pull_requests) { no_pull_requests }
-
-      it 'builds happy message' do
-        expect(message_builder.build).to eq("Good morning team! It's a beautiful day! :happyseal: :happyseal: :happyseal:\n\nNo pull requests to review today! :rainbow: :sunny: :metal: :tada:")
-      end
+    it 'has an informative poster mood' do
+      message_builder.build
+      expect(message_builder.poster_mood).to eq("informative")
     end
   end
 
-  context 'angry' do
+  context 'no pull requests' do
+    let(:pull_requests) { no_pull_requests }
+
+    it 'builds seal of approval message' do
+      expect(message_builder.build).to eq("Good morning team! It's a beautiful day! :happyseal: :happyseal: :happyseal:\n\nNo pull requests to review today! :rainbow: :sunny: :metal: :tada:")
+    end
+
+    it 'has an approval poster mood' do
+      message_builder.build
+      expect(pull_requests).to eq({})
+      expect(message_builder.poster_mood).to eq("approval")
+    end
+
+  end
+
+  context 'there are some PR that are over 2 days old' do
     let(:mood) { 'angry' }
 
     context 'old pull requests' do
-      let(:pull_requests) { old_pull_requests }
+      let(:pull_requests) { old_and_new_pull_requests }
 
       it 'builds message' do
         expect(message_builder.build).to eq("AAAAAAARGH! This pull request has not been updated in over 2 days.\n\n1) *whitehall* | mattbostock | updated 5 days ago | 1 :+1:\n<https://github.com/alphagov/whitehall/pull/2266|[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host> - 1 comment\n\nRemember each time you time you forget to review your pull requests, a baby seal dies.")
       end
-    end
 
-    context 'no old PRs' do
-      let(:pull_requests) { no_pull_requests }
-
-      it 'produces an empty string' do
-        expect(message_builder.build).to be_empty
+      it 'has an angry poster mood' do
+        message_builder.build
+        expect(message_builder.poster_mood).to eq("angry")
       end
     end
 
