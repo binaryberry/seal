@@ -10,9 +10,8 @@ require './lib/slack_poster.rb'
 class Seal
   ORGANISATION ||= ENV['SEAL_ORGANISATION']
 
-  def initialize(team, mood)
+  def initialize(team)
     @team = team
-    @mood = mood
   end
 
   def bark
@@ -32,7 +31,7 @@ class Seal
   end
 
   def bark_at(team)
-    message_builder = MessageBuilder.new(pull_requests(team), mood)
+    message_builder = MessageBuilder.new(pull_requests(team))
     message = message_builder.build
     slack = SlackPoster.new(ENV['SLACK_WEBHOOK'], team_config(team)['channel'], message_builder.poster_mood)
     slack.send_request(message)

@@ -13,6 +13,7 @@ describe 'slack_poster' do
   context 'send_request' do
     before do
       expect(Slack::Poster).to receive(:new).and_return(fake_slack_poster)
+      Timecop.freeze(Time.local(2015, 07, 16))
     end
 
     it 'posts to Slack' do

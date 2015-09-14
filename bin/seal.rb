@@ -2,5 +2,4 @@
 
 require './lib/seal'
 
-Seal.new(ARGV[0], 'informative').bark
-
+Seal.new(ARGV[0]).bark

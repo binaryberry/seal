@@ -2,19 +2,20 @@ class MessageBuilder
 
   attr_accessor :pull_requests, :report, :mood, :poster_mood
 
-  def initialize(pull_requests, mood)
+  def initialize(pull_requests)
     @pull_requests = pull_requests
-    @mood = mood
   end
 
   def build
-    case mood
-    when 'informative'
-      informative
-    when 'angry'
-      angry
+    if !old_pull_requests.empty?
+      @poster_mood = "angry"
+      bark_about_old_pull_requests
+    elsif @pull_requests.empty?
+      @poster_mood = "approval"
+      no_pull_requests
     else
-      fail("This seal does not understand '#{mood}']")
+      @poster_mood = "informative"
+      list_pull_requests
     end
   end
 
@@ -38,13 +39,17 @@ class MessageBuilder
   end
 
   def bark_about_old_pull_requests
-    msg = old_pull_requests.keys.each_with_index.map { |title, n| present(title, n + 1) }
-    "AAAAAAARGH! #{these(old_pull_requests.length)} #{pr_plural(old_pull_requests.length)} not been updated in over 2 days.\n\n#{msg.join}\nRemember each time you time you forget to review your pull requests, a baby seal dies."
+    angry_bark = old_pull_requests.keys.each_with_index.map { |title, n| present(title, n + 1) }
+    recent_pull_requests = @pull_requests.reject { |_title, pr| rotten?(pr) }
+    list_recent_pull_requests = recent_pull_requests.keys.each_with_index.map { |title, n| present(title, n + 1) }
+    informative_bark = "There are also these pull requests that need to be reviewed today:\n\n#{list_recent_pull_requests.join} " if !recent_pull_requests.empty?
+    "AAAAAAARGH! #{these(old_pull_requests.length)} #{pr_plural(old_pull_requests.length)} not been updated in over 2 days.\n\n#{angry_bark.join}\nRemember each time you time you forget to review your pull requests, a baby seal dies.
+    \n\n#{informative_bark}"
   end
 
   def list_pull_requests
-    msg = @pull_requests.keys.each_with_index.map { |title, n| present(title, n + 1) }
-    "Good morning team! \n\n Here are the pull requests that need to be reviewed today:\n\n#{msg.join}\nMerry reviewing!"
+    message = @pull_requests.keys.each_with_index.map { |title, n| present(title, n + 1) }
+    "Good morning team! \n\n Here are the pull requests that need to be reviewed today:\n\n#{message.join}\nMerry reviewing!"
   end
 
   def no_pull_requests
@@ -95,25 +100,6 @@ class MessageBuilder
       "yesterday"
     else
       "#{days} days ago"
-    end
-  end
-
-  def informative
-    if @pull_requests.empty?
-      @poster_mood = "approval"
-      no_pull_requests
-    else
-      @poster_mood = "informative"
-      list_pull_requests
-    end
-  end
-
-  def angry
-    @poster_mood = "angry"
-    if old_pull_requests.empty?
-      ''
-    else
-      bark_about_old_pull_requests
     end
   end
 

@@ -139,6 +139,9 @@ Just run `rspec` in the command line
 - Seal now displays thumbs up when present in comments
 - Angry seal now looks angrier
 
+13th of September
+- Seal now has only one script to be triggered - will start either the angry seal, the informative seal or the seal of approval each day.
+
 ## Tips
 
 How to list your organisation's repositories modified within the last year:
