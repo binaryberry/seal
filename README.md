@@ -22,15 +22,16 @@ export SLACK_WEBHOOK="get_your_incoming_webhook_link_for_your_slack_group_channe
 - To get a new `GITHUB_TOKEN`, head to: https://github.com/settings/tokens
 - To get a new `SLACK_WEBHOOK`, head to: https://<your_organisation_here>.slack.com/services/new/incoming-webhook
 
-To test the script locally, go to Slack and create a channel or private group called "#angry-seal-bot-test". Then run `./bin/informative_seal.rb your_team_name` in your command line, and you should see the post in the #angry-seal-bot-test channel.
+To test the script locally, go to Slack and create a channel or private group called "#angry-seal-bot-test". Then run `./bin/seal.rb your_team_name` in your command line, and you should see the post in the #angry-seal-bot-test channel.
 
 You should also set up the following custom emojis in Slack:
 - :informative_seal:
 - :angrier_seal:
 - :seal_of_approval:
+
 You can use the images in images/emojis that have the corresponding names.
 
-When that works, you can push the app to Heroku, add the GITHUB_TOKEN and SLACK_WEBHOOK environment variables to heroku, and use the Heroku scheduler add-on to create repeated rasks - I set Informative Seal to run at 9.30am every morning (the seal won't post on weekends), and will set Angry Seal to run every afternoon.
+When that works, you can push the app to Heroku, add the GITHUB_TOKEN and SLACK_WEBHOOK environment variables to heroku, and use the Heroku scheduler add-on to create repeated rasks - I set the seal to run at 9.30am every morning (the seal won't post on weekends)
 
 Any questions feel free to contact me on Twitter -  my handle is binaryberry
 
@@ -41,7 +42,7 @@ Just run `rspec` in the command line
 
 10th April:
 - Finalised what the app does:
-    - Hourly, checks if any pull requests are over 6 hours old (angry seal)
+    - Checks if any pull requests are over 2 days old (angry seal)
     - at 9.45am prepares an overview of all pull requests that need reviewing (informative seal)
     - when a team member posts a new pull request, publishes it on slack (notification seal) (this feature was then abandoned, as I thought it's best for this not to be automated, it's more motivating when real people ask for a review, not a bot)
 
