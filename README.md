@@ -168,3 +168,7 @@ Slack Poster:
 - posts message to Slack
 
 Trello board: https://trello.com/b/sgakJmlY/moody-seal
+
+## License
+
+See the [LICENSE](LICENSE) file for license rights and limitations (MIT).
