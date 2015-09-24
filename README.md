@@ -35,6 +35,10 @@ When that works, you can push the app to Heroku, add the GITHUB_TOKEN and SLACK_
 
 Any questions feel free to contact me on Twitter -  my handle is binaryberry
 
+## Deploy to Heroku
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
 ##How to run the tests?
 Just run `rspec` in the command line
 
