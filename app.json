@@ -14,22 +14,22 @@
       "description": "Your Github token (obtainable at https://github.com/settings/tokens)"
     },
     "GITHUB_REPOS": {
-      "description": "Comma serperated list of repos to check"
+      "description": "Comma separated list of repos to check"
     },
     "GITHUB_MEMBERS": {
-      "description": "Comma serperated list of github members",
+      "description": "Comma separated list of github members",
       "required": false
     },
     "GITHUB_USE_LABELS": {
-      "description": "Comma serperated list of labels to include",
+      "description": "Comma separated list of labels to include",
       "required": false
     },
     "GITHUB_EXCLUDE_LABELS": {
-      "description": "Comma serperated list of labels to exclude",
+      "description": "Comma separated list of labels to exclude",
       "required": false
     },
     "GITHUB_EXCLUDE_TITLES": {
-      "description": "Comma serperated list of titles e.g (WIP) to exclude",
+      "description": "Comma separated list of titles e.g (WIP) to exclude",
       "required": false
     },
     "SLACK_WEBHOOK": {
