@@ -20,7 +20,7 @@ export SLACK_WEBHOOK="get_your_incoming_webhook_link_for_your_slack_group_channe
 ```
 
 - To get a new `GITHUB_TOKEN`, head to: https://github.com/settings/tokens
-- To get a new `SLACK_WEBHOOK`, head to: https://YOUR_ORGANISATION_HERE.slack.com/services/new/incoming-webhook
+- To get a new `SLACK_WEBHOOK`, head to: https://slack.com/services/new/incoming-webhook
 
 To test the script locally, go to Slack and create a channel or private group called "#angry-seal-bot-test". Then run `./bin/seal.rb your_team_name` in your command line, and you should see the post in the #angry-seal-bot-test channel.
 
