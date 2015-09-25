@@ -39,7 +39,7 @@ class Seal
   end
 
   def org_config
-    @org_config ||= YAML.load_file('./config/#{ORGANISATION}.yml') if File.exist?('./config/#{ORGANISATION}.yml')
+    @org_config ||= YAML.load_file("./config/#{ORGANISATION}.yml") if File.exist?("./config/#{ORGANISATION}.yml")
   end
 
   def pull_requests(team)
