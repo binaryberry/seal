@@ -6,7 +6,6 @@ core-formats:
     - benlovell
     - binaryberry
     - boffbowsh
-    - edds
     - fofr
     - jamiecobbett
 
@@ -212,7 +211,6 @@ testing:
     - benilovj
     - binaryberry
     - boffbowsh
-    - edds
     - fofr
     - jamiecobbett
 
