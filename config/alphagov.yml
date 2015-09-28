@@ -124,6 +124,7 @@ finding-things:
     - cloudflare-configure
     - collections
     - collections-publisher
+    - content-store
     - design-principles
     - digitalmarketplace-utils
     - document-kit
