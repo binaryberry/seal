@@ -1,40 +1,42 @@
+# Please insert new items alphabetically.
+
 core-formats:
   members:
-    - binaryberry
-    - jamiecobbett
-    - boffbowsh
     - benilovj
-    - fofr
-    - edds
     - benlovell
+    - binaryberry
+    - boffbowsh
+    - edds
+    - fofr
+    - jamiecobbett
 
   repos:
-    - maslow
-    - signonotron2
-    - short-url-manager
-    - support
+    - Accessible-Media-Player
+    - asset-manager
+    - content-register
+    - content-store
+    - external-link-tracker
     - feedback
     - frontend
-    - specialist-publisher
-    - publisher
-    - whitehall
-    - govuk_content_api
-    - release
-    - metadata-api
-    - travel-advice-publisher
-    - info-frontend
     - government-frontend
-    - support-api
-    - external-link-tracker
-    - specialist-frontend
-    - static
-    - asset-manager
-    - content-store
-    - url-arbiter
-    - content-register
-    - panopticon
+    - govuk_content_api
     - govuk-content-schemas
-    - Accessible-Media-Player
+    - info-frontend
+    - maslow
+    - metadata-api
+    - panopticon
+    - publisher
+    - release
+    - short-url-manager
+    - signonotron2
+    - specialist-frontend
+    - specialist-publisher
+    - static
+    - support
+    - support-api
+    - travel-advice-publisher
+    - url-arbiter
+    - whitehall
 
   channel:
     "#core-formats"
@@ -46,12 +48,12 @@ core-formats:
 
 custom:
   members:
-    - jennyd
     - dsingleton
-    - tommyp
     - issyl0
-    - mikejustdoit
+    - jennyd
     - marksheldonGDS
+    - mikejustdoit
+    - tommyp
 
   repos:
     - business-support-api
@@ -97,104 +99,104 @@ finding-things:
     - alext
     - alextea
     - bishboria
+    - jackscotti
     - KushalP
     - markhurrell
     - mobaig
     - rboulton
     - tijmenb
-    - jackscotti
 
   repos:
-    - static
-    - slimmer
-    - panopticon
-    - frontend
-    - whitehall
-    - smart-answers
-    - rummager
-    - smokey
-    - design-principles
-    - signonotron2
-    - prototyping
-    - govuk_content_models
-    - trade-tariff-backend
-    - styleguides
-    - e-petitions
-    - govuk_content_api
-    - business-support-finder
-    - govuk_frontend_toolkit
-    - support
-    - fabric-scripts
-    - assets-directgov
-    - government-service-design-manual
-    - transition-config
-    - release
     - Accessible-Media-Player
-    - gds-boxen
-    - govuk_frontend_toolkit_gem
-    - trade-tariff-admin
-    - packager
-    - transition-stats
-    - ci-puppet
-    - transformation-dashboard
-    - govuk_template
-    - govuk_mirror-puppet
-    - fourth-wall
-    - maslow
-    - router
-    - govuk_frontend_toolkit_npm
-    - finder-frontend
-    - specialist-publisher
-    - backdrop-transactions-explorer-collector
-    - search-performance-dashboard
-    - govuk_elements
-    - govuk_migration_plan_public
-    - collections
-    - search-admin
-    - cdn-acceptance-tests
-    - smartdown
-    - support-api
-    - govuk_prototype_kit
-    - collections-publisher
-    - gradle-gatling-plugin
-    - metadata-api
-    - email-alert-api
-    - cloudflare-configure
-    - govuk-content-schemas
-    - email-alert-monitor
-    - policy-publisher
-    - govdelivery-email-templates
-    - ier-frontend
-    - govuk-content-schema-test-helpers
-    - interaction-diagrams
-    - tsuru-ansible
-    - tsuru-terraform
-    - payment-prototype-options
-    - digitalmarketplace-utils
-    - govuk-content-best-practices
-    - multicloud-deploy
-    - ansible-role-openconnect
+    - ansible-graphite
     - ansible-playbook-docker_server
     - ansible-playbook-gandalf
     - ansible-playbook-hipache
-    - ansible-playbook-tsuru_api
     - ansible-playbook-redis
-    - terraform
-    - github_sshkey_checker
-    - authenticating-proxy
-    - puppet-rcs
-    - puppet-autofsck
-    - tsuru-dashboard
-    - govuk-rails-app-template
+    - ansible-playbook-tsuru_api
+    - ansible-role-openconnect
     - ansible-statsd
-    - ansible-graphite
-    - tsuru-testing
+    - assets-directgov
+    - authenticating-proxy
+    - backdrop-transactions-explorer-collector
+    - business-support-finder
+    - cdn-acceptance-tests
+    - ci-puppet
+    - cloudflare-configure
+    - collections
+    - collections-publisher
+    - design-principles
+    - digitalmarketplace-utils
     - document-kit
+    - e-petitions
+    - email-alert-api
+    - email-alert-monitor
     - example-java-jetty
+    - fabric-scripts
+    - finder-frontend
+    - fourth-wall
+    - frontend
+    - gds-boxen
+    - github_sshkey_checker
+    - govdelivery-email-templates
+    - government-service-design-manual
+    - govuk_content_api
+    - govuk_content_models
+    - govuk_elements
+    - govuk_frontend_toolkit
+    - govuk_frontend_toolkit_gem
+    - govuk_frontend_toolkit_npm
+    - govuk_migration_plan_public
+    - govuk_mirror-puppet
+    - govuk_prototype_kit
+    - govuk_template
+    - govuk-content-best-practices
+    - govuk-content-schema-test-helpers
+    - govuk-content-schemas
     - govuk-lint
+    - govuk-rails-app-template
+    - gradle-gatling-plugin
+    - ier-frontend
+    - interaction-diagrams
+    - maslow
+    - metadata-api
+    - multicloud-deploy
+    - packager
+    - panopticon
+    - payment-prototype-options
+    - policy-publisher
+    - prototyping
+    - puppet-autofsck
+    - puppet-rcs
+    - recommended-links
+    - release
+    - router
+    - rummager
+    - search-admin
+    - search-performance-dashboard
+    - signonotron2
     - situation-room
     - situation-room-dashboard
-    - recommended-links
+    - slimmer
+    - smart-answers
+    - smartdown
+    - smokey
+    - specialist-publisher
+    - static
+    - styleguides
+    - support
+    - support-api
+    - terraform
+    - trade-tariff-admin
+    - trade-tariff-backend
+    - transformation-dashboard
+    - transition-config
+    - transition-stats
+    - tsuru-ansible
+    - tsuru-dashboard
+    - tsuru-terraform
+    - tsuru-testing
+    - whitehall
 
   channel:
     "#finding-things"
@@ -206,41 +208,41 @@ finding-things:
 
 testing:
   members:
-    - binaryberry
-    - jamiecobbett
-    - boffbowsh
-    - benilovj
-    - fofr
-    - edds
     - ajlanghorn
+    - benilovj
+    - binaryberry
+    - boffbowsh
+    - edds
+    - fofr
+    - jamiecobbett
 
   repos:
-    - maslow
-    - signonotron2
-    - short-url-manager
-    - support
+    - Accessible-Media-Player
+    - asset-manager
+    - content-register
+    - content-store
+    - external-link-tracker
     - feedback
     - frontend
-    - specialist-publisher
-    - publisher
-    - whitehall
-    - govuk_content_api
-    - release
-    - metadata-api
-    - travel-advice-publisher
-    - info-frontend
     - government-frontend
-    - support-api
-    - external-link-tracker
-    - specialist-frontend
-    - static
-    - asset-manager
-    - content-store
-    - url-arbiter
-    - content-register
-    - panopticon
+    - govuk_content_api
     - govuk-content-schemas
-    - Accessible-Media-Player
+    - info-frontend
+    - maslow
+    - metadata-api
+    - panopticon
+    - publisher
+    - release
+    - short-url-manager
+    - signonotron2
+    - specialist-frontend
+    - specialist-publisher
+    - static
+    - support
+    - support-api
+    - travel-advice-publisher
+    - url-arbiter
+    - whitehall
 
   channel:
     "#testing"
