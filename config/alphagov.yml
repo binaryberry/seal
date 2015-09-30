@@ -6,6 +6,7 @@ core-formats:
     - benilovj
     - fofr
     - edds
+    - benlovell
 
   repos:
     - maslow
@@ -40,6 +41,7 @@ core-formats:
 
   exclude_titles:
     - "[DO NOT MERGE]"
+    - DO NOT MERGE
     - WIP
 
 custom:
@@ -87,6 +89,7 @@ custom:
 
   exclude_titles:
     - "[DO NOT MERGE]"
+    - DO NOT MERGE
     - WIP
 
 finding-things:
@@ -96,6 +99,7 @@ finding-things:
     - bishboria
     - KushalP
     - markhurrell
+    - mobaig
     - rboulton
     - tijmenb
     - jackscotti
@@ -197,6 +201,7 @@ finding-things:
 
   exclude_titles:
     - "[DO NOT MERGE]"
+    - DO NOT MERGE
     - WIP
 
 testing:
