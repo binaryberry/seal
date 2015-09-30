@@ -3,14 +3,13 @@ require './lib/seal'
 
 describe Seal do
   subject(:seal) { described_class.new(team) }
-  let(:mood) { 'angry' }
 
   describe '#bark' do
     before do
       expect(YAML).to receive(:load_file).and_return(org_config)
       expect(MessageBuilder).to receive(:new)
         .exactly(number_of_teams).times
-        .and_return(instance_double(MessageBuilder, build: nil, poster_mood: mood))
+        .and_return(instance_double(MessageBuilder, build: nil, poster_mood: nil))
       expect(SlackPoster).to receive(:new)
         .exactly(number_of_teams).times
         .and_return(instance_double(SlackPoster, send_request: nil))
