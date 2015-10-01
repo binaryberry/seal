@@ -16,12 +16,14 @@ envato-market:
     - docs
     - envato.com
     - front-end-coding-test
+    - handdrill
     - market-dev-expectations
     - marketplace
     - marketplace-puppet
     - marketplace_debian_package_build_scripts
     - new-coding-test
     - our-boxen
+    - themeAudit
     - webuild.envato.com
   use_labels: true
   exclude_labels:
