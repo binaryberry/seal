@@ -20,7 +20,7 @@ export SLACK_WEBHOOK="get_your_incoming_webhook_link_for_your_slack_group_channe
 ```
 
 - To get a new `GITHUB_TOKEN`, head to: https://github.com/settings/tokens
-- To get a new `SLACK_WEBHOOK`, head to: https://<your_organisation_here>.slack.com/services/new/incoming-webhook
+- To get a new `SLACK_WEBHOOK`, head to: https://slack.com/services/new/incoming-webhook
 
 To test the script locally, go to Slack and create a channel or private group called "#angry-seal-bot-test". Then run `./bin/seal.rb your_team_name` in your command line, and you should see the post in the #angry-seal-bot-test channel.
 
@@ -34,6 +34,10 @@ You can use the images in images/emojis that have the corresponding names.
 When that works, you can push the app to Heroku, add the GITHUB_TOKEN and SLACK_WEBHOOK environment variables to heroku, and use the Heroku scheduler add-on to create repeated rasks - I set the seal to run at 9.30am every morning (the seal won't post on weekends)
 
 Any questions feel free to contact me on Twitter -  my handle is binaryberry
+
+## Deploy to Heroku
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 ##How to run the tests?
 Just run `rspec` in the command line

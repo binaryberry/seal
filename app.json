@@ -1,0 +1,45 @@
+{
+  "name": "Seal: A Slack Github PR Bot",
+  "description": "A bot that notifies Slack about open GitHub PRs.",
+  "keywords": [
+    "slack",
+    "github"
+  ],
+  "repository": "https://github.com/binaryberry/seal",
+  "env": {
+    "SEAL_ORGANISATION": {
+      "description": "Your Github organisation name"
+    },
+    "GITHUB_TOKEN": {
+      "description": "Your Github token (obtainable at https://github.com/settings/tokens)"
+    },
+    "GITHUB_REPOS": {
+      "description": "Comma separated list of repos to check"
+    },
+    "GITHUB_MEMBERS": {
+      "description": "Comma separated list of github members",
+      "required": false
+    },
+    "GITHUB_USE_LABELS": {
+      "description": "Comma separated list of labels to include",
+      "required": false
+    },
+    "GITHUB_EXCLUDE_LABELS": {
+      "description": "Comma separated list of labels to exclude",
+      "required": false
+    },
+    "GITHUB_EXCLUDE_TITLES": {
+      "description": "Comma separated list of titles e.g (WIP) to exclude",
+      "required": false
+    },
+    "SLACK_WEBHOOK": {
+      "description": "Your Slack Incoming Webhook token (obtainable at https://slack.com/services/new/incoming-webhook)"
+    },
+    "SLACK_CHANNEL": {
+      "description": "Slack channel to notify"
+    }
+  },
+  "addons": [
+    "scheduler"
+  ]
+}
