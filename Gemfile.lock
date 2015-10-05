@@ -29,6 +29,8 @@ GEM
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     json (1.8.3)
+    jsonlint (0.1.0)
+      oj (~> 2)
     listen (3.0.3)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
@@ -42,6 +44,7 @@ GEM
       shellany (~> 0.0)
     octokit (4.0.1)
       sawyer (~> 0.6.0, >= 0.5.3)
+    oj (2.12.14)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -82,6 +85,7 @@ PLATFORMS
 DEPENDENCIES
   guard
   guard-rspec
+  jsonlint
   octokit (~> 4.0)
   pry-byebug
   rake
