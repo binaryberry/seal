@@ -8,8 +8,6 @@ require './lib/slack_poster.rb'
 
 # Entry point for the Seal!
 class Seal
-  ORGANISATION ||= ENV['SEAL_ORGANISATION']
-
   def initialize(team)
     @team = team
   end
@@ -39,7 +37,11 @@ class Seal
   end
 
   def org_config
-    @org_config ||= YAML.load_file("./config/#{ORGANISATION}.yml") if File.exist?("./config/#{ORGANISATION}.yml")
+    @org_config ||= YAML.load_file(configuration_filename) if File.exist?(configuration_filename)
+  end
+
+  def configuration_filename
+    @configuration_filename ||= "./config/#{ENV['SEAL_ORGANISATION']}.yml"
   end
 
   def pull_requests(team)
