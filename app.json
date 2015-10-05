@@ -37,6 +37,10 @@
     },
     "SLACK_CHANNEL": {
       "description": "Slack channel to notify"
+    },
+    "TZ": {
+      "description": "The timezone within which Seal operates (e.g. Australia/Melbourne)",
+      "required": false
     }
   },
   "addons": [
