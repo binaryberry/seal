@@ -28,6 +28,7 @@ You should also set up the following custom emojis in Slack:
 - :informative_seal:
 - :angrier_seal:
 - :seal_of_approval:
+- :happyseal:
 
 You can use the images in images/emojis that have the corresponding names.
 
