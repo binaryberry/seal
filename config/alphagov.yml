@@ -26,6 +26,7 @@ core-formats:
     - panopticon
     - publisher
     - release
+    - router-api
     - short-url-manager
     - signonotron2
     - specialist-frontend
