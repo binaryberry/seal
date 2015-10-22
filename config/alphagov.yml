@@ -27,6 +27,7 @@ core-formats:
     - publisher
     - release
     - router-api
+    - router-data
     - short-url-manager
     - signonotron2
     - specialist-frontend
