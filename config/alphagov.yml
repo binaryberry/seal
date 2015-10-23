@@ -152,6 +152,7 @@ finding-things:
     - govuk_frontend_toolkit
     - govuk_frontend_toolkit_gem
     - govuk_frontend_toolkit_npm
+    - govuk_message_queue_consumer
     - govuk_migration_plan_public
     - govuk_mirror-puppet
     - govuk_prototype_kit
