@@ -215,8 +215,8 @@ finding-things:
 
 testing:
   members:
+    - ajlanghorn
     - benilovj
-    - benlovell
     - binaryberry
     - boffbowsh
     - fofr
@@ -230,19 +230,15 @@ testing:
     - external-link-tracker
     - feedback
     - frontend
-    - gds_zendesk
     - government-frontend
-    - govuk_admin_template
     - govuk_content_api
     - govuk-content-schemas
-    - govuk_content_models
     - info-frontend
     - maslow
     - metadata-api
     - panopticon
     - publisher
     - release
-    - router-api
     - short-url-manager
     - signonotron2
     - specialist-frontend
@@ -258,4 +254,5 @@ testing:
     "#testing"
 
   exclude_titles:
+    - "[DO NOT MERGE]"
     - WIP

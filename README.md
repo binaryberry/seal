@@ -29,12 +29,6 @@ You should also set up the following custom emojis in Slack:
 - :angrier_seal:
 - :seal_of_approval:
 - :happyseal:
-- :halloween_informative_seal:
-- :halloween_angrier_seal:
-- :halloween_seal_of_approval:
-- :festive_season_informative_seal:
-- :festive_season_angrier_seal:
-- :festive_season_seal_of_approval:
 
 You can use the images in images/emojis that have the corresponding names.
 

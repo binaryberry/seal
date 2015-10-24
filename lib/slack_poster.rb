@@ -2,7 +2,7 @@ require 'slack-poster'
 
 class SlackPoster
 
-  attr_accessor :webhook_url, :poster, :mood, :mood_hash, :channel, :season_name, :halloween_season, :festive_season
+  attr_accessor :webhook_url, :poster, :mood, :mood_hash, :channel
 
   def initialize(webhook_url, team_channel, mood)
     @webhook_url = webhook_url
@@ -29,49 +29,18 @@ class SlackPoster
 
   def mood_hash
     @mood_hash = {}
-    check_season
-    assign_poster_settings
-  end
-
-  def assign_poster_settings
     if @mood == "informative"
-      @mood_hash[:icon_emoji]= ":#{@season_symbol}informative_seal:"
-      @mood_hash[:username]= "#{@season_name}Informative Seal"
+      @mood_hash[:icon_emoji]= ":informative_seal:"
+      @mood_hash[:username]= "Informative Seal"
     elsif @mood == "approval"
-      @mood_hash[:icon_emoji]= ":#{@season_symbol}seal_of_approval:"
-      @mood_hash[:username]= "#{@season_name}Seal of Approval"
+      @mood_hash[:icon_emoji]= ":seal_of_approval:"
+      @mood_hash[:username]= "Seal of Approval"
     elsif @mood == "angry"
-      @mood_hash[:icon_emoji]= ":#{@season_symbol}angrier_seal:"
-      @mood_hash[:username]= "#{@season_name}Angry Seal"
+      @mood_hash[:icon_emoji]= ":angrier_seal:"
+      @mood_hash[:username]= "Angry Seal"
     else
       raise "bad mood"
     end
-  end
-
-  def check_season
-    if halloween_season?
-      @season_name = "Halloween "
-    elsif festive_season?
-      @season_name = "Festive Season "
-    else
-      @season_name = ""
-    end
-    @season_symbol = snake_case(@season_name)
-  end
-
-  def halloween_season?
-    this_year = Date.today.year
-    Date.today <= Date.new(this_year, 10, 31) && Date.today >= Date.new(this_year,10,23)
-  end
-
-  def festive_season?
-    this_year = Date.today.year
-    return true if Date.today <= Date.new(this_year, 12, 31) && Date.today >= Date.new(this_year,12,1)
-    return true if Date.today == Date.new(this_year, 01, 01)
-  end
-
-  def snake_case(string)
-    string.downcase.gsub(" ", "_")
   end
 
   def channel
