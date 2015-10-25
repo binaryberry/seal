@@ -17,15 +17,19 @@ core-formats:
     - external-link-tracker
     - feedback
     - frontend
+    - gds_zendesk
     - government-frontend
+    - govuk_admin_template
     - govuk_content_api
     - govuk-content-schemas
+    - govuk_content_models
     - info-frontend
     - maslow
     - metadata-api
     - panopticon
     - publisher
     - release
+    - router-api
     - short-url-manager
     - signonotron2
     - specialist-frontend
@@ -53,6 +57,8 @@ custom:
     - marksheldonGDS
     - mikejustdoit
     - tommyp
+    - h-lame
+    - davidbasalla
 
   repos:
     - business-support-api
@@ -146,6 +152,7 @@ finding-things:
     - govuk_frontend_toolkit
     - govuk_frontend_toolkit_gem
     - govuk_frontend_toolkit_npm
+    - govuk_message_queue_consumer
     - govuk_migration_plan_public
     - govuk_mirror-puppet
     - govuk_prototype_kit
