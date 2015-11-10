@@ -14,7 +14,8 @@
       "description": "Your Github token (obtainable at https://github.com/settings/tokens)"
     },
     "GITHUB_REPOS": {
-      "description": "Comma separated list of repos to check"
+      "description": "Comma separated list of repos to check",
+      "required": false
     },
     "GITHUB_MEMBERS": {
       "description": "Comma separated list of github members",
@@ -36,7 +37,8 @@
       "description": "Your Slack Incoming Webhook token (obtainable at https://slack.com/services/new/incoming-webhook)"
     },
     "SLACK_CHANNEL": {
-      "description": "Slack channel to notify"
+      "description": "Slack channel to notify",
+      "required": false
     },
     "TZ": {
       "description": "The timezone within which Seal operates (e.g. Australia/Melbourne)",
