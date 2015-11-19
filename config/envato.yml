@@ -45,7 +45,9 @@ discovery:
     - discovery_users
     - ami-builder
     - discovery-docker
-  use_labels: false
+  use_labels: true
+  exclude_labels:
+    - wip
 
 site-reliability:
   channel: '#mp-site-reliability'
