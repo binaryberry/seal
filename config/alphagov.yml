@@ -106,9 +106,9 @@ finding-things:
     - bishboria
     - jackscotti
     - KushalP
-    - markhurrell
     - mobaig
     - rboulton
+    - srmoscow
     - tijmenb
 
   repos:
@@ -173,6 +173,7 @@ finding-things:
     - payment-prototype-options
     - policy-publisher
     - prototyping
+    - publishing-api
     - puppet-autofsck
     - puppet-rcs
     - recommended-links
