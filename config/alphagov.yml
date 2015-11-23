@@ -105,12 +105,11 @@ finding-things:
     - alextea
     - bishboria
     - jackscotti
-    - KushalP
     - mobaig
     - rboulton
-    - srmoscow
+    - stephen-richards
     - tijmenb
-
+    
   repos:
     - Accessible-Media-Player
     - ansible-graphite
