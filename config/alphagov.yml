@@ -101,7 +101,6 @@ custom:
 
 finding-things:
   members:
-    - alext
     - alextea
     - bishboria
     - jackscotti
