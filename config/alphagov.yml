@@ -23,6 +23,7 @@ core-formats:
     - govuk_content_api
     - govuk-content-schemas
     - govuk_content_models
+    - govuk_need_api
     - info-frontend
     - maslow
     - metadata-api
