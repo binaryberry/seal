@@ -23,6 +23,7 @@ envato-market:
     - marketplace_debian_package_build_scripts
     - new-coding-test
     - our-boxen
+    - sso-client
     - themeAudit
     - webuild.envato.com
   use_labels: true
