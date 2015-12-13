@@ -1,3 +1,13 @@
+boxen:
+  channel: '#boxen'
+  members: []
+  repos:
+    - boxen-web
+    - our-boxen
+  use_labels: true
+  exclude_labels:
+    - wip
+
 envato-market:
   channel: '#marketplacedev'
   members: []
@@ -6,16 +16,20 @@ envato-market:
     - docs
     - envato.com
     - front-end-coding-test
+    - handdrill
     - market-dev-expectations
     - marketplace
     - marketplace-puppet
+    - marketplace_debian_package_build_scripts
     - new-coding-test
-    - ops-coding-test
     - our-boxen
+    - sso-client
+    - themeAudit
     - webuild.envato.com
   use_labels: true
   exclude_labels:
     - wip
+
 discovery:
   channel: '#discovery-notify'
   members: []
@@ -32,4 +46,20 @@ discovery:
     - discovery_users
     - ami-builder
     - discovery-docker
-  use_labels: false
+  use_labels: true
+  exclude_labels:
+    - wip
+
+site-reliability:
+  channel: '#mp-site-reliability'
+  members: []
+  repos:
+    - envato-cloud-management
+    - lua-deflector
+    - marketplace-ansible
+    - marketplace-puppet
+    - ops-coding-test
+    - toolbox
+  use_labels: true
+  exclude_labels:
+    - wip
