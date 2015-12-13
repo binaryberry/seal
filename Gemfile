@@ -4,6 +4,7 @@ ruby "2.1.2"
 gem 'slack-poster', '~> 1.0.1'
 gem "octokit", "~> 4.0"
 gem "sinatra"
+gem "thin"
 
 group :test do
   gem 'guard'
@@ -14,4 +15,3 @@ group :test do
   gem 'timecop'
   gem 'pry-byebug'
 end
-
