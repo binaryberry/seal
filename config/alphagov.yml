@@ -14,6 +14,7 @@ core-formats:
     - asset-manager
     - content-register
     - content-store
+    - deprecated_columns
     - external-link-tracker
     - feedback
     - frontend
