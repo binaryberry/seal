@@ -48,20 +48,17 @@ class Seal
     config = team_config(team)
     if config
       members = config['members']
-      repos = config['repos']
       use_labels = config['use_labels']
       exclude_labels = config['exclude_labels']
       exclude_titles = config['exclude_titles']
     else
       members = ENV['GITHUB_MEMBERS'] ? ENV['GITHUB_MEMBERS'].split(',') : []
-      repos = ENV['GITHUB_REPOS'] ? ENV['GITHUB_REPOS'].split(',') : []
       use_labels = ENV['GITHUB_USE_LABELS'] ? ENV['GITHUB_USE_LABELS'].split(',') : nil
       exclude_labels = ENV['GITHUB_EXCLUDE_LABELS'] ? ENV['GITHUB_EXCLUDE_LABELS'].split(',') : nil
       exclude_titles = ENV['GITHUB_EXCLUDE_TITLES'] ? ENV['GITHUB_EXCLUDE_TITLES'].split(',') : nil
     end
 
     git = GithubFetcher.new(members,
-                            repos,
                             use_labels,
                             exclude_labels,
                             exclude_titles

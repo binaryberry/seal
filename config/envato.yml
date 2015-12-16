@@ -1,35 +1,10 @@
 envato-market:
   channel: '#marketplacedev'
   members: []
-  repos:
-    - db_backup
-    - docs
-    - envato.com
-    - front-end-coding-test
-    - market-dev-expectations
-    - marketplace
-    - marketplace-puppet
-    - new-coding-test
-    - ops-coding-test
-    - our-boxen
-    - webuild.envato.com
   use_labels: true
   exclude_labels:
     - wip
 discovery:
   channel: '#discovery-notify'
   members: []
-  repos:
-    - discovery
-    - solid_octane
-    - solid_octane_service
-    - dewey
-    - discovery-scheduler
-    - recommender-api
-    - api-gateway
-    - build.envato.com
-    - search_public_api
-    - discovery_users
-    - ami-builder
-    - discovery-docker
   use_labels: false
