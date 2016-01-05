@@ -17,6 +17,8 @@
 #
 require 'timecop'
 
+ENV['SEAL_ORGANISATION'] ||= "alphagov"
+
 RSpec.configure do |config|
 
   config.expect_with :rspec do |expectations|

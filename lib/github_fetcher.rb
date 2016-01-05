@@ -3,15 +3,13 @@ require 'octokit'
 class GithubFetcher
   ORGANISATION ||= ENV['SEAL_ORGANISATION']
 
-  attr_accessor :people, :repos
+  attr_accessor :people
 
-  def initialize(team_members_accounts, team_repos, use_labels, exclude_labels, exclude_titles)
+  def initialize(team_members_accounts, use_labels, exclude_labels, exclude_titles)
     @github = Octokit::Client.new(:access_token => ENV['GITHUB_TOKEN'])
     @github.user.login
     Octokit.auto_paginate = true
     @people = team_members_accounts
-    @repos = team_repos.sort!
-    @pull_requests = {}
     @use_labels = use_labels
     @exclude_labels = exclude_labels.map(&:downcase).uniq if exclude_labels
     @exclude_titles = exclude_titles.map(&:downcase).uniq if exclude_titles
@@ -19,27 +17,33 @@ class GithubFetcher
   end
 
   def list_pull_requests
-    @repos.each do |repo|
-      response = @github.pull_requests("#{ORGANISATION}/#{repo}", state: "open")
-      response.reject { |pr| hidden?(pr, repo) }.each do |pull_request|
-        @pull_requests[pull_request.title] = {}.tap do |pr|
-          pr['title'] = pull_request.title
-          pr['link'] = pull_request.html_url
-          pr['author'] = pull_request.user.login
-          pr['repo'] = repo
-          pr['comments_count'] = count_comments(pull_request, repo)
-          pr['thumbs_up'] = count_thumbs_up(pull_request, repo)
-          pr['updated'] = Date.parse(pull_request.updated_at.to_s)
-          pr['labels'] = labels(pull_request, repo)
-        end
-      end
+    pull_requests_from_github.each_with_object({}) do |pull_request, pull_requests|
+      repo_name = pull_request.html_url.split("/")[4]
+      next if hidden?(pull_request, repo_name)
+      pull_requests[pull_request.title] = present_pull_request(pull_request, repo_name)
     end
-    @pull_requests
   end
 
   private
 
   attr_reader :use_labels, :exclude_labels, :exclude_titles
+
+  def present_pull_request(pull_request, repo_name)
+    pr = {}
+    pr['title'] = pull_request.title
+    pr['link'] = pull_request.html_url
+    pr['author'] = pull_request.user.login
+    pr['repo'] = repo_name
+    pr['comments_count'] = count_comments(pull_request, repo_name)
+    pr['thumbs_up'] = count_thumbs_up(pull_request, repo_name)
+    pr['updated'] = Date.parse(pull_request.updated_at.to_s)
+    pr['labels'] = labels(pull_request, repo_name)
+    pr
+  end
+
+  def pull_requests_from_github
+    @github.search_issues("is:pr state:open user:#{ORGANISATION}").items
+  end
 
   def person_subscribed?(pull_request)
     people.empty? || people.include?("#{pull_request.user.login}")

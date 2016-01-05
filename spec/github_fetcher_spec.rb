@@ -4,7 +4,6 @@ require './lib/github_fetcher'
 describe 'GithubFetcher' do
   subject(:github_fetcher) do
     GithubFetcher.new(team_members_accounts,
-                      team_repos,
                       use_labels,
                       exclude_labels,
                       exclude_titles
@@ -58,7 +57,6 @@ describe 'GithubFetcher' do
   let(:exclude_labels) { nil }
   let(:exclude_titles) { nil }
   let(:team_members_accounts) { %w(binaryberry boffbowsh jackscotti tekin elliotcm tommyp mattbostock) }
-  let(:team_repos) { %w(whitehall) }
   let(:pull_2266) do
     double(Sawyer::Resource,
            user: double(Sawyer::Resource, login: 'mattbostock'),
@@ -97,7 +95,7 @@ describe 'GithubFetcher' do
   before do
     expect(Octokit::Client).to receive(:new).and_return(fake_octokit_client)
     expect(fake_octokit_client).to receive_message_chain('user.login')
-    expect(fake_octokit_client).to receive(:pull_requests).with(repo_name, :state => 'open').and_return([pull_2266, pull_2248])
+    expect(fake_octokit_client).to receive(:search_issues).with("is:pr state:open user:alphagov").and_return(double(items: [pull_2266, pull_2248]))
 
     allow(fake_octokit_client).to receive(:issue_comments).with(repo_name, 2266).and_return(comments_2266)
     allow(fake_octokit_client).to receive(:issue_comments).with(repo_name, 2248).and_return(comments_2248)

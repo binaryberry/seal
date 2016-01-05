@@ -13,10 +13,6 @@
     "GITHUB_TOKEN": {
       "description": "Your Github token (obtainable at https://github.com/settings/tokens)"
     },
-    "GITHUB_REPOS": {
-      "description": "Comma separated list of repos to check",
-      "required": false
-    },
     "GITHUB_MEMBERS": {
       "description": "Comma separated list of github members",
       "required": false

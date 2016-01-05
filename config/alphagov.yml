@@ -9,40 +9,6 @@ core-formats:
     - fofr
     - jamiecobbett
 
-  repos:
-    - Accessible-Media-Player
-    - asset-manager
-    - content-register
-    - content-store
-    - deprecated_columns
-    - external-link-tracker
-    - feedback
-    - frontend
-    - gds_zendesk
-    - government-frontend
-    - govuk_admin_template
-    - govuk_content_api
-    - govuk-content-schemas
-    - govuk_content_models
-    - govuk_need_api
-    - info-frontend
-    - maslow
-    - metadata-api
-    - panopticon
-    - publisher
-    - release
-    - router-api
-    - short-url-manager
-    - signonotron2
-    - specialist-frontend
-    - specialist-publisher
-    - static
-    - support
-    - support-api
-    - travel-advice-publisher
-    - url-arbiter
-    - whitehall
-
   channel:
     "#core-formats"
 
@@ -62,37 +28,6 @@ custom:
     - h-lame
     - davidbasalla
 
-  repos:
-    - business-support-api
-    - calendars
-    - contacts-admin
-    - contacts-frontend
-    - content-register
-    - content-store
-    - courts-api
-    - courts-frontend
-    - govuk-content-schemas
-    - hmrc-manuals-api
-    - imminence
-    - licence-finder
-    - manuals-frontend
-    - mapit
-    - optic14n
-    - pre-transition-stats
-    - publishing-api
-    - side-by-side-browser
-    - smart-answers
-    - specialist-publisher
-    - static
-    - trade-tariff-admin
-    - trade-tariff-backend
-    - trade-tariff-frontend
-    - transition
-    - transition-config
-    - transition-stats
-    - url-arbiter
-    - whitehall
-
   channel:
     "#custom"
 
@@ -110,45 +45,6 @@ finding-things:
     - rboulton
     - stephen-richards
     - tijmenb
-    
-  repos:
-    - collections
-    - collections-publisher
-    - content-store
-    - content-tagger
-    - email-alert-api
-    - email-alert-monitor
-    - finder-frontend
-    - govdelivery-email-templates
-    - government-service-design-manual
-    - govuk_content_api
-    - govuk_content_models
-    - govuk_message_queue_consumer
-    - govuk_migration_plan_public
-    - govuk_mirror-puppet
-    - govuk_prototype_kit
-    - govuk-content-best-practices
-    - govuk-content-schema-test-helpers
-    - govuk-content-schemas
-    - panopticon
-    - payment-prototype-options
-    - policy-publisher
-    - prototyping
-    - publishing-api
-    - recommended-links
-    - release
-    - router
-    - rummager
-    - search-admin
-    - search-performance-dashboard
-    - smokey
-    - specialist-publisher
-    - static
-    - styleguides
-    - support
-    - support-api
-    - tagging-migration-verifier
-    - whitehall
 
   channel:
     "#finding-things"
@@ -166,34 +62,6 @@ testing:
     - boffbowsh
     - fofr
     - jamiecobbett
-
-  repos:
-    - Accessible-Media-Player
-    - asset-manager
-    - content-register
-    - content-store
-    - external-link-tracker
-    - feedback
-    - frontend
-    - government-frontend
-    - govuk_content_api
-    - govuk-content-schemas
-    - info-frontend
-    - maslow
-    - metadata-api
-    - panopticon
-    - publisher
-    - release
-    - short-url-manager
-    - signonotron2
-    - specialist-frontend
-    - specialist-publisher
-    - static
-    - support
-    - support-api
-    - travel-advice-publisher
-    - url-arbiter
-    - whitehall
 
   channel:
     "#testing"
