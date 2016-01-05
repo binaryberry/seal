@@ -8,6 +8,9 @@ core-formats:
     - boffbowsh
     - fofr
     - jamiecobbett
+    - tommyp
+    - gpeng
+    - dsingleton
 
   channel:
     "#core-formats"
@@ -19,11 +22,11 @@ core-formats:
 
 custom:
   members:
-    - dsingleton
+    - brenetic
+    - sihugh
     - issyl0
     - jennyd
     - marksheldonGDS
-    - mikejustdoit
     - tommyp
     - h-lame
     - davidbasalla
