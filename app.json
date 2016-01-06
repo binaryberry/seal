@@ -29,6 +29,10 @@
       "description": "Comma separated list of titles e.g (WIP) to exclude",
       "required": false
     },
+    "QUOTES": {
+      "description": "Comma separated list of sentences you would like the Seal to post. Can be used for inspirational quotes or reminders.",
+      "required": false
+    },
     "SLACK_WEBHOOK": {
       "description": "Your Slack Incoming Webhook token (obtainable at https://slack.com/services/new/incoming-webhook)"
     },
