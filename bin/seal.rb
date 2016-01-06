@@ -2,4 +2,4 @@
 
 require './lib/seal'
 
-Seal.new(ARGV[0]).bark
+Seal.new(ARGV[0], ARGV[1]).bark

@@ -43,8 +43,12 @@ class SlackPoster
     elsif @mood == "angry"
       @mood_hash[:icon_emoji]= ":#{@season_symbol}angrier_seal:"
       @mood_hash[:username]= "#{@season_name}Angry Seal"
+    elsif @team_channel == "#tea"
+      @mood_hash[:icon_emoji]= ":manatea:"
+      @mood_hash[:username]= "Tea Seal"
     else
-      raise "bad mood"
+      @mood_hash[:icon_emoji]= ":happyseal:"
+      @mood_hash[:username]= "Core Team Charter Seal"
     end
   end
 
