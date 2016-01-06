@@ -88,7 +88,7 @@ class SlackPoster
       @postable_day = today.friday?
     elsif @mood == nil && @team_channel == "#core-formats"
       @mood = "charter"
-      @postable_day = today.tuesday? || today.thursday? || today.wednesday?
+      @postable_day = today.tuesday? || today.thursday?
     end
   end
 
