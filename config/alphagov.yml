@@ -5,12 +5,12 @@ core-formats:
     - benilovj
     - benlovell
     - binaryberry
+    - dsingleton
     - boffbowsh
     - fofr
+    - gpeng
     - jamiecobbett
     - tommyp
-    - gpeng
-    - dsingleton
 
   channel:
     "#core-formats"
@@ -20,16 +20,36 @@ core-formats:
     - DO NOT MERGE
     - WIP
 
+  quotes:
+    - Everyone should have the opportunity to learn. Don’t be afraid to pick up stories on things you don’t understand and ask for help with them.
+    - Be nice and respect each other. Support each other.
+    - Don’t be a silo of knowledge
+    - Ask if anyone needs support before picking up new work
+    - Be considerate to remote workers
+    - Avoid gendered language when it isn’t needed
+    - Turn up to meetings on time, one person speaks at a time
+    - Developers - we prefer to pair when it’s suitable, no cherry picking from the backlog
+    - Any excuse for cake - or generally celebrating awesomeness
+    - Never be afraid to suggest better ways of working.
+    - Stories should start with a user need
+    - It’s not done until it’s in the hands of the people who need it
+    - When working at home, dial in to stand-up
+    - Keep things up-to-date - like the digital wall, team calendar
+    - Communicate what you’re working on - make sure you don’t leave people out of the loop
+    - Meetings must have a clear purpose and make the best use of everyone’s time
+    - Keep our desks and work spaces (including the tea stand) tidy
+    - Get involved with user research - everyone should spend 2 hours every 6 weeks learning about our users
+
 custom:
   members:
     - brenetic
-    - sihugh
+    - davidbasalla
+    - h-lame
     - issyl0
     - jennyd
     - marksheldonGDS
     - tommyp
-    - h-lame
-    - davidbasalla
+    - sihugh
 
   channel:
     "#custom"
@@ -72,3 +92,24 @@ testing:
   exclude_titles:
     - "[DO NOT MERGE]"
     - WIP
+
+  quotes:
+    - Everyone should have the opportunity to learn. Don’t be afraid to pick up stories on things you don’t understand and ask for help with them.
+    - Be nice and respect each other. Support each other.
+    - Don’t be a silo of knowledge
+
+tea:
+  members:
+    - binaryberry
+
+  channel:
+    "#tea"
+
+  quotes: >
+    - @here Gentle reminder to please empty the milk jug before the weekend! :rainbow:
+    - @here Time to be a tea-m player and take out the milk before the weekend! :facepalm:
+    - @here Good news, the weekend is starting. Bad news, YOU have to throw out the milk first.
+    - @here We want YOU to empty the milk jug! http://georgiamidwife.org/wp-content/uploads/2015/07/We-want-you-image.png
+    - @here Let's avoid Monday cheese, and empty the milk jug now. :cheese:
+    - @here Hello beau-teas! Time to empty the milk jug, and go for a :beer:!
+    - @here Reminder of your du-tea to empty the milk jug before the weekend. Thank you!

@@ -8,8 +8,12 @@ require './lib/slack_poster.rb'
 
 # Entry point for the Seal!
 class Seal
-  def initialize(team)
+
+  attr_reader :mode
+
+  def initialize(team, mode=nil)
     @team = team
+    @mode = mode
   end
 
   def bark
@@ -29,7 +33,7 @@ class Seal
   end
 
   def bark_at(team)
-    message_builder = MessageBuilder.new(pull_requests(team))
+    message_builder = MessageBuilder.new(team_params(team), @mode)
     message = message_builder.build
     channel = ENV["SLACK_CHANNEL"] ? ENV["SLACK_CHANNEL"] : team_config(team)['channel']
     slack = SlackPoster.new(ENV['SLACK_WEBHOOK'], channel, message_builder.poster_mood)
@@ -44,20 +48,27 @@ class Seal
     @configuration_filename ||= "./config/#{ENV['SEAL_ORGANISATION']}.yml"
   end
 
-  def pull_requests(team)
+  def team_params(team)
     config = team_config(team)
     if config
       members = config['members']
       use_labels = config['use_labels']
       exclude_labels = config['exclude_labels']
       exclude_titles = config['exclude_titles']
+      @quotes = config['quotes']
     else
       members = ENV['GITHUB_MEMBERS'] ? ENV['GITHUB_MEMBERS'].split(',') : []
       use_labels = ENV['GITHUB_USE_LABELS'] ? ENV['GITHUB_USE_LABELS'].split(',') : nil
       exclude_labels = ENV['GITHUB_EXCLUDE_LABELS'] ? ENV['GITHUB_EXCLUDE_LABELS'].split(',') : nil
       exclude_titles = ENV['GITHUB_EXCLUDE_TITLES'] ? ENV['GITHUB_EXCLUDE_TITLES'].split(',') : nil
+      @quotes = ENV['SEAL_QUOTES'] ? ENV['SEAL_QUOTES'].split(',') : nil
     end
+    return fetch_from_github(members, use_labels, exclude_labels, exclude_titles) if @mode == nil
+    @quotes
+  end
 
+
+def fetch_from_github(members, use_labels, exclude_labels, exclude_titles)
     git = GithubFetcher.new(members,
                             use_labels,
                             exclude_labels,

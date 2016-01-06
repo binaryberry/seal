@@ -22,7 +22,7 @@ export SLACK_WEBHOOK="get_your_incoming_webhook_link_for_your_slack_group_channe
 - To get a new `GITHUB_TOKEN`, head to: https://github.com/settings/tokens
 - To get a new `SLACK_WEBHOOK`, head to: https://slack.com/services/new/incoming-webhook
 
-To test the script locally, go to Slack and create a channel or private group called "#angry-seal-bot-test". Then run `./bin/seal.rb your_team_name` in your command line, and you should see the post in the #angry-seal-bot-test channel.
+To test the script locally, go to Slack and create a channel or private group called "#angry-seal-bot-test". Then run `./bin/seal.rb your_team_name` in your command line, and you should see the post in the #angry-seal-bot-test channel. If you don't want to post github pull requests but a random quote from your team's quotes config, run `./bin/seal.rb your_team_name quotes`
 
 You should also set up the following custom emojis in Slack:
 - :informative_seal:
@@ -35,6 +35,7 @@ You should also set up the following custom emojis in Slack:
 - :festive_season_informative_seal:
 - :festive_season_angrier_seal:
 - :festive_season_seal_of_approval:
+- :manatea:
 
 You can use the images in images/emojis that have the corresponding names.
 
@@ -153,6 +154,9 @@ Just run `rspec` in the command line
 
 13th of September
 - Seal now has only one script to be triggered - will start either the angry seal, the informative seal or the seal of approval each day.
+
+6th of January
+- Seal can now post random quotes from the team's list of quotes in the config. Can be used as a reminder or for inspirational quotes!
 
 ## Tips
 
