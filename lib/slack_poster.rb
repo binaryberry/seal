@@ -30,6 +30,7 @@ class SlackPoster
   def mood_hash
     @mood_hash = {}
     check_season
+    check_if_quotes
     assign_poster_settings
   end
 
@@ -43,12 +44,14 @@ class SlackPoster
     elsif @mood == "angry"
       @mood_hash[:icon_emoji]= ":#{@season_symbol}angrier_seal:"
       @mood_hash[:username]= "#{@season_name}Angry Seal"
-    elsif @team_channel == "#tea"
+    elsif @mood == "tea" && @postable_day
       @mood_hash[:icon_emoji]= ":manatea:"
       @mood_hash[:username]= "Tea Seal"
-    else
+    elsif @mood == "charter" && @postable_day
       @mood_hash[:icon_emoji]= ":happyseal:"
       @mood_hash[:username]= "Core Team Charter Seal"
+    else
+      raise "bad mood"
     end
   end
 
@@ -76,6 +79,17 @@ class SlackPoster
 
   def snake_case(string)
     string.downcase.gsub(" ", "_")
+  end
+
+  def check_if_quotes
+    today = Date.today
+    if @team_channel == "#tea"
+      @mood = "tea"
+      @postable_day = today.friday?
+    elsif @mood == nil && @team_channel = "#core-formats"
+      @mood = "charter"
+      @postable_day = today.tuesday? || today.thursday?
+    end
   end
 
   def channel
