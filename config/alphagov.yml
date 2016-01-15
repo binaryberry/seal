@@ -106,11 +106,11 @@ tea:
   channel:
     "#tea"
 
-  quotes: >
-    - @here Gentle reminder to please empty the milk jug before the weekend! :rainbow:
-    - @here Time to be a tea-m player and take out the milk before the weekend! :facepalm:
-    - @here Good news, the weekend is starting. Bad news, YOU have to throw out the milk first.
-    - @here We want YOU to empty the milk jug! http://georgiamidwife.org/wp-content/uploads/2015/07/We-want-you-image.png
-    - @here Let's avoid Monday cheese, and empty the milk jug now. :cheese:
-    - @here Hello beau-teas! Time to empty the milk jug, and go for a :beer:!
-    - @here Reminder of your du-tea to empty the milk jug before the weekend. Thank you!
+  quotes:
+    - "@here Gentle reminder to please empty the milk jug before the weekend! :rainbow:"
+    - "@here Time to be a tea-m player and take out the milk before the weekend! :facepalm:"
+    - "@here Good news, the weekend is starting. Bad news, YOU have to throw out the milk first."
+    - "@here We want YOU to empty the milk jug! http://georgiamidwife.org/wp-content/uploads/2015/07/We-want-you-image.png"
+    - "@here Let's avoid Monday cheese, and empty the milk jug now. :cheese:"
+    - "@here Hello beau-teas! Time to empty the milk jug, and go for a :beer:!"
+    - "@here Reminder of your du-tea to empty the milk jug before the weekend. Thank you!"
