@@ -47,7 +47,7 @@ class Seal
   def pull_requests(team)
     config = team_config(team)
     if config
-      members = config['members']
+      members = config.fetch('members', [])
       repos = config['repos']
       use_labels = config['use_labels']
       exclude_labels = config['exclude_labels']
