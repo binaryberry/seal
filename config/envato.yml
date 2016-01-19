@@ -65,7 +65,7 @@ site-reliability:
     - wip
 
 market-financedev:
-  channel: '#mp-financedev'
+  channel: '#mp-financedev-prs'
   members: ['macosgrove', 'orien', 'andredantasrocha', 'asellitt', 'jiexinhuang', 'pablolee', 'rabidcarrot', 'salamagd', 'stephnacios', 'yasminfatima']
   repos:
     - marketplace
