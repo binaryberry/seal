@@ -4,6 +4,7 @@ require './lib/github_fetcher'
 describe 'GithubFetcher' do
   subject(:github_fetcher) do
     GithubFetcher.new(team_members_accounts,
+                      github_team_ids,
                       team_repos,
                       use_labels,
                       exclude_labels,
@@ -57,7 +58,9 @@ describe 'GithubFetcher' do
   end
   let(:exclude_labels) { nil }
   let(:exclude_titles) { nil }
-  let(:team_members_accounts) { %w(binaryberry boffbowsh jackscotti tekin elliotcm tommyp mattbostock) }
+  let(:team_members_accounts) { %w(jackscotti tekin elliotcm tommyp mattbostock) }
+  let(:github_team_ids) { [1234] }
+  let(:github_team_members) { [ double(login: 'binaryberry'), double(login: 'boffbowsh') ] }
   let(:team_repos) { %w(whitehall) }
   let(:pull_2266) do
     double(Sawyer::Resource,
@@ -104,6 +107,8 @@ describe 'GithubFetcher' do
 
     allow(fake_octokit_client).to receive(:pull_request).with(repo_name, 2248).and_return(pull_2248)
     allow(fake_octokit_client).to receive(:pull_request).with(repo_name, 2266).and_return(pull_2266)
+
+    allow(fake_octokit_client).to receive(:team_members).with(1234).and_return(github_team_members)
   end
 
   shared_examples_for 'fetching from GitHub' do
