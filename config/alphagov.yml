@@ -114,3 +114,28 @@ tea:
     - "@here Let's avoid Monday cheese, and empty the milk jug now. :cheese:"
     - "@here Hello beau-teas! Time to empty the milk jug, and go for a :beer:!"
     - "@here Reminder of your du-tea to empty the milk jug before the weekend. Thank you!"
+
+publishing:
+  members:
+    - bradwright
+    - danielroseman
+    - elliotcm
+    - mattbostock
+    - mgrassotti
+    - Rosa-Fox
+    - steventux
+    - tommyp
+    - tuzz
+
+  channel:
+    "#publishing-platform"
+
+  quotes:
+    - "If you're not well, don't come in to the office."
+    - "Pair where possible."
+    - "Seek to share knowledge inside and outside of the team."
+    - "Before starting new work, see if others can be helped with their existing work."
+    - "Document all decisions and make sure they're shared."
+    - "Read your email regularly."
+    - "Meetings are expensive, make sure you get value out of them."
+    - "Be open to questioning, challenges and discussion (and do it respectfully and with empathy)."
