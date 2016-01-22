@@ -59,3 +59,15 @@ site-reliability:
   use_labels: true
   exclude_labels:
     - wip
+
+market-financedev:
+  channel: '#mp-financedev-prs'
+  github_team_ids: [298478]
+  repos:
+    - marketplace
+    - moneybookers-support-app
+    - double_entry
+  use_labels: true
+  exclude_labels:
+    - wip
+
