@@ -47,13 +47,15 @@ class Seal
   def pull_requests(team)
     config = team_config(team)
     if config
-      members = config['members']
+      members = config.fetch('members', [])
+      github_team_ids = config.fetch('github_team_ids', [])
       repos = config['repos']
       use_labels = config['use_labels']
       exclude_labels = config['exclude_labels']
       exclude_titles = config['exclude_titles']
     else
       members = ENV['GITHUB_MEMBERS'] ? ENV['GITHUB_MEMBERS'].split(',') : []
+      github_team_ids = ENV['GITHUB_TEAM_IDS'] ? ENV['GITHUB_TEAM_IDS'].split(',') : []
       repos = ENV['GITHUB_REPOS'] ? ENV['GITHUB_REPOS'].split(',') : []
       use_labels = ENV['GITHUB_USE_LABELS'] ? ENV['GITHUB_USE_LABELS'].split(',') : nil
       exclude_labels = ENV['GITHUB_EXCLUDE_LABELS'] ? ENV['GITHUB_EXCLUDE_LABELS'].split(',') : nil
@@ -61,6 +63,7 @@ class Seal
     end
 
     git = GithubFetcher.new(members,
+                            github_team_ids,
                             repos,
                             use_labels,
                             exclude_labels,
