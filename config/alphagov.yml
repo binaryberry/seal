@@ -115,20 +115,24 @@ tea:
     - "@here Hello beau-teas! Time to empty the milk jug, and go for a :beer:!"
     - "@here Reminder of your du-tea to empty the milk jug before the weekend. Thank you!"
 
-publishing:
+platform:
   members:
+    - alexmuller
     - bradwright
     - danielroseman
+    - deanwilson
     - elliotcm
     - mattbostock
     - mgrassotti
+    - rjw1
     - Rosa-Fox
     - steventux
+    - surminus
     - tommyp
     - tuzz
 
   channel:
-    "#publishing-platform"
+    "#platform-team"
 
   quotes:
     - "If you're not well, don't come in to the office."
