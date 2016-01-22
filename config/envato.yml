@@ -62,7 +62,7 @@ site-reliability:
 
 market-financedev:
   channel: '#mp-financedev-prs'
-  github_team_ids: [298478]
+  github_team_names: ['Finance']
   repos:
     - marketplace
     - moneybookers-support-app
