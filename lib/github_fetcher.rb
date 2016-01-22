@@ -5,12 +5,12 @@ class GithubFetcher
 
   attr_accessor :repos
 
-  def initialize(team_members_accounts, github_team_ids, team_repos, use_labels, exclude_labels, exclude_titles)
+  def initialize(team_members_accounts, github_team_names, team_repos, use_labels, exclude_labels, exclude_titles)
     @github = Octokit::Client.new(:access_token => ENV['GITHUB_TOKEN'])
     @github.user.login
     Octokit.auto_paginate = true
     @team_members_accounts = team_members_accounts
-    @github_team_ids = github_team_ids
+    @github_team_names = github_team_names
     @repos = team_repos.sort!
     @pull_requests = {}
     @use_labels = use_labels
@@ -52,10 +52,25 @@ class GithubFetcher
 
   def github_team_members
     @github_team_members ||= [].tap do |team_members|
-      @github_team_ids.each do |team_id|
+      github_team_ids.each do |team_id|
         team_members.concat(@github.team_members(team_id).map(&:login))
       end
     end.uniq
+  end
+
+  def github_teams
+    @github_teams ||= {}.tap do |teams|
+      @github.organization_teams(ORGANISATION).each do |team|
+        team_name = team[:name]
+        team_id = team[:id]
+
+        teams[team_name] = team_id
+      end
+    end
+  end
+
+  def github_team_ids
+    @github_team_ids ||= @github_team_names.map { |name| github_teams.fetch(name) }
   end
 
   def count_comments(pull_request, repo)

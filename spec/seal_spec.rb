@@ -7,7 +7,7 @@ describe Seal do
     {
       'lion' => {
         'members' => [],
-        'github_team_ids' => [123],
+        'github_team_names' => ['super-team'],
         'repos' => ['leo'],
         'use_labels' => nil,
         'exclude_labels' => nil,
@@ -61,7 +61,7 @@ describe Seal do
         it 'fetches PRs for the lions and the tigers' do
           expect(GithubFetcher)
             .to receive(:new)
-            .with([], [123], ['leo'], nil, nil, nil)
+            .with([], ['super-team'], ['leo'], nil, nil, nil)
             .and_return(instance_double(GithubFetcher, list_pull_requests: []))
 
           expect(GithubFetcher)

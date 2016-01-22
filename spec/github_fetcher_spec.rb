@@ -4,7 +4,7 @@ require './lib/github_fetcher'
 describe 'GithubFetcher' do
   subject(:github_fetcher) do
     GithubFetcher.new(team_members_accounts,
-                      github_team_ids,
+                      github_team_names,
                       team_repos,
                       use_labels,
                       exclude_labels,
@@ -59,7 +59,8 @@ describe 'GithubFetcher' do
   let(:exclude_labels) { nil }
   let(:exclude_titles) { nil }
   let(:team_members_accounts) { %w(jackscotti tekin elliotcm tommyp mattbostock) }
-  let(:github_team_ids) { [1234] }
+  let(:github_team_names) { ['super_team'] }
+  let(:github_teams) { [{ name: 'super_team', id: 1234 }] }
   let(:github_team_members) { [ double(login: 'binaryberry'), double(login: 'boffbowsh') ] }
   let(:team_repos) { %w(whitehall) }
   let(:pull_2266) do
@@ -108,6 +109,7 @@ describe 'GithubFetcher' do
     allow(fake_octokit_client).to receive(:pull_request).with(repo_name, 2248).and_return(pull_2248)
     allow(fake_octokit_client).to receive(:pull_request).with(repo_name, 2266).and_return(pull_2266)
 
+    allow(fake_octokit_client).to receive(:organization_teams).with(GithubFetcher::ORGANISATION).and_return(github_teams)
     allow(fake_octokit_client).to receive(:team_members).with(1234).and_return(github_team_members)
   end
 
