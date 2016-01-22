@@ -80,7 +80,6 @@ finding-things:
 
 testing:
   members:
-    - ajlanghorn
     - benilovj
     - binaryberry
     - boffbowsh
