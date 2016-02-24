@@ -10,7 +10,6 @@ core-formats:
     - fofr
     - gpeng
     - jamiecobbett
-    - tommyp
     - Rosa-Fox
 
   channel:
@@ -52,8 +51,6 @@ custom:
     - h-lame
     - issyl0
     - jennyd
-    - marksheldonGDS
-    - tommyp
     - sihugh
 
   channel:
@@ -132,7 +129,6 @@ platform:
     - Rosa-Fox
     - steventux
     - surminus
-    - tommyp
     - tuzz
 
   channel:
