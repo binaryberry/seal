@@ -108,6 +108,3 @@ DEPENDENCIES
   slack-poster (~> 1.0.1)
   thin
   timecop
-
-BUNDLED WITH
-   1.10.6

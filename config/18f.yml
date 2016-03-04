@@ -1,0 +1,10 @@
+18f:
+  channel: "#open-pull-requests"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - DO NOT MERGE
+    - WIP
+
+  exclude_labels:
+    - wip
