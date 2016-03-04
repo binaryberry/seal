@@ -93,6 +93,6 @@ class SlackPoster
   end
 
   def channel
-    @team_channel = '#angry-seal-bot-test' if ENV["DYNO"].nil?
+    @team_channel = '#transient' if ENV["DYNO"].nil?
   end
 end
