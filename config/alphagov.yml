@@ -144,3 +144,15 @@ platform:
     - "Be open to questioning, challenges and discussion (and do it respectfully and with empathy)."
     - ":eggplant:"
     - "http://s18.postimg.org/ryk1eup09/automotivator.jpg"
+
+service-manual:
+  members:
+    - andrewvos
+    - henry.turner
+    - gemmaleigh
+
+  channel:
+    "#servicemanual"
+
+  quotes:
+    - "hi"
