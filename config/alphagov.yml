@@ -147,8 +147,8 @@ platform:
 
 service-manual:
   members:
-    - andrewvos
-    - henry.turner
+    - AndrewVos
+    - thehenster
     - gemmaleigh
 
   channel:
