@@ -95,7 +95,7 @@ describe 'GithubFetcher' do
   before do
     expect(Octokit::Client).to receive(:new).and_return(fake_octokit_client)
     expect(fake_octokit_client).to receive_message_chain('user.login')
-    expect(fake_octokit_client).to receive(:search_issues).with("is:pr state:open user:alphagov").and_return(double(items: [pull_2266, pull_2248]))
+    expect(fake_octokit_client).to receive(:search_issues).with("is:pr state:open user:alphagov", per_page: 100).and_return(double(items: [pull_2266, pull_2248]))
 
     allow(fake_octokit_client).to receive(:issue_comments).with(repo_name, 2266).and_return(comments_2266)
     allow(fake_octokit_client).to receive(:issue_comments).with(repo_name, 2248).and_return(comments_2248)
