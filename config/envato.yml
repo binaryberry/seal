@@ -67,6 +67,9 @@ market-financedev:
     - marketplace
     - moneybookers-support-app
     - double_entry
+    - cqrs-service-template
+    - cqrs-es-framework
+    - event-store
   use_labels: true
   exclude_labels:
     - wip
