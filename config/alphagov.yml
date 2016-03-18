@@ -3,14 +3,13 @@
 core-formats:
   members:
     - benilovj
-    - benlovell
     - binaryberry
     - dsingleton
     - boffbowsh
     - fofr
     - gpeng
-    - jamiecobbett
-    - Rosa-Fox
+    - tvararu
+    - mgrassotti
 
   channel:
     "#core-formats"
@@ -22,6 +21,7 @@ core-formats:
 
   quotes:
     - Everyone should have the opportunity to learn. Don’t be afraid to pick up stories on things you don’t understand and ask for help with them.
+    - Keep making puns, and when you do make sure to @benilovj.
     - We focus on users - always starting with ‘why’ we are doing something, not ‘what’ we are doing.
     - If it’s gonna take more than 30 minutes, or it needs deploying - write a card for it and chat to Jen.
     - Try to pair when possible.
@@ -43,6 +43,15 @@ core-formats:
     - Meetings must have a clear purpose and make the best use of everyone’s time
     - Keep our desks and work spaces tidy (including the tea stand)
     - Get involved with user research - everyone should spend 2 hours every 6 weeks learning about our users
+
+specialist-publisher:
+  members:
+    - mathildathompson
+    - Rosa-Fox
+    - christopherwong
+
+  channel:
+    "#specialist-publisher"
 
 custom:
   members:
@@ -115,23 +124,39 @@ tea:
     - "Hello beau-teas! Time to empty the milk jug, and go for a :beer:!"
     - "Reminder of your du-tea to empty the milk jug before the weekend. Thank you!"
 
-platform:
+publishing-platform:
   members:
-    - alexmuller
-    - bradwright
     - danielroseman
-    - deanwilson
     - elliotcm
-    - mattbostock
-    - mgrassotti
-    - rjw1
-    - Rosa-Fox
     - steventux
-    - surminus
+    - dougdroper
     - tuzz
 
   channel:
-    "#platform-team"
+    "#publishing-platform"
+
+  quotes:
+    - "If you're not well, don't come in to the office."
+    - "Pair where possible."
+    - "Seek to share knowledge inside and outside of the team."
+    - "Before starting new work, see if others can be helped with their existing work."
+    - "Document all decisions and make sure they're shared."
+    - "Read your email regularly."
+    - "Meetings are expensive, make sure you get value out of them."
+    - "Be open to questioning, challenges and discussion (and do it respectfully and with empathy)."
+    - ":eggplant:"
+    - "http://s18.postimg.org/ryk1eup09/automotivator.jpg"
+
+govuk-infrastructure:
+  members:
+    - alexmuller
+    - deanwilson
+    - mattbostock
+    - rjw1
+    - surminus
+
+  channel:
+    "#govuk-infrastructure"
 
   quotes:
     - "If you're not well, don't come in to the office."
