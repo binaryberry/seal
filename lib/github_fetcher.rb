@@ -8,7 +8,7 @@ class GithubFetcher
   def initialize(team_members_accounts, use_labels, exclude_labels, exclude_titles)
     @github = Octokit::Client.new(:access_token => ENV['GITHUB_TOKEN'])
     @github.user.login
-    Octokit.auto_paginate = true
+    @github.auto_paginate = true
     @people = team_members_accounts
     @use_labels = use_labels
     @exclude_labels = exclude_labels.map(&:downcase).uniq if exclude_labels
@@ -44,7 +44,7 @@ class GithubFetcher
   # https://developer.github.com/v3/search/#search-issues
   # returns up to 100 results per page.
   def pull_requests_from_github
-    @github.search_issues("is:pr state:open user:#{ORGANISATION}", per_page: 100).items
+    @github.search_issues("is:pr state:open user:#{ORGANISATION}").items
   end
 
   def person_subscribed?(pull_request)
