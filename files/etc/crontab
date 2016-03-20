@@ -1,0 +1,3 @@
+#!/usr/bin/ruby
+
+* * * * * root /bin/sh -c "(export PATH=/usr/bin:/bin; ./bin/seal.rb Developers)" >> /var/log/cron.log 2>&1

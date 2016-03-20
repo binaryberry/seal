@@ -1,1 +1,1 @@
-web: bundle exec puma -p $PORT
+cron: /usr/bin/start-cron.sh
