@@ -7,6 +7,7 @@ gem "sinatra"
 gem "thin"
 gem 'puma'
 gem 'whenever', :require => false
+gem 'tzinfo'
 
 group :test do
   gem 'guard'
