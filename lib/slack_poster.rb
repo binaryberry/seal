@@ -22,7 +22,7 @@ class SlackPoster
   end
 
   def send_request(message)
-    poster.send_message("#{message}") unless Date.today.saturday? || Date.today.sunday?
+    poster.send_message("#{message}")
   end
 
   private

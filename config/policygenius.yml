@@ -1,0 +1,30 @@
+# Please insert new items alphabetically.
+
+Developers:
+  members:
+    - bradwheel
+    - ianyamey
+    - j-clark
+    - JustinTernullo
+    - kellywu
+    - PepperTeasdale
+    - petrgazarov
+
+  channel:
+    "#sandbox"
+
+  exclude_titles:
+    - WIP
+
+Front-end:
+  members:
+    - ianyamey
+    - JustinTernullo
+    - petrgazarov
+    - elky
+
+  channel:
+    "#sandbox"
+
+  exclude_titles:
+    - WIP

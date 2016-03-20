@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-
 require 'yaml'
 
 require './lib/github_fetcher.rb'
