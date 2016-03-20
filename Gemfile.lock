@@ -4,6 +4,7 @@ GEM
     addressable (2.3.8)
     byebug (5.0.0)
       columnize (= 0.9.0)
+    chronic (0.10.2)
     coderay (1.1.0)
     columnize (0.9.0)
     daemons (1.2.3)
@@ -93,6 +94,8 @@ GEM
     thor (0.19.1)
     tilt (2.0.1)
     timecop (0.8.0)
+    whenever (0.9.4)
+      chronic (>= 0.6.3)
 
 PLATFORMS
   ruby
@@ -110,6 +113,7 @@ DEPENDENCIES
   slack-poster (~> 1.0.1)
   thin
   timecop
+  whenever
 
 BUNDLED WITH
    1.11.2

@@ -6,6 +6,7 @@ gem "octokit", "~> 4.0"
 gem "sinatra"
 gem "thin"
 gem 'puma'
+gem 'whenever', :require => false
 
 group :test do
   gem 'guard'

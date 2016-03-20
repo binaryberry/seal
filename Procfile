@@ -1,1 +1,1 @@
-cron: /usr/bin/start-cron.sh
+cron: sh start-cron.sh
