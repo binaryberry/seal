@@ -52,7 +52,7 @@ class MessageBuilder
     recent_pull_requests = @content.reject { |_title, pr| rotten?(pr) }
     list_recent_pull_requests = recent_pull_requests.keys.each_with_index.map { |title, n| present(title, n + 1) }
     informative_bark = "There are also these pull requests that need to be reviewed today:\n\n#{list_recent_pull_requests.join} " if !recent_pull_requests.empty?
-    "AAAAAAARGH! #{these(old_pull_requests.length)} #{pr_plural(old_pull_requests.length)} not been updated in over 2 days.\n\n#{angry_bark.join}\nRemember each time you forget to review your pull requests, a baby seal dies.
+    "#{angry_exclamation} #{these(old_pull_requests.length)} #{pr_plural(old_pull_requests.length)} not been updated in over 2 days.\n\n#{angry_bark.join}\nRemember each time you forget to review your pull requests, a baby seal dies. :happyseal:
     \n\n#{informative_bark}"
   end
 
@@ -62,7 +62,7 @@ class MessageBuilder
   end
 
   def no_pull_requests
-    "Good morning team! It's a beautiful day! :happyseal: :happyseal: :happyseal:\n\nNo pull requests to review today! :rainbow: :sunny: :metal: :tada:"
+    "Good morning team! :happyseal: :happyseal: :happyseal:\n\nNo pull requests to review! :rainbow: :sunny: :metal: :tada:"
   end
 
   def bark_about_quotes
@@ -80,6 +80,10 @@ class MessageBuilder
     else
       'These'
     end
+  end
+
+  def angry_exclamation
+    ['Yikes!', 'Argh!', 'Boo!', 'Eek!', 'Ouch!', 'Oops!'].sample
   end
 
   def pr_plural(prs)
