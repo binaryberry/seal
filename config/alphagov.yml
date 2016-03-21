@@ -18,6 +18,10 @@ core-formats:
     - "[DO NOT MERGE]"
     - DO NOT MERGE
     - WIP
+    - "[DO NOT SEAL]"
+    - "[DON'T SEAL]"
+    - DO NOT SEAL
+    - DON'T SEAL
 
   quotes:
     - Everyone should have the opportunity to learn. Don’t be afraid to pick up stories on things you don’t understand and ask for help with them.
