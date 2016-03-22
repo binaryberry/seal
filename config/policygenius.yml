@@ -1,5 +1,3 @@
-# Please insert new items alphabetically.
-
 Developers:
   members:
     - bradwheel
@@ -9,22 +7,10 @@ Developers:
     - kellywu
     - PepperTeasdale
     - petrgazarov
-
-  channel:
-    "#sandbox"
-
-  exclude_titles:
-    - WIP
-
-Front-end:
-  members:
-    - ianyamey
-    - JustinTernullo
-    - petrgazarov
     - elky
 
   channel:
-    "#sandbox"
+    "#engineering"
 
   exclude_titles:
     - WIP

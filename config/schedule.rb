@@ -11,10 +11,6 @@ ENV.each { |k, v| env(k, v) }
 
 job_type :aptible_script, 'cd /lib && set -a && . .aptible.env && :task'
 
-every :day, :at => local('9:00 pm') do
+every :day, :at => local('9:00 am') do
   aptible_script "ruby ./bin/seal.rb"
 end
-
-# every 1.minute do
-  # aptible_script "ruby ./bin/seal.rb Developers"
-# end
