@@ -22,10 +22,14 @@ class SlackPoster
   end
 
   def send_request(message)
-    poster.send_message("#{message}")
+    poster.send_message("#{message}") unless today_is_weekend
   end
 
   private
+
+  def today_is_weekend
+    Date.today.saturday? || Date.today.sunday?
+  end
 
   def mood_hash
     @mood_hash = {}
