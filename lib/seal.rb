@@ -19,9 +19,21 @@ class Seal
     teams.each { |team| bark_at(team) }
   end
 
+  def update(channel: nil)
+    teams.each { |team| update_team(team: team, channel: channel) }
+  end
+
   private
 
   attr_accessor :mood
+
+  def update_team(team:, channel: nil)
+    message_builder = MessageBuilder.new(team_params(team), @mode)
+    message = message_builder.build
+    channel ||= (ENV["SLACK_CHANNEL"] || team_config(team)['channel'])
+    slack = SlackPoster.new(ENV['SLACK_WEBHOOK'], channel, message_builder.poster_mood)
+    slack.send_request(message)
+  end
 
   def teams
     if @team.nil? && org_config

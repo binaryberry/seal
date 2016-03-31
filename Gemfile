@@ -8,6 +8,8 @@ gem "thin"
 gem 'puma'
 gem 'whenever', :require => false
 gem 'tzinfo'
+gem 'slack-ruby-bot'
+gem 'dotenv'
 
 group :test do
   gem 'guard'

@@ -13,5 +13,5 @@ RUN bundle install
 RUN touch /var/log/cron.log && chmod go+rw /var/log/cron.log
 ADD . /lib
 
-ENV PORT 4567
-EXPOSE 4567
+ENV PORT 9292
+EXPOSE 9292
