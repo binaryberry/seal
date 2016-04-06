@@ -170,7 +170,7 @@ govuk-infrastructure:
     - "If it's Wednesday, go to Beck's"
     - "We :heart: Taylor Swift"
 
-service-manual:
+servicemanual:
   members:
     - AndrewVos
     - thehenster
