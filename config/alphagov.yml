@@ -163,6 +163,10 @@ govuk-infrastructure:
   channel:
     "#govuk-infrastructure"
 
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - WIP
+
   quotes:
     - ":eggplant:"
     - "indeed"
