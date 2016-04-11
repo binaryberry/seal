@@ -57,6 +57,10 @@ specialist-publisher:
   channel:
     "#specialist-publisher"
 
+    exclude_titles:
+    - "[DO NOT MERGE]"
+    - WIP
+
 custom:
   members:
     - brenetic
