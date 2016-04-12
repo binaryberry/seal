@@ -58,7 +58,7 @@ specialist-publisher:
   channel:
     "#specialist-publisher"
 
-    exclude_titles:
+  exclude_titles:
     - "[DO NOT MERGE]"
     - WIP
 
