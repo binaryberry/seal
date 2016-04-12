@@ -2,7 +2,6 @@
 
 core-formats:
   members:
-    - benilovj
     - binaryberry
     - dsingleton
     - boffbowsh
@@ -50,6 +49,8 @@ core-formats:
 
 specialist-publisher:
   members:
+    - benilovj
+    - danielroseman
     - mathildathompson
     - Rosa-Fox
     - christophwong
