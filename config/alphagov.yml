@@ -53,7 +53,9 @@ specialist-publisher:
     - christophwong
     - danielroseman
     - mathildathompson
+    - rgarner
     - Rosa-Fox
+    - tahb
 
   channel:
     "#specialist-publisher"
