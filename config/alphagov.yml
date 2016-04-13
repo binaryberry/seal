@@ -50,10 +50,10 @@ core-formats:
 specialist-publisher:
   members:
     - benilovj
+    - christophwong
     - danielroseman
     - mathildathompson
     - Rosa-Fox
-    - christophwong
 
   channel:
     "#specialist-publisher"
