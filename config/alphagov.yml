@@ -83,6 +83,9 @@ custom:
     - DO NOT MERGE
     - WIP
 
+  exclude_repos:
+    - e-petitions
+
 finding-things:
   members:
     - benhyland
