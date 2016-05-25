@@ -8,6 +8,8 @@ class SlackPoster
     @webhook_url = webhook_url
     @team_channel = team_channel
     @mood = mood
+    @today = Date.today
+    @postable_day = !today.saturday? && !today.sunday?
     mood_hash
     channel
     create_poster
@@ -19,14 +21,17 @@ class SlackPoster
 
   def send_request(message)
     if ENV['DRY']
+      puts "Will#{' not' unless postable_day} post #{mood} message to #{channel} on #{today.strftime('%A')}"
       puts slack_options.inspect
       puts message
     else
-      poster.send_message("#{message}") unless Date.today.saturday? || Date.today.sunday?
+      poster.send_message(message) if postable_day
     end
   end
 
   private
+
+  attr_reader :postable_day, :today
 
   def slack_options
     {
@@ -53,14 +58,14 @@ class SlackPoster
     elsif @mood == "angry"
       @mood_hash[:icon_emoji]= ":#{@season_symbol}angrier_seal:"
       @mood_hash[:username]= "#{@season_name}Angry Seal"
-    elsif @mood == "tea" && @postable_day
+    elsif @mood == "tea"
       @mood_hash[:icon_emoji]= ":manatea:"
       @mood_hash[:username]= "Tea Seal"
-    elsif @mood == "charter" && @postable_day
+    elsif @mood == "charter"
       @mood_hash[:icon_emoji]= ":happyseal:"
       @mood_hash[:username]= "Team Charter Seal"
     else
-      raise "bad mood"
+      fail "Bad mood: #{mood}."
     end
   end
 
@@ -76,14 +81,14 @@ class SlackPoster
   end
 
   def halloween_season?
-    this_year = Date.today.year
-    Date.today <= Date.new(this_year, 10, 31) && Date.today >= Date.new(this_year,10,23)
+    this_year = today.year
+    today <= Date.new(this_year, 10, 31) && today >= Date.new(this_year,10,23)
   end
 
   def festive_season?
-    this_year = Date.today.year
-    return true if Date.today <= Date.new(this_year, 12, 31) && Date.today >= Date.new(this_year,12,1)
-    Date.today == Date.new(this_year, 01, 01)
+    this_year = today.year
+    return true if today <= Date.new(this_year, 12, 31) && today >= Date.new(this_year,12,1)
+    today == Date.new(this_year, 01, 01)
   end
 
   def snake_case(string)
@@ -91,7 +96,6 @@ class SlackPoster
   end
 
   def check_if_quotes
-    today = Date.today
     if @team_channel == "#tea"
       @mood = "tea"
       @postable_day = today.friday?
