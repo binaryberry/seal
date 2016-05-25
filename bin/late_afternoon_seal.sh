@@ -1,3 +1,3 @@
 #!/bin/bash
 
-`./bin/seal.rb tea quotes`
+./bin/seal.rb tea quotes

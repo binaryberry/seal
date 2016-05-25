@@ -1,9 +1,13 @@
 #!/bin/bash
 
-`./bin/seal.rb core-formats`
-`./bin/seal.rb publishing-platform`
-`./bin/seal.rb specialist-publisher`
-`./bin/seal.rb finding-things`
-`./bin/seal.rb custom`
-`./bin/seal.rb govuk-infrastructure`
-`./bin/seal.rb servicemanual`
+teams=(core-formats
+       publishing-platform
+       specialist-publisher
+       finding-things
+       custom
+       govuk-infrastructure
+       servicemanual)
+
+for team in ${teams[*]}; do
+  ./bin/seal.rb $team
+done

@@ -1,5 +1,9 @@
 #!/bin/bash
 
-`./bin/seal.rb core-formats quotes`
-`./bin/seal.rb publishing-platform quotes`
-`./bin/seal.rb govuk-infrastructure quotes`
+teams=(core-formats
+       publishing-platform
+       govuk-infrastructure)
+
+for team in ${teams[*]} ; do
+  ./bin/seal.rb $team quotes
+done
