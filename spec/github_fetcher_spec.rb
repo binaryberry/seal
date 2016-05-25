@@ -6,12 +6,14 @@ describe 'GithubFetcher' do
     GithubFetcher.new(team_members_accounts,
                       use_labels,
                       exclude_labels,
-                      exclude_titles
+                      exclude_titles,
+                      exclude_repos
                      )
   end
 
   let(:fake_octokit_client) { double(Octokit::Client) }
-  let(:repo_name) { "#{GithubFetcher::ORGANISATION}/whitehall" }
+  let(:whitehall_repo_name) { "#{GithubFetcher::ORGANISATION}/whitehall" }
+  let(:whitehall_rebuild_repo_name) { "#{GithubFetcher::ORGANISATION}/whitehall-rebuild" }
   let(:blocked_and_wip) do
     [
       {
@@ -44,9 +46,9 @@ describe 'GithubFetcher' do
       'Remove all Import-related code' =>
         {
           'title' => 'Remove all Import-related code',
-          'link' => 'https://github.com/alphagov/whitehall/pull/2248',
+          'link' => 'https://github.com/alphagov/whitehall-rebuild/pull/2248',
           'author' => 'tekin',
-          'repo' => 'whitehall',
+          'repo' => 'whitehall-rebuild',
           'comments_count' => '5',
           'thumbs_up' => '0',
           'updated' => Date.parse('2015-07-17 ((2457221j,0s,0n),+0s,2299161j)'),
@@ -56,6 +58,7 @@ describe 'GithubFetcher' do
   end
   let(:exclude_labels) { nil }
   let(:exclude_titles) { nil }
+  let(:exclude_repos) { nil }
   let(:team_members_accounts) { %w(binaryberry boffbowsh jackscotti tekin elliotcm tommyp mattbostock) }
   let(:pull_2266) do
     double(Sawyer::Resource,
@@ -72,7 +75,7 @@ describe 'GithubFetcher' do
     double(Sawyer::Resource,
            user: double(Sawyer::Resource, login: 'tekin'),
            title: 'Remove all Import-related code',
-           html_url: 'https://github.com/alphagov/whitehall/pull/2248',
+           html_url: 'https://github.com/alphagov/whitehall-rebuild/pull/2248',
            number: 2248,
            review_comments: 1,
            comments: 4,
@@ -98,11 +101,11 @@ describe 'GithubFetcher' do
     expect(fake_octokit_client).to receive(:auto_paginate=).with(true)
     expect(fake_octokit_client).to receive(:search_issues).with("is:pr state:open user:alphagov").and_return(double(items: [pull_2266, pull_2248]))
 
-    allow(fake_octokit_client).to receive(:issue_comments).with(repo_name, 2266).and_return(comments_2266)
-    allow(fake_octokit_client).to receive(:issue_comments).with(repo_name, 2248).and_return(comments_2248)
+    allow(fake_octokit_client).to receive(:issue_comments).with(whitehall_repo_name, 2266).and_return(comments_2266)
+    allow(fake_octokit_client).to receive(:issue_comments).with(whitehall_rebuild_repo_name, 2248).and_return(comments_2248)
 
-    allow(fake_octokit_client).to receive(:pull_request).with(repo_name, 2248).and_return(pull_2248)
-    allow(fake_octokit_client).to receive(:pull_request).with(repo_name, 2266).and_return(pull_2266)
+    allow(fake_octokit_client).to receive(:pull_request).with(whitehall_rebuild_repo_name, 2248).and_return(pull_2248)
+    allow(fake_octokit_client).to receive(:pull_request).with(whitehall_repo_name, 2266).and_return(pull_2266)
   end
 
   shared_examples_for 'fetching from GitHub' do
@@ -117,8 +120,8 @@ describe 'GithubFetcher' do
     let(:use_labels) { true }
 
     before do
-      expect(fake_octokit_client).to receive(:labels_for_issue).with(repo_name, 2248).and_return(blocked_and_wip)
-      expect(fake_octokit_client).to receive(:labels_for_issue).with(repo_name, 2266).and_return([])
+      allow(fake_octokit_client).to receive(:labels_for_issue).with(whitehall_rebuild_repo_name, 2248).and_return(blocked_and_wip)
+      allow(fake_octokit_client).to receive(:labels_for_issue).with(whitehall_repo_name, 2266).and_return([])
 
       expected_open_prs['Remove all Import-related code']['labels'] = blocked_and_wip if expected_open_prs['Remove all Import-related code']
     end
@@ -152,6 +155,16 @@ describe 'GithubFetcher' do
 
         expect(titles).not_to include 'Remove all Import-related code'
         expect(titles).to include '[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host'
+      end
+    end
+
+    context 'excluding "whitehall-rebuild" repo' do
+      let(:exclude_repos) { ['whitehall-rebuild'] }
+
+      it 'filters out PRs for the "whitehall-rebuild" repo' do
+        titles = github_fetcher.list_pull_requests.keys
+
+        expect(titles).to match_array(['[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host'])
       end
     end
   end
@@ -190,6 +203,16 @@ describe 'GithubFetcher' do
 
           expect(titles).not_to include '[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host'
           expect(titles).to include 'Remove all Import-related code'
+        end
+      end
+
+      context 'excluding "whitehall-rebuild" repo' do
+        let(:exclude_repos) { ['whitehall-rebuild'] }
+
+        it 'filters out PRs for the "whitehall-rebuild" repo' do
+          titles = github_fetcher.list_pull_requests.keys
+
+          expect(titles).to match_array(['[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host'])
         end
       end
     end
