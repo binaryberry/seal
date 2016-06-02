@@ -9,6 +9,7 @@ core-formats:
     - gpeng
     - tvararu
     - mgrassotti
+    - nickcolley
 
   channel:
     "#core-formats"
