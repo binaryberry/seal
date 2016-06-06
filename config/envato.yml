@@ -78,3 +78,15 @@ customer-group-leads:
   channel: '#customer-eng-leads'
   repos:
     - customer-group-leads
+
+infrastructure:
+  channel: '#infrastructure'
+  github_team_names: ['Infrastructure']
+  repos:
+    - marketplace-aws
+    - envato-cloud-management
+    - envato-platform-infrastructure
+    - platform-iam-configuration
+  use_labels: true
+  exclude_labels:
+    - wip
