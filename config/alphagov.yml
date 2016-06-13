@@ -187,12 +187,21 @@ govuk-infrastructure:
 
 servicemanual:
   members:
-    - AndrewVos
-    - thehenster
+    - deborahchua
     - gemmaleigh
+    - thehenster
 
   channel:
     "#servicemanual"
 
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - DO NOT MERGE
+    - WIP
+
+  exclude_repos:
+    - govuk_elements
+    - govuk_frontend_toolkit
+
   quotes:
-    - "hi"
+    - ":wave:"
