@@ -9,7 +9,9 @@ This is a Slack bot that publishes a team's pull requests to their Slack Channel
 ![image](https://github.com/binaryberry/seal/blob/master/images/readme/angry.png)
 
 ##How to use it?
-Fork the repo, and change the config file to put: your team's name, the github names of your team members, the list of repos to follow, and the Slack channel you want to post to.
+Fork the repo and add/change the config file that relates to your github organisation. For example, the alphagov config file is located at (config/alphagov.yml)[https://github.com/binaryberry/seal/blob/master/config/alphagov.yml].
+
+Include your team's name, the github names of your team members, the list of repos to follow, and the Slack channel you want to post to.
 
 In your shell profile, put in:
 
