@@ -1,0 +1,19 @@
+livestaxltd:
+  members:
+    - drtortoise
+    - jamiecobbett
+    - lozette
+    - mnowster
+    - sl33p
+
+  channel:
+    "#pull-requests"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - DO NOT MERGE
+    - WIP
+    - "[DO NOT SEAL]"
+    - "[DON'T SEAL]"
+    - DO NOT SEAL
+    - DON'T SEAL
