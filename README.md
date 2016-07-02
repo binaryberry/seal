@@ -11,7 +11,7 @@ This is a Slack bot that publishes a team's pull requests to their Slack Channel
 ##How to use it?
 Fork the repo and add/change the config file that relates to your github organisation. For example, the alphagov config file is located at [config/alphagov.yml](https://github.com/binaryberry/seal/blob/master/config/alphagov.yml).
 
-Include your team's name, the github names of your team members, the list of repos to follow, and the Slack channel you want to post to.
+Include your team's name, the Github names of your team members, the list of repos to follow, and the Slack channel you want to post to.
 
 In your shell profile, put in:
 
@@ -24,7 +24,9 @@ export SLACK_WEBHOOK="get_your_incoming_webhook_link_for_your_slack_group_channe
 - To get a new `GITHUB_TOKEN`, head to: https://github.com/settings/tokens
 - To get a new `SLACK_WEBHOOK`, head to: https://slack.com/services/new/incoming-webhook
 
-To test the script locally, go to Slack and create a channel or private group called "#angry-seal-bot-test". Then run `./bin/seal.rb your_team_name` in your command line, and you should see the post in the #angry-seal-bot-test channel. If you don't want to post github pull requests but a random quote from your team's quotes config, run `./bin/seal.rb your_team_name quotes`
+To test the script locally, go to Slack and create a channel or private group called "#angry-seal-bot-test" (the Slack webhook you set up should have its channel set to "#angry-seal-bot-test" in the Integration Settings). Then run `./bin/seal.rb your_team_name` in your command line, and you should see the post in the #angry-seal-bot-test channel.
+
+If you don't want to post github pull requests but a random quote from your team's quotes config, run `./bin/seal.rb your_team_name quotes`
 
 You should also set up the following custom emojis in Slack:
 - :informative_seal:
@@ -41,7 +43,9 @@ You should also set up the following custom emojis in Slack:
 
 You can use the images in images/emojis that have the corresponding names.
 
-When that works, you can push the app to Heroku, add the GITHUB_TOKEN and SLACK_WEBHOOK environment variables to heroku, and use the Heroku scheduler add-on to create repeated rasks - I set the seal to run at 9.30am every morning (the seal won't post on weekends)
+When that works, you can push the app to Heroku and add the GITHUB_TOKEN and SLACK_WEBHOOK environment variables to heroku.
+
+Use the Heroku scheduler add-on to create repeated tasks - I set the seal to run at 9.30am every morning (the seal won't post on weekends). The scheduler is at [https://scheduler.heroku.com/dashboard](https://scheduler.heroku.com/dashboard) and the command to run is `bin/seal.rb your_team_name`
 
 Any questions feel free to contact me on Twitter -  my handle is binaryberry
 
@@ -49,7 +53,7 @@ Any questions feel free to contact me on Twitter -  my handle is binaryberry
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-##How to run the tests?
+## How to run the tests?
 Just run `rspec` in the command line
 
 ## Diary of how this app was built
