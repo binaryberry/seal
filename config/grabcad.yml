@@ -10,7 +10,7 @@ lighthouse:
     - zhelezina
 
   channel:
-    "#drd-testing"
+    "#lighthouse"
 
   quotes:
     - ":wave:"
