@@ -11,7 +11,6 @@ class SlackPoster
     @today = Date.today
     @postable_day = !today.saturday? && !today.sunday?
     mood_hash
-    channel
     create_poster
   end
 

@@ -5,7 +5,7 @@
     "slack",
     "github"
   ],
-  "repository": "https://github.com/binaryberry/seal",
+  "repository": "https://github.com/GrabCAD/Slack-Pull-Requests",
   "env": {
     "SEAL_ORGANISATION": {
       "description": "Your Github organisation name"

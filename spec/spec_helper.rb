@@ -17,7 +17,7 @@
 #
 require 'timecop'
 
-ENV['SEAL_ORGANISATION'] ||= "alphagov"
+ENV['SEAL_ORGANISATION'] ||= "grabcad"
 
 RSpec.configure do |config|
 

@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'yaml'
+require 'certified'
 
 require './lib/github_fetcher.rb'
 require './lib/message_builder.rb'
@@ -36,6 +37,9 @@ class Seal
     message_builder = MessageBuilder.new(team_params(team), @mode)
     message = message_builder.build
     channel = ENV["SLACK_CHANNEL"] ? ENV["SLACK_CHANNEL"] : team_config(team)['channel']
+    puts channel
+    puts ENV['SLACK_WEBHOOK']
+
     slack = SlackPoster.new(ENV['SLACK_WEBHOOK'], channel, message_builder.poster_mood)
     slack.send_request(message)
   end
