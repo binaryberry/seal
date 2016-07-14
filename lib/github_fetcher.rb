@@ -6,7 +6,7 @@ class GithubFetcher
   attr_accessor :people
 
   def initialize(team_members_accounts, use_labels, exclude_labels, exclude_titles, exclude_repos)
-    @github = Octokit::Client.new(:access_token => ENV['GITHUB_TOKEN'])
+    @github = Octokit::Client.new(:access_token => ENV['GIT_PERSONAL_ACCESS_TOKEN'])
     @github.user.login
     @github.auto_paginate = true
     @people = team_members_accounts
