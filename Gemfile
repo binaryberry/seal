@@ -5,6 +5,7 @@ gem 'slack-poster', '~> 1.0.1'
 gem "octokit", "~> 4.0"
 gem "sinatra"
 gem "thin"
+gem "certified"
 
 group :test do
   gem 'guard'
