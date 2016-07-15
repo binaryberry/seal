@@ -1,14 +1,12 @@
 # Angry Seal
 
-[![Build Status](https://teamcity.grabcad.net/app/rest/builds/buildType:(id:PrintServiceProjects_CiHelpers_LighthouseAngrySeal)/statusIcon)](https://teamcity.grabcad.net/viewType.html?buildTypeId=PrintServiceProjects_CiHelpers_LighthouseAngrySeal)
-
 ##What is it?
 
-This is a fork of
+A Bot that nags a team on slack about Pull Requests needing attention. It's quieter than the github sack notifications, giving only one nag a day. It is a fork of
 
-https://github.com/binaryberry/seal
+[AngrySeal](https://github.com/binaryberry/seal)
 
-and is set to run on TC on a daily basis.To add your team simply clone and edit config\grabcad.yml, the member names are case sensitive, but beyond that no magic
+and is set to run on TC on a daily basis. To add your team simply push a new version config\grabcad.yml, the member names are case sensitive, but beyond that no magic
 
 
     lighthouse:
@@ -24,6 +22,7 @@ and is set to run on TC on a daily basis.To add your team simply clone and edit 
         "#lighthouse"
 
 
-This will cause the ligthhouse channel to get a nag of Pull Requests created by the specified members of the team. The notification is currently sent by a job that runs on TeamCity on a daily basis at 7:00 UTC. This means the developers get to see the nag when they get in.
+This will cause the ligthhouse channel to get a nag of Pull Requests created by the specified members of the team. The notification is currently 
+sent by a job that runs on TeamCity on a daily basis at 7:00 UTC. This means the developers get to see the nag when they get in. The job is run by this TC build configuration
 
-https://teamcity.grabcad.net/viewType.html?buildTypeId=PrintServiceProjects_CiHelpers_LighthouseAngrySeal
+[TeamCityAngrySeal](https://teamcity.grabcad.net/viewType.html?buildTypeId=PrintServiceProjects_CiHelpers_LighthouseAngrySeal)
