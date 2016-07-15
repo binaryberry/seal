@@ -1,6 +1,6 @@
 # Angry Seal
 
-[![Build Status](https://teamcity.grabcad.net/viewType.html?buildTypeId=PrintServiceProjects_CiHelpers_LighthouseAngrySeal)](https://teamcity.grabcad.net/app/rest/builds/buildType:(id:PrintServiceProjects_CiHelpers_LighthouseAngrySeal)/statusIcon)
+[![Build Status](https://teamcity.grabcad.net/app/rest/builds/buildType:(id:PrintServiceProjects_CiHelpers_LighthouseAngrySeal)/statusIcon)](https://teamcity.grabcad.net/viewType.html?buildTypeId=PrintServiceProjects_CiHelpers_LighthouseAngrySeal)
 
 ##What is it?
 
