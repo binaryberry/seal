@@ -1,5 +1,17 @@
 # Please insert new items alphabetically.
 
+apps:
+  members:
+    - OwenOrsini
+    - rromanchenko
+    - flindeman
+
+  channel:
+    "#apps"
+
+  quotes:
+    - ":wave:"
+
 lighthouse:
   members:
     - adigrabcad
@@ -14,3 +26,4 @@ lighthouse:
 
   quotes:
     - ":wave:"
+
