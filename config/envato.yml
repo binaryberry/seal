@@ -60,20 +60,6 @@ site-reliability:
   exclude_labels:
     - wip
 
-market-financedev:
-  channel: '#mp-financedev-prs'
-  github_team_names: ['Finance']
-  repos:
-    - marketplace
-    - moneybookers-support-app
-    - double_entry
-    - cqrs-service-template
-    - cqrs-es-framework
-    - event-store
-  use_labels: true
-  exclude_labels:
-    - wip
-
 customer-group-leads:
   channel: '#customer-eng-leads'
   repos:
