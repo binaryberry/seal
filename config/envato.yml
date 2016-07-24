@@ -48,7 +48,7 @@ discovery:
     - wip
 
 site-reliability:
-  channel: '#mp-site-reliability'
+  channel: '#customer-uptime'
   repos:
     - envato-cloud-management
     - lua-deflector
