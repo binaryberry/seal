@@ -33,6 +33,9 @@ octopus:
     - EyalRaz
     - Jittery
     - arielhad
+    - csidorchuk
+    - zhelezina
+    - mklchum
 
   channel:
     "#secret-octopus-team"
