@@ -3,13 +3,12 @@
 core-formats:
   members:
     - binaryberry
-    - dsingleton
     - boffbowsh
     - fofr
     - gpeng
-    - tvararu
     - mgrassotti
     - nickcolley
+    - andrewgarner
 
   channel:
     "#core-formats"
@@ -25,9 +24,8 @@ core-formats:
 
   quotes:
     - Everyone should have the opportunity to learn. Don’t be afraid to pick up stories on things you don’t understand and ask for help with them.
-    - Keep making puns, and when you do make sure to @benilovj.
     - We focus on users - always starting with ‘why’ we are doing something, not ‘what’ we are doing.
-    - If it’s gonna take more than 30 minutes, or it needs deploying - write a card for it and chat to Jen.
+    - If it’s gonna take more than 30 minutes, or it needs deploying - write a card for it and chat to Shilpa.
     - Try to pair when possible.
     - Pick up work from the 'ready column' - don't cherry pick from the backlog/ice box or ‘next’ column.
     - Any excuse for cake - or generally celebrating awesomeness
@@ -87,14 +85,12 @@ custom:
 
 finding-things:
   members:
-    - benhyland
     - carolinegreen
     - carvil
     - Davidslv
     - jackscotti
     - MatMoore
     - mobaig
-    - rboulton
     - rubenarakelyan
     - tijmenb
 
@@ -145,10 +141,10 @@ tea:
 publishing-platform:
   members:
     - danielroseman
-    - elliotcm
+    - kevindew
+    - cbaines
     - steventux
     - dougdroper
-    - tuzz
 
   channel:
     "#publishing-platform"
@@ -172,6 +168,7 @@ govuk-infrastructure:
     - jonauman
     - rjw1
     - surminus
+    - djsd123
 
   channel:
     "#govuk-infrastructure"
