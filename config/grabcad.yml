@@ -19,6 +19,7 @@ lighthouse:
     - bitosome
     - DanielDignam
     - robert-may1
+    - NigelAtGrabCAD
 
   channel:
     "#lighthouse"
@@ -28,7 +29,6 @@ lighthouse:
 
 octopus:
   members:
-    - NigelAtGrabCAD
     - EyalRaz
     - Jittery
     - arielhad
