@@ -2,9 +2,9 @@
 
 apps:
   members:
-    - OwenOrsini
     - rromanchenko
     - flindeman
+	- aroschupkin
 
   channel:
     "#apps"
