@@ -4,7 +4,7 @@ apps:
   members:
     - rromanchenko
     - flindeman
-	- aroschupkin
+    - aroschupkin
 
   channel:
     "#apps"
