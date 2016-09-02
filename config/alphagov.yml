@@ -162,6 +162,9 @@ publishing-platform:
     - ":eggplant:"
     - "http://s18.postimg.org/ryk1eup09/automotivator.jpg"
 
+  exclude_titles:
+    - "[DO NOT MERGE]"
+
 govuk-infrastructure:
   members:
     - alexmuller
