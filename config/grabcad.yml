@@ -15,7 +15,7 @@ apps:
 lighthouse:
   members:
     - adigrabcad
-    - atardugno
+    - chris-grabcad
     - bitosome
     - DanielDignam
     - NigelAtGrabCAD
@@ -37,6 +37,18 @@ octopus:
 
   channel:
     "#secret-octopus-team"
+
+  quotes:
+    - ":wave:"
+  
+solutions:
+  members:
+    - atardugno
+    - vtravieso
+    - urimike
+
+  channel:
+    "#solutions"
 
   quotes:
     - ":wave:"
