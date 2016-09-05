@@ -4,10 +4,22 @@ apps:
   members:
     - rromanchenko
     - flindeman
-    - aroschupkin
 
   channel:
     "#apps"
+
+  quotes:
+    - ":wave:"
+
+fox:
+  members:
+    - flindeman
+    - aroschupkin
+    - OlegMiroshnichenko
+    - s7sorin
+
+  channel:
+    “#eaglesolidworksaddin”
 
   quotes:
     - ":wave:"
