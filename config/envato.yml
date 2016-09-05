@@ -47,7 +47,6 @@ site-reliability:
   repos:
     - envato-cloud-management
     - lua-deflector
-    - marketplace-ansible
     - marketplace-puppet
     - ops-coding-test
     - toolbox
