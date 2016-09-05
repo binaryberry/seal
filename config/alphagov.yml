@@ -51,6 +51,7 @@ specialist-publisher:
     - christophwong
     - Rosa-Fox
     - Seraphiana
+    - steventux
     - tuzz
     - Chrislee187
 
@@ -143,7 +144,7 @@ publishing-platform:
     - danielroseman
     - kevindew
     - cbaines
-    - steventux
+    - carlosmartinez
     - dougdroper
 
   channel:
@@ -160,6 +161,9 @@ publishing-platform:
     - "Be open to questioning, challenges and discussion (and do it respectfully and with empathy)."
     - ":eggplant:"
     - "http://s18.postimg.org/ryk1eup09/automotivator.jpg"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
 
 govuk-infrastructure:
   members:
