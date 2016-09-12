@@ -9,11 +9,11 @@ class SealApp < Sinatra::Base
   get '/' do
     "Hello Seal"
   end
-  # POST /teams/core-formats
 
-
-  post '/teams/?:team_name?' do
-    Seal.new(params[:team_name]).bark
+  post '/bark/:team_name/:secret' do
+    if params[:secret] == ENV["SEAL_SECRET"]
+      Seal.new(params[:team_name]).bark
+      "Seal received message with #{params[:team_name]} team name"
+    end
   end
-
 end
