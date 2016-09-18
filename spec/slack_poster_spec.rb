@@ -68,30 +68,6 @@ describe 'slack_poster' do
     end
   end
 
-  context 'tea notifications are sent on time' do
-    before { expect(Slack::Poster).to receive(:new).and_return(fake_slack_poster) }
-    let(:mood) { 'tea' }
-    let(:team_channel) { '#tea' }
-
-    context 'on Wednesday' do
-      let(:wednesday) { Time.local(2016, 4, 13) }
-      before { Timecop.freeze(wednesday) }
-      it 'is not time for tea' do
-        expect(fake_slack_poster).not_to receive(:send_message)
-        slack_poster.send_request('earl grey')
-      end
-    end
-
-    context 'on Friday' do
-      let(:friday) { Time.local(2016, 4, 15) }
-      before { Timecop.freeze(friday) }
-      it 'is tea time' do
-        expect(fake_slack_poster).to receive(:send_message).with('earl grey')
-        slack_poster.send_request('earl grey')
-      end
-    end
-  end
-
   context 'bad mood' do
     let(:mood) { 'baadf00d' }
 
