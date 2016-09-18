@@ -98,7 +98,6 @@ class SlackPoster
   def check_if_quotes
     if @team_channel == "#tea"
       @mood = "tea"
-      @postable_day = today.friday?
     elsif @mood == nil
       @mood = "charter"
       @postable_day = today.tuesday? || today.thursday?
