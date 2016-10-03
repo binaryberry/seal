@@ -38,6 +38,17 @@ lighthouse:
   quotes:
     - ":wave:"
 
+machine:
+  members:
+    - zhelezina
+    - robert-may1
+	
+  channel:
+    "machine"
+
+  quotes:
+    - ":wave:"  
+
 octopus:
   members:
     - EyalRaz
