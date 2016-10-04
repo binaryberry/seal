@@ -42,9 +42,9 @@ machine:
   members:
     - zhelezina
     - robert-may1
-	
+
   channel:
-    "machine"
+    "#machine"
 
   quotes:
     - ":wave:"  
