@@ -7,8 +7,8 @@ boxen:
   exclude_labels:
     - wip
 
-envato-market:
-  channel: '#marketplacedev'
+customer-group:
+  channel: '#customer-engineering'
   repos:
     - docs
     - envato.com
