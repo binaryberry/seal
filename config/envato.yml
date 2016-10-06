@@ -12,16 +12,20 @@ customer-group:
   repos:
     - docs
     - envato.com
-    - front-end-coding-test
     - handdrill
     - market-dev-expectations
     - marketplace
-    - new-coding-test
     - themeAudit
     - webuild.envato.com
   use_labels: true
   exclude_labels:
     - wip
+
+developers:
+  channel: '#developers'
+  repos:
+    - new-coding-test
+    - front-end-coding-test
 
 discovery:
   channel: '#discovery-notify'
