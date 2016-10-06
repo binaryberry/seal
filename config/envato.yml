@@ -11,11 +11,15 @@ customer-group:
   channel: '#customer-engineering'
   repos:
     - docs
+    - envato-cloud-management
     - envato.com
     - handdrill
+    - lua-deflector
     - market-dev-expectations
     - marketplace
+    - marketplace-puppet
     - themeAudit
+    - toolbox
     - webuild.envato.com
   use_labels: true
   exclude_labels:
@@ -46,14 +50,10 @@ discovery:
   exclude_labels:
     - wip
 
-site-reliability:
-  channel: '#customer-uptime'
+infracoders:
+  channel: '#infracoders'
   repos:
-    - envato-cloud-management
-    - lua-deflector
-    - marketplace-puppet
     - ops-coding-test
-    - toolbox
   use_labels: true
   exclude_labels:
     - wip
