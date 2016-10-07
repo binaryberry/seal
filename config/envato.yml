@@ -7,21 +7,29 @@ boxen:
   exclude_labels:
     - wip
 
-envato-market:
-  channel: '#marketplacedev'
+customer-group:
+  channel: '#customer-engineering'
   repos:
     - docs
+    - envato-cloud-management
     - envato.com
-    - front-end-coding-test
     - handdrill
+    - lua-deflector
     - market-dev-expectations
     - marketplace
-    - new-coding-test
+    - marketplace-puppet
     - themeAudit
+    - toolbox
     - webuild.envato.com
   use_labels: true
   exclude_labels:
     - wip
+
+developers:
+  channel: '#developers'
+  repos:
+    - new-coding-test
+    - front-end-coding-test
 
 discovery:
   channel: '#discovery-notify'
@@ -42,14 +50,10 @@ discovery:
   exclude_labels:
     - wip
 
-site-reliability:
-  channel: '#customer-uptime'
+infracoders:
+  channel: '#infracoders'
   repos:
-    - envato-cloud-management
-    - lua-deflector
-    - marketplace-puppet
     - ops-coding-test
-    - toolbox
   use_labels: true
   exclude_labels:
     - wip
