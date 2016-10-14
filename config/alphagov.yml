@@ -7,8 +7,9 @@ core-formats:
     - fofr
     - gpeng
     - mgrassotti
-    - nickcolley
     - andrewgarner
+    - bevanloon
+    - tvararu
 
   channel:
     "#core-formats"
@@ -224,3 +225,12 @@ servicemanual:
 
   quotes:
     - ":wave:"
+    
+templateconsolidation:
+  members:
+    - nickcolley
+    - miaallers
+    - markhurrell
+
+ channel:
+    "#templateconsolidation"
