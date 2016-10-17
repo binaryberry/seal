@@ -225,12 +225,12 @@ servicemanual:
 
   quotes:
     - ":wave:"
-    
+
 templateconsolidation:
   members:
     - nickcolley
     - miaallers
     - markhurrell
 
- channel:
+  channel:
     "#templateconsolidation"
