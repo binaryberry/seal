@@ -67,11 +67,12 @@ custom:
   members:
     - brenetic
     - davidbasalla
+    - deborahchua
     - emmabeynon
-    - h-lame
     - issyl0
     - jennyd
     - sihugh
+    - whoojemaflip
 
   channel:
     "#custom"
@@ -80,9 +81,6 @@ custom:
     - "[DO NOT MERGE]"
     - DO NOT MERGE
     - WIP
-
-  exclude_repos:
-    - e-petitions
 
 finding-things:
   members:
