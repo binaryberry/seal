@@ -7,6 +7,7 @@ core-formats:
     - fofr
     - gpeng
     - mgrassotti
+    - Rosa-Fox
     - andrewgarner
     - bevanloon
     - tvararu
@@ -46,22 +47,6 @@ core-formats:
     - Meetings must have a clear purpose and make the best use of everyone’s time
     - Keep our desks and work spaces tidy (including the tea stand)
     - Get involved with user research - everyone should spend 2 hours every 6 weeks learning about our users
-
-specialist-publisher:
-  members:
-    - christophwong
-    - Rosa-Fox
-    - Seraphiana
-    - steventux
-    - tuzz
-    - Chrislee187
-
-  channel:
-    "#specialist-publisher"
-
-  exclude_titles:
-    - "[DO NOT MERGE]"
-    - WIP
 
 custom:
   members:
@@ -159,6 +144,7 @@ publishing-platform:
     - kevindew
     - cbaines
     - carlosmartinez
+    - steventux
     - dougdroper
 
   channel:
@@ -204,7 +190,6 @@ govuk-infrastructure:
 
 servicemanual:
   members:
-    - deborahchua
     - gemmaleigh
     - thehenster
     - 36degrees
