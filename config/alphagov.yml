@@ -84,6 +84,7 @@ finding-things:
 
   exclude_titles:
     - "[DO NOT MERGE]"
+    - "Don't merge"
     - DO NOT MERGE
     - WIP
 
