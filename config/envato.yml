@@ -16,8 +16,10 @@ customer-group:
     - handdrill
     - lua-deflector
     - market-dev-expectations
+    - market-shopfront
     - marketplace
     - marketplace-puppet
+    - shopfront-infrastructure
     - themeAudit
     - toolbox
     - webuild.envato.com
