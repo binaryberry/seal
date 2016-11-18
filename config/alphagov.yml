@@ -3,6 +3,7 @@
 core-formats:
   members:
     - binaryberry
+    - steventux
     - boffbowsh
     - fofr
     - gpeng
@@ -144,7 +145,6 @@ publishing-platform:
     - kevindew
     - cbaines
     - carlosmartinez
-    - steventux
     - dougdroper
 
   channel:
