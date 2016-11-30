@@ -56,7 +56,9 @@ octopus:
     - csidorchuk
     - novice3030
     - mklchum
-    - adigrabcad    
+    - adigrabcad 
+    - posulliv
+    - idan-shimoni
 
   channel:
     "#secret-octopus-team"
