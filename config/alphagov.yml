@@ -148,6 +148,7 @@ publishing-platform:
     - cbaines
     - carlosmartinez
     - dougdroper
+    - thomasleese
 
   channel:
     "#publishing-platform"
@@ -166,6 +167,7 @@ publishing-platform:
 
   exclude_titles:
     - "[DO NOT MERGE]"
+    - WIP
 
 govuk-infrastructure:
   members:
