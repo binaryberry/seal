@@ -165,6 +165,7 @@ publishing-platform:
 
   exclude_titles:
     - "[DO NOT MERGE]"
+    - WIP
 
 govuk-infrastructure:
   members:
