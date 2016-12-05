@@ -147,6 +147,7 @@ publishing-platform:
     - cbaines
     - carlosmartinez
     - dougdroper
+    - thomasleese
 
   channel:
     "#publishing-platform"
