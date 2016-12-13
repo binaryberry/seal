@@ -207,8 +207,8 @@ govuk-infrastructure:
 
 servicemanual:
   members:
-    - thehenster
     - 36degrees
+    - mcmillan
 
   channel:
     "#servicemanual"
