@@ -6,6 +6,8 @@ teams=(core-formats
        finding-things
        custom
        govuk-infrastructure
+       mainstream-pop-up
+       email
        servicemanual)
 
 for team in ${teams[*]}; do
