@@ -34,14 +34,14 @@ developers:
     - front-end-coding-test
 
 discovery:
-  channel: '#discovery-notify'
+  channel: '#conversion'
   repos:
     - discovery
     - solid_octane
     - solid_octane_service
     - dewey
     - discovery-scheduler
-    - recommender-api
+    - recommendation-api
     - api-gateway
     - build.envato.com
     - search_public_api
