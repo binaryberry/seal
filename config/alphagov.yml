@@ -2,7 +2,6 @@
 
 core-formats:
   members:
-    - binaryberry
     - steventux
     - boffbowsh
     - fofr
@@ -49,14 +48,21 @@ core-formats:
     - Keep our desks and work spaces tidy (including the tea stand)
     - Get involved with user research - everyone should spend 2 hours every 6 weeks learning about our users
 
+mainstream-pop-up:
+  members:
+    - binaryberry
+    - issyl0
+    - cbaines
+
+  channel:
+    "#mainstream-pop-up"
+
 custom:
   members:
     - brenetic
     - davidbasalla
     - deborahchua
     - emmabeynon
-    - issyl0
-    - jennyd
     - sihugh
     - whoojemaflip
 
@@ -90,13 +96,18 @@ finding-things:
     - DO NOT MERGE
     - WIP
 
+email:
+  members:
+    - jennyd
+
+  channel:
+    "#email"
+
 testing:
   members:
-    - benilovj
     - binaryberry
     - boffbowsh
     - fofr
-    - jamiecobbett
 
   channel:
     "#testing"
@@ -145,7 +156,6 @@ publishing-platform:
   members:
     - danielroseman
     - kevindew
-    - cbaines
     - carlosmartinez
     - dougdroper
     - thomasleese
@@ -177,6 +187,7 @@ govuk-infrastructure:
     - rjw1
     - surminus
     - djsd123
+    - dazahern
 
   channel:
     "#govuk-infrastructure"
