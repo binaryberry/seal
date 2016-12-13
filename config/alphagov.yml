@@ -95,6 +95,8 @@ finding-things:
     - "Don't merge"
     - DO NOT MERGE
     - WIP
+    - "[REVIEW ONLY]"
+    - REVIEW ONLY
 
 email:
   members:
