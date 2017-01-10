@@ -57,9 +57,31 @@ octopus:
     - novice3030
     - mklchum
     - adigrabcad
+    - posulliv
+    - idan-shimoni
+    - Ludasha
 
   channel:
     "#secret-octopus-team"
+
+  quotes:
+    - ":wave:"  
+
+octopusanubis:
+  members:
+    - EyalRaz
+    - Jittery
+    - arielhad
+    - csidorchuk
+    - novice3030
+    - mklchum
+    - adigrabcad
+    - posulliv
+    - idan-shimoni
+    - Ludasha
+
+  channel:
+    "#octopus-anubis"
 
   quotes:
     - ":wave:"
