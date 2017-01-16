@@ -17,6 +17,12 @@ content-tools:
     - DO NOT MERGE
     - "Waiting on factcheck"
 
+  exclude_labels:
+    - "[DO NOT MERGE]"
+    - "Don't merge"
+    - DO NOT MERGE
+    - "Waiting on factcheck"
+
   quotes:
     - Everyone should have the opportunity to learn. Don’t be afraid to pick up stories on things you don’t understand and ask for help with them.
     - We focus on users - always starting with ‘why’ we are doing something, not ‘what’ we are doing.
