@@ -1,6 +1,7 @@
 #!/bin/bash
 
-teams=(core-formats
+teams=(content-tools
+       core-formats
        publishing-platform
        specialist-publisher
        finding-things
