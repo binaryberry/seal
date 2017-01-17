@@ -236,11 +236,12 @@ govuk-infrastructure:
   members:
     - alexmuller
     - deanwilson
-    - jonauman
     - rjw1
     - surminus
     - djsd123
     - dazahern
+    - afda16
+    - SamLR
 
   channel:
     "#govuk-infrastructure"
@@ -255,6 +256,9 @@ govuk-infrastructure:
     - "naming is hard"
     - "If it's Wednesday, go to Beck's"
     - "We :heart: Taylor Swift"
+    - "I like to pair, do you?"
+    - "Sam has nice coffee"
+    - "Daz is a hipster"
 
 servicemanual:
   members:
