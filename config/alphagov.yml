@@ -259,6 +259,10 @@ govuk-infrastructure:
     - "I like to pair, do you?"
     - "Sam has nice coffee"
     - "Daz is a hipster"
+    - "Go team!"
+    - "Now that’s an interesting question"
+    - "$integer = '34'"
+    - "How hot is it? Probably 28"
 
 servicemanual:
   members:
