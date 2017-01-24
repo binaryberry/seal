@@ -28,8 +28,9 @@ lighthouse:
   members:
     - chris-grabcad
     - bitosome
-    - DanielDignam
     - NigelAtGrabCAD
+    - robert-may1
+    - EmaParodi
 
   channel:
     "#lighthouse"
@@ -40,7 +41,7 @@ lighthouse:
 machine:
   members:
     - zhelezina
-    - robert-may1
+    - DanielDignam
 
   channel:
     "#machine"
