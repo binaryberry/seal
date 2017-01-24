@@ -11,6 +11,20 @@ apps:
   quotes:
     - ":wave:"
 
+deathclaw:
+  members:
+    - priitm
+    - evan-grabcad
+    - Maxodactyl
+    - forzesed
+    - caseprince
+
+  channel:
+    "#deathclaw-core"
+
+  quotes:
+    - ":wave:"
+
 fox:
   members:
     - flindeman
@@ -47,7 +61,7 @@ machine:
     "#machine"
 
   quotes:
-    - ":wave:"  
+    - ":wave:"
 
 octopus:
   members:
@@ -66,7 +80,7 @@ octopus:
     "#secret-octopus-team"
 
   quotes:
-    - ":wave:"  
+    - ":wave:"
 
 octopusanubis:
   members:
@@ -86,7 +100,7 @@ octopusanubis:
 
   quotes:
     - ":wave:"
-  
+
 solutions:
   members:
     - atardugno
