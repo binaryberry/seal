@@ -2,6 +2,8 @@ require 'octokit'
 
 class GithubFetcher
   ORGANISATION ||= ENV['SEAL_ORGANISATION']
+  # TODO: remove media type when review support comes out of preview
+  Octokit.default_media_type = 'application/vnd.github.black-cat-preview+json'
 
   attr_accessor :people
 
@@ -37,6 +39,7 @@ class GithubFetcher
     pr['repo'] = repo_name
     pr['comments_count'] = count_comments(pull_request, repo_name)
     pr['thumbs_up'] = count_thumbs_up(pull_request, repo_name)
+    pr['approved'] = approved?(pull_request, repo_name)
     pr['updated'] = Date.parse(pull_request.updated_at.to_s)
     pr['labels'] = labels(pull_request, repo_name)
     pr
@@ -61,6 +64,11 @@ class GithubFetcher
     response = @github.issue_comments("#{ORGANISATION}/#{repo}", pull_request.number)
     comments_string = response.map {|comment| comment.body}.join
     thumbs_up = comments_string.scan(/:\+1:/).count.to_s
+  end
+
+  def approved?(pull_request, repo)
+    reviews = @github.get("repos/#{ORGANISATION}/#{repo}/pulls/#{pull_request.number}/reviews")
+    reviews.any? { |review| review.state == 'APPROVED' }
   end
 
   def labels(pull_request, repo)
