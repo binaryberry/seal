@@ -16,6 +16,7 @@ content-tools:
     - "Don't merge"
     - DO NOT MERGE
     - "Waiting on factcheck"
+    - WIP
 
   use_labels: true
 
