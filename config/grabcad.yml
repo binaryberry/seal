@@ -72,11 +72,10 @@ octopus:
     - mklchum
     - adigrabcad
     - posulliv
-    - idan-shimoni
     - Ludasha
 
   channel:
-    "#secret-octopus-team"
+    "#octopus"
 
   quotes:
     - ":wave:"
@@ -91,7 +90,6 @@ octopusanubis:
     - mklchum
     - adigrabcad
     - posulliv
-    - idan-shimoni
     - Ludasha
 
   channel:
