@@ -93,12 +93,14 @@ mainstream-pop-up:
 
 custom:
   members:
+    - binaryberry
     - brenetic
     - davidbasalla
     - deborahchua
     - emmabeynon
     - sihugh
     - whoojemaflip
+    - cbaines
 
   channel:
     "#custom"
