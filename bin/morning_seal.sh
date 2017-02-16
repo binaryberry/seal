@@ -5,6 +5,7 @@ teams=(content-tools
        publishing-platform
        specialist-publisher
        finding-things
+       email
        custom
        govuk-infrastructure
        mainstream-pop-up
