@@ -30,7 +30,6 @@ customer-group:
 developers:
   channel: '#developers'
   repos:
-    - new-coding-test
     - front-end-coding-test
 
 discovery:
