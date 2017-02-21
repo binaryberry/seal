@@ -1,0 +1,28 @@
+# Please insert new items alphabetically.
+
+devops:
+  members:
+    - andrevdh
+    - gisql
+    - mafonso
+    - nadirollo
+    - obsider
+    - proffalken
+    - trcrichardson
+    - tv-17
+
+  channel:
+    "#devops-prs"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - "Don't merge"
+    - DO NOT MERGE
+    - "Waiting on factcheck"
+    - WIP
+
+  use_labels: true
+
+  exclude_labels:
+    - "work in progress"
+    - "WIP"
