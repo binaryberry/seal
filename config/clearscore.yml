@@ -26,3 +26,4 @@ devops:
   exclude_labels:
     - "work in progress"
     - "WIP"
+    - "work_in_progress"
