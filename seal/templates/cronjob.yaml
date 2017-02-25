@@ -1,0 +1,72 @@
+apiVersion: batch/v2alpha1
+kind: CronJob
+metadata:
+  name: {{ template "fullname" . }}
+  labels:
+    app: {{ template "fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+spec:
+  schedule: "30 15 * * *"
+  jobTemplate:
+    spec:
+      activeDeadlineSeconds: 100
+      template:
+        spec:
+          restartPolicy: Never
+          containers:
+          - name: {{ template "fullname" . }}
+            image: "{{ .Values.image.repository }}"
+            imagePullPolicy: {{ default "" .Values.image.imagePullPolicy | quote }}
+            command: [ "bin/seal.rb" ]
+            env:
+            - name: SEAL_QUOTES
+              valueFrom:
+                secretKeyRef:
+                  name: {{ template "fullname" . }}
+                  key: seal_quotes
+            - name: GITHUB_EXCLUDE_LABELS
+              valueFrom:
+                secretKeyRef:
+                  name: {{ template "fullname" . }}
+                  key: github_exclude_labels
+            - name: GITHUB_USE_LABELS
+              valueFrom:
+                secretKeyRef:
+                  name: {{ template "fullname" . }}
+                  key: github_use_labels
+            - name: GITHUB_MEMBERS
+              valueFrom:
+                secretKeyRef:
+                  name: {{ template "fullname" . }}
+                  key: github_members
+            - name: SLACK_CHANNEL
+              valueFrom:
+                secretKeyRef:
+                  name: {{ template "fullname" . }}
+                  key: slack_channel
+            - name: DYNO
+              valueFrom:
+                secretKeyRef:
+                  name: {{ template "fullname" . }}
+                  key: dyno
+            - name: SLACK_WEBHOOK
+              valueFrom:
+                secretKeyRef:
+                  name: {{ template "fullname" . }}
+                  key: slack_webhook
+            - name: GITHUB_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: {{ template "fullname" . }}
+                  key: github_token
+            - name: SEAL_ORGANISATION
+              valueFrom:
+                secretKeyRef:
+                  name: {{ template "fullname" . }}
+                  key: seal_organisation
+            {{- if .Values.seal.dry_run }}
+            - name: DRY
+              value: "true"
+            {{- end }}
