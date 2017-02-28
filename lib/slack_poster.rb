@@ -9,7 +9,7 @@ class SlackPoster
     @team_channel = team_channel
     @mood = mood
     @today = Date.today
-    @postable_day = !today.saturday? && !today.sunday?
+    @postable_day = !today.saturday?
     mood_hash
     channel
     create_poster
