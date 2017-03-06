@@ -203,9 +203,8 @@ publishing-platform:
   members:
     - danielroseman
     - kevindew
-    - carlosmartinez
-    - dougdroper
     - thomasleese
+    - michaelihejirika
 
   channel:
     "#publishing-platform"
