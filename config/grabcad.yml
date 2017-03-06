@@ -1,16 +1,5 @@
 # Please insert new items alphabetically.
 
-apps:
-  members:
-    - rromanchenko
-    - flindeman
-
-  channel:
-    "#apps"
-
-  quotes:
-    - ":wave:"
-
 deathclaw:
   members:
     - priitm
@@ -21,19 +10,6 @@ deathclaw:
 
   channel:
     "#deathclaw-core"
-
-  quotes:
-    - ":wave:"
-
-fox:
-  members:
-    - flindeman
-    - aroschupkin
-    - OlegMiroshnichenko
-    - s7sorin
-
-  channel:
-    "#eaglesolidworksaddin"
 
   quotes:
     - ":wave:"
