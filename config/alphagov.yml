@@ -113,7 +113,6 @@ finding-things:
   members:
     - alecgibson
     - alextea
-    - carolinegreen
     - carvil
     - Davidslv
     - klssmith
@@ -139,6 +138,7 @@ email:
     - jennyd
     - dwhenry
     - carolinegreen
+    - mobaig
 
   channel:
     "#email"
