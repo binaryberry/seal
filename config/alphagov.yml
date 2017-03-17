@@ -27,6 +27,7 @@ content-tools:
     - "Waiting on factcheck"
 
   quotes:
+    - Leave Leena's mug alone!
     - Everyone should have the opportunity to learn. Don’t be afraid to pick up stories on things you don’t understand and ask for help with them.
     - If it’s gonna take more than 30 minutes, or it needs deploying - write a card for it and chat to the Product Manager.
     - Try to pair when possible.
@@ -44,7 +45,6 @@ core-formats:
     - Rosa-Fox
     - andrewgarner
     - bevanloon
-    - tvararu
 
   channel:
     "#core-formats"
@@ -59,7 +59,6 @@ core-formats:
     - DON'T SEAL
 
   quotes:
-    - Leave Leena's mug alone!
     - Everyone should have the opportunity to learn. Don’t be afraid to pick up stories on things you don’t understand and ask for help with them.
     - We focus on users - always starting with ‘why’ we are doing something, not ‘what’ we are doing.
     - If it’s gonna take more than 30 minutes, or it needs deploying - write a card for it and chat to the Product Manager.
@@ -83,21 +82,15 @@ core-formats:
     - Keep our desks and work spaces tidy (including the tea stand)
     - Get involved with user research - everyone should spend 2 hours every 6 weeks learning about our users
 
-mainstream-pop-up:
-  members:
-    - binaryberry
-    - issyl0
-    - cbaines
-
-  channel:
-    "#mainstream-pop-up"
-
 custom:
   members:
+    - binaryberry
     - brenetic
+    - cbaines
     - davidbasalla
     - deborahchua
     - emmabeynon
+    - issyl0
     - sihugh
     - whoojemaflip
 
@@ -233,7 +226,6 @@ govuk-infrastructure:
     - rjw1
     - surminus
     - djsd123
-    - dazahern
     - afda16
     - SamLR
 
@@ -252,7 +244,6 @@ govuk-infrastructure:
     - "We :heart: Taylor Swift"
     - "I like to pair, do you?"
     - "Sam has nice coffee"
-    - "Daz is a hipster"
     - "Go team!"
     - "Now that’s an interesting question"
     - "$integer = '34'"
