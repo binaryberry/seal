@@ -2,3 +2,4 @@ apiVersion: v1
 description: A Helm chart for Kubernetes
 name: seal
 version: 0.1.0
+icon: https://github.com/binaryberry/seal/raw/master/images/emoji/Everyday%20images/happy_seal.gif
