@@ -33,7 +33,7 @@ developers:
     - front-end-coding-test
 
 discovery:
-  channel: '#conversion'
+  channel: '#conversion-help'
   repos:
     - discovery
     - solid_octane
