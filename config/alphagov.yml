@@ -1,5 +1,20 @@
 # Please insert new items alphabetically.
 
+benchmarking:
+  members:
+    - binaryberry
+    - deborahchua
+    - issyl0
+    - sihugh
+
+  channel:
+    "#benchmarking"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - DO NOT MERGE
+    - WIP
+
 content-tools:
   members:
     - pmanrubia
