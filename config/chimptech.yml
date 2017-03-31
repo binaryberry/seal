@@ -1,0 +1,30 @@
+# Please insert new items alphabetically.
+
+feature-monsters:
+  members:
+    - allpro
+    - anatolyspektor
+    - aveline
+    - jshado1
+    - nickersona
+
+  channel:
+    "#testintegration"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - DO NOT MERGE
+    - WIP
+
+  exclude_labels:
+    - "[DO NOT MERGE]"
+    - "Don't merge"
+    - DO NOT MERGE
+    - "Waiting on factcheck"
+
+  quotes:
+    - Try to pair when possible.
+    - If you're not well, don't come in to the office. And get some rest!
+    - Set your Slack status to away or do not disturb so people know whether they can disturb you.
+    - Has your story got points?
+    - Don't forget to assign your face to a card and PR if you're working on it or reviewing.
