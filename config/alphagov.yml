@@ -18,9 +18,8 @@ benchmarking:
 content-tools:
   members:
     - pmanrubia
-    - leenagupte
+    - cbaines
     - ikennaokpala
-    - theleebriggs
     - chao-xian
 
   channel:
@@ -42,13 +41,16 @@ content-tools:
     - "Waiting on factcheck"
 
   quotes:
-    - Leave Leena's mug alone!
-    - Everyone should have the opportunity to learn. Don’t be afraid to pick up stories on things you don’t understand and ask for help with them.
     - If it’s gonna take more than 30 minutes, or it needs deploying - write a card for it and chat to the Product Manager.
     - Try to pair when possible.
-    - Be considerate to remote workers and follow the Working from home practices https://gov-uk.atlassian.net/wiki/x/Bz_5Bw
+    - Be considerate to remote workers and follow the Working from home practices https://gov-uk.atlassian.net/wiki/x/Bz_5Bw and https://gov-uk.atlassian.net/wiki/display/CT/Working+from+home+ideas
     - Who's organising the next team lunch?
-    - If you're not well, don't come in to the office.
+    - If you're not well, don't come in to the office. And get some rest!
+    - Set your Slack status to away or do not disturb so people know whether they can disturb you.
+    - Has your story got points?
+    - Don't forget to assign your face to a card and PR if you're working on it or reviewing.
+    - Don't forget the Jabra and fisheye lens if you're dialing in people!
+    - If Hangouts is being flaky, try Slack calls or appear.in!
 
 core-formats:
   members:
