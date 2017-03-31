@@ -97,26 +97,6 @@ core-formats:
     - Keep our desks and work spaces tidy (including the tea stand)
     - Get involved with user research - everyone should spend 2 hours every 6 weeks learning about our users
 
-custom:
-  members:
-    - binaryberry
-    - brenetic
-    - cbaines
-    - davidbasalla
-    - deborahchua
-    - emmabeynon
-    - issyl0
-    - sihugh
-    - whoojemaflip
-
-  channel:
-    "#custom"
-
-  exclude_titles:
-    - "[DO NOT MERGE]"
-    - DO NOT MERGE
-    - WIP
-
 finding-things:
   members:
     - alecgibson
