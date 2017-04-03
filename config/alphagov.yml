@@ -59,7 +59,6 @@ core-formats:
     - fofr
     - gpeng
     - mgrassotti
-    - Rosa-Fox
     - andrewgarner
     - bevanloon
 
@@ -99,18 +98,31 @@ core-formats:
     - Keep our desks and work spaces tidy (including the tea stand)
     - Get involved with user research - everyone should spend 2 hours every 6 weeks learning about our users
 
-finding-things:
+navigation:
   members:
     - alecgibson
     - alextea
     - carvil
     - Davidslv
+    - Rosa-Fox
+
+  channel:
+    "#finding-things"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - "Don't merge"
+    - DO NOT MERGE
+    - WIP
+    - "[REVIEW ONLY]"
+    - REVIEW ONLY
+
+content-transformation:
+  members:
+    - andrewgarner
     - klssmith
-    - MatMoore
-    - mobaig
-    - rubenarakelyan
     - tijmenb
-    - suzannehamilton
+    - whoojemaflip
 
   channel:
     "#finding-things"
