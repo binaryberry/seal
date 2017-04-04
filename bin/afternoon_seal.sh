@@ -1,9 +1,11 @@
 #!/bin/bash
 
-teams=(content-tools
-       core-formats
-       publishing-platform
-       govuk-infrastructure)
+teams=(
+  govuk-infrastructure
+  search
+  content-tools
+  servicemanual
+)
 
 for team in ${teams[*]} ; do
   ./bin/seal.rb $team quotes
