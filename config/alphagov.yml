@@ -209,6 +209,12 @@ templateconsolidation:
     - miaallers
     - markhurrell
     - michaelihejirika
+    - theleebriggs
+    - fofr
+    - mcgoooo
 
   channel:
     "#templateconsolidation"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
