@@ -28,7 +28,7 @@ export SLACK_WEBHOOK="get_your_incoming_webhook_link_for_your_slack_group_channe
 Another option, which is 12-factor-app ready is to use ENV variables for basically everything. 
 In that case you don't need a config file at all.
 
-Divider is ',' (coma) symbol.
+Divider is ',' (comma) symbol.
 
 In your shell profile, put in:
 
