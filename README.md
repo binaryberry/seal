@@ -46,6 +46,9 @@ export SEAL_QUOTES="Everyone should have the opportunity to learn. Don’t be af
 - To get a new `GITHUB_TOKEN`, head to: https://github.com/settings/tokens
 - To get a new `SLACK_WEBHOOK`, head to: https://slack.com/services/new/incoming-webhook
 
+### Bash scripts
+In your forked repo, include your team names in the appropriate bash script. Ex. `bin/morning_seal.sh`
+
 ### Local testing
 
 To test the script locally, go to Slack and create a channel or private group called "#angry-seal-bot-test" (the Slack webhook you set up should have its channel set to "#angry-seal-bot-test" in the Integration Settings). Then run `./bin/seal.rb your_team_name` in your command line, and you should see the post in the #angry-seal-bot-test channel.
