@@ -63,7 +63,7 @@ navigation:
     - theKHutDeveloper
 
   channel:
-    "#finding-things"
+    "#navigation"
 
   exclude_titles:
     - "[DO NOT MERGE]"
@@ -81,7 +81,7 @@ content-transformation:
     - whoojemaflip
 
   channel:
-    "#finding-things"
+    "#taxonomy"
 
   exclude_titles:
     - "[DO NOT MERGE]"
