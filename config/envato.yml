@@ -8,7 +8,7 @@ boxen:
     - wip
 
 customer-group:
-  channel: '#customer-engineering'
+  channel: '#customer-market-eng'
   repos:
     - docs
     - envato-cloud-management
