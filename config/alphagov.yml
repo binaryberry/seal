@@ -73,7 +73,7 @@ navigation:
     - "[REVIEW ONLY]"
     - REVIEW ONLY
 
-content-transformation:
+taxonomy:
   members:
     - andrewgarner
     - klssmith
