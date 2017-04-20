@@ -3,7 +3,7 @@
 
 ## What is it?
 
-This is a Slack bot that publishes a team's pull requests to their Slack Channel, once provided the organisation name, the team members' github names, and a list of repos to follow. It is my first 20% project at GDS.
+This is a Slack bot that publishes a team's pull requests to their Slack Channel, once provided the organisation name and the team members' github names. It is my first 20% project at GDS.
 
 ![image](https://github.com/binaryberry/seal/blob/master/images/readme/informative.png)
 ![image](https://github.com/binaryberry/seal/blob/master/images/readme/angry.png)
@@ -13,7 +13,7 @@ This is a Slack bot that publishes a team's pull requests to their Slack Channel
 ### Config file
 Fork the repo and add/change the config file that relates to your github organisation. For example, the alphagov config file is located at [config/alphagov.yml](https://github.com/binaryberry/seal/blob/master/config/alphagov.yml).
 
-Include your team's name, the Github names of your team members, the list of repos to follow, and the Slack channel you want to post to.
+Include your team's name, the Github names of your team members, and the Slack channel you want to post to.
 
 In your shell profile, put in:
 
@@ -45,6 +45,9 @@ export SEAL_QUOTES="Everyone should have the opportunity to learn. Don’t be af
 
 - To get a new `GITHUB_TOKEN`, head to: https://github.com/settings/tokens
 - To get a new `SLACK_WEBHOOK`, head to: https://slack.com/services/new/incoming-webhook
+
+### Bash scripts
+In your forked repo, include your team names in the appropriate bash script. Ex. `bin/morning_seal.sh`
 
 ### Local testing
 
