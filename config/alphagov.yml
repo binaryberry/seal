@@ -53,6 +53,22 @@ content-tools:
     - Don't forget the Jabra and fisheye lens if you're dialing in people!
     - If Hangouts is being flaky, try Slack calls or appear.in!
 
+hold-gov-to-account:
+  members:
+    - kevindew
+    - thomasleese
+    - emmabeynon
+    - steventux
+    - leenagupte
+    - bevanloon
+
+  channel:
+    "#support-holdgovtoacc"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - WIP
+
 navigation:
   members:
     - alecgibson
