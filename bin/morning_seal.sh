@@ -4,7 +4,7 @@ teams=(
   benchmarking
   content-tools
   navigation
-  content-transformation
+  taxonomy
   email
   search
   govuk-infrastructure
