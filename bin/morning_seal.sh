@@ -6,6 +6,7 @@ teams=(
   navigation
   content-transformation
   email
+  hold-gov-to-account
   search
   govuk-infrastructure
   servicemanual
