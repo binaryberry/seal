@@ -4,7 +4,7 @@ teams=(
   benchmarking
   content-tools
   navigation
-  content-transformation
+  taxonomy
   email
   hold-gov-to-account
   search
