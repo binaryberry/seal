@@ -232,3 +232,17 @@ templateconsolidation:
 
   exclude_titles:
     - "[DO NOT MERGE]"
+
+worldwide-publishing:
+  members:
+    - davidbasalla
+    - gpeng
+    - mgrassotti
+    - rubenarakelyan
+
+  channel:
+    "#worldwide-publishing"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - WIP
