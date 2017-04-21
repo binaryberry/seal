@@ -156,11 +156,8 @@ testing:
 
 govuk-infrastructure:
   members:
-    - alexmuller
     - deanwilson
-    - rjw1
     - surminus
-    - djsd123
     - afda16
     - SamLR
 
