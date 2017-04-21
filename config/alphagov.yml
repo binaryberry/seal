@@ -109,7 +109,7 @@ email:
     - "[REVIEW ONLY]"
     - REVIEW ONLY
 
-search:
+search-team:
   members:
     - matmoore
     - brenetic
