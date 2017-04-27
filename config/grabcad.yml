@@ -29,8 +29,8 @@ lighthouse:
 
 machine:
   members:
-    - zhelezina
     - DanielDignam
+    - hmak3d
 
   channel:
     "#machine"
