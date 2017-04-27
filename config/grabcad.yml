@@ -29,7 +29,7 @@ lighthouse:
 
 machine:
   members:
-    - zhelezina
+    - hmak3d
     - DanielDignam
 
   channel:
