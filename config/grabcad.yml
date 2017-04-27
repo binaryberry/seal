@@ -40,15 +40,10 @@ machine:
 
 octopus:
   members:
-    - EyalRaz
-    - Jittery
     - arielhad
     - csidorchuk
-    - novice3030
     - mklchum
     - adigrabcad
-    - posulliv
-    - Ludasha
 
   channel:
     "#octopus"
@@ -60,16 +55,13 @@ octopusanubis:
   members:
     - EyalRaz
     - Jittery
-    - arielhad
-    - csidorchuk
-    - novice3030
-    - mklchum
+    - TamirYanko
     - adigrabcad
     - posulliv
     - Ludasha
 
   channel:
-    "#octopus-anubis"
+    "#anubis"
 
   quotes:
     - ":wave:"
