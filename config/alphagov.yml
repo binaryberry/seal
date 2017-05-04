@@ -107,24 +107,6 @@ taxonomy:
     - "[REVIEW ONLY]"
     - REVIEW ONLY
 
-email:
-  members:
-    - jennyd
-    - dwhenry
-    - carolinegreen
-    - mobaig
-
-  channel:
-    "#email"
-
-  exclude_titles:
-    - "[DO NOT MERGE]"
-    - "Don't merge"
-    - DO NOT MERGE
-    - WIP
-    - "[REVIEW ONLY]"
-    - REVIEW ONLY
-
 search-team:
   members:
     - MatMoore
