@@ -8,7 +8,7 @@ metadata:
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
 spec:
-  schedule: "30 15 * * *"
+  schedule: {{- if .Values.crontab }} {{ .Values.crontab }} {{ else }} "0 14 * * *" {{ end }}
   jobTemplate:
     spec:
       activeDeadlineSeconds: 100
