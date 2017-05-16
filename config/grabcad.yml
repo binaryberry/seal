@@ -83,10 +83,17 @@ solutions:
 
 lacheetah:
   members:
-    - mlni
     - raidokaldma
     - joras
     - meelispr
 
   channel:
     "#la-cheetah"
+
+spock:
+  members:
+    - mlni
+    - johannessiig
+    - tambet
+  channel:
+    "#spock-notifications"
