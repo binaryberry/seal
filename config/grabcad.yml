@@ -98,3 +98,16 @@ spock:
     - tambet
   channel:
     "#spock-notifications"
+
+coyote:
+  members:
+    - nk327
+    - jeffmisu
+    - hmak3d
+    - tatianagrabcad
+
+  channel:
+    "#coyote-private"
+
+  quotes:
+    - ":wave:"
