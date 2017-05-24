@@ -6,10 +6,10 @@ devops:
     - gisql
     - mafonso
     - nadirollo
-    - obsider
+    - danielschambers
     - proffalken
     - trcrichardson
-    - tv-17
+    - blaffoy
 
   channel:
     "#devops-prs"
