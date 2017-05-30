@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.1.2"
+ruby "2.1.10"
 
 gem 'slack-poster', '~> 1.0.1'
 gem "octokit", "~> 4.0"
