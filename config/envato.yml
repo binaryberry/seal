@@ -75,3 +75,22 @@ infrastructure:
   use_labels: true
   exclude_labels:
     - wip
+
+identity:
+  channel: '#identity-dev'
+  repos:
+    - identity
+    - identity-infrastructure
+    - identity-client
+    - identity-admin
+    - identity-team
+    - sso-server
+    - sso-client
+    - sso-embedded
+    - sso-js
+    - area51-client
+    - area51
+    - area51-server-deprecated
+  use_labels: true
+  exclude_labels:
+    - wip
