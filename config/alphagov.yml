@@ -175,6 +175,23 @@ govuk-infrastructure:
     - "$integer = '34'"
     - "How hot is it? Probably 28"
 
+search-team:
+  members:
+    - brenetic
+    - dwhenry
+    - markmcleod
+    - MatMoore
+    - suzannehamilton
+
+  channel:
+    "#search-team"
+
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - DO NOT MERGE
+    - WIP
+
 servicemanual:
   members:
     - 36degrees
