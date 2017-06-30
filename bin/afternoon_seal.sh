@@ -2,7 +2,7 @@
 
 teams=(
   govuk-infrastructure
-  search
+  search-team
   content-tools
   servicemanual
 )

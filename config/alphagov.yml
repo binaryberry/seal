@@ -109,26 +109,24 @@ search-team:
     - brenetic
     - suzannehamilton
     - dwhenry
+    - tatiana
 
   channel:
     "#search-team"
 
   quotes:
-    - Everyone should have the opportunity to learn. Don’t be afraid to pick up stories on things you don’t understand and ask for help with them.
-    - Never be afraid to suggest better ways of working.
-    - Be nice and respect each other. Support each other.
-    - Ask if anyone needs support before picking up new work
-    - Be considerate to remote workers
-    - Turn up to meetings on time, one person speaks at a time
-    - Stories should start with a user need
-    - Trello should reflect what everyone’s working on - if it's going to take longer than 30 minutes or it's going to need to be deployed - write a card and chat with the Product Manager.
-    - Meetings should have a clear purpose and make the best use of everyone’s time
-    - Keep our desks and work spaces tidy
-    - Get involved with user research - everyone should spend 2 hours every 6 weeks learning about our users
-    - "If you're not well, don't come in to the office."
-    - "Before starting new work, see if others can be helped with their existing work."
-    - "Document all decisions and make sure they're shared."
-    - "Read your email regularly."
+    - Biscuits
+    - Respect each other
+    - Document document document
+    - Change when things don't work
+    - Create a clear, shared vision of our goals
+    - Work at a sustainable and accommodating pace
+    - Make data driven decisions based on user needs
+    - Make good use of peoples' time
+    - Communicate priorities effectively across the whole team
+    - Monitor progress against our goals
+    - Celebrate progress
+    - Unblock priority WIPs before starting new work
 
 testing:
   members:
