@@ -2,11 +2,9 @@
 
 benchmarking:
   members:
-    - binaryberry
+    - Davidslv
     - deborahchua
-    - issyl0
     - sihugh
-    - markmcleod
 
   channel:
     "#benchmarking"
@@ -166,6 +164,7 @@ govuk-infrastructure:
     - surminus
     - afda16
     - SamLR
+    - issyl0
 
   channel:
     "#govuk-infrastructure"
