@@ -2,10 +2,9 @@
 
 benchmarking:
   members:
-    - binaryberry
+    - Davidslv
     - deborahchua
     - sihugh
-    - markmcleod
 
   channel:
     "#benchmarking"
