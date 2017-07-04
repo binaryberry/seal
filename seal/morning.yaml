@@ -1,0 +1,24 @@
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+crontab: "0 6 * * *"
+image:
+  repository: quay.io/strataconsulting/seal:helm
+  imagePullPolicy: Always
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+seal:
+  seal_organisation: "org"
+  github_token: "token"
+  slack_webhook: "webhook"
+  dyno: "true"
+  slack_channel: "#channel"
+  github_members: "user1,user2"
+  github_use_labels: "true"
+  github_exclude_labels: "[DO NOT MERGE],Don't merge,DO NOT MERGE,Waiting on factcheck,wip"
+  seal_quotes: "Everyone should have the opportunity to learn. Don’t be afraid to pick up stories on things you don’t understand and ask for help with them.,Try to pair when possible."
+  dry_run: true
