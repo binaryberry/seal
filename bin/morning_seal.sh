@@ -11,7 +11,6 @@ teams=(
   govuk-infrastructure
   servicemanual
   templateconsolidation
-  worldwide-publishing
 )
 
 for team in ${teams[*]}; do
