@@ -31,7 +31,6 @@ lighthouse:
   members:
     - chris-grabcad
     - NigelAtGrabCAD
-    - robert-may1
     - EmaParodi
     - zhelezina
 
@@ -73,6 +72,7 @@ octopusanubis:
     - adigrabcad
     - posulliv
     - Ludasha
+    - robert-may1
 
   channel:
     "#anubis"
