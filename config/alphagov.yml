@@ -17,10 +17,11 @@ benchmarking:
 content-tools:
   members:
     - pmanrubia
-    - cbaines
     - ikennaokpala
     - chao-xian
     - mgrassotti
+    - andrewgarner
+    - alecgibson 
 
   channel:
     "#content-tools"
@@ -98,7 +99,7 @@ navigation:
 
 taxonomy:
   members:
-    - andrewgarner
+    - cbaines
     - klssmith
     - tijmenb
     - whoojemaflip
