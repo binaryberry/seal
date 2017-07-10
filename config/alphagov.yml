@@ -67,17 +67,16 @@ email:
     - "[DO NOT MERGE]"
     - "[WIP]"
 
-hold-gov-to-account:
+content-api:
   members:
     - kevindew
     - thomasleese
     - emmabeynon
     - steventux
-    - leenagupte
-    - bevanloon
+    - klssmith
 
   channel:
-    "#support-holdgovtoacc"
+    "#content-api"
 
   exclude_titles:
     - "[DO NOT MERGE]"
