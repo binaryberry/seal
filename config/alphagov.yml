@@ -99,10 +99,10 @@ scrutineers:
 taxonomy:
   members:
     - cbaines
-    - klssmith
+    - koetsier
+    - theKHutDeveloper
     - tijmenb
     - whoojemaflip
-    - koetsier
 
   channel:
     "#taxonomy"
