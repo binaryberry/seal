@@ -21,7 +21,7 @@ content-tools:
     - chao-xian
     - mgrassotti
     - andrewgarner
-    - alecgibson 
+    - alecgibson
 
   channel:
     "#content-tools"
@@ -83,17 +83,15 @@ hold-gov-to-account:
     - "[DO NOT MERGE]"
     - WIP
 
-navigation:
+scrutineers:
   members:
-    - alecgibson
     - alextea
     - carvil
-    - Davidslv
-    - Rosa-Fox
-    - theKHutDeveloper
+    - leenagupte
+    - bevanloon
 
   channel:
-    "#navigation"
+    "#scrutineers"
 
   exclude_titles:
     - WIP
