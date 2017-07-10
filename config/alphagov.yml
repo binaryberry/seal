@@ -83,21 +83,10 @@ hold-gov-to-account:
     - "[DO NOT MERGE]"
     - WIP
 
-scrutineers:
+taxonomy:
   members:
     - alextea
     - carvil
-    - leenagupte
-    - bevanloon
-
-  channel:
-    "#scrutineers"
-
-  exclude_titles:
-    - WIP
-
-taxonomy:
-  members:
     - cbaines
     - koetsier
     - theKHutDeveloper
