@@ -33,6 +33,7 @@ lighthouse:
     - NigelAtGrabCAD
     - EmaParodi
     - zhelezina
+    - DanielDignam
 
   channel:
     "#lighthouse"
@@ -43,7 +44,7 @@ lighthouse:
 machine:
   members:
     - hmak3d
-    - DanielDignam
+    - csidorchuk
 
   channel:
     "#machine"
@@ -54,7 +55,7 @@ machine:
 octopus:
   members:
     - arielhad
-    - csidorchuk
+    - posulliv
     - mklchum
     - adigrabcad
 
