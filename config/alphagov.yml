@@ -102,6 +102,7 @@ taxonomy:
     - WIP
     - "[REVIEW ONLY]"
     - REVIEW ONLY
+    - "[SEAL IGNORE]"
 
 search-team:
   members:
