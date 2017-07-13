@@ -195,18 +195,16 @@ servicemanual:
   quotes:
     - ":wave:"
 
-templateconsolidation:
+publishing-frontend:
   members:
     - nickcolley
     - miaallers
-    - markhurrell
-    - michaelihejirika
-    - theleebriggs
+    - andysellick
+    - vanitabarrett
     - fofr
-    - mcgoooo
 
   channel:
-    "#templateconsolidation"
+    "#publishing-frontend"
 
   exclude_titles:
     - "[DO NOT MERGE]"

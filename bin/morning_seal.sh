@@ -7,10 +7,10 @@ teams=(
   taxonomy
   email
   hold-gov-to-account
-  search
+  search-team
   govuk-infrastructure
   servicemanual
-  templateconsolidation
+  publishing-frontend
 )
 
 for team in ${teams[*]}; do
