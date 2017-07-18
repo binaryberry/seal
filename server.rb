@@ -12,10 +12,8 @@ class SealApp < Sinatra::Base
 
   post '/bark/:team_name/:secret' do
     if params[:secret] == ENV["SEAL_SECRET"]
-      Thread.start do
-        Seal.new(params[:team_name]).bark
-      end
-      "Just a second..."
+      Seal.new(params[:team_name]).bark
+      "Seal received message with #{params[:team_name]} team name"
     end
   end
 
