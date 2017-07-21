@@ -6,7 +6,7 @@ teams=(
   navigation
   taxonomy
   email
-  hold-gov-to-account
+  content-api
   search-team
   govuk-infrastructure
   servicemanual
