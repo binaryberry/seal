@@ -73,7 +73,6 @@ content-api:
     - thomasleese
     - emmabeynon
     - steventux
-    - klssmith
 
   channel:
     "#content-api"
