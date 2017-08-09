@@ -98,25 +98,25 @@ identity:
 finance-dev:
   channel: '#finance-dev-prs'
   repos:
+    - finance-central
     - finance-dev
     - finance_infrastructure
-    - payables
     - elements-earnings
-    - recurly_subscription_service
-    - finance-central
-    - tax-forms
-    - irs-summaries-generator
-    - skrill-payment
-    - payables-client
     - elements_earnings-client
-    - tax-forms-client
-    - tax_rates
-    - payoneer
-    - knuckle_cluster
-    - event_translator_toolkit
-    - event-translator-template
     - et-elements-storefront-elements-earnings
     - et-elements-earnings-payables
+    - event_translator_toolkit
+    - event-translator-template
+    - irs-summaries-generator
+    - knuckle_cluster
+    - payables
+    - payables-client
+    - payoneer
+    - recurly_subscription_service
+    - skrill-payment
+    - tax-forms
+    - tax-forms-client
+    - tax_rates
   use_labels: true
   exclude_labels:
     - wip
