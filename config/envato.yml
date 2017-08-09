@@ -113,7 +113,7 @@ finance-dev:
     - tax_rates
     - payoneer
     - knuckle_cluster
-    - event-translator-toolkit
+    - event_translator_toolkit
     - event-translator-template
     - et-elements-storefront-elements-earnings
     - et-elements-earnings-payables
