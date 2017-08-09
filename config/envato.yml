@@ -94,3 +94,29 @@ identity:
   use_labels: true
   exclude_labels:
     - wip
+
+finance-dev:
+  channel: '#finance-dev-prs'
+  repos:
+    - finance-central
+    - finance-dev
+    - finance_infrastructure
+    - elements-earnings
+    - elements_earnings-client
+    - et-elements-storefront-elements-earnings
+    - et-elements-earnings-payables
+    - event_translator_toolkit
+    - event-translator-template
+    - irs-summaries-generator
+    - knuckle_cluster
+    - payables
+    - payables-client
+    - payoneer
+    - recurly_subscription_service
+    - skrill-payment
+    - tax-forms
+    - tax-forms-client
+    - tax_rates
+  use_labels: true
+  exclude_labels:
+    - wip
