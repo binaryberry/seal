@@ -27,3 +27,36 @@ devops:
     - "work in progress"
     - "WIP"
     - "work_in_progress"
+
+monetise:
+  members:
+    - navssurtani
+    - gisql
+    - mafonso
+    - andrevdh
+    - ruebencampbell
+    - garyu69
+    - TesterSpike
+    - pbellchambers
+    - miighty
+    - iammatthewward
+    - jaceclearscore
+    - giuseppesardo
+    - FrancescoFucile
+    - natstu
+    - jordanterry
+
+  channel: "#team-monetise"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - "Don't merge"
+    - DO NOT MERGE
+    - "Waiting on factcheck"
+    - WIP
+
+  use_labels: true
+  exclude_labels:
+    - "work in progress"
+    - "WIP"
+    - "work_in_progress"
