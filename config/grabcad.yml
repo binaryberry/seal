@@ -55,9 +55,9 @@ machine:
 octopus:
   members:
     - arielhad
-    - posulliv
     - mklchum
     - adigrabcad
+    - orivainer
 
   channel:
     "#octopus"
