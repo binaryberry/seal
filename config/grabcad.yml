@@ -55,7 +55,7 @@ machine:
 octopus:
   members:
     - arielhad
-    - posulliv
+	- orivainer
     - mklchum
     - adigrabcad
 
