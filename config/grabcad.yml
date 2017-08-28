@@ -109,3 +109,11 @@ spock:
     - tambet
   channel:
     "#spock-notifications"
+
+pelican:
+  members:
+    - jaxer
+    - mwhearty
+
+  channel:
+    "#pelican"
