@@ -15,10 +15,9 @@ coyote:
 
 deathclaw:
   members:
-    - priitm
+    - hmak3d
     - evan-grabcad
     - Maxodactyl
-    - forzesed
     - caseprince
 
   channel:
@@ -43,7 +42,7 @@ lighthouse:
 
 machine:
   members:
-    - hmak3d
+    - priitm
     - csidorchuk
 
   channel:
