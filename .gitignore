@@ -15,3 +15,11 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Ignore mac hidden filesystem files
+.DS_Store
+# Ignore vim files
+*~
+
+# Ignore bundled files
+vendor/bundle/*
