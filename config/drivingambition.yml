@@ -2,18 +2,18 @@
 
 development:
   members:
-    - alex.kovalev
+    - kovalevswan
     - mileszs
     - dstrus
-    - rebecca
-    - naviman
+    - Rvanderbur
+    - lnavimanl
     - sam2themax
     - henadzi
-    - outoforder_cc
-    - juan
-    - sergey
-    - yoshka
-    - fulcrum
+    - urkle
+    - juanroldan1989
+    - sergey-verevkin
+    - YosipVoloshchuk
+    - alex-rogachev
 
   channel:
     "#development"
