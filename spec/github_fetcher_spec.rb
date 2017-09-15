@@ -39,6 +39,7 @@ describe 'GithubFetcher' do
           'repo' => 'whitehall',
           'comments_count' => '1',
           'thumbs_up' => '1',
+          'approved' => false,
           'updated' => Date.parse('2015-07-13 ((2457217j,0s,0n),+0s,2299161j)'),
           'labels' => []
         },
@@ -51,6 +52,7 @@ describe 'GithubFetcher' do
           'repo' => 'whitehall-rebuild',
           'comments_count' => '5',
           'thumbs_up' => '0',
+          'approved' => true,
           'updated' => Date.parse('2015-07-17 ((2457221j,0s,0n),+0s,2299161j)'),
           'labels' => []
         }
@@ -95,6 +97,14 @@ describe 'GithubFetcher' do
     ].map { |body| double(Sawyer::Resource, body: body)}
   end
 
+  let(:reviews_2248) do
+    [
+      double(Sawyer::Resource, state: "APPROVED" )
+    ]
+  end
+
+  let(:reviews_2266) { [] }
+
   before do
     expect(Octokit::Client).to receive(:new).and_return(fake_octokit_client)
     expect(fake_octokit_client).to receive_message_chain('user.login')
@@ -106,6 +116,8 @@ describe 'GithubFetcher' do
 
     allow(fake_octokit_client).to receive(:pull_request).with(whitehall_rebuild_repo_name, 2248).and_return(pull_2248)
     allow(fake_octokit_client).to receive(:pull_request).with(whitehall_repo_name, 2266).and_return(pull_2266)
+    allow(fake_octokit_client).to receive(:get).with(%r"repos/alphagov/[\w-]+/pulls/2248/reviews").and_return(reviews_2248)
+    allow(fake_octokit_client).to receive(:get).with(%r"repos/alphagov/[\w-]+/pulls/2266/reviews").and_return(reviews_2266)
   end
 
   shared_examples_for 'fetching from GitHub' do

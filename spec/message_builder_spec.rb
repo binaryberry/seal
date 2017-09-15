@@ -14,6 +14,7 @@ describe MessageBuilder do
         'repo' => 'whitehall',
         'comments_count' => '5',
         'thumbs_up' => '0',
+        'approved' => true,
         'updated' => Date.parse('2015-07-17 ((2457221j, 0s, 0n), +0s, 2299161j)'),
         'labels' => []
       }
@@ -29,6 +30,7 @@ describe MessageBuilder do
         'repo' => 'whitehall',
         'comments_count' => '1',
         'thumbs_up' => '1',
+        'approved' => false,
         'updated' => Date.parse('2015-07-13 ((2457217j, 0s, 0n), +0s, 2299161j)'),
         'labels' => []
       },
@@ -39,6 +41,7 @@ describe MessageBuilder do
         'repo' => 'whitehall',
         'comments_count' => '5',
         'thumbs_up' => '0',
+        'approved' => false,
         'updated' => Date.parse('2015-07-17 ((2457221j, 0s, 0n), +0s, 2299161j)'),
         'labels' => []
       }
@@ -58,6 +61,7 @@ describe MessageBuilder do
           'repo' => 'repo',
           'comments_count' => '0',
           'thumbs_up' => '0',
+          'approved' => false,
           'updated' => Date.today,
           'labels' => [
             { 'name' => 'wip' },
