@@ -44,12 +44,6 @@ You should also set up the following custom emojis in Slack:
 
 You can use the images in images/emojis that have the corresponding names.
 
-When that works, you can push the app to Heroku and add the GITHUB_TOKEN and SLACK_WEBHOOK environment variables to heroku.
-
-Use the Heroku scheduler add-on to create repeated tasks - I set the seal to run at 9.30am every morning (the seal won't post on weekends). The scheduler is at [https://scheduler.heroku.com/dashboard](https://scheduler.heroku.com/dashboard) and the command to run is `bin/seal.rb your_team_name`
-
-Any questions feel free to contact me on Twitter -  my handle is binaryberry
-
 ## Usage 
 
 `./bin/seal.rb team_name` 
