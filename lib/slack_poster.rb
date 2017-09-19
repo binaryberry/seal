@@ -11,7 +11,6 @@ class SlackPoster
     @today = Date.today
     @postable_day = !today.saturday? && !today.sunday?
     mood_hash
-    channel
     create_poster
   end
 
@@ -37,7 +36,8 @@ class SlackPoster
     {
      icon_emoji: @mood_hash[:icon_emoji],
      username: @mood_hash[:username],
-     channel: @team_channel
+     channel: @team_channel,
+     link_names: true
    }
   end
 
@@ -102,9 +102,5 @@ class SlackPoster
       @mood = "charter"
       @postable_day = today.tuesday? || today.thursday?
     end
-  end
-
-  def channel
-    @team_channel = '#angry-seal-bot-test' if ENV["DYNO"].nil?
   end
 end

@@ -5,6 +5,15 @@ class MessageBuilder
   def initialize(content, mode=nil)
     @content = content
     @mode = mode
+    org_config
+  end
+
+  def org_config
+    @org_config ||= YAML.load_file(configuration_filename) if File.exist?(configuration_filename)
+  end
+
+  def configuration_filename
+    @configuration_filename ||= "./config/#{ENV['GITHUB_ORGANISATION']}.yml"
   end
 
   def build
@@ -97,9 +106,29 @@ class MessageBuilder
     thumbs_up = " | #{pr["thumbs_up"].to_i} :+1:" if pr["thumbs_up"].to_i > 0
     approved = pr["approved"] ? " | :white_check_mark: " : ""
     <<-EOF.gsub(/^\s+/, '')
-    #{index}\) *#{pr["repo"]}* | #{pr["author"]} | updated #{days_plural(days)}#{thumbs_up}#{approved}
+    #{index}\) *#{pr["repo"]}* | #{format_author(pr)} | updated #{days_plural(days)}#{thumbs_up}#{approved}
     #{labels(pr)} <#{pr["link"]}|#{pr["title"]}> - #{pr["comments_count"]}#{comments(pull_request)}
     EOF
+  end
+
+  def format_author pull_request 
+    if pull_request["requested_reviewers"].empty?
+      author = format_github_handle(pull_request["author"])
+      return "Requiring changes from #{author}"
+    else
+      usernames = []
+      pull_request["requested_reviewers"].each do |reviewer|
+        usernames << format_github_handle(reviewer[:login])
+      end
+      return "Requiring reviews from #{usernames.join(', ')}" 
+    end
+  end
+
+  def format_github_handle github_handle
+    if @org_config["slack_users"] && @org_config["slack_users"][github_handle]
+      return "@#{@org_config['slack_users'][github_handle]}"
+    end
+    return github_handle
   end
 
   def age_in_days(pull_request)
