@@ -104,9 +104,10 @@ class MessageBuilder
     days = age_in_days(pr)
     thumbs_up = ''
     thumbs_up = " | #{pr["thumbs_up"].to_i} :+1:" if pr["thumbs_up"].to_i > 0
+    changes_requested = pr["requested_reviewers"].empty? ? " :change: " : " :mag: " 
     approved = pr["approved"] ? " | :white_check_mark: " : ""
     <<-EOF.gsub(/^\s+/, '')
-    #{index}\) *#{pr["repo"]}* | #{format_author(pr)} | updated #{days_plural(days)}#{thumbs_up}#{approved}
+    #{index}\) *#{pr["repo"]}* | #{changes_requested}#{format_author(pr)} | updated #{days_plural(days)}#{thumbs_up}#{approved}
     #{labels(pr)} <#{pr["link"]}|#{pr["title"]}> - #{pr["comments_count"]}#{comments(pull_request)}
     EOF
   end

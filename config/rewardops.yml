@@ -2,12 +2,25 @@
 backend: 
   members:
     - noahkoch
+    - Yathi
+    - mgraham
+    - viabledish
+    - benevolentmadman
+    - adriaanlabusc
+    - RoLoTo
+    - jeradg
+    - muokata
+    - myeung58
 
-  channel: '#seal-test'
+  channel: '#development'
 
   include_repos: 
     - "pangea" 
 
+  quotes:
+    - I'm pretty sure there's a lot more to life than being really, really, ridiculously good looking. And I plan on finding out what that is.
+    - Where shall we go for lunch?
+    - Where's the data?
 
 frontend:
   members:
@@ -17,7 +30,7 @@ frontend:
     - myeung58
     - noahkoch 
 
-  channel: "#seal-test"
+  channel: "#catalog-app"
 
   include_repos:
     - rewardops-ng     

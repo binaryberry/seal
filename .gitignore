@@ -18,3 +18,4 @@
 
 # Ignore application configuration
 .env
+*.sw*
