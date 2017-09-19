@@ -39,6 +39,7 @@ frontend:
     - rewardops-angular-admin
     - rewardops-angular-catalog-airmiles
     - rewardops-express-admin
+    - rewardops-sdk-node
 
   exclude_titles:
     - "[DO NOT MERGE]"
