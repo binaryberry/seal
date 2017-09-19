@@ -36,6 +36,8 @@ frontend:
     - rewardops-ng     
     - rewardops-angular-catalog
     - rewardops-angular-catalog-puntos-colombia
+    - rewardops-angular-admin
+    - rewardops-angular-catalog-airmiles
 
   exclude_titles:
     - "[DO NOT MERGE]"
