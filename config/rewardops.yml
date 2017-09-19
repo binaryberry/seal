@@ -1,0 +1,65 @@
+# Please insert new items alphabetically.
+backend: 
+  members:
+    - noahkoch
+    - Yathi
+    - mgraham
+    - viabledish
+    - benevolentmadman
+    - adriaanlabusc
+    - RoLoTo
+    - jeradg
+    - muokata
+    - myeung58
+
+  channel: '#development'
+
+  include_repos: 
+    - "pangea" 
+
+  quotes:
+    - I'm pretty sure there's a lot more to life than being really, really, ridiculously good looking. And I plan on finding out what that is.
+    - Where shall we go for lunch?
+    - Where's the data?
+
+frontend:
+  members:
+    - Yathi 
+    - adriaanlabusc
+    - jeradg    
+    - myeung58
+    - noahkoch 
+
+  channel: "#catalog-app"
+
+  include_repos:
+    - rewardops-ng     
+    - rewardops-angular-catalog
+    - rewardops-angular-catalog-puntos-colombia
+    - rewardops-angular-admin
+    - rewardops-angular-catalog-airmiles
+    - rewardops-express-admin
+    - rewardops-sdk-node
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - DO NOT MERGE
+    - WIP
+
+  quotes:
+    - I'm pretty sure there's a lot more to life than being really, really, ridiculously good looking. And I plan on finding out what that is.
+    - Where shall we go for lunch?
+    - Where's the data?
+
+# github handle: slack handle
+slack_users:
+  myeung58: "mike" 
+  jeradg: "jrad"
+  Yathi: "yathi"
+  adriaanlabusc: "adriaan"
+  noahkoch: "noah"
+  mgraham: "michael"
+  viabledish: "abid"
+  benevolentmadman: "alex"
+  RoLoTo: "rolo"
+  muokata: "allan"

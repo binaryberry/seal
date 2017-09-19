@@ -1,13 +1,13 @@
 require 'octokit'
 
 class GithubFetcher
-  ORGANISATION ||= ENV['SEAL_ORGANISATION']
+  ORGANISATION ||= ENV['GITHUB_ORGANISATION']
   # TODO: remove media type when review support comes out of preview
   Octokit.default_media_type = 'application/vnd.github.black-cat-preview+json'
 
   attr_accessor :people
 
-  def initialize(team_members_accounts, use_labels, exclude_labels, exclude_titles, exclude_repos)
+  def initialize(team_members_accounts, use_labels, exclude_labels, exclude_titles, include_repos)
     @github = Octokit::Client.new(:access_token => ENV['GITHUB_TOKEN'])
     @github.user.login
     @github.auto_paginate = true
@@ -16,20 +16,21 @@ class GithubFetcher
     @exclude_labels = exclude_labels.map(&:downcase).uniq if exclude_labels
     @exclude_titles = exclude_titles.map(&:downcase).uniq if exclude_titles
     @labels = {}
-    @exclude_repos = exclude_repos
+    @include_repos = include_repos 
   end
 
   def list_pull_requests
     pull_requests_from_github.each_with_object({}) do |pull_request, pull_requests|
       repo_name = pull_request.html_url.split("/")[4]
       next if hidden?(pull_request, repo_name)
+      next if approved?(pull_request, repo_name) 
       pull_requests[pull_request.title] = present_pull_request(pull_request, repo_name)
     end
   end
 
   private
 
-  attr_reader :use_labels, :exclude_labels, :exclude_titles, :exclude_repos
+  attr_reader :use_labels, :exclude_labels, :exclude_titles, :include_repos
 
   def present_pull_request(pull_request, repo_name)
     pr = {}
@@ -42,7 +43,12 @@ class GithubFetcher
     pr['approved'] = approved?(pull_request, repo_name)
     pr['updated'] = Date.parse(pull_request.updated_at.to_s)
     pr['labels'] = labels(pull_request, repo_name)
+    pr['requested_reviewers'] = get_requested_reviewers(pull_request, repo_name)
     pr
+  end
+
+  def get_requested_reviewers pull_request, repo_name
+    @github.pull_request("#{ORGANISATION}/#{repo_name}", pull_request.number).requested_reviewers
   end
 
   # https://developer.github.com/v3/search/#search-issues
@@ -63,7 +69,7 @@ class GithubFetcher
   def count_thumbs_up(pull_request, repo)
     response = @github.issue_comments("#{ORGANISATION}/#{repo}", pull_request.number)
     comments_string = response.map {|comment| comment.body}.join
-    thumbs_up = comments_string.scan(/:\+1:/).count.to_s
+    comments_string.scan(/:\+1:/).count.to_s
   end
 
   def approved?(pull_request, repo)
@@ -78,7 +84,7 @@ class GithubFetcher
   end
 
   def hidden?(pull_request, repo)
-    excluded_repo?(repo) ||
+    !included_repo?(repo) ||
       excluded_label?(pull_request, repo) ||
       excluded_title?(pull_request.title) ||
       !person_subscribed?(pull_request)
@@ -94,8 +100,8 @@ class GithubFetcher
     exclude_titles && exclude_titles.any? { |t| title.downcase.include?(t) }
   end
 
-  def excluded_repo?(repo)
-    return false unless exclude_repos
-    exclude_repos.include?(repo)
+  def included_repo?(repo)
+    return false unless include_repos
+    include_repos.include?(repo)
   end
 end
