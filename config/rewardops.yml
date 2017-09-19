@@ -1,0 +1,48 @@
+# Please insert new items alphabetically.
+backend: 
+  members:
+    - noahkoch
+
+  channel: '#seal-test'
+
+  include_repos: 
+    - "pangea" 
+
+
+frontend:
+  members:
+    - Yathi 
+    - adriaanlabusc
+    - jeradg    
+    - myeung58
+    - noahkoch 
+
+  channel: "#seal-test"
+
+  include_repos:
+    - rewardops-ng     
+    - rewardops-angular-catalog
+    - rewardops-angular-catalog-puntos-colombia
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - DO NOT MERGE
+    - WIP
+
+  quotes:
+    - I'm pretty sure there's a lot more to life than being really, really, ridiculously good looking. And I plan on finding out what that is.
+    - Where shall we go for lunch?
+    - Where's the data?
+
+# github handle: slack handle
+slack_users:
+  myeung58: "mike" 
+  jeradg: "jrad"
+  Yathi: "yathi"
+  adriaanlabusc: "adriaan"
+  noahkoch: "noah"
+  mgraham: "michael"
+  viabledish: "abid"
+  benevolentmadman: "alex"
+  RoLoTo: "rolo"
+  muokata: "allan"
