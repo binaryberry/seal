@@ -1,9 +1,8 @@
 # Seal
-[![Build Status](https://travis-ci.org/binaryberry/seal.svg)](https://travis-ci.org/binaryberry/seal)
 
 ## Basics 
 
-This is a Slack bot that publishes a team's pull requests to their Slack Channel, once provided the organisation name and the team members' github names. It is my first 20% project at GDS.
+This is a Slack bot that publishes a team's pull requests to their Slack Channel, once provided the organisation name and the team members' github names. 
 
 ![image](https://github.com/binaryberry/seal/blob/master/images/readme/informative.png)
 ![image](https://github.com/binaryberry/seal/blob/master/images/readme/angry.png)
