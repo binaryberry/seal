@@ -69,7 +69,7 @@ class GithubFetcher
   def count_thumbs_up(pull_request, repo)
     response = @github.issue_comments("#{ORGANISATION}/#{repo}", pull_request.number)
     comments_string = response.map {|comment| comment.body}.join
-    thumbs_up = comments_string.scan(/:\+1:/).count.to_s
+    comments_string.scan(/:\+1:/).count.to_s
   end
 
   def approved?(pull_request, repo)
