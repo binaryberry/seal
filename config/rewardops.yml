@@ -38,6 +38,7 @@ frontend:
     - rewardops-angular-catalog-puntos-colombia
     - rewardops-angular-admin
     - rewardops-angular-catalog-airmiles
+    - rewardops-express-admin
 
   exclude_titles:
     - "[DO NOT MERGE]"
