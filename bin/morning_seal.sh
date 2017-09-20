@@ -1,7 +1,7 @@
 #!/bin/bash
 
 teams=(
-  benchmarking
+  modelling-services
   content-tools
   navigation
   taxonomy
