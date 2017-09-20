@@ -1,13 +1,14 @@
 # Please insert new items alphabetically.
 
-benchmarking:
+modelling-services:
   members:
     - Davidslv
     - deborahchua
     - sihugh
+    - andysellick
 
   channel:
-    "#benchmarking"
+    "#modelling-services"
 
   exclude_titles:
     - "[DO NOT MERGE]"
