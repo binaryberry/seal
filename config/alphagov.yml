@@ -62,9 +62,11 @@ content-tools:
 email:
   members:
     - 1pretz1
-    - davidbasalla
+    - bevanloon
     - gpeng
+    - kevindew
     - rubenarakelyan
+    - thomasleese
     - tuzz
 
   channel:
@@ -76,8 +78,6 @@ email:
 
 content-api:
   members:
-    - kevindew
-    - thomasleese
     - emmabeynon
     - steventux
 
