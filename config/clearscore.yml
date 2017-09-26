@@ -3,13 +3,12 @@
 devops:
   members:
     - andrevdh
-    - gisql
     - mafonso
     - nadirollo
-    - danielschambers
-    - proffalken
     - trcrichardson
     - blaffoy
+    - hernan82arg
+    - dwardu89
 
   channel:
     "#devops-prs"
