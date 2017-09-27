@@ -59,6 +59,23 @@ content-tools:
     - Don't forget the Jabra and fisheye lens if you're dialing in people!
     - If Hangouts is being flaky, try Slack calls or appear.in!
 
+design-system:
+  members:
+    - 36degrees
+    - alex-ju
+    - dashouse
+    - gemmaleigh
+    - hannalaakso
+    - igloosi
+    - timpaul
+
+  channel:
+    "#govuk-design-system"
+
+  exclude_titles:
+    - DO NOT MERGE
+    - WIP
+
 email:
   members:
     - 1pretz1
@@ -183,25 +200,15 @@ govuk-infrastructure:
     - "$integer = '34'"
     - "How hot is it? Probably 28"
 
-servicemanual:
-  members:
-    - 36degrees
-    - mcmillan
-
-  channel:
-    "#servicemanual"
-
-  exclude_titles:
-    - "[DO NOT MERGE]"
-    - DO NOT MERGE
-    - WIP
-
-  exclude_repos:
-    - govuk_elements
-    - govuk_frontend_toolkit
-
-  quotes:
-    - ":wave:"
+# servicemanual:
+#   members:
+# 
+#   channel:
+#     "#servicemanual"
+# 
+#   exclude_titles:
+#     - DO NOT MERGE
+#     - WIP
 
 publishing-frontend:
   members:
