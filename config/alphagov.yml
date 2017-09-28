@@ -105,6 +105,22 @@ content-api:
     - "[DO NOT MERGE]"
     - WIP
 
+
+frontend-design:
+  members:
+    - vanitabarrett
+    - fofr
+    - maxgds
+    - miaallers
+    - alextea
+    - steventux
+
+  channel:
+    "#frontend-design"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+
 taxonomy:
   members:
     - alextea
