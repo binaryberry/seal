@@ -98,6 +98,7 @@ lacheetah:
     - raidokaldma
     - joras
     - meelispr
+    - amPerl
 
   channel:
     "#la-cheetah"
