@@ -194,7 +194,6 @@ govuk-infrastructure:
     - deanwilson
     - surminus
     - afda16
-    - SamLR
     - issyl0
 
   channel:
@@ -206,16 +205,15 @@ govuk-infrastructure:
 
   quotes:
     - ":eggplant:"
-    - "indeed"
-    - "naming is hard"
-    - "If it's Wednesday, go to Beck's"
-    - "We :heart: Taylor Swift"
-    - "I like to pair, do you?"
-    - "Sam has nice coffee"
+    - "Indeed"
+    - "Naming is hard"
+    - "Pretty sure I saw an interruptible person around here somewhere"
     - "Go team!"
     - "Now that’s an interesting question"
-    - "$integer = '34'"
-    - "How hot is it? Probably 28"
+    - "Go home early, you deserve it"
+    - "Remember: you look fabulous today"
+    - "When Dean's on peak, he does the work of three people"
+    - "I heard Stephen was at a meeting about printers"
 
 # servicemanual:
 #   members:
