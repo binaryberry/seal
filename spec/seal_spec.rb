@@ -11,6 +11,7 @@ describe Seal do
         'exclude_labels' => nil,
         'exclude_titles' => nil,
         'exclude_repos' => nil,
+        'include_repos' => nil,
       },
       'tigers' => {
         'members' => [],
@@ -18,6 +19,7 @@ describe Seal do
         'exclude_labels' => nil,
         'exclude_titles' => nil,
         'exclude_repos' => nil,
+        'include_repos' => nil,
       }
     }
   end
@@ -44,7 +46,7 @@ describe Seal do
       it 'fetches PRs for the tigers and only the tigers' do
         expect(GithubFetcher)
           .to receive(:new)
-          .with([], nil, nil, nil, nil)
+          .with([], nil, nil, nil, nil, nil)
           .and_return(instance_double(GithubFetcher, list_pull_requests: []))
 
         seal.bark
@@ -60,12 +62,12 @@ describe Seal do
         it 'fetches PRs for the lions and the tigers' do
           expect(GithubFetcher)
             .to receive(:new)
-            .with([], nil, nil, nil, nil)
+            .with([], nil, nil, nil, nil, nil)
             .and_return(instance_double(GithubFetcher, list_pull_requests: []))
 
           expect(GithubFetcher)
             .to receive(:new)
-            .with([], nil, nil, nil, nil)
+            .with([], nil, nil, nil, nil, nil)
             .and_return(instance_double(GithubFetcher, list_pull_requests: []))
 
           seal.bark

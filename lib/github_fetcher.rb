@@ -7,7 +7,7 @@ class GithubFetcher
 
   attr_accessor :people
 
-  def initialize(team_members_accounts, use_labels, exclude_labels, exclude_titles, exclude_repos)
+  def initialize(team_members_accounts, use_labels, exclude_labels, exclude_titles, exclude_repos, include_repos)
     @github = Octokit::Client.new(:access_token => ENV['GITHUB_TOKEN'])
     @github.user.login
     @github.auto_paginate = true
@@ -17,6 +17,7 @@ class GithubFetcher
     @exclude_titles = exclude_titles.map(&:downcase).uniq if exclude_titles
     @labels = {}
     @exclude_repos = exclude_repos
+    @include_repos = include_repos
   end
 
   def list_pull_requests
@@ -29,7 +30,7 @@ class GithubFetcher
 
   private
 
-  attr_reader :use_labels, :exclude_labels, :exclude_titles, :exclude_repos
+  attr_reader :use_labels, :exclude_labels, :exclude_titles, :exclude_repos, :include_repos
 
   def present_pull_request(pull_request, repo_name)
     pr = {}
@@ -81,7 +82,8 @@ class GithubFetcher
     excluded_repo?(repo) ||
       excluded_label?(pull_request, repo) ||
       excluded_title?(pull_request.title) ||
-      !person_subscribed?(pull_request)
+      !person_subscribed?(pull_request) ||
+      (include_repos && !explicitly_included_repo?(repo))
   end
 
   def excluded_label?(pull_request, repo)
@@ -97,5 +99,10 @@ class GithubFetcher
   def excluded_repo?(repo)
     return false unless exclude_repos
     exclude_repos.include?(repo)
+  end
+
+  def explicitly_included_repo?(repo)
+    return false unless include_repos
+    include_repos.include?(repo)
   end
 end
