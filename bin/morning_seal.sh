@@ -11,6 +11,7 @@ teams=(
   govuk-infrastructure
   servicemanual
   publishing-frontend
+  frontend-design
 )
 
 for team in ${teams[*]}; do
