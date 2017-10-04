@@ -23,11 +23,11 @@ modelling-services:
 content-tools:
   members:
     - pmanrubia
-    - ikennaokpala
     - chao-xian
     - mgrassotti
     - andrewgarner
     - alecgibson
+    - theKHutDeveloper
 
   channel:
     "#content-tools"
@@ -58,6 +58,7 @@ content-tools:
     - Don't forget to assign your face to a card and PR if you're working on it or reviewing.
     - Don't forget the Jabra and fisheye lens if you're dialing in people!
     - If Hangouts is being flaky, try Slack calls or appear.in!
+    - I AM VENGEANCE! I AM THE NIGHT! I AM BATMAN! :batsignal:
 
 design-system:
   members:
@@ -128,7 +129,6 @@ taxonomy:
     - carvil
     - cbaines
     - koetsier
-    - theKHutDeveloper
     - tijmenb
     - tomsabin
     - whoojemaflip
@@ -217,10 +217,10 @@ govuk-infrastructure:
 
 # servicemanual:
 #   members:
-# 
+#
 #   channel:
 #     "#servicemanual"
-# 
+#
 #   exclude_titles:
 #     - DO NOT MERGE
 #     - WIP
