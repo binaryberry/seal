@@ -23,11 +23,11 @@ modelling-services:
 content-tools:
   members:
     - pmanrubia
-    - ikennaokpala
     - chao-xian
     - mgrassotti
     - andrewgarner
     - alecgibson
+    - theKHutDeveloper
 
   channel:
     "#content-tools"
@@ -58,6 +58,7 @@ content-tools:
     - Don't forget to assign your face to a card and PR if you're working on it or reviewing.
     - Don't forget the Jabra and fisheye lens if you're dialing in people!
     - If Hangouts is being flaky, try Slack calls or appear.in!
+    - I AM VENGEANCE! I AM THE NIGHT! I AM BATMAN! :batsignal:
 
 design-system:
   members:
@@ -105,13 +106,29 @@ content-api:
     - "[DO NOT MERGE]"
     - WIP
 
+frontend-design:
+  members:
+    - vanitabarrett
+    - fofr
+    - maxgds
+    - miaallers
+    - alextea
+    - steventux
+
+  channel:
+    "#frontend-design"
+
+  exclude_titles:
+    - "DO NOT MERGE"
+    - "WIP"
+    - "REVIEW ONLY"
+
 taxonomy:
   members:
     - alextea
     - carvil
     - cbaines
     - koetsier
-    - theKHutDeveloper
     - tijmenb
     - tomsabin
     - whoojemaflip
@@ -177,7 +194,6 @@ govuk-infrastructure:
     - deanwilson
     - surminus
     - afda16
-    - SamLR
     - issyl0
 
   channel:
@@ -189,23 +205,22 @@ govuk-infrastructure:
 
   quotes:
     - ":eggplant:"
-    - "indeed"
-    - "naming is hard"
-    - "If it's Wednesday, go to Beck's"
-    - "We :heart: Taylor Swift"
-    - "I like to pair, do you?"
-    - "Sam has nice coffee"
+    - "Indeed"
+    - "Naming is hard"
+    - "Pretty sure I saw an interruptible person around here somewhere"
     - "Go team!"
     - "Now that’s an interesting question"
-    - "$integer = '34'"
-    - "How hot is it? Probably 28"
+    - "Go home early, you deserve it"
+    - "Remember: you look fabulous today"
+    - "When Dean's on peak, he does the work of three people"
+    - "I heard Stephen was at a meeting about printers"
 
 # servicemanual:
 #   members:
-# 
+#
 #   channel:
 #     "#servicemanual"
-# 
+#
 #   exclude_titles:
 #     - DO NOT MERGE
 #     - WIP
