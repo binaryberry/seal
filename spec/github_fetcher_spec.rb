@@ -181,6 +181,16 @@ describe 'GithubFetcher' do
         expect(titles).to match_array(['[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host'])
       end
     end
+
+    context 'excluding "whitehall-rebuild" repo' do
+      let(:include_repos) { ['whitehall-rebuild'] }
+
+      it 'filters out PRs NOT from the "whitehall-rebuild" repo' do
+        titles = github_fetcher.list_pull_requests.keys
+
+        expect(titles).to match_array(['Remove all Import-related code'])
+      end
+    end
   end
 
   context 'labels turned off' do
