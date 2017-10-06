@@ -3,7 +3,6 @@
 coyote:
   members:
     - nk327
-    - jeffmisu
     - hmak3d
     - tatianagrabcad
 
@@ -118,3 +117,12 @@ pelican:
 
   channel:
     "#pelican"
+    
+photon:
+  members:
+    - jeffmisu
+    - posulliv
+    - bcourter
+
+  channel:
+    "#photon"
