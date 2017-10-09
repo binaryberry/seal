@@ -94,18 +94,6 @@ email:
     - "[DO NOT MERGE]"
     - "[WIP]"
 
-content-api:
-  members:
-    - emmabeynon
-    - steventux
-
-  channel:
-    "#content-api"
-
-  exclude_titles:
-    - "[DO NOT MERGE]"
-    - WIP
-
 frontend-design:
   members:
     - vanitabarrett
