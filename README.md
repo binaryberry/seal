@@ -10,8 +10,8 @@ This is a Slack bot that publishes a team's pull requests to their Slack Channel
 
 ## How to use it?
 
-### Config file
-Fork the repo and add/change the config file that relates to your github organisation. For example, the alphagov config file is located at [config/alphagov.yml](https://github.com/binaryberry/seal/blob/master/config/alphagov.yml).
+### Config
+Fork the repo and add/change the config files that relate to your github organisation. For example, the alphagov config file is located at [config/alphagov.yml](config/alphagov.yml) and the config for scheduled daily visits can be found in [bin](bin)
 
 Include your team's name, the Github names of your team members, and the Slack channel you want to post to.
 
@@ -25,7 +25,7 @@ export SLACK_WEBHOOK="get_your_incoming_webhook_link_for_your_slack_group_channe
 
 ### Env variables
 
-Another option, which is 12-factor-app ready is to use ENV variables for basically everything. 
+Another option, which is 12-factor-app ready is to use ENV variables for basically everything.
 In that case you don't need a config file at all.
 
 Divider is ',' (comma) symbol.
