@@ -11,7 +11,7 @@ This is a Slack bot that publishes a team's pull requests to their Slack Channel
 ## How to use it?
 
 ### Config
-Fork the repo and add/change the config files that relate to your github organisation. For example, the alphagov config file is located at [config/alphagov.yml](https://github.com/binaryberry/seal/blob/master/config/alphagov.yml) and the config for scheduled daily visits can be found in [bin](https://github.com/binaryberry/seal/tree/master/bin)
+Fork the repo and add/change the config files that relate to your github organisation. For example, the alphagov config file is located at [config/alphagov.yml](config/alphagov.yml) and the config for scheduled daily visits can be found in [bin](bin)
 
 Include your team's name, the Github names of your team members, and the Slack channel you want to post to.
 
