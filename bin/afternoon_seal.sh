@@ -1,12 +1,13 @@
 #!/bin/bash
 
+: ${SEAL_ORGANISATION:?"must set SEAL_ORGANISATION"}
+: ${GITHUB_TOKEN:?"must set GITHUB_TOKEN"}
+: ${SLACK_WEBHOOK:?"must set SLACK_WEBHOOK"}
+
 teams=(
-  govuk-infrastructure
-  search-team
-  content-tools
-  servicemanual
+  DevOps
 )
 
 for team in ${teams[*]} ; do
-  ./bin/seal.rb $team quotes
+  ./bin/seal.rb $team
 done

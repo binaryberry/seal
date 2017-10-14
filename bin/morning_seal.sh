@@ -1,17 +1,11 @@
 #!/bin/bash
 
+: ${SEAL_ORGANISATION:?"must set SEAL_ORGANISATION"}
+: ${GITHUB_TOKEN:?"must set GITHUB_TOKEN"}
+: ${SLACK_WEBHOOK:?"must set SLACK_WEBHOOK"}
+
 teams=(
-  modelling-services
-  content-tools
-  navigation
-  taxonomy
-  email
-  content-api
-  search-team
-  govuk-infrastructure
-  servicemanual
-  publishing-frontend
-  frontend-design
+  DevOps
 )
 
 for team in ${teams[*]}; do
