@@ -159,6 +159,22 @@ search-team:
     - Celebrate progress
     - Unblock priority WIPs before starting new work
 
+start-pages:
+  members:
+    - emmabeynon
+    - leenagupte
+    - nickcolley
+
+  channel:
+    "#start-pages"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - "Don't merge"
+    - DO NOT MERGE
+    - WIP
+    - [WIP]
+
 testing:
   members:
     - binaryberry
