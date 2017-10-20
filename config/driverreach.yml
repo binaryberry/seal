@@ -1,0 +1,34 @@
+# Please insert new items alphabetically.
+
+development:
+  members:
+    - kovalevswan
+    - mileszs
+    - dstrus
+    - Rvanderbur
+    - lnavimanl
+    - sam2themax
+    - henadzi
+    - urkle
+    - sergey-verevkin
+    - YosipVoloshchuk
+    - alex-rogachev
+
+  channel:
+    "#development"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - DO NOT MERGE
+    - WIP
+
+  quotes:
+    - I'm pretty sure there's a lot more to life than being really, really, ridiculously good looking. And I plan on finding out what that is.
+    - Where shall we go for lunch?
+    - Where's the data?
+
+  use_labels: true
+
+  exclude_labels:
+    - "in progress"
+    - "needs work"
