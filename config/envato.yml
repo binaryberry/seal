@@ -97,7 +97,7 @@ finance-dev:
     - payables-client
     - payoneer
     - recurly_subscription_service
-    - sites_earnings
+    - sites-earnings
     - skrill-payment
     - tax-forms
     - tax-forms-client
