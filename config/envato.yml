@@ -79,6 +79,7 @@ infrastructure:
 finance-dev:
   channel: '#finance-dev-prs'
   repos:
+    - au-rwt-summaries-generator
     - finance-central
     - finance-dev
     - finance_infrastructure
@@ -86,18 +87,22 @@ finance-dev:
     - elements_earnings-client
     - et-elements-storefront-elements-earnings
     - et-elements-earnings-payables
+    - et-recurly-subscriptions-elements-earnings
     - event_translator_toolkit
     - event-translator-template
     - irs-summaries-generator
+    - irs-solicitations
     - knuckle_cluster
     - payables
     - payables-client
     - payoneer
     - recurly_subscription_service
+    - sites_earnings
     - skrill-payment
     - tax-forms
     - tax-forms-client
     - tax_rates
+    - tax_calculator
   use_labels: true
   exclude_labels:
     - wip
