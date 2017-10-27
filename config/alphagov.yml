@@ -135,12 +135,13 @@ taxonomy:
 
 search-team:
   members:
-    - MatMoore
     - brenetic
-    - suzannehamilton
     - dwhenry
-    - tatiana
+    - JonathanHallam
+    - MatMoore
     - Rosa-Fox
+    - suzannehamilton
+    - tatiana
 
   channel:
     "#search-team"
