@@ -57,22 +57,11 @@ octopus:
     - adigrabcad
     - orivainer
     - forzesed
+    - EyalRaz
+    - Jittery
 
   channel:
     "#octopus"
-
-  quotes:
-    - ":wave:"
-
-octopusanubis:
-  members:
-    - EyalRaz
-    - Jittery
-    - adigrabcad
-    - robert-may1
-
-  channel:
-    "#anubis"
 
   quotes:
     - ":wave:"
