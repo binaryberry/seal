@@ -98,7 +98,7 @@ class MessageBuilder
     approved = pr["approved"] ? " | :white_check_mark: " : ""
     <<-EOF.gsub(/^\s+/, '')
     #{index}\) *#{pr["repo"]}* | #{pr["author"]} | updated #{days_plural(days)}#{thumbs_up}#{approved}
-    #{labels(pr)} <#{pr["link"]}|#{pr["title"]}> - #{pr["comments_count"]}#{comments(pull_request)}
+    #{labels(pr)} <#{pr["link"]}|#{html_encode(pr["title"])}> - #{pr["comments_count"]}#{comments(pull_request)}
     EOF
   end
 
@@ -121,5 +121,9 @@ class MessageBuilder
     pull_request['labels']
       .map { |label| "[#{label['name']}]" }
       .join(' ')
+  end
+
+  def html_encode(string)
+    string.tr('&', '&amp;').tr('<', '&lt;').tr('>', '&gt;')
   end
 end
