@@ -243,3 +243,18 @@ publishing-frontend:
 
   exclude_titles:
     - "[DO NOT MERGE]"
+
+govuk-madetech:
+  members:
+    - chrisblackburn
+    - danielburnley
+    - davidwinter
+    - idabmat
+    - lukemorton
+    - naliwajek
+    - RoryMacDonald
+    - RyanMacG
+    - SebAshton
+
+  channel:
+    "#govuk-madetech"
