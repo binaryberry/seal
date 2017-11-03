@@ -2,11 +2,12 @@
 
 content-tools:
   members:
-    - pmanrubia
-    - chao-xian
-    - mgrassotti
-    - andrewgarner
     - alecgibson
+    - andrewgarner
+    - chao-xian
+    - kylemacpherson
+    - pmanrubia
+    - mgrassotti
     - theKHutDeveloper
 
   channel:
