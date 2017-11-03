@@ -1,7 +1,6 @@
 #!/bin/bash
 
 teams=(
-  content-api
   content-tools
   email
   frontend-design
