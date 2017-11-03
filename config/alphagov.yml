@@ -246,10 +246,10 @@ publishing-frontend:
 
 govuk-madetech:
   members:
+    - app/dependabot
     - chrisblackburn
     - danielburnley
     - davidwinter
-    - dependabot
     - idabmat
     - lukemorton
     - naliwajek
