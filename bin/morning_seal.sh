@@ -12,6 +12,7 @@ teams=(
   servicemanual
   publishing-frontend
   frontend-design
+  govuk-madetech
 )
 
 for team in ${teams[*]}; do
