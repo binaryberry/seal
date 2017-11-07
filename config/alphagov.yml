@@ -129,6 +129,7 @@ taxonomy:
     - "[REVIEW ONLY]"
     - REVIEW ONLY
     - "[SEAL IGNORE]"
+    - RFC
 
 search-team:
   members:
