@@ -113,13 +113,10 @@ frontend-design:
 
 taxonomy:
   members:
-    - alextea
-    - carvil
     - cbaines
     - koetsier
-    - tijmenb
+    - davidbasalla
     - tomsabin
-    - whoojemaflip
 
   channel:
     "#taxonomy"
