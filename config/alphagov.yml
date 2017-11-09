@@ -1,32 +1,13 @@
 # Please insert new items alphabetically.
 
-modelling-services:
-  members:
-    - Davidslv
-    - deborahchua
-    - sihugh
-    - andysellick
-
-  channel:
-    "#modelling-services"
-
-  exclude_titles:
-    - "[DO NOT MERGE]"
-    - DO NOT MERGE
-    - WIP
-
-  quotes:
-    - I'm pretty sure there's a lot more to life than being really, really, ridiculously good looking. And I plan on finding out what that is.
-    - Where shall we go for lunch?
-    - Where's the data?
-
 content-tools:
   members:
-    - pmanrubia
-    - chao-xian
-    - mgrassotti
-    - andrewgarner
     - alecgibson
+    - andrewgarner
+    - chao-xian
+    - kylemacpherson
+    - pmanrubia
+    - mgrassotti
     - theKHutDeveloper
 
   channel:
@@ -110,6 +91,26 @@ frontend-design:
     - "DO NOT MERGE"
     - "WIP"
     - "REVIEW ONLY"
+
+modelling-services:
+  members:
+    - Davidslv
+    - deborahchua
+    - sihugh
+    - andysellick
+
+  channel:
+    "#modelling-services"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - DO NOT MERGE
+    - WIP
+
+  quotes:
+    - I'm pretty sure there's a lot more to life than being really, really, ridiculously good looking. And I plan on finding out what that is.
+    - Where shall we go for lunch?
+    - Where's the data?
 
 taxonomy:
   members:
