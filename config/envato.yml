@@ -76,6 +76,21 @@ infrastructure:
   exclude_labels:
     - wip
 
+q-branch:
+  channel: '#q-branch'
+  github_team_names: ['q-branch']
+  repos:
+    - ami-bakery
+    - auth0
+    - envato-platform-infrastructure
+    - keymaker
+    - platform-iam-configuration
+    - the-oracle
+    - q-branch
+  use_labels: true
+  exclude_labels:
+    - wip
+
 finance-dev:
   channel: '#finance-dev-prs'
   repos:
