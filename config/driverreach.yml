@@ -32,3 +32,4 @@ development:
   exclude_labels:
     - "in progress"
     - "needs work"
+    - "ready for merge"
