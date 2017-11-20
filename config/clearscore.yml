@@ -3,12 +3,13 @@
 devops:
   members:
     - andrevdh
-    - mafonso
     - nadirollo
     - trcrichardson
     - blaffoy
     - hernan82arg
     - dwardu89
+    - jurajseffer
+    - osalkk
 
   channel:
     "#devops-prs"
