@@ -259,3 +259,28 @@ govuk-madetech:
 
   channel:
     "#govuk-madetech"
+
+# The objective with Start pages, Frontend navigation & Modelling services
+govuk-easier-finding:
+  members:
+    - alextea
+    - andysellick
+    - Davidslv
+    - deborahchua
+    - emmabeynon
+    - fofr
+    - leenagupte
+    - maxgds
+    - miaallers
+    - nickcolley
+    - sihugh
+    - steventux
+    - tijmenb
+    - vanitabarrett
+
+  channel:
+    "#govuk-easier-finding"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - "WIP"
