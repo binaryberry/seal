@@ -7,7 +7,8 @@ describe 'GithubFetcher' do
                       use_labels,
                       exclude_labels,
                       exclude_titles,
-                      exclude_repos
+                      exclude_repos,
+                      include_repos
                      )
   end
 
@@ -61,6 +62,7 @@ describe 'GithubFetcher' do
   let(:exclude_labels) { nil }
   let(:exclude_titles) { nil }
   let(:exclude_repos) { nil }
+  let(:include_repos) { nil }
   let(:team_members_accounts) { %w(binaryberry boffbowsh jackscotti tekin elliotcm tommyp mattbostock) }
   let(:pull_2266) do
     double(Sawyer::Resource,
@@ -177,6 +179,16 @@ describe 'GithubFetcher' do
         titles = github_fetcher.list_pull_requests.keys
 
         expect(titles).to match_array(['[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host'])
+      end
+    end
+
+    context 'excluding "whitehall-rebuild" repo' do
+      let(:include_repos) { ['whitehall-rebuild'] }
+
+      it 'filters out PRs NOT from the "whitehall-rebuild" repo' do
+        titles = github_fetcher.list_pull_requests.keys
+
+        expect(titles).to match_array(['Remove all Import-related code'])
       end
     end
   end
