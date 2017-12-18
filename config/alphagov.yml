@@ -141,6 +141,7 @@ search-team:
     - Rosa-Fox
     - suzannehamilton
     - tatiana
+    - dependabot
 
   channel:
     "#search-team"
