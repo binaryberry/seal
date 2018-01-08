@@ -49,6 +49,7 @@ design-system:
     - gemmaleigh
     - hannalaakso
     - igloosi
+    - nickcolley
     - timpaul
 
   channel:
@@ -163,7 +164,6 @@ start-pages:
   members:
     - emmabeynon
     - leenagupte
-    - nickcolley
 
   channel:
     "#start-pages"
@@ -231,7 +231,6 @@ govuk-infrastructure:
 
 publishing-frontend:
   members:
-    - nickcolley
     - miaallers
     - andysellick
     - vanitabarrett
@@ -272,7 +271,6 @@ govuk-easier-finding:
     - leenagupte
     - maxgds
     - miaallers
-    - nickcolley
     - sihugh
     - steventux
     - tijmenb
