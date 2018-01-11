@@ -191,31 +191,23 @@ testing:
     - Be nice and respect each other. Support each other.
     - Don’t be a silo of knowledge
 
-govuk-infrastructure:
+reliability-engineering:
   members:
     - deanwilson
     - surminus
     - afda16
     - issyl0
+    - stephenharker
 
   channel:
-    "#govuk-infrastructure"
+    "#r20g-infra-internal"
 
   exclude_titles:
     - "[DO NOT MERGE]"
     - WIP
 
   quotes:
-    - ":eggplant:"
-    - "Indeed"
-    - "Naming is hard"
-    - "Pretty sure I saw an interruptible person around here somewhere"
-    - "Go team!"
-    - "Now that’s an interesting question"
-    - "Go home early, you deserve it"
-    - "Remember: you look fabulous today"
-    - "When Dean's on peak, he does the work of three people"
-    - "I heard Stephen was at a meeting about printers"
+    - "Someone needs to think of some new quotes!"
 
 # servicemanual:
 #   members:
