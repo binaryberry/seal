@@ -1,10 +1,10 @@
 #!/bin/bash
 
 teams=(
-  govuk-easier-finding
-  govuk-infrastructure
-  search-team
   content-tools
+  govuk-easier-finding
+  reliability-engineering
+  search-team
   servicemanual
 )
 
