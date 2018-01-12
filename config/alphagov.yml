@@ -272,3 +272,18 @@ govuk-easier-finding:
   exclude_titles:
     - "[DO NOT MERGE]"
     - "WIP"
+
+platform_support:
+  members:
+    - boffbowsh
+    - dwhenry
+    - elenatanasoiu
+    - h-lame
+    - suzannehamilton
+
+  channel:
+    "#platform_support"
+   
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - "WIP"
