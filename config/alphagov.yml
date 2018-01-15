@@ -133,21 +133,6 @@ taxonomy:
     - "[SEAL IGNORE]"
     - RFC
 
-start-pages:
-  members:
-    - emmabeynon
-    - leenagupte
-
-  channel:
-    "#start-pages"
-
-  exclude_titles:
-    - "[DO NOT MERGE]"
-    - "Don't merge"
-    - DO NOT MERGE
-    - WIP
-    - [WIP]
-
 testing:
   members:
     - binaryberry
