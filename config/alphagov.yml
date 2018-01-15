@@ -131,33 +131,6 @@ taxonomy:
     - "[SEAL IGNORE]"
     - RFC
 
-search-team:
-  members:
-    - brenetic
-    - dwhenry
-    - JonathanHallam
-    - MatMoore
-    - Rosa-Fox
-    - suzannehamilton
-    - tatiana
-
-  channel:
-    "#search-team"
-
-  quotes:
-    - Biscuits
-    - Respect each other
-    - Document document document
-    - Change when things don't work
-    - Create a clear, shared vision of our goals
-    - Work at a sustainable and accommodating pace
-    - Make data driven decisions based on user needs
-    - Make good use of people's time
-    - Communicate priorities effectively across the whole team
-    - Monitor progress against our goals
-    - Celebrate progress
-    - Unblock priority WIPs before starting new work
-
 start-pages:
   members:
     - emmabeynon
@@ -283,7 +256,7 @@ platform_support:
 
   channel:
     "#platform_support"
-   
+
   exclude_titles:
     - "[DO NOT MERGE]"
     - "WIP"

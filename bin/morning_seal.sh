@@ -10,7 +10,6 @@ teams=(
   platform_support
   publishing-frontend
   reliability-engineering
-  search-team
   servicemanual
   taxonomy
 )
