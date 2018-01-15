@@ -4,7 +4,6 @@ teams=(
   content-tools
   govuk-easier-finding
   reliability-engineering
-  search-team
   servicemanual
 )
 
