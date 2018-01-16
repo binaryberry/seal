@@ -6,7 +6,6 @@ teams=(
   frontend-design
   govuk-madetech
   modelling-services
-  navigation
   platform_support
   publishing-frontend
   reliability-engineering
