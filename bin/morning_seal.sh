@@ -4,12 +4,13 @@ teams=(
   content-tools
   email
   frontend-design
+  govuk-design-system
+  govuk-easier-finding
   govuk-madetech
   modelling-services
   platform_support
   publishing-frontend
   reliability-engineering
-  servicemanual
   taxonomy
 )
 
