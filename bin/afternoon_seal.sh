@@ -2,7 +2,6 @@
 
 teams=(
   content-tools
-  govuk-easier-finding
   reliability-engineering
   servicemanual
 )
