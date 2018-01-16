@@ -41,23 +41,6 @@ content-tools:
     - If Hangouts is being flaky, try Slack calls or appear.in!
     - I AM VENGEANCE! I AM THE NIGHT! I AM BATMAN! :batsignal:
 
-design-system:
-  members:
-    - 36degrees
-    - alex-ju
-    - dashouse
-    - hannalaakso
-    - igloosi
-    - nickcolley
-    - timpaul
-
-  channel:
-    "#govuk-design-system"
-
-  exclude_titles:
-    - DO NOT MERGE
-    - WIP
-
 email:
   members:
     - 1pretz1
@@ -93,6 +76,64 @@ frontend-design:
     - "WIP"
     - "REVIEW ONLY"
 
+govuk-design-system:
+  members:
+    - 36degrees
+    - alex-ju
+    - dashouse
+    - hannalaakso
+    - igloosi
+    - nickcolley
+    - timpaul
+
+  channel:
+    "#govuk-design-system"
+
+  exclude_titles:
+    - DO NOT MERGE
+    - WIP
+
+# The objective with Start pages, Frontend navigation & Modelling services
+govuk-easier-finding:
+  members:
+    - alextea
+    - andysellick
+    - Davidslv
+    - deborahchua
+    - emmabeynon
+    - fofr
+    - leenagupte
+    - maxgds
+    - miaallers
+    - sihugh
+    - steventux
+    - tijmenb
+    - vanitabarrett
+
+  channel:
+    "#govuk-easier-finding"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - "WIP"
+
+govuk-madetech:
+  members:
+    - app/dependabot
+    - chrisblackburn
+    - danielburnley
+    - davidwinter
+    - idabmat
+    - lukemorton
+    - naliwajek
+    - RoryMacDonald
+    - RyanMacG
+    - adrianclay
+    - SebAshton
+
+  channel:
+    "#govuk-madetech"
+
 modelling-services:
   members:
     - Davidslv
@@ -112,6 +153,52 @@ modelling-services:
     - I'm pretty sure there's a lot more to life than being really, really, ridiculously good looking. And I plan on finding out what that is.
     - Where shall we go for lunch?
     - Where's the data?
+
+platform_support:
+  members:
+    - boffbowsh
+    - dwhenry
+    - elenatanasoiu
+    - h-lame
+    - suzannehamilton
+
+  channel:
+    "#platform_support"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - "WIP"
+
+publishing-frontend:
+  members:
+    - miaallers
+    - andysellick
+    - vanitabarrett
+    - fofr
+
+  channel:
+    "#publishing-frontend"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+
+reliability-engineering:
+  members:
+    - deanwilson
+    - surminus
+    - afda16
+    - issyl0
+    - stephenharker
+
+  channel:
+    "#r20g-infra-internal"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - WIP
+
+  quotes:
+    - "Someone needs to think of some new quotes!"
 
 taxonomy:
   members:
@@ -140,7 +227,7 @@ testing:
     - fofr
 
   channel:
-    "#testing"
+    "#bot-testing"
 
   exclude_titles:
     - "[DO NOT MERGE]"
@@ -150,100 +237,3 @@ testing:
     - Everyone should have the opportunity to learn. Don’t be afraid to pick up stories on things you don’t understand and ask for help with them.
     - Be nice and respect each other. Support each other.
     - Don’t be a silo of knowledge
-
-reliability-engineering:
-  members:
-    - deanwilson
-    - surminus
-    - afda16
-    - issyl0
-    - stephenharker
-
-  channel:
-    "#r20g-infra-internal"
-
-  exclude_titles:
-    - "[DO NOT MERGE]"
-    - WIP
-
-  quotes:
-    - "Someone needs to think of some new quotes!"
-
-# servicemanual:
-#   members:
-#
-#   channel:
-#     "#servicemanual"
-#
-#   exclude_titles:
-#     - DO NOT MERGE
-#     - WIP
-
-publishing-frontend:
-  members:
-    - miaallers
-    - andysellick
-    - vanitabarrett
-    - fofr
-
-  channel:
-    "#publishing-frontend"
-
-  exclude_titles:
-    - "[DO NOT MERGE]"
-
-govuk-madetech:
-  members:
-    - app/dependabot
-    - chrisblackburn
-    - danielburnley
-    - davidwinter
-    - idabmat
-    - lukemorton
-    - naliwajek
-    - RoryMacDonald
-    - RyanMacG
-    - adrianclay
-    - SebAshton
-
-  channel:
-    "#govuk-madetech"
-
-# The objective with Start pages, Frontend navigation & Modelling services
-govuk-easier-finding:
-  members:
-    - alextea
-    - andysellick
-    - Davidslv
-    - deborahchua
-    - emmabeynon
-    - fofr
-    - leenagupte
-    - maxgds
-    - miaallers
-    - sihugh
-    - steventux
-    - tijmenb
-    - vanitabarrett
-
-  channel:
-    "#govuk-easier-finding"
-
-  exclude_titles:
-    - "[DO NOT MERGE]"
-    - "WIP"
-
-platform_support:
-  members:
-    - boffbowsh
-    - dwhenry
-    - elenatanasoiu
-    - h-lame
-    - suzannehamilton
-
-  channel:
-    "#platform_support"
-
-  exclude_titles:
-    - "[DO NOT MERGE]"
-    - "WIP"

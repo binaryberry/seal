@@ -2,8 +2,8 @@
 
 teams=(
   content-tools
+  modelling-services
   reliability-engineering
-  servicemanual
 )
 
 for team in ${teams[*]} ; do
