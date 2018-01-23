@@ -12,7 +12,6 @@ customer-group:
   repos:
     - docs
     - envato-cloud-management
-    - envato.com
     - handdrill
     - lua-deflector
     - market-dev-expectations
