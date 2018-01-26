@@ -184,11 +184,13 @@ publishing-frontend:
 
 reliability-engineering:
   members:
-    - deanwilson
-    - surminus
     - afda16
+    - deanwilson
     - issyl0
+    - jljalderman
     - stephenharker
+    - surminus
+    - suthagahrt
 
   channel:
     "#r20g-infra-internal"
