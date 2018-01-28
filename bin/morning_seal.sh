@@ -1,7 +1,7 @@
 #!/bin/bash
 
 teams=(
-  content-tools
+  data-informed-content
   email
   frontend-design
   govuk-design-system
