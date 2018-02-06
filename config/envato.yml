@@ -58,11 +58,6 @@ infracoders:
   exclude_labels:
     - wip
 
-customer-group-leads:
-  channel: '#customer-eng-leads'
-  repos:
-    - customer-group-leads
-
 infrastructure:
   channel: '#infrastructure'
   github_team_names: ['Infrastructure']
