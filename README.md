@@ -39,6 +39,7 @@ export SLACK_WEBHOOK="get_your_incoming_webhook_link_for_your_slack_group_channe
 export SLACK_CHANNEL="#whatever-channel-you-prefer"
 export GITHUB_MEMBERS="netflash,binaryberry,otheruser"
 export GITHUB_USE_LABELS=true
+export GITHUB_EXCLUDE_REVIEWED=true
 export GITHUB_EXCLUDE_LABELS="[DO NOT MERGE],Don't merge,DO NOT MERGE,Waiting on factcheck,wip"
 export GITHUB_EXCLUDE_REPOS="notmyproject,someotherproject" # Ensure these projects are *NOT* included
 export GITHUB_INCLUDE_REPOS="definitelymyproject,forsuremyproject" # Ensure *only* these projects will be included
@@ -106,6 +107,7 @@ docker run -it --rm --name seal \
   -e DYNO=${DYNO} \
   -e SLACK_CHANNEL=${SLACK_CHANNEL} \
   -e GITHUB_MEMBERS=${GITHUB_MEMBERS} \
+  -e GITHUB_EXCLUDE_REVIEWED=${GITHUB_EXCLUDE_REVIEWED} \
   -e GITHUB_USE_LABELS=${GITHUB_USE_LABELS} \
   -e "GITHUB_EXCLUDE_LABELS=${GITHUB_EXCLUDE_LABELS}" \
   -e "SEAL_QUOTES=${SEAL_QUOTES}" \
@@ -219,6 +221,9 @@ docker run -it --rm --name seal \
 
 6th of January
 - Seal can now post random quotes from the team's list of quotes in the config. Can be used as a reminder or for inspirational quotes!
+
+7th of February
+- Seal can exclude pull requests that have been already reviewed by at least one peer, regardless of approval status
 
 ## Tips
 
