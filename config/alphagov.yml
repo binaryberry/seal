@@ -83,7 +83,7 @@ govuk-design-system:
     - timpaul
 
   channel:
-    "#govuk-design-system"
+    "#design-system-dev"
 
   exclude_titles:
     - DO NOT MERGE
