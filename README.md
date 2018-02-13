@@ -21,6 +21,7 @@ In your shell profile, put in:
 export SEAL_ORGANISATION="your_github_organisation"
 export GITHUB_TOKEN="get_your_github_token_from_yourgithub_settings"
 export SLACK_WEBHOOK="get_your_incoming_webhook_link_for_your_slack_group_channel"
+export GITHUB_API_ENDPOINT="your_github_api_endpoint" # OPTIONAL If you are using a Github Enterprise instance
 ```
 
 ### Env variables
@@ -35,6 +36,7 @@ In your shell profile, put in:
 ```sh
 export SEAL_ORGANISATION="your_github_organisation"
 export GITHUB_TOKEN="get_your_github_token_from_yourgithub_settings"
+export GITHUB_API_ENDPOINT="your_github_api_endpoint" # OPTIONAL If you are using a Github Enterprise instance
 export SLACK_WEBHOOK="get_your_incoming_webhook_link_for_your_slack_group_channel"
 export SLACK_CHANNEL="#whatever-channel-you-prefer"
 export GITHUB_MEMBERS="netflash,binaryberry,otheruser"
@@ -102,6 +104,7 @@ And then run it (assuming you already set all the env variables)
 docker run -it --rm --name seal \
   -e "SEAL_ORGANISATION=${SEAL_ORGANISATION}" \
   -e GITHUB_TOKEN=${GITHUB_TOKEN} \
+  -e GITHUB_API_ENDPOINT=${GITHUB_API_ENDPOINT} \
   -e SLACK_WEBHOOK=${SLACK_WEBHOOK} \
   -e DYNO=${DYNO} \
   -e SLACK_CHANNEL=${SLACK_CHANNEL} \
