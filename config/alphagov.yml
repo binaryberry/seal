@@ -199,10 +199,11 @@ reliability-engineering:
 
 taxonomy:
   members:
-    - cbaines
     - koetsier
-    - davidbasalla
     - tomsabin
+    - ellieking17
+    - ff-l
+    - myst3ria
 
   channel:
     "#taxonomy"
