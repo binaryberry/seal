@@ -2,13 +2,12 @@
 
 data-informed-content:
   members:
-    - andrewgarner
     - chao-xian
     - kylemacpherson
-    - pmanrubia
-    - theKHutDeveloper
     - matmoore
     - peteglondon
+    - pmanrubia
+    - theKHutDeveloper
 
   channel:
     "#data-informed-content"
