@@ -180,9 +180,9 @@ publishing-frontend:
 reliability-engineering:
   members:
     - afda16
-    - deanwilson
     - issyl0
     - jljalderman
+    - rtrinque
     - stephenharker
     - surminus
     - suthagahrt
