@@ -115,3 +115,31 @@ finance-dev:
   use_labels: true
   exclude_labels:
     - wip
+
+finance-dev-money-out:
+  channel: '#money-out'
+  repos:
+    - au-rwt-summaries-generator
+    - finance-central
+    - finance-dev
+    - finance_infrastructure
+    - elements-earnings
+    - elements_earnings-client
+    - elements-revenue-period-finalizer
+    - et-elements-storefront-elements-earnings
+    - et-elements-earnings-payables
+    - et-recurly-subscriptions-elements-earnings
+    - event_translator_toolkit
+    - event-translator-template
+    - irs-summaries-generator
+    - irs-solicitations
+    - payables
+    - payables-client
+    - payoneer
+    - sites-earnings
+    - tax-forms
+    - tax-forms-client
+    - tax_calculator
+  use_labels: true
+  exclude_labels:
+    - wip
