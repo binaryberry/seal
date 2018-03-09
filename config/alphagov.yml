@@ -131,10 +131,11 @@ govuk-madetech:
 
 modelling-services:
   members:
+    - andysellick
     - Davidslv
     - deborahchua
+    - selfthinker
     - sihugh
-    - andysellick
 
   channel:
     "#modelling-services"
@@ -148,6 +149,8 @@ modelling-services:
     - Where shall we go for lunch?
     - Where's the data?
     - Be the MEGA-CHAG you wish to see in the world! :mega-chag:
+    - I still call them task lists
+    - How many steps would a step by step nav have if a step by step nav could step over steps?
 
 platform_support:
   members:
