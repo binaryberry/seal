@@ -12,6 +12,7 @@ teams=(
   publishing-frontend
   reliability-engineering
   taxonomy
+  gov-uk-licensing-support
 )
 
 for team in ${teams[*]}; do
