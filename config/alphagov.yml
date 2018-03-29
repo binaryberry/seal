@@ -36,22 +36,6 @@ data-informed-content:
     - Does your work have a story? Has your story got points?
     - I AM VENGEANCE! I AM THE NIGHT! I AM BATMAN! :batsignal:
 
-email:
-  members:
-    - 1pretz1
-    - bevanloon
-    - gpeng
-    - kevindew
-    - rubenarakelyan
-    - thomasleese
-
-  channel:
-    "#email"
-
-  exclude_titles:
-    - "[DO NOT MERGE]"
-    - "[WIP]"
-
 frontend-design:
   members:
     - vanitabarrett
@@ -238,14 +222,14 @@ testing:
     - Everyone should have the opportunity to learn. Don’t be afraid to pick up stories on things you don’t understand and ask for help with them.
     - Be nice and respect each other. Support each other.
     - Don’t be a silo of knowledge
-        
+
 gov-uk-licensing-support:
   members:
     - PeteLeaman
     - SomniGiggles
     - steven-radford
     - chrispapto
-    
+
   channel:
     "#govuk-licensing"
 
