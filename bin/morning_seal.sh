@@ -2,7 +2,6 @@
 
 teams=(
   data-informed-content
-  email
   frontend-design
   govuk-design-system
   govuk-easier-finding
