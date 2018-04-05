@@ -4,7 +4,6 @@ teams=(
   data-informed-content
   frontend-design
   govuk-design-system
-  govuk-easier-finding
   govuk-madetech
   modelling-services
   platform_support

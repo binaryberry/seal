@@ -72,30 +72,6 @@ govuk-design-system:
     - DO NOT MERGE
     - WIP
 
-# The objective with Start pages, Frontend navigation & Modelling services
-govuk-easier-finding:
-  members:
-    - alextea
-    - andysellick
-    - Davidslv
-    - deborahchua
-    - emmabeynon
-    - fofr
-    - leenagupte
-    - maxgds
-    - miaallers
-    - sihugh
-    - steventux
-    - tijmenb
-    - vanitabarrett
-
-  channel:
-    "#govuk-easier-finding"
-
-  exclude_titles:
-    - "[DO NOT MERGE]"
-    - "WIP"
-
 govuk-madetech:
   members:
     - app/dependabot
