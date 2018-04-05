@@ -10,7 +10,7 @@ teams=(
   platform_support
   publishing-frontend
   reliability-engineering
-  taxonomy
+  taxonomy-and-navigation
   gov-uk-licensing-support
 )
 
