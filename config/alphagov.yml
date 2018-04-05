@@ -36,25 +36,6 @@ data-informed-content:
     - Does your work have a story? Has your story got points?
     - I AM VENGEANCE! I AM THE NIGHT! I AM BATMAN! :batsignal:
 
-frontend-design:
-  members:
-    - vanitabarrett
-    - maxgds
-    - miaallers
-    - alextea
-    - steventux
-    - emmabeynon
-    - leenagupte
-    - fmlharrison
-
-  channel:
-    "#frontend-design"
-
-  exclude_titles:
-    - "DO NOT MERGE"
-    - "WIP"
-    - "REVIEW ONLY"
-
 govuk-design-system:
   members:
     - 36degrees
@@ -71,47 +52,6 @@ govuk-design-system:
   exclude_titles:
     - DO NOT MERGE
     - WIP
-
-# The objective with Start pages, Frontend navigation & Modelling services
-govuk-easier-finding:
-  members:
-    - alextea
-    - andysellick
-    - Davidslv
-    - deborahchua
-    - emmabeynon
-    - fofr
-    - leenagupte
-    - maxgds
-    - miaallers
-    - sihugh
-    - steventux
-    - tijmenb
-    - vanitabarrett
-
-  channel:
-    "#govuk-easier-finding"
-
-  exclude_titles:
-    - "[DO NOT MERGE]"
-    - "WIP"
-
-govuk-madetech:
-  members:
-    - app/dependabot
-    - chrisblackburn
-    - danielburnley
-    - davidwinter
-    - idabmat
-    - lukemorton
-    - naliwajek
-    - RoryMacDonald
-    - RyanMacG
-    - adrianclay
-    - SebAshton
-
-  channel:
-    "#govuk-madetech"
 
 modelling-services:
   members:
@@ -152,19 +92,6 @@ platform_support:
   exclude_titles:
     - "[DO NOT MERGE]"
     - "WIP"
-
-publishing-frontend:
-  members:
-    - miaallers
-    - andysellick
-    - vanitabarrett
-    - fofr
-
-  channel:
-    "#publishing-frontend"
-
-  exclude_titles:
-    - "[DO NOT MERGE]"
 
 reliability-engineering:
   members:

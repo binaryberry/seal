@@ -2,13 +2,9 @@
 
 teams=(
   data-informed-content
-  frontend-design
   govuk-design-system
-  govuk-easier-finding
-  govuk-madetech
   modelling-services
   platform_support
-  publishing-frontend
   reliability-engineering
   taxonomy-and-navigation
   gov-uk-licensing-support
