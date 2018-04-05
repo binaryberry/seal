@@ -72,23 +72,6 @@ govuk-design-system:
     - DO NOT MERGE
     - WIP
 
-govuk-madetech:
-  members:
-    - app/dependabot
-    - chrisblackburn
-    - danielburnley
-    - davidwinter
-    - idabmat
-    - lukemorton
-    - naliwajek
-    - RoryMacDonald
-    - RyanMacG
-    - adrianclay
-    - SebAshton
-
-  channel:
-    "#govuk-madetech"
-
 modelling-services:
   members:
     - andysellick
