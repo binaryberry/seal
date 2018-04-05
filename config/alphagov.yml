@@ -112,19 +112,6 @@ platform_support:
     - "[DO NOT MERGE]"
     - "WIP"
 
-publishing-frontend:
-  members:
-    - miaallers
-    - andysellick
-    - vanitabarrett
-    - fofr
-
-  channel:
-    "#publishing-frontend"
-
-  exclude_titles:
-    - "[DO NOT MERGE]"
-
 reliability-engineering:
   members:
     - afda16

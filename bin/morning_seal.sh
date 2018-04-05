@@ -6,7 +6,6 @@ teams=(
   govuk-design-system
   modelling-services
   platform_support
-  publishing-frontend
   reliability-engineering
   taxonomy-and-navigation
   gov-uk-licensing-support
