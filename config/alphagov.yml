@@ -184,24 +184,27 @@ reliability-engineering:
   quotes:
     - "Someone needs to think of some new quotes!"
 
-taxonomy:
+taxonomy-and-naviation:
   members:
+    - 1pretz1
+    - alextea
+    - cbaines
     - koetsier
-    - tomsabin
-    - ellieking17
-    - ff-l
+    - leenagupte
+    - miaallers
+    - mmholland88
     - myst3ria
+    - peteglondon
+    - vanitabarrett
 
   channel:
-    "#taxonomy"
+    "#taxonomy-and-nav"
 
   exclude_titles:
     - "[DO NOT MERGE]"
     - "Don't merge"
     - DO NOT MERGE
     - WIP
-    - "[REVIEW ONLY]"
-    - REVIEW ONLY
     - "[SEAL IGNORE]"
     - RFC
 
