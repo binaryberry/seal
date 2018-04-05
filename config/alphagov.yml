@@ -36,25 +36,6 @@ data-informed-content:
     - Does your work have a story? Has your story got points?
     - I AM VENGEANCE! I AM THE NIGHT! I AM BATMAN! :batsignal:
 
-frontend-design:
-  members:
-    - vanitabarrett
-    - maxgds
-    - miaallers
-    - alextea
-    - steventux
-    - emmabeynon
-    - leenagupte
-    - fmlharrison
-
-  channel:
-    "#frontend-design"
-
-  exclude_titles:
-    - "DO NOT MERGE"
-    - "WIP"
-    - "REVIEW ONLY"
-
 govuk-design-system:
   members:
     - 36degrees

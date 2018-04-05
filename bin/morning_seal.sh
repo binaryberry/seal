@@ -2,7 +2,6 @@
 
 teams=(
   data-informed-content
-  frontend-design
   govuk-design-system
   modelling-services
   platform_support
