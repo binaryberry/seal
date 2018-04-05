@@ -138,11 +138,13 @@ modelling-services:
 
 platform_support:
   members:
+    - barrucadu
+    - bevanloon
     - boffbowsh
-    - dwhenry
-    - elenatanasoiu
-    - h-lame
-    - suzannehamilton
+    - deborahchua
+    - kevindew
+    - steventux
+    - thomasleese
 
   channel:
     "#platform_support"
