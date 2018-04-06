@@ -53,28 +53,26 @@ govuk-design-system:
     - DO NOT MERGE
     - WIP
 
-modelling-services:
+porg-pages:
   members:
     - andysellick
     - Davidslv
-    - deborahchua
-    - selfthinker
+    - MahmudH
+    - rubenarakelyan
     - sihugh
 
   channel:
-    "#modelling-services"
+    "#porg-pages"
 
   exclude_titles:
     - WIP
     - "[WIP]"
 
   quotes:
-    - I'm pretty sure there's a lot more to life than being really, really, ridiculously good looking. And I plan on finding out what that is.
-    - Where shall we go for lunch?
-    - Where's the data?
-    - Be the MEGA-CHAG you wish to see in the world! :mega-chag:
-    - I still call them task lists
-    - How many steps would a step by step nav have if a step by step nav could step over steps?
+    - I find your lack of an easily implemented change process for organisations disturbing
+    - When 900 years you have worked on Whitehall, look as good you will not.
+    - These are not the organisation pages you are looking for
+    - Migration is the path to the dark side. Migration leads to anger; anger leads to hate; hate leads to suffering. I sense much migration in you.
 
 platform_support:
   members:
