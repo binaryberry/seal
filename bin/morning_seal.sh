@@ -3,8 +3,8 @@
 teams=(
   data-informed-content
   govuk-design-system
-  modelling-services
   platform_support
+  porg-pages
   reliability-engineering
   taxonomy-and-navigation
   gov-uk-licensing-support
