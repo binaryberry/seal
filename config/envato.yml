@@ -69,6 +69,7 @@ q-branch:
     - platform-iam-configuration
     - the-oracle
     - q-branch
+    - snitch
   use_labels: true
   exclude_labels:
     - wip
