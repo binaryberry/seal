@@ -67,6 +67,7 @@ porg-pages:
   exclude_titles:
     - WIP
     - "[WIP]"
+    - "[DO NOT MERGE]"
 
   quotes:
     - I find your lack of an easily implemented change process for organisations disturbing
