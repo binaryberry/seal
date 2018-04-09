@@ -58,18 +58,6 @@ infracoders:
   exclude_labels:
     - wip
 
-infrastructure:
-  channel: '#infrastructure'
-  github_team_names: ['Infrastructure']
-  repos:
-    - marketplace-aws
-    - envato-cloud-management
-    - envato-platform-infrastructure
-    - platform-iam-configuration
-  use_labels: true
-  exclude_labels:
-    - wip
-
 q-branch:
   channel: '#q-branch'
   github_team_names: ['q-branch']
