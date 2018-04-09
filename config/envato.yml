@@ -26,11 +26,6 @@ customer-group:
   exclude_labels:
     - wip
 
-developers:
-  channel: '#developers'
-  repos:
-    - front-end-coding-test
-
 discovery:
   channel: '#conversion-help'
   repos:
@@ -46,14 +41,6 @@ discovery:
     - discovery_users
     - ami-builder
     - discovery-docker
-  use_labels: true
-  exclude_labels:
-    - wip
-
-infracoders:
-  channel: '#infracoders'
-  repos:
-    - ops-coding-test
   use_labels: true
   exclude_labels:
     - wip
