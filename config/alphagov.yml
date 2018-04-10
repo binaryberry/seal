@@ -75,7 +75,7 @@ porg-pages:
     - These are not the organisation pages you are looking for
     - Migration is the path to the dark side. Migration leads to anger; anger leads to hate; hate leads to suffering. I sense much migration in you.
 
-platform_support:
+platform_health:
   members:
     - barrucadu
     - bevanloon
@@ -86,7 +86,7 @@ platform_support:
     - thomasleese
 
   channel:
-    "#platform_support"
+    "#platform-health"
 
   exclude_titles:
     - "[DO NOT MERGE]"
