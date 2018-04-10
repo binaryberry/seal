@@ -1,6 +1,7 @@
 #!/bin/bash
 
 teams=(
+  data-gov-uk
   data-informed-content
   govuk-design-system
   platform_support

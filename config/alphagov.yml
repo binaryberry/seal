@@ -1,4 +1,21 @@
 # Please insert new items alphabetically.
+data-gov-uk:
+  members:
+    - andrewgarner
+    - benthorner
+    - emmabeynon
+    - hannako
+    - laurentqro
+    - rossjones
+
+  channel:
+    "#datagovuk-tech"
+
+  exclude_titles:
+    - "WIP"
+    - "[WIP]"
+    - "DO NOT MERGE"
+    - "[DO NOT MERGE]"
 
 data-informed-content:
   members:
