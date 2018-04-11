@@ -6,6 +6,7 @@ data-gov-uk:
     - emmabeynon
     - hannako
     - laurentqro
+    - maxgds
     - rossjones
 
   channel:
@@ -16,6 +17,11 @@ data-gov-uk:
     - "[WIP]"
     - "DO NOT MERGE"
     - "[DO NOT MERGE]"
+
+  include_repos:
+    - datagovuk_publish
+    - datagovuk_find
+    - datagovuk_infrastructure
 
 data-informed-content:
   members:
