@@ -4,7 +4,7 @@ teams=(
   data-gov-uk
   data-informed-content
   govuk-design-system
-  platform_support
+  platform_health
   porg-pages
   reliability-engineering
   taxonomy-and-navigation
