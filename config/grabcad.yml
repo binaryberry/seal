@@ -94,11 +94,10 @@ pelican:
   channel:
     "#pelican"
     
-photon:
+jackalope:
   members:
     - jeffmisu
     - posulliv
-    - bcourter
 
   channel:
-    "#photon"
+    "#jackalope"
