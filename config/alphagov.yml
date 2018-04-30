@@ -86,7 +86,7 @@ porg-pages:
     - tijmenb
 
   channel:
-    "#porg-pages"
+    "#govuk-porg-pages"
 
   exclude_titles:
     - WIP
