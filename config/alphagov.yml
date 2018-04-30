@@ -152,7 +152,7 @@ taxonomy-and-navigation:
     - vanitabarrett
 
   channel:
-    "#taxonomy-and-nav"
+    "#govuk-tax-and-nav"
 
   exclude_titles:
     - "[DO NOT MERGE]"
