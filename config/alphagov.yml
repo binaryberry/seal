@@ -86,7 +86,7 @@ porg-pages:
     - tijmenb
 
   channel:
-    "#porg-pages"
+    "#govuk-porg-pages"
 
   exclude_titles:
     - WIP
@@ -105,12 +105,13 @@ platform-health:
     - bevanloon
     - boffbowsh
     - deborahchua
+    - elliotcm
     - kevindew
     - steventux
     - thomasleese
 
   channel:
-    "#platform-health"
+    "#govuk-platform-health"
 
   exclude_titles:
     - "[DO NOT MERGE]"
@@ -151,7 +152,7 @@ taxonomy-and-navigation:
     - vanitabarrett
 
   channel:
-    "#taxonomy-and-nav"
+    "#govuk-tax-and-nav"
 
   exclude_titles:
     - "[DO NOT MERGE]"
