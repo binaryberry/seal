@@ -111,7 +111,7 @@ platform-health:
     - thomasleese
 
   channel:
-    "#platform-health"
+    "#govuk-platform-health"
 
   exclude_titles:
     - "[DO NOT MERGE]"
