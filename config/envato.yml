@@ -1,12 +1,3 @@
-boxen:
-  channel: '#boxen'
-  repos:
-    - boxen-web
-    - our-boxen
-  use_labels: true
-  exclude_labels:
-    - wip
-
 customer-group:
   channel: '#customer-market-eng'
   repos:
