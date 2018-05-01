@@ -1,14 +1,14 @@
 #!/bin/bash
 
 teams=(
-  data-gov-uk
-  data-informed-content
-  govuk-design-system
-  platform-health
-  porg-pages
-  reliability-engineering
-  taxonomy-and-navigation
-  gov-uk-licensing-support
+  govuk-datagovuk-tech
+  govuk-data-informed
+  design-system-dev
+  govuk-platform-health
+  govuk-porg-pages
+  r20g-infra-internal
+  govuk-tax-and-nav
+  govuk-licensing
 )
 
 for team in ${teams[*]}; do
