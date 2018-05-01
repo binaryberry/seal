@@ -10,7 +10,7 @@ data-gov-uk:
     - rossjones
 
   channel:
-    "#datagovuk-tech"
+    "#govuk-datagovuk-tech"
 
   exclude_titles:
     - "WIP"
@@ -33,7 +33,7 @@ data-informed-content:
     - theKHutDeveloper
 
   channel:
-    "#data-informed-content"
+    "#govuk-data-informed"
 
   exclude_titles:
     - "[DO NOT MERGE]"
@@ -152,7 +152,7 @@ taxonomy-and-navigation:
     - vanitabarrett
 
   channel:
-    "#taxonomy-and-nav"
+    "#govuk-tax-and-nav"
 
   exclude_titles:
     - "[DO NOT MERGE]"
