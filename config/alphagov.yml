@@ -1,5 +1,5 @@
 # Please insert new items alphabetically.
-data-gov-uk:
+govuk-datagovuk-tech:
   members:
     - andrewgarner
     - benthorner
@@ -10,7 +10,7 @@ data-gov-uk:
     - rossjones
 
   channel:
-    "#datagovuk-tech"
+    "#govuk-datagovuk-tech"
 
   exclude_titles:
     - "WIP"
@@ -23,17 +23,17 @@ data-gov-uk:
     - datagovuk_find
     - datagovuk_infrastructure
 
-data-informed-content:
+govuk-data-informed:
   members:
     - chao-xian
     - kylemacpherson
     - matmoore
-    - peteglondon
     - pmanrubia
     - theKHutDeveloper
+    - tombye
 
   channel:
-    "#data-informed-content"
+    "#govuk-data-informed"
 
   exclude_titles:
     - "[DO NOT MERGE]"
@@ -59,7 +59,7 @@ data-informed-content:
     - Does your work have a story? Has your story got points?
     - I AM VENGEANCE! I AM THE NIGHT! I AM BATMAN! :batsignal:
 
-govuk-design-system:
+design-system-dev:
   members:
     - 36degrees
     - alex-ju
@@ -76,7 +76,7 @@ govuk-design-system:
     - DO NOT MERGE
     - WIP
 
-porg-pages:
+govuk-porg-pages:
   members:
     - andysellick
     - Davidslv
@@ -86,7 +86,7 @@ porg-pages:
     - tijmenb
 
   channel:
-    "#porg-pages"
+    "#govuk-porg-pages"
 
   exclude_titles:
     - WIP
@@ -99,24 +99,25 @@ porg-pages:
     - These are not the organisation pages you are looking for
     - Migration is the path to the dark side. Migration leads to anger; anger leads to hate; hate leads to suffering. I sense much migration in you.
 
-platform-health:
+govuk-platform-health:
   members:
     - barrucadu
     - bevanloon
     - boffbowsh
     - deborahchua
+    - elliotcm
     - kevindew
     - steventux
     - thomasleese
 
   channel:
-    "#platform-health"
+    "#govuk-platform-health"
 
   exclude_titles:
     - "[DO NOT MERGE]"
     - "WIP"
 
-reliability-engineering:
+r20g-infra-internal:
   members:
     - afda16
     - issyl0
@@ -136,7 +137,7 @@ reliability-engineering:
   quotes:
     - "Someone needs to think of some new quotes!"
 
-taxonomy-and-navigation:
+govuk-tax-and-nav:
   members:
     - 1pretz1
     - alextea
@@ -151,7 +152,7 @@ taxonomy-and-navigation:
     - vanitabarrett
 
   channel:
-    "#taxonomy-and-nav"
+    "#govuk-tax-and-nav"
 
   exclude_titles:
     - "[DO NOT MERGE]"
@@ -179,7 +180,7 @@ testing:
     - Be nice and respect each other. Support each other.
     - Don’t be a silo of knowledge
 
-gov-uk-licensing-support:
+govuk-licensing:
   members:
     - PeteLeaman
     - SomniGiggles
