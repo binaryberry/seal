@@ -117,18 +117,17 @@ govuk-platform-health:
     - "[DO NOT MERGE]"
     - "WIP"
 
-r20g-infra-internal:
+re-infra-internal:
   members:
     - afda16
     - issyl0
     - jljalderman
     - rtrinque
     - stephenharker
-    - surminus
     - suthagahrt
 
   channel:
-    "#r20g-infra-internal"
+    "#re-infra-internal"
 
   exclude_titles:
     - "[DO NOT MERGE]"
