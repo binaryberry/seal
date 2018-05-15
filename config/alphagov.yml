@@ -3,9 +3,9 @@ govuk-datagovuk-tech:
   members:
     - andrewgarner
     - benthorner
+    - brucebolt
     - emmabeynon
     - hannako
-    - laurentqro
     - maxgds
     - rossjones
 
@@ -22,6 +22,8 @@ govuk-datagovuk-tech:
     - datagovuk_publish
     - datagovuk_find
     - datagovuk_infrastructure
+    - datagovuk_ckan_deployment
+    - ckanext-datagovuk
 
 govuk-data-informed:
   members:
