@@ -3,7 +3,6 @@
 teams=(
   govuk-data-informed
   govuk-porg-pages
-  r20g-infra-internal
   govuk-licensing
 )
 

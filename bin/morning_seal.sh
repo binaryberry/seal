@@ -6,7 +6,7 @@ teams=(
   design-system-dev
   govuk-platform-health
   govuk-porg-pages
-  r20g-infra-internal
+  re-infra-internal
   govuk-tax-and-nav
   govuk-licensing
 )
