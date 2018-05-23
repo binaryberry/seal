@@ -1,29 +1,20 @@
 # Please insert new items alphabetically.
-govuk-datagovuk-tech:
+design-system-dev:
   members:
-    - andrewgarner
-    - benthorner
-    - brucebolt
-    - emmabeynon
-    - hannako
-    - maxgds
-    - rossjones
+    - 36degrees
+    - alex-ju
+    - dashouse
+    - hannalaakso
+    - igloosi
+    - nickcolley
+    - timpaul
 
   channel:
-    "#govuk-datagovuk-tech"
+    "#design-system-dev"
 
   exclude_titles:
-    - "WIP"
-    - "[WIP]"
-    - "DO NOT MERGE"
-    - "[DO NOT MERGE]"
-
-  include_repos:
-    - datagovuk_publish
-    - datagovuk_find
-    - datagovuk_infrastructure
-    - datagovuk_ckan_deployment
-    - ckanext-datagovuk
+    - DO NOT MERGE
+    - WIP
 
 govuk-data-informed:
   members:
@@ -61,45 +52,45 @@ govuk-data-informed:
     - Does your work have a story? Has your story got points?
     - I AM VENGEANCE! I AM THE NIGHT! I AM BATMAN! :batsignal:
 
-design-system-dev:
+govuk-datagovuk-tech:
   members:
-    - 36degrees
-    - alex-ju
-    - dashouse
-    - hannalaakso
-    - igloosi
-    - nickcolley
-    - timpaul
+    - andrewgarner
+    - benthorner
+    - brucebolt
+    - emmabeynon
+    - hannako
+    - maxgds
+    - rossjones
 
   channel:
-    "#design-system-dev"
+    "#govuk-datagovuk-tech"
 
   exclude_titles:
-    - DO NOT MERGE
-    - WIP
-
-govuk-porg-pages:
-  members:
-    - andysellick
-    - Davidslv
-    - MahmudH
-    - rubenarakelyan
-    - sihugh
-    - tijmenb
-
-  channel:
-    "#govuk-porg-pages"
-
-  exclude_titles:
-    - WIP
+    - "WIP"
     - "[WIP]"
+    - "DO NOT MERGE"
     - "[DO NOT MERGE]"
 
-  quotes:
-    - I find your lack of an easily implemented change process for organisations disturbing
-    - When 900 years you have worked on Whitehall, look as good you will not.
-    - These are not the organisation pages you are looking for
-    - Migration is the path to the dark side. Migration leads to anger; anger leads to hate; hate leads to suffering. I sense much migration in you.
+  include_repos:
+    - datagovuk_publish
+    - datagovuk_find
+    - datagovuk_infrastructure
+    - datagovuk_ckan_deployment
+    - ckanext-datagovuk
+
+govuk-licensing:
+  members:
+    - PeteLeaman
+    - SomniGiggles
+    - steven-radford
+    - chrispapto
+
+  channel:
+    "#govuk-licensing"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - "[WIP]"
 
 govuk-platform-health:
   members:
@@ -119,24 +110,23 @@ govuk-platform-health:
     - "[DO NOT MERGE]"
     - "WIP"
 
-re-infra-internal:
+govuk-porg-pages:
   members:
-    - afda16
-    - issyl0
-    - jljalderman
-    - rtrinque
-    - stephenharker
-    - suthagahrt
+    - andysellick
+    - Davidslv
+    - MahmudH
+    - rubenarakelyan
+    - sihugh
+    - tijmenb
 
   channel:
-    "#re-infra-internal"
+    "#govuk-porg-pages"
 
   exclude_titles:
     - "[DO NOT MERGE]"
-    - WIP
-
-  quotes:
-    - "Someone needs to think of some new quotes!"
+    - "[Don't merge]"
+    - "[SPIKE]"
+    - "[WIP]"
 
 govuk-tax-and-nav:
   members:
@@ -163,11 +153,29 @@ govuk-tax-and-nav:
     - "[SEAL IGNORE]"
     - RFC
 
+re-infra-internal:
+  members:
+    - afda16
+    - issyl0
+    - jljalderman
+    - rtrinque
+    - stephenharker
+    - suthagahrt
+
+  channel:
+    "#re-infra-internal"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - WIP
+
+  quotes:
+    - "Someone needs to think of some new quotes!"
+
 testing:
   members:
     - binaryberry
     - boffbowsh
-    - fofr
 
   channel:
     "#bot-testing"
@@ -180,17 +188,3 @@ testing:
     - Everyone should have the opportunity to learn. Don’t be afraid to pick up stories on things you don’t understand and ask for help with them.
     - Be nice and respect each other. Support each other.
     - Don’t be a silo of knowledge
-
-govuk-licensing:
-  members:
-    - PeteLeaman
-    - SomniGiggles
-    - steven-radford
-    - chrispapto
-
-  channel:
-    "#govuk-licensing"
-
-  exclude_titles:
-    - "[DO NOT MERGE]"
-    - "[WIP]"

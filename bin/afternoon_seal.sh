@@ -2,7 +2,6 @@
 
 teams=(
   govuk-data-informed
-  govuk-porg-pages
   govuk-licensing
 )
 
