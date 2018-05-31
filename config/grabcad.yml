@@ -47,6 +47,7 @@ octopus:
     - orivainer
     - EyalRaz
     - danielyac
+    - amPerl
 
   channel:
     "#octopus"
