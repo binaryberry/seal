@@ -157,11 +157,14 @@ govuk-tax-and-nav:
 re-infra-internal:
   members:
     - afda16
+    - dougneal
     - issyl0
-    - jljalderman
     - rtrinque
+    - schmie
+    - stephengrier
     - stephenharker
     - suthagahrt
+    - szd55gds
 
   channel:
     "#re-infra-internal"
