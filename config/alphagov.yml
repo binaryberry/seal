@@ -178,6 +178,24 @@ re-infra-internal:
   quotes:
     - "Someone needs to think of some new quotes!"
 
+re-tools-internal:
+  members:
+    - danielroseman
+    - DavidJeche
+    - ejrowley
+    - idavidmcdonald
+    - JonathanHallam
+    - kentsanggds
+    - philandstuff
+    - MuriloDalRi
+
+  channel:
+    "#re-tools-internal"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - WIP
+
 testing:
   members:
     - binaryberry
