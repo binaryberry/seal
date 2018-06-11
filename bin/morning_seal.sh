@@ -9,6 +9,7 @@ teams=(
   govuk-porg-pages
   govuk-tax-and-nav
   re-infra-internal
+  re-tools-internal
 )
 
 for team in ${teams[*]}; do
