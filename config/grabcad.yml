@@ -74,13 +74,13 @@ lacheetah:
     - raidokaldma
     - joras
     - meelispr
+    - mlni
 
   channel:
     "#la-cheetah"
 
 spock:
   members:
-    - mlni
     - johannessiig
     - tambet
   channel:
