@@ -38,7 +38,7 @@ discovery:
 
 q-branch:
   channel: '#q-branch'
-  github_team_names: ['q-branch']
+  github_team_names: ['Q-Branch']
   repos:
     - ami-bakery
     - auth0
