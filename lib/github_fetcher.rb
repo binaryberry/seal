@@ -70,7 +70,14 @@ class GithubFetcher
   end
 
   def github_team_ids
-    @github_team_ids ||= @github_team_names.map { |name| github_teams.fetch(name) }
+    @github_team_ids ||= begin
+                           @github_team_names.map { |name| github_teams.fetch(name) }
+                         rescue KeyError => e
+                           puts '-' * 80
+                           puts "#{e}: Known teams: #{github_teams.keys.sort}"
+                           puts '-' * 80
+                           raise
+                         end
   end
 
   def count_comments(pull_request, repo)
