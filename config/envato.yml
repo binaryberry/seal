@@ -17,11 +17,6 @@ customer-group:
   exclude_labels:
     - wip
 
-developers:
-  channel: '#developers'
-  repos:
-    - front-end-coding-test
-
 discovery:
   channel: '#conversion-help'
   repos:
@@ -41,26 +36,6 @@ discovery:
   exclude_labels:
     - wip
 
-infracoders:
-  channel: '#infracoders'
-  repos:
-    - ops-coding-test
-  use_labels: true
-  exclude_labels:
-    - wip
-
-infrastructure:
-  channel: '#infrastructure'
-  github_team_names: ['Infrastructure']
-  repos:
-    - marketplace-aws
-    - envato-cloud-management
-    - envato-platform-infrastructure
-    - platform-iam-configuration
-  use_labels: true
-  exclude_labels:
-    - wip
-
 q-branch:
   channel: '#q-branch'
   github_team_names: ['q-branch']
@@ -72,6 +47,7 @@ q-branch:
     - platform-iam-configuration
     - the-oracle
     - q-branch
+    - snitch
   use_labels: true
   exclude_labels:
     - wip
