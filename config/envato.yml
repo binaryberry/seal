@@ -72,6 +72,7 @@ finance-dev:
     - payables
     - payables-client
     - payoneer
+    - platform-communicator
     - recurly_subscription_service
     - sites-earnings
     - skrill-payment
