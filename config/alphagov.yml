@@ -102,6 +102,7 @@ govuk-platform-health:
     - hongoose
     - jonodrew
     - kevindew
+    - rubenarakelyan
     - steventux
     - thomasleese
 
@@ -115,9 +116,7 @@ govuk-platform-health:
 govuk-porg-pages:
   members:
     - andysellick
-    - Davidslv
     - MahmudH
-    - rubenarakelyan
     - sihugh
     - tijmenb
     - vanitabarrett
