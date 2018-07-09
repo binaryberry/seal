@@ -146,6 +146,23 @@ govuk-single-taxonomy:
     - "[SEAL IGNORE]"
     - RFC
 
+govuk-step-by-step:
+  members:
+    - leenagupte
+    - andysellick
+    - dilwoarh
+    - jonodrew
+
+  channel:
+    "#govuk-step-by-step"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - "DO NOT MERGE"
+    - "Don't merge"
+    - "[WIP]"
+    - "WIP"
+
 re-infra-internal:
   members:
     - afda16
