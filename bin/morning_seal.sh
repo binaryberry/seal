@@ -7,7 +7,7 @@ teams=(
   govuk-licensing
   govuk-platform-health
   govuk-content-pages
-  govuk-tax-and-nav
+  govuk-single-taxonomy
   re-infra-internal
   re-tools-internal
 )
