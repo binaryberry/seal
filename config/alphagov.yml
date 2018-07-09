@@ -129,23 +129,6 @@ govuk-content-pages:
     - "[SPIKE]"
     - "[WIP]"
 
-govuk-porg-pages:
-  members:
-    - andysellick
-    - MahmudH
-    - sihugh
-    - tijmenb
-    - vanitabarrett
-
-  channel:
-    "#govuk-porg-pages"
-
-  exclude_titles:
-    - "[DO NOT MERGE]"
-    - "[Don't merge]"
-    - "[SPIKE]"
-    - "[WIP]"
-
 govuk-tax-and-nav:
   members:
     - 1pretz1
