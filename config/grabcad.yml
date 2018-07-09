@@ -43,11 +43,12 @@ octopus:
   members:
     - arielhad
     - mklchum
-    - adigrabcad
     - orivainer
-    - EyalRaz
     - danielyac
+    - manuel-grabcad
     - amPerl
+    - YairFuchs
+    - prime-initiative 
 
   channel:
     "#octopus"
