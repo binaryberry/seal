@@ -130,22 +130,14 @@ govuk-porg-pages:
     - "[SPIKE]"
     - "[WIP]"
 
-govuk-tax-and-nav:
+govuk-single-taxonomy:
   members:
     - 1pretz1
-    - alextea
     - cbaines
     - koetsier
-    - leenagupte
-    - miaallers
-    - mmholland88
-    - myst3ria
-    - peteglondon
-    - tijmenb
-    - vanitabarrett
 
   channel:
-    "#govuk-tax-and-nav"
+    "#govuk-taxonomy"
 
   exclude_titles:
     - "[DO NOT MERGE]"
