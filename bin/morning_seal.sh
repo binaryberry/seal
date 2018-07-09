@@ -8,6 +8,7 @@ teams=(
   govuk-platform-health
   govuk-content-pages
   govuk-single-taxonomy
+  govuk-step-by-step
   re-infra-internal
   re-tools-internal
 )
