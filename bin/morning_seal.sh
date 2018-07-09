@@ -6,7 +6,7 @@ teams=(
   govuk-datagovuk-tech
   govuk-licensing
   govuk-platform-health
-  govuk-porg-pages
+  govuk-content-pages
   govuk-tax-and-nav
   re-infra-internal
   re-tools-internal

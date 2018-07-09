@@ -113,16 +113,15 @@ govuk-platform-health:
     - "[DO NOT MERGE]"
     - "WIP"
 
-govuk-porg-pages:
+govuk-content-pages:
   members:
-    - andysellick
+    - andrewgarner
     - MahmudH
     - sihugh
-    - tijmenb
     - vanitabarrett
 
   channel:
-    "#govuk-porg-pages"
+    "#govuk-content-pages"
 
   exclude_titles:
     - "[DO NOT MERGE]"
