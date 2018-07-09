@@ -2,7 +2,6 @@
 design-system-dev:
   members:
     - 36degrees
-    - alex-ju
     - dashouse
     - hannalaakso
     - igloosi
@@ -15,6 +14,23 @@ design-system-dev:
   exclude_titles:
     - DO NOT MERGE
     - WIP
+
+govuk-pub-workflow:
+  members:
+    - alex-ju
+    - benthorner
+    - davbo
+    - emmabeynon
+    - erino
+    - kevindew
+    - tijmenb
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - "Don't merge"
+    - "DON'T MERGE"
+    - "DO NOT MERGE"
+    - "WIP"
 
 govuk-data-informed:
   members:
@@ -55,9 +71,7 @@ govuk-data-informed:
 govuk-datagovuk-tech:
   members:
     - andrewgarner
-    - benthorner
     - brucebolt
-    - emmabeynon
     - hannako
     - maxgds
     - rossjones
@@ -101,7 +115,6 @@ govuk-platform-health:
     - elliotcm
     - hongoose
     - jonodrew
-    - kevindew
     - rubenarakelyan
     - steventux
     - thomasleese

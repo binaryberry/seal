@@ -6,6 +6,7 @@ teams=(
   govuk-datagovuk-tech
   govuk-licensing
   govuk-platform-health
+  govuk-pub-workflow
   govuk-content-pages
   govuk-single-taxonomy
   govuk-step-by-step
