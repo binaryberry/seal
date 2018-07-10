@@ -39,10 +39,10 @@ govuk-data-informed:
   members:
     - chao-xian
     - kylemacpherson
-    - matmoore
+    - maxgds
+    - peteglondon
     - pmanrubia
     - theKHutDeveloper
-    - tombye
 
   channel:
     "#govuk-data-informed"
@@ -51,7 +51,6 @@ govuk-data-informed:
     - "[DO NOT MERGE]"
     - "Don't merge"
     - DO NOT MERGE
-    - "Waiting on factcheck"
     - WIP
 
   use_labels: true
@@ -60,15 +59,12 @@ govuk-data-informed:
     - "[DO NOT MERGE]"
     - "Don't merge"
     - DO NOT MERGE
-    - "Waiting on factcheck"
 
   quotes:
     - Be the change you want to see!
-    - Help each other out. Pair if possible.
+    - Be Excellent To Each Other!
     - Be considerate to remote workers. Ask \#remote-workers for tips.
-    - Who's organising the next team lunch?
     - If you're not well, don't come in to the office. And get some rest!
-    - Does your work have a story? Has your story got points?
     - I AM VENGEANCE! I AM THE NIGHT! I AM BATMAN! :batsignal:
 
 govuk-datagovuk-tech:
@@ -76,7 +72,6 @@ govuk-datagovuk-tech:
     - andrewgarner
     - brucebolt
     - hannako
-    - maxgds
     - rossjones
 
   channel:
