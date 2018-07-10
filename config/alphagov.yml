@@ -25,6 +25,9 @@ govuk-pub-workflow:
     - kevindew
     - tijmenb
 
+  channel:
+    "#govuk-pub-workflow"
+
   exclude_titles:
     - "[DO NOT MERGE]"
     - "Don't merge"
