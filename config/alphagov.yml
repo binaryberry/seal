@@ -89,6 +89,7 @@ govuk-datagovuk-tech:
     - datagovuk_infrastructure
     - datagovuk_ckan_deployment
     - ckanext-datagovuk
+    - ckanext-s3-resources
 
 govuk-licensing:
   members:
