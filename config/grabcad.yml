@@ -31,7 +31,8 @@ lighthouse:
 machine:
   members:
     - priitm
-    - csidorchuk
+    - meelispr
+    - hmak3d
 
   channel:
     "#machine"
