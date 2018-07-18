@@ -74,8 +74,6 @@ solutions:
 lacheetah:
   members:
     - raidokaldma
-    - joras
-    - meelispr
     - mlni
 
   channel:
