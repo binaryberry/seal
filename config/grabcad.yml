@@ -59,11 +59,8 @@ octopus:
 
 solutions:
   members:
-    - atardugno
-    - vtravieso
-    - ShaiTubul
-    - yossikoren
     - urimike
+	- AvivEshed
 
   channel:
     "#solutions"
