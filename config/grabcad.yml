@@ -60,7 +60,7 @@ octopus:
 solutions:
   members:
     - urimike
-	- AvivEshed
+    - AvivEshed
 
   channel:
     "#solutions"
