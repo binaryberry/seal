@@ -98,3 +98,11 @@ jackalope:
 
   channel:
     "#jackalope"
+
+carpenters:
+  members:
+    - atardugno
+    - vtravieso
+
+  channel:
+    "#carpenters"
