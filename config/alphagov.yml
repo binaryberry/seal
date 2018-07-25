@@ -223,7 +223,7 @@ re-infra-internal:
   quotes:
     - "Someone needs to think of some new quotes!"
 
-re-tools-internal:
+re-observe:
   members:
     - danielroseman
     - DavidJeche
@@ -235,7 +235,7 @@ re-tools-internal:
     - MuriloDalRi
 
   channel:
-    "#re-tools-internal"
+    "#re-observe"
 
   exclude_titles:
     - "[DO NOT MERGE]"
