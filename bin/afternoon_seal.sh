@@ -3,6 +3,7 @@
 teams=(
   govuk-data-informed
   govuk-licensing
+  govuk-platform-health
 )
 
 for team in ${teams[*]} ; do
