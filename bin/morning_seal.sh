@@ -11,7 +11,7 @@ teams=(
   govuk-single-taxonomy
   govuk-step-by-step
   re-infra-internal
-  re-tools-internal
+  re-observe
 )
 
 for team in ${teams[*]}; do
