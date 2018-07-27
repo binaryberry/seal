@@ -23,7 +23,7 @@ class TeamBuilder
 
   def build_single_team(team_name)
     [
-      Team.new(apply_env(static_config[team_name.to_sym])),
+      Team.new(apply_env(static_config[team_name.to_s] || {})),
     ]
   end
 
@@ -35,14 +35,15 @@ class TeamBuilder
 
   def apply_env(config)
     {
-      members: env["GITHUB_MEMBERS"]&.split(",") || config[:members],
-      use_labels: env["GITHUB_USE_LABELS"] == "true" || config[:use_labels],
-      exclude_labels: env["GITHUB_EXCLUDE_LABELS"]&.split(',') || config[:exclude_labels],
-      exclude_titles: env["GITHUB_EXCLUDE_TITLES"]&.split(',') || config[:exclude_titles],
-      exclude_repos: env["GITHUB_EXCLUDE_REPOS"]&.split(',') || config[:exclude_repos],
-      include_repos: env["GITHUB_INCLUDE_REPOS"]&.split(',') || config[:include_repos],
-      quotes: env["SEAL_QUOTES"]&.split(',') || config[:quotes],
-      slack_channel: env["SLACK_CHANNEL"] || config[:channel],
+      members: env["GITHUB_MEMBERS"]&.split(",") || config["members"],
+      use_labels: env["GITHUB_USE_LABELS"] == "true" || config["use_labels"],
+      compact: env["COMPACT"] == "true" || config["compact"],
+      exclude_labels: env["GITHUB_EXCLUDE_LABELS"]&.split(',') || config["exclude_labels"],
+      exclude_titles: env["GITHUB_EXCLUDE_TITLES"]&.split(',') || config["exclude_titles"],
+      exclude_repos: env["GITHUB_EXCLUDE_REPOS"]&.split(',') || config["exclude_repos"],
+      include_repos: env["GITHUB_INCLUDE_REPOS"]&.split(',') || config["include_repos"],
+      quotes: env["SEAL_QUOTES"]&.split(',') || config["quotes"],
+      slack_channel: env["SLACK_CHANNEL"] || config["channel"],
     }
   end
 

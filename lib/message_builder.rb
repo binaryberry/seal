@@ -51,7 +51,9 @@ class MessageBuilder
       present(pr, n)
     }.join("\n")
 
-    @recent_pull_requests = pull_requests.reject { |pr| rotten?(pr) }
+    @recent_pull_requests = pull_requests.reject { |pr|
+      rotten?(pr) || pr[:approved]
+    }
 
     @list_recent_pull_requests = @recent_pull_requests.map.with_index(1) { |pr, n|
       present(pr, n)
@@ -61,7 +63,9 @@ class MessageBuilder
   end
 
   def list_pull_requests
-    @message = pull_requests.map.with_index(1) { |pr, n|
+    @message = pull_requests.reject{ |pr|
+      pr[:approved]
+    }.map.with_index(1) { |pr, n|
       present(pr, n)
     }.join("\n")
 
@@ -135,8 +139,16 @@ class MessageBuilder
     string.tr('&', '&amp;').tr('<', '&lt;').tr('>', '&gt;')
   end
 
+  def apply_style(template_name)
+    if team.compact
+      "#{template_name}.compact"
+    else
+      template_name
+    end
+  end
+
   def render(template_name)
-    template_file = TEMPLATE_DIR + "#{template_name}.text.erb"
+    template_file = TEMPLATE_DIR + "#{apply_style(template_name)}.text.erb"
     ERB.new(template_file.read).result(binding).strip
   end
 end
