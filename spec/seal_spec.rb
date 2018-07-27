@@ -1,77 +1,53 @@
-require 'spec_helper'
-require './lib/seal'
+require "spec_helper"
+require_relative "../lib/seal"
 
-describe Seal do
-  subject(:seal) { described_class.new(team) }
-  let(:org_config) do
-    {
-      'lion' => {
-        'members' => [],
-        'use_labels' => nil,
-        'exclude_labels' => nil,
-        'exclude_titles' => nil,
-        'exclude_repos' => nil,
-        'include_repos' => nil,
-      },
-      'tigers' => {
-        'members' => [],
-        'use_labels' => nil,
-        'exclude_labels' => nil,
-        'exclude_titles' => nil,
-        'exclude_repos' => nil,
-        'include_repos' => nil,
-      }
-    }
+RSpec.describe Seal do
+  subject(:seal) { described_class.new(teams) }
+
+  let(:lions) {
+    Team.new(
+      slack_channel: "#lions",
+      quotes: ["go lions!"],
+    )
+  }
+  let(:tigers) {
+    Team.new(
+      slack_channel: "#tigers",
+    )
+  }
+  let(:teams) do
+    [
+      lions,
+      tigers,
+    ]
   end
 
-  describe '#bark' do
+  let(:slack_poster) { instance_double(SlackPoster, send_request: nil) }
+  let(:message_builder) { instance_double(MessageBuilder, build: message) }
+  let(:message) { instance_double(Message, mood: "", text: "") }
+
+  describe ".bark(mode: nil)" do
     before do
-      expect(ENV).to receive(:[]).once.with('SEAL_ORGANISATION').and_return('navy')
-      expect(ENV).to receive(:[]).exactly(number_of_teams).times.with('SLACK_CHANNEL')
-      expect(ENV).to receive(:[]).exactly(number_of_teams).times.with('SLACK_WEBHOOK')
-      expect(File).to receive(:exist?).at_least(:once).with('./config/navy.yml').and_return(true)
-      expect(YAML).to receive(:load_file).and_return(org_config)
-      expect(MessageBuilder).to receive(:new)
-        .exactly(number_of_teams).times
-        .and_return(instance_double(MessageBuilder, build: nil, poster_mood: nil))
-      expect(SlackPoster).to receive(:new)
-        .exactly(number_of_teams).times
-        .and_return(instance_double(SlackPoster, send_request: nil))
+      allow(SlackPoster).to receive(:new).and_return(slack_poster)
     end
 
-    context 'given a team "tigers"' do
-      let(:team) { 'tigers' }
-      let(:number_of_teams) { 1 }
-
-      it 'fetches PRs for the tigers and only the tigers' do
-        expect(GithubFetcher)
-          .to receive(:new)
-          .with([], nil, nil, nil, nil, nil)
-          .and_return(instance_double(GithubFetcher, list_pull_requests: []))
-
-        seal.bark
+    it "barks at all teams" do
+      teams.each do |team|
+        expect(MessageBuilder).to receive(:new).with(team).and_return(message_builder)
+        expect(SlackPoster).to receive(:new).with(team.channel, anything)
       end
+
+      subject.bark
     end
 
-    context 'given no team' do
-      let(:team) { nil }
+    context "when in quotes mode" do
+      let(:teams) { [lions] }
 
-      context "but two teams, lions and tigers in the organisation's config" do
-        let(:number_of_teams) { 2 }
+      it "barks at all teams" do
+        expect(Message).to receive(:new).with("go lions!").and_return(message)
+        expect(SlackPoster).to receive(:new).with(lions.channel, anything)
 
-        it 'fetches PRs for the lions and the tigers' do
-          expect(GithubFetcher)
-            .to receive(:new)
-            .with([], nil, nil, nil, nil, nil)
-            .and_return(instance_double(GithubFetcher, list_pull_requests: []))
-
-          expect(GithubFetcher)
-            .to receive(:new)
-            .with([], nil, nil, nil, nil, nil)
-            .and_return(instance_double(GithubFetcher, list_pull_requests: []))
-
-          seal.bark
-        end
+        subject.bark(mode: "quotes")
       end
     end
   end
