@@ -26,6 +26,7 @@ RSpec.describe TeamBuilder do
           "WIP",
         ],
         use_labels: true,
+        compact: true,
         quotes: [
           "This is a quote",
           "This is also a quote",
@@ -71,6 +72,7 @@ RSpec.describe TeamBuilder do
     ])
 
     expect(lions.use_labels).to eq(true)
+    expect(lions.compact).to eq(true)
 
     expect(lions.quotes).to eq([
       "This is a quote",
@@ -84,6 +86,7 @@ RSpec.describe TeamBuilder do
     expect(tigers.exclude_titles).to eq([])
     expect(tigers.exclude_labels).to eq([])
     expect(tigers.use_labels).to eq(false)
+    expect(tigers.compact).to eq(false)
     expect(tigers.quotes).to eq([])
     expect(tigers.include_repos).to eq([])
     expect(tigers.exclude_repos).to eq([])

@@ -135,8 +135,16 @@ class MessageBuilder
     string.tr('&', '&amp;').tr('<', '&lt;').tr('>', '&gt;')
   end
 
+  def apply_style(template_name)
+    if team.compact
+      "#{template_name}.compact"
+    else
+      template_name
+    end
+  end
+
   def render(template_name)
-    template_file = TEMPLATE_DIR + "#{template_name}.text.erb"
+    template_file = TEMPLATE_DIR + "#{apply_style(template_name)}.text.erb"
     ERB.new(template_file.read).result(binding).strip
   end
 end

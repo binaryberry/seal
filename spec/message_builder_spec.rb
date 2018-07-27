@@ -2,7 +2,7 @@ require 'spec_helper'
 require './lib/message_builder'
 
 RSpec.describe MessageBuilder do
-  let(:team) { double(:team) }
+  let(:team) { double(:team, compact: false) }
   let(:github_fetcher) { double(:github_fetcher, list_pull_requests: pull_requests)}
   subject(:message_builder) { MessageBuilder.new(team) }
 
@@ -139,6 +139,16 @@ RSpec.describe MessageBuilder do
 
     it 'has an angry poster mood' do
       expect(message_builder.build.mood).to eq("angry")
+    end
+
+    context "when in compact mode" do
+      let(:team) { double(:team, compact: true) }
+
+      before { Timecop.freeze(Time.local(2015, 07, 18)) }
+
+      it "builds a more compact message" do
+        expect(message_builder.build.text).to eq("*Old pull requests*:\n1) whitehall: <https://github.com/alphagov/whitehall/pull/2266|[FOR DISCUSSION ONLY] Remove Whitehall.case_study_preview_host>\n\n*Recent pull requests*:\n1) whitehall: <https://github.com/alphagov/whitehall/pull/2248|Remove all Import-related code>\n2) seal: <https://github.com/alphagov/seal/pull/9999|Add extra examples to the specs>")
+      end
     end
   end
 

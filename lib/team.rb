@@ -2,6 +2,7 @@ class Team
   def initialize(
                   members: nil,
                   use_labels: nil,
+                  compact: nil,
                   exclude_labels: nil,
                   exclude_titles: nil,
                   exclude_repos: nil,
@@ -11,6 +12,7 @@ class Team
                 )
     @members = members || []
     @use_labels = (use_labels.nil? ? false : use_labels)
+    @compact = (compact.nil? ? false : compact)
     @exclude_labels = exclude_labels || []
     @exclude_titles = exclude_titles || []
     @exclude_repos = exclude_repos || []
@@ -22,6 +24,7 @@ class Team
   attr_reader *%i[
     members
     use_labels
+    compact
     exclude_labels
     exclude_titles
     exclude_repos

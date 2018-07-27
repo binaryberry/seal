@@ -44,6 +44,7 @@ export GITHUB_USE_LABELS=true
 export GITHUB_EXCLUDE_LABELS="[DO NOT MERGE],Don't merge,DO NOT MERGE,Waiting on factcheck,wip"
 export GITHUB_EXCLUDE_REPOS="notmyproject,someotherproject" # Ensure these projects are *NOT* included
 export GITHUB_INCLUDE_REPOS="definitelymyproject,forsuremyproject" # Ensure *only* these projects will be included
+export COMPACT=true # Use a more compact version of the seal output
 export SEAL_QUOTES="Everyone should have the opportunity to learn. Don’t be afraid to pick up stories on things you don’t understand and ask for help with them.,Try to pair when possible."
 ```
 

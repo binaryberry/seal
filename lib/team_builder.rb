@@ -37,6 +37,7 @@ class TeamBuilder
     {
       members: env["GITHUB_MEMBERS"]&.split(",") || config[:members],
       use_labels: env["GITHUB_USE_LABELS"] == "true" || config[:use_labels],
+      compact: env["COMPACT"] == "true" || config[:compact],
       exclude_labels: env["GITHUB_EXCLUDE_LABELS"]&.split(',') || config[:exclude_labels],
       exclude_titles: env["GITHUB_EXCLUDE_TITLES"]&.split(',') || config[:exclude_titles],
       exclude_repos: env["GITHUB_EXCLUDE_REPOS"]&.split(',') || config[:exclude_repos],
