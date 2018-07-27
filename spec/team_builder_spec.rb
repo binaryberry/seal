@@ -10,35 +10,35 @@ RSpec.describe TeamBuilder do
   before do
     FileUtils.mkdir_p(File.join(File.dirname(__FILE__), "../config"))
     File.write(File.join(File.dirname(__FILE__), "../config/#{organisation}.yml"), YAML.dump(
-      lions: {
-        members: [
+      "lions" => {
+        "members" => [
           "lil lion",
           "snoop lion",
           "biggy smalls",
         ],
-        channel: "#lions",
-        exclude_titles: [
+        "channel" => "#lions",
+        "exclude_titles" => [
           "DO NOT MERGE",
           "WIP",
         ],
-        exclude_labels: [
+        "exclude_labels" => [
           "DO NOT MERGE",
           "WIP",
         ],
-        use_labels: true,
-        compact: true,
-        quotes: [
+        "use_labels" => true,
+        "compact" => true,
+        "quotes" => [
           "This is a quote",
           "This is also a quote",
         ],
       },
-      tigers: {
-        members: [
+      "tigers" => {
+        "members" => [
           "tony",
           "stripey",
           "biggy smalls",
         ],
-        channel: "#tigers",
+        "channel" => "#tigers",
       },
     ))
   end
