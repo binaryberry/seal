@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
-require "message_builder"
-require "slack_poster"
+require_relative "message_builder"
+require_relative "slack_poster"
 
 # Entry point for the Seal!
 class Seal
