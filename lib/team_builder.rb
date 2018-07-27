@@ -23,7 +23,7 @@ class TeamBuilder
 
   def build_single_team(team_name)
     [
-      Team.new(apply_env(static_config[team_name.to_sym])),
+      Team.new(apply_env(static_config[team_name.to_s] || {})),
     ]
   end
 
