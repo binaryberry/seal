@@ -16,6 +16,7 @@
 # users commonly want.
 #
 require 'timecop'
+require "pry-byebug"
 
 ENV['SEAL_ORGANISATION'] ||= "alphagov"
 
