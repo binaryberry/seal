@@ -105,3 +105,19 @@ finance-dev-money-out:
   use_labels: true
   exclude_labels:
     - wip
+
+team-byron:
+  channel: '#team-byron'
+  repos:
+    - author-context
+    - author-platform
+    - content-author-facts
+    - content-lighthouse
+    - elements-bonus-api
+    - lighthouse-access
+    - loading_bay_backend
+    - photo-qc
+    - photo_refinery
+  use_labels: true
+  exclude_labels:
+    - wip
