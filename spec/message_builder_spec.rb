@@ -16,10 +16,21 @@ RSpec.describe MessageBuilder do
         repo: 'whitehall',
         comments_count: 5,
         thumbs_up: 0,
+        approved: false,
+        updated: Date.parse('2015-07-17 ((2457221j, 0s, 0n), +0s, 2299161j)'),
+        labels: [],
+      },
+      {
+        title: 'Some approved PR',
+        link: 'https://github.com/alphagov/whitehall/pull/9999',
+        author: 'helpful_person',
+        repo: 'whitehall',
+        comments_count: 5,
+        thumbs_up: 0,
         approved: true,
         updated: Date.parse('2015-07-17 ((2457221j, 0s, 0n), +0s, 2299161j)'),
         labels: [],
-      }
+      },
     ]
   end
 
@@ -98,8 +109,8 @@ RSpec.describe MessageBuilder do
   context 'pull requests are recent' do
     let(:pull_requests) { recent_pull_requests }
 
-    it 'builds informative message' do
-      expect(message_builder.build.text).to eq("Hello team!\n\nHere are the pull requests that need to be reviewed today:\n\n1) *whitehall* | tekin | updated yesterday | :white_check_mark: \n<https://github.com/alphagov/whitehall/pull/2248|Remove all Import-related code> - 5 comments\n\nMerry reviewing!")
+    it 'builds informative message excluding approved PRs' do
+      expect(message_builder.build.text).to eq("Hello team!\n\nHere are the pull requests that need to be reviewed today:\n\n1) *whitehall* | tekin | updated yesterday\n<https://github.com/alphagov/whitehall/pull/2248|Remove all Import-related code> - 5 comments\n\nMerry reviewing!")
     end
 
     it 'has an informative poster mood' do
