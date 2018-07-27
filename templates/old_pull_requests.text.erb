@@ -1,0 +1,11 @@
+AAAAAAARGH! <%= these(old_pull_requests.length) %> <%= pr_plural(old_pull_requests.length) %> not been updated in over 2 days.
+
+<%= @angry_bark %>
+
+Remember each time you forget to review your pull requests, a baby seal dies.
+
+<% if !@recent_pull_requests.empty? %>
+There are also these pull requests that need to be reviewed today:
+
+<%= @list_recent_pull_requests %>
+<% end %>
