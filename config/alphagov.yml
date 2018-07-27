@@ -151,6 +151,8 @@ govuk-platform-health:
     - Slack as primary point of contact (email for long form stuff)
     - "[Get ready to form] sub teams on larger pieces of work"
 
+  compact: true
+
 govuk-content-pages:
   members:
     - andrewgarner
