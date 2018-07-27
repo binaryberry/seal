@@ -1,10 +1,9 @@
 #!/bin/bash
 
 teams=(
-  data-informed-content
-  porg-pages
-  reliability-engineering
-  gov-uk-licensing-support
+  govuk-data-informed
+  govuk-licensing
+  govuk-platform-health
 )
 
 for team in ${teams[*]} ; do

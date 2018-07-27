@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
-require './lib/seal'
+require_relative "../lib/seal"
+require_relative "../lib/team_builder"
 
-Seal.new(ARGV[0], ARGV[1]).bark
+teams = TeamBuilder.build(env: ENV, team_name: ARGV[0])
+Seal.new(teams).bark(mode: ARGV[1])

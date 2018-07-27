@@ -1,0 +1,2 @@
+<%= @index %>) *<%= @pr[:repo] %>* | <%= @pr[:author] %> | updated <%= [days_plural(@days), @thumbs_up, @approved].join %>
+<%= "#{labels(@pr)} " unless [nil, ""].include?(labels(@pr)) %><<%= @pr[:link] %>|<%= html_encode(@pr[:title]) %>> - <%= [@pr[:comments_count], comments(@pr)].join %>
