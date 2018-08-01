@@ -100,7 +100,6 @@ class SlackPoster
       @mood = "tea"
     elsif @mood == nil
       @mood = "charter"
-      @postable_day = today.tuesday? || today.thursday?
     end
   end
 
