@@ -206,11 +206,11 @@ govuk-step-by-step:
 re-infra-internal:
   members:
     - afda16
+    - deanwilson
     - dougneal
     - issyl0
     - rtrinque
     - schmie
-    - stephengrier
     - stephenharker
     - suthagahrt
     - szd55gds
@@ -224,6 +224,8 @@ re-infra-internal:
 
   quotes:
     - "Someone needs to think of some new quotes!"
+
+  compact: true
 
 re-observe:
   members:
