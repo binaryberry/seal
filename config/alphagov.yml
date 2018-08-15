@@ -187,6 +187,8 @@ govuk-single-taxonomy:
     - "[SEAL IGNORE]"
     - RFC
 
+  compact: true
+
 govuk-step-by-step:
   members:
     - leenagupte
