@@ -4,8 +4,8 @@ class SlackPoster
 
   attr_accessor :webhook_url, :poster, :mood, :mood_hash, :channel, :season_name, :halloween_season, :festive_season
 
-  def initialize(webhook_url, team_channel, mood)
-    @webhook_url = webhook_url
+  def initialize(team_channel, mood)
+    @webhook_url = ENV['SLACK_WEBHOOK']
     @team_channel = team_channel
     @mood = mood
     @today = Date.today
@@ -100,7 +100,6 @@ class SlackPoster
       @mood = "tea"
     elsif @mood == nil
       @mood = "charter"
-      @postable_day = today.tuesday? || today.thursday?
     end
   end
 

@@ -1,14 +1,18 @@
-require 'spec_helper'
-require './lib/slack_poster'
+require "spec_helper"
+require_relative "../lib/slack_poster"
 
-describe 'slack_poster' do
-  subject(:slack_poster) { SlackPoster.new(webhook_url, team_channel, mood) }
+RSpec.describe SlackPoster do
+  subject(:slack_poster) { described_class.new(team_channel, mood) }
 
   let(:webhook_url) { 'https://slack/webhook' }
   let(:team_channel) { '#angry-seal-bot-test' }
   let(:message) { 'test running!' }
   let(:mood) { 'informative' }
   let(:fake_slack_poster) { instance_double(Slack::Poster) }
+
+  before do
+    ENV["SLACK_WEBHOOK"] = webhook_url
+  end
 
   context 'send_request' do
     before do

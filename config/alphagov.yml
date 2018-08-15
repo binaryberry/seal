@@ -1,68 +1,7 @@
 # Please insert new items alphabetically.
-data-gov-uk:
-  members:
-    - andrewgarner
-    - benthorner
-    - emmabeynon
-    - hannako
-    - laurentqro
-    - maxgds
-    - rossjones
-
-  channel:
-    "#datagovuk-tech"
-
-  exclude_titles:
-    - "WIP"
-    - "[WIP]"
-    - "DO NOT MERGE"
-    - "[DO NOT MERGE]"
-
-  include_repos:
-    - datagovuk_publish
-    - datagovuk_find
-    - datagovuk_infrastructure
-
-data-informed-content:
-  members:
-    - chao-xian
-    - kylemacpherson
-    - matmoore
-    - peteglondon
-    - pmanrubia
-    - theKHutDeveloper
-
-  channel:
-    "#data-informed-content"
-
-  exclude_titles:
-    - "[DO NOT MERGE]"
-    - "Don't merge"
-    - DO NOT MERGE
-    - "Waiting on factcheck"
-    - WIP
-
-  use_labels: true
-
-  exclude_labels:
-    - "[DO NOT MERGE]"
-    - "Don't merge"
-    - DO NOT MERGE
-    - "Waiting on factcheck"
-
-  quotes:
-    - Be the change you want to see!
-    - Help each other out. Pair if possible.
-    - Be considerate to remote workers. Ask \#remote-workers for tips.
-    - Who's organising the next team lunch?
-    - If you're not well, don't come in to the office. And get some rest!
-    - Does your work have a story? Has your story got points?
-    - I AM VENGEANCE! I AM THE NIGHT! I AM BATMAN! :batsignal:
-
-govuk-design-system:
+design-system-dev:
   members:
     - 36degrees
-    - alex-ju
     - dashouse
     - hannalaakso
     - igloosi
@@ -76,110 +15,84 @@ govuk-design-system:
     - DO NOT MERGE
     - WIP
 
-porg-pages:
+govuk-pub-workflow:
   members:
-    - andysellick
-    - Davidslv
-    - MahmudH
-    - rubenarakelyan
-    - sihugh
+    - alex-ju
+    - benthorner
+    - davbo
+    - emmabeynon
+    - erino
+    - kevindew
     - tijmenb
 
   channel:
-    "#porg-pages"
-
-  exclude_titles:
-    - WIP
-    - "[WIP]"
-    - "[DO NOT MERGE]"
-
-  quotes:
-    - I find your lack of an easily implemented change process for organisations disturbing
-    - When 900 years you have worked on Whitehall, look as good you will not.
-    - These are not the organisation pages you are looking for
-    - Migration is the path to the dark side. Migration leads to anger; anger leads to hate; hate leads to suffering. I sense much migration in you.
-
-platform-health:
-  members:
-    - barrucadu
-    - bevanloon
-    - boffbowsh
-    - deborahchua
-    - kevindew
-    - steventux
-    - thomasleese
-
-  channel:
-    "#platform-health"
+    "#govuk-pub-workflow"
 
   exclude_titles:
     - "[DO NOT MERGE]"
+    - "Don't merge"
+    - "DON'T MERGE"
+    - "DO NOT MERGE"
     - "WIP"
 
-reliability-engineering:
+govuk-data-informed:
   members:
-    - afda16
-    - issyl0
-    - jljalderman
-    - rtrinque
-    - stephenharker
-    - surminus
-    - suthagahrt
-
-  channel:
-    "#r20g-infra-internal"
-
-  exclude_titles:
-    - "[DO NOT MERGE]"
-    - WIP
-
-  quotes:
-    - "Someone needs to think of some new quotes!"
-
-taxonomy-and-navigation:
-  members:
-    - 1pretz1
-    - alextea
-    - cbaines
-    - koetsier
-    - leenagupte
-    - miaallers
-    - mmholland88
-    - myst3ria
+    - chao-xian
+    - kylemacpherson
+    - maxgds
     - peteglondon
-    - tijmenb
-    - vanitabarrett
+    - pmanrubia
+    - theKHutDeveloper
 
   channel:
-    "#taxonomy-and-nav"
+    "#govuk-data-informed"
 
   exclude_titles:
     - "[DO NOT MERGE]"
     - "Don't merge"
     - DO NOT MERGE
     - WIP
-    - "[SEAL IGNORE]"
-    - RFC
 
-testing:
-  members:
-    - binaryberry
-    - boffbowsh
-    - fofr
+  use_labels: true
 
-  channel:
-    "#bot-testing"
-
-  exclude_titles:
+  exclude_labels:
     - "[DO NOT MERGE]"
-    - WIP
+    - "Don't merge"
+    - DO NOT MERGE
 
   quotes:
-    - Everyone should have the opportunity to learn. Don’t be afraid to pick up stories on things you don’t understand and ask for help with them.
-    - Be nice and respect each other. Support each other.
-    - Don’t be a silo of knowledge
+    - Be the change you want to see!
+    - Be Excellent To Each Other!
+    - Be considerate to remote workers. Ask \#remote-workers for tips.
+    - If you're not well, don't come in to the office. And get some rest!
+    - I AM VENGEANCE! I AM THE NIGHT! I AM BATMAN! :batsignal:
 
-gov-uk-licensing-support:
+govuk-datagovuk-tech:
+  members:
+    - andrewgarner
+    - brucebolt
+    - hannako
+    - rossjones
+
+  channel:
+    "#govuk-datagovuk-tech"
+
+  exclude_titles:
+    - "WIP"
+    - "[WIP]"
+    - "DO NOT MERGE"
+    - "[DO NOT MERGE]"
+
+  include_repos:
+    - datagovuk_publish
+    - datagovuk_find
+    - datagovuk_infrastructure
+    - datagovuk_ckan_deployment
+    - ckanext-datagovuk
+    - ckanext-ga-report
+    - ckanext-s3-resources
+
+govuk-licensing:
   members:
     - PeteLeaman
     - SomniGiggles
@@ -192,3 +105,161 @@ gov-uk-licensing-support:
   exclude_titles:
     - "[DO NOT MERGE]"
     - "[WIP]"
+
+govuk-platform-health:
+  members:
+    - barrucadu
+    - bevanloon
+    - binaryberry
+    - boffbowsh
+    - brucebolt
+    - deborahchua
+    - elliotcm
+    - hongoose
+    - rubenarakelyan
+    - steventux
+    - thomasleese
+
+  channel:
+    "#govuk-platform-health"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - "WIP"
+
+  quotes:
+    - Continue getting involved in Hong's weird team activities
+    - If a fika isn't happening, start it
+    - Fika is a work-free environment
+    - We encourage you to do Fika everyday - don't be shy about initiating it
+    - Team lunch anyone?
+    - Listen to each other's points of view
+    - Spot opportunities, be brave in announcing them
+    - Ask for more clarity if needed
+    - Feel free to ask for help/questions/etc
+    - Try pairing, as well as not pairing...both are good
+    - Ask questions when you don't know something - it will also give others the confidence to ask their questions
+    - It's OK to not know how something works
+    - Be supportive - knowledge sharing helps the team achieve its goals
+    - Don't rush on to the next thing, pause, help out, deliver work as a team
+    - Work at a considered / sustainable pace
+    - Take responsibility for your work until it's deployed
+    - "Awareness of everyone's preferences on ways of working (more info: https://drive.google.com/drive/folders/1qllr2HfwGg6JL1VCWPCQusMokYYCq_-Z)"
+    - Support remote working as the norm
+    - If you're sick, stay home
+    - If not well enough to work, don't, even from home
+    - Slack as primary point of contact (email for long form stuff)
+    - "[Get ready to form] sub teams on larger pieces of work"
+
+  compact: true
+
+govuk-content-pages:
+  members:
+    - andrewgarner
+    - MahmudH
+    - sihugh
+    - vanitabarrett
+
+  channel:
+    "#govuk-content-pages"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - "[Don't merge]"
+    - "[SPIKE]"
+    - "[WIP]"
+
+govuk-single-taxonomy:
+  members:
+    - 1pretz1
+    - cbaines
+    - koetsier
+    - AlanGabbianelli
+
+  channel:
+    "#govuk-taxonomy"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - "Don't merge"
+    - DO NOT MERGE
+    - WIP
+    - "[SEAL IGNORE]"
+    - RFC
+
+  compact: true
+
+govuk-step-by-step:
+  members:
+    - leenagupte
+    - andysellick
+    - dilwoarh
+    - jonodrew
+
+  channel:
+    "#govuk-step-by-step"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - "DO NOT MERGE"
+    - "Don't merge"
+    - "[WIP]"
+    - "WIP"
+
+re-infra-internal:
+  members:
+    - afda16
+    - deanwilson
+    - dougneal
+    - issyl0
+    - rtrinque
+    - schmie
+    - stephenharker
+    - suthagahrt
+    - szd55gds
+
+  channel:
+    "#re-infra-internal"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - WIP
+
+  quotes:
+    - "Someone needs to think of some new quotes!"
+
+  compact: true
+
+re-observe:
+  members:
+    - danielroseman
+    - DavidJeche
+    - ejrowley
+    - idavidmcdonald
+    - kentsanggds
+    - philandstuff
+    - MuriloDalRi
+
+  channel:
+    "#re-observe"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - WIP
+
+testing:
+  members:
+    - binaryberry
+    - boffbowsh
+
+  channel:
+    "#bot-testing"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - WIP
+
+  quotes:
+    - Everyone should have the opportunity to learn. Don’t be afraid to pick up stories on things you don’t understand and ask for help with them.
+    - Be nice and respect each other. Support each other.
+    - Don’t be a silo of knowledge
