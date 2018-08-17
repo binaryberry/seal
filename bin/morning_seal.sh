@@ -3,7 +3,6 @@
 teams=(
   design-system-dev
   govuk-data-informed
-  govuk-datagovuk-tech
   govuk-licensing
   govuk-platform-health
   govuk-pub-workflow
