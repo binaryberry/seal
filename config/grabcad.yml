@@ -17,10 +17,8 @@ lighthouse:
   members:
     - chris-grabcad
     - NigelAtGrabCAD
-    - EmaParodi
-    - zhelezina
-    - DanielDignam
     - robert-may1
+    - hhazi
 
   channel:
     "#lighthouse"
