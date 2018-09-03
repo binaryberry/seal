@@ -104,6 +104,6 @@ class SlackPoster
   end
 
   def channel
-    @team_channel = '#angry-seal-bot-test' if ENV["DYNO"].nil?
+    @team_channel = '#bot-testing' if ENV["DYNO"].nil?
   end
 end
