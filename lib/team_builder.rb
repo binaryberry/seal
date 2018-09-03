@@ -22,9 +22,12 @@ class TeamBuilder
   attr_reader :env
 
   def build_single_team(team_name)
-    [
-      Team.new(apply_env(static_config[team_name.to_s] || {})),
-    ]
+    team = Team.new(apply_env(static_config[team_name.to_s] || {}))
+    if team.members.empty?
+      []
+    else
+      [team]
+    end
   end
 
   def build_all_teams

@@ -106,4 +106,10 @@ RSpec.describe TeamBuilder do
     expect(teams.count).to eq(1)
     expect(teams.first.channel).to eq("#tigers")
   end
+
+  it "short-circuits if the team name does not appear in the configuration file" do
+    teams = TeamBuilder.build(env: env, team_name: "cheetas")
+
+    expect(teams.count).to eq(0)
+  end
 end
