@@ -144,7 +144,7 @@ govuk-content-pages:
     - "[SPIKE]"
     - "[WIP]"
 
-govuk-single-taxonomy:
+govuk-taxonomy:
   members:
     - 1pretz1
     - cbaines
@@ -222,10 +222,9 @@ re-observe:
     - "[DO NOT MERGE]"
     - WIP
 
-testing:
+bot-testing:
   members:
     - binaryberry
-    - boffbowsh
 
   channel:
     "#bot-testing"
