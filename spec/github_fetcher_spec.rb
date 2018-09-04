@@ -125,7 +125,7 @@ RSpec.describe GithubFetcher do
     allow(Octokit::Client).to receive(:new).and_return(fake_octokit_client)
     allow(fake_octokit_client).to receive_message_chain('user.login')
     allow(fake_octokit_client).to receive(:auto_paginate=).with(true)
-    allow(fake_octokit_client).to receive(:search_issues).with("is:pr state:open user:alphagov").and_return(double(items: [pull_2266, pull_2248]))
+    allow(fake_octokit_client).to receive(:search_issues).with("is:pr state:open user:alphagov archived:false").and_return(double(items: [pull_2266, pull_2248]))
 
     allow(fake_octokit_client).to receive(:issue_comments).with(whitehall_repo_name, 2266).and_return(comments_2266)
     allow(fake_octokit_client).to receive(:issue_comments).with(whitehall_rebuild_repo_name, 2248).and_return(comments_2248)
