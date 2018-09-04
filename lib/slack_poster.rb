@@ -96,7 +96,7 @@ class SlackPoster
   end
 
   def check_if_quotes
-    if @team_channel == "#tea"
+    if @team_channel == "#club-tea"
       @mood = "tea"
     elsif @mood == nil
       @mood = "charter"
