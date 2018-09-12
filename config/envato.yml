@@ -38,7 +38,7 @@ discovery:
 
 q-branch:
   channel: '#q-branch'
-  github_team_names: ['q-branch']
+  github_team_names: ['Q-Branch']
   repos:
     - ami-bakery
     - auth0
@@ -60,18 +60,12 @@ finance-dev:
     - finance-dev
     - finance_infrastructure
     - elements-earnings
-    - elements_earnings-client
-    - et-elements-storefront-elements-earnings
-    - et-elements-earnings-payables
-    - et-recurly-subscriptions-elements-earnings
-    - event_translator_toolkit
-    - event-translator-template
     - irs-summaries-generator
     - irs-solicitations
     - knuckle_cluster
     - payables
-    - payables-client
     - payoneer
+    - platform-communicator
     - recurly_subscription_service
     - sites-earnings
     - skrill-payment
@@ -103,10 +97,27 @@ finance-dev-money-out:
     - payables
     - payables-client
     - payoneer
+    - platform-communicator
     - sites-earnings
     - tax-forms
     - tax-forms-client
     - tax_calculator
+  use_labels: true
+  exclude_labels:
+    - wip
+
+team-byron:
+  channel: '#team-byron'
+  repos:
+    - author-context
+    - author-platform
+    - content-author-facts
+    - content-lighthouse
+    - elements-bonus-api
+    - lighthouse-access
+    - loading_bay_backend
+    - photo-qc
+    - photo_refinery
   use_labels: true
   exclude_labels:
     - wip
