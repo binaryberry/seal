@@ -125,6 +125,7 @@ govuk-platform-health:
     - If not well enough to work, don't, even from home
     - Slack as primary point of contact (email for long form stuff)
     - "[Get ready to form] sub teams on larger pieces of work"
+    - When an epic emerges, write all the cards so we can _share the work_
 
   compact: true
 
