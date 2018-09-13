@@ -2,6 +2,8 @@ require 'slack-poster'
 
 class SlackPoster
 
+  SlackResponseError = Class.new(StandardError)
+
   attr_accessor :webhook_url, :poster, :mood, :mood_hash, :channel, :season_name, :halloween_season, :festive_season
 
   def initialize(webhook_url, team_channel, mood)
@@ -25,7 +27,10 @@ class SlackPoster
       puts slack_options.inspect
       puts message
     else
-      poster.send_message(message) if postable_day
+      if postable_day
+        response = poster.send_message(message)
+        raise SlackResponseError, "Posting to webhook failed with: #{response.status} #{response.reason_phrase} #{response.body}" unless response.success?
+      end
     end
   end
 
