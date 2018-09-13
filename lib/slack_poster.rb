@@ -29,7 +29,7 @@ class SlackPoster
     else
       if postable_day
         response = poster.send_message(message)
-	raise SlackResponseError, "Posting to webhook failed with: #{response.status} #{response.reason_phrase} #{response.body}" unless response.success?
+        raise SlackResponseError, "Posting to webhook failed with: #{response.status} #{response.reason_phrase} #{response.body}" unless response.success?
       end
     end
   end
