@@ -83,17 +83,16 @@ finance-dev-money-out:
     - au-rwt-summaries-generator
     - finance-central
     - finance-dev
+    - finance-event-translators
     - finance_infrastructure
     - elements-earnings
     - elements_earnings-client
     - elements-revenue-period-finalizer
-    - et-elements-storefront-elements-earnings
-    - et-elements-earnings-payables
-    - et-recurly-subscriptions-elements-earnings
     - event_translator_toolkit
     - event-translator-template
     - irs-summaries-generator
     - irs-solicitations
+    - money-out-infrastructure
     - payables
     - payables-client
     - payoneer
