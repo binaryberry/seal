@@ -191,8 +191,6 @@ re-infra-internal:
     - rtrinque
     - schmie
     - stephenharker
-    - suthagahrt
-    - szd55gds
 
   channel:
     "#re-infra-internal"
