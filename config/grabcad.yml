@@ -30,7 +30,6 @@ lighthouse:
 machine:
   members:
     - priitm
-    - meelispr
     - hmak3d
 
   channel:
@@ -72,6 +71,7 @@ lacheetah:
   members:
     - raidokaldma
     - mlni
+    - meelispr
 
   channel:
     "#la-cheetah"
