@@ -17,12 +17,16 @@ design-system-dev:
 
 govuk-pub-workflow:
   members:
+    - 1pretz1
     - alex-ju
     - benthorner
-    - davbo
+    - DilwoarH
     - emmabeynon
     - erino
     - kevindew
+    - kgarwood
+    - leenagupte
+    - MuriloDalRi
     - tijmenb
 
   channel:
@@ -38,11 +42,11 @@ govuk-pub-workflow:
 govuk-data-informed:
   members:
     - chao-xian
+    - cbaines
     - kylemacpherson
     - maxgds
     - peteglondon
     - pmanrubia
-    - theKHutDeveloper
 
   channel:
     "#govuk-data-informed"
@@ -83,6 +87,7 @@ govuk-licensing:
 
 govuk-platform-health:
   members:
+    - AlanGabbianelli
     - barrucadu
     - bevanloon
     - binaryberry
@@ -129,59 +134,6 @@ govuk-platform-health:
 
   compact: true
 
-govuk-content-pages:
-  members:
-    - andrewgarner
-    - MahmudH
-    - sihugh
-    - vanitabarrett
-
-  channel:
-    "#govuk-content-pages"
-
-  exclude_titles:
-    - "[DO NOT MERGE]"
-    - "[Don't merge]"
-    - "[SPIKE]"
-    - "[WIP]"
-
-govuk-taxonomy:
-  members:
-    - 1pretz1
-    - cbaines
-    - koetsier
-    - AlanGabbianelli
-
-  channel:
-    "#govuk-taxonomy"
-
-  exclude_titles:
-    - "[DO NOT MERGE]"
-    - "Don't merge"
-    - DO NOT MERGE
-    - WIP
-    - "[SEAL IGNORE]"
-    - RFC
-
-  compact: true
-
-govuk-step-by-step:
-  members:
-    - leenagupte
-    - andysellick
-    - DilwoarH
-    - jonodrew
-
-  channel:
-    "#govuk-step-by-step"
-
-  exclude_titles:
-    - "[DO NOT MERGE]"
-    - "DO NOT MERGE"
-    - "Don't merge"
-    - "[WIP]"
-    - "WIP"
-
 re-infra-internal:
   members:
     - afda16
@@ -206,13 +158,11 @@ re-infra-internal:
 
 re-observe:
   members:
-    - danielroseman
     - DavidJeche
     - ejrowley
     - idavidmcdonald
     - kentsanggds
     - philandstuff
-    - MuriloDalRi
 
   channel:
     "#re-observe"
