@@ -206,13 +206,11 @@ re-infra-internal:
 
 re-observe:
   members:
-    - danielroseman
     - DavidJeche
     - ejrowley
     - idavidmcdonald
     - kentsanggds
     - philandstuff
-    - MuriloDalRi
 
   channel:
     "#re-observe"
