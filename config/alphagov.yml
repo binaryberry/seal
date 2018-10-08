@@ -17,11 +17,16 @@ design-system-dev:
 
 govuk-pub-workflow:
   members:
+    - 1pretz1
     - alex-ju
     - benthorner
+    - DilwoarH
     - emmabeynon
     - erino
     - kevindew
+    - kgarwood
+    - leenagupte
+    - MuriloDalRi
     - tijmenb
 
   channel:
@@ -37,6 +42,7 @@ govuk-pub-workflow:
 govuk-data-informed:
   members:
     - chao-xian
+    - cbaines
     - kylemacpherson
     - maxgds
     - peteglondon
@@ -81,6 +87,7 @@ govuk-licensing:
 
 govuk-platform-health:
   members:
+    - AlanGabbianelli
     - barrucadu
     - bevanloon
     - binaryberry
