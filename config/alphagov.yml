@@ -19,7 +19,6 @@ govuk-pub-workflow:
   members:
     - alex-ju
     - benthorner
-    - davbo
     - emmabeynon
     - erino
     - kevindew
@@ -42,7 +41,6 @@ govuk-data-informed:
     - maxgds
     - peteglondon
     - pmanrubia
-    - theKHutDeveloper
 
   channel:
     "#govuk-data-informed"
