@@ -15,6 +15,26 @@ design-system-dev:
     - DO NOT MERGE
     - WIP
 
+govuk-finding-brexit:
+  members:
+    - andrewgarner
+    - andysellick
+    - bilbof
+    - karlbaker02
+    - koetsier
+    - MahmudH
+    - oscarwyatt
+    - sihugh
+    - vanitabarrett
+    - VitalieMogoreanu
+
+  channel:
+    "#govuk-finding-brexit"
+
+  exclude_titles:
+    - WIP
+    - "[WIP]"
+
 govuk-pub-workflow:
   members:
     - 1pretz1
