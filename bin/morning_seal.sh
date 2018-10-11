@@ -8,8 +8,6 @@ teams=(
   govuk-platform-health
   govuk-pub-workflow
   govuk-content-pages
-  govuk-taxonomy
-  govuk-step-by-step
   re-infra-internal
   re-observe
 )
