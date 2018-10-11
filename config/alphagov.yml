@@ -159,7 +159,6 @@ re-infra-internal:
     - afda16
     - deanwilson
     - dougneal
-    - issyl0
     - rtrinque
     - schmie
     - stephenharker
@@ -178,11 +177,13 @@ re-infra-internal:
 
 re-observe:
   members:
-    - DavidJeche
-    - ejrowley
     - idavidmcdonald
+    - issyl0
+    - JonathanHallam
     - kentsanggds
+    - matthewcullum-gds
     - philandstuff
+    - venusbb
 
   channel:
     "#re-observe"
