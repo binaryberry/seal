@@ -31,7 +31,11 @@ govuk-finding-brexit:
   channel:
     "#govuk-finding-brexit"
 
+  compact: true
+
   exclude_titles:
+    - "[DO NOT MERGE]"
+    - "[PROTOTYPE]"
     - WIP
     - "[WIP]"
 
