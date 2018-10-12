@@ -133,27 +133,22 @@ govuk-platform-health:
 
   quotes:
     - Continue getting involved in Hong's weird team activities
-    - If a fika isn't happening, start it
     - Fika is a work-free environment
     - We encourage you to do Fika everyday - don't be shy about initiating it
-    - Team lunch anyone?
     - Listen to each other's points of view
-    - Spot opportunities, be brave in announcing them
-    - Ask for more clarity if needed
-    - Feel free to ask for help/questions/etc
+    - Spot improvement opportunities, be brave in announcing them
+    - Feel free to ask questions/for clarity/for help
     - Try pairing, as well as not pairing...both are good
-    - Ask questions when you don't know something - it will also give others the confidence to ask their questions
-    - It's OK to not know how something works
-    - Be supportive - knowledge sharing helps the team achieve its goals
-    - Don't rush on to the next thing, pause, help out, deliver work as a team
+    - It's OK to work on something you don't understand yet
+    - Be supportive 
+    - Knowledge sharing helps the team achieve its goals
+    - Before moving on to the next thing: pause, help out, deliver work as a team
     - Work at a considered / sustainable pace
-    - Take responsibility for your work until it's deployed
-    - "Awareness of everyone's preferences on ways of working (more info: https://drive.google.com/drive/folders/1qllr2HfwGg6JL1VCWPCQusMokYYCq_-Z)"
+    - Be aware of everyone's preferences on ways of working (more info: https://drive.google.com/drive/folders/1qllr2HfwGg6JL1VCWPCQusMokYYCq_-Z)"
     - Support remote working as the norm
-    - If you're sick, stay home
+    - If you're sick, quarantine yourself
     - If not well enough to work, don't, even from home
-    - Slack as primary point of contact (email for long form stuff)
-    - "[Get ready to form] sub teams on larger pieces of work"
+    - Slack as primary point of contact; email for things you want to remember 
     - When an epic emerges, write all the cards so we can _share the work_
 
   compact: true
