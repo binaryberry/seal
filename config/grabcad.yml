@@ -47,7 +47,7 @@ octopus:
     - manuel-grabcad
     - amPerl
     - YairFuchs
-    - prime-initiative 
+    - dmitri-grabcad
 
   channel:
     "#octopus"
