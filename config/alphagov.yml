@@ -115,9 +115,9 @@ govuk-platform-health:
     - andreagrandi
     - barrucadu
     - bevanloon
-    - binaryberry
     - brucebolt
     - deborahchua
+    - edwardkerry
     - elliotcm
     - hongoose
     - rubenarakelyan
@@ -190,19 +190,3 @@ re-observe:
   exclude_titles:
     - "[DO NOT MERGE]"
     - WIP
-
-bot-testing:
-  members:
-    - binaryberry
-
-  channel:
-    "#bot-testing"
-
-  exclude_titles:
-    - "[DO NOT MERGE]"
-    - WIP
-
-  quotes:
-    - Everyone should have the opportunity to learn. Don’t be afraid to pick up stories on things you don’t understand and ask for help with them.
-    - Be nice and respect each other. Support each other.
-    - Don’t be a silo of knowledge
