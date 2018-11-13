@@ -157,10 +157,13 @@ re-infra-internal:
   members:
     - afda16
     - deanwilson
-    - dougneal
+    - fredericfran-gds
+    - jstandring-gds
+    - ronocg
     - rtrinque
     - schmie
     - stephenharker
+    - th31nitiate
 
   channel:
     "#re-infra-internal"
