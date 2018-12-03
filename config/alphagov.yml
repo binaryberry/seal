@@ -123,6 +123,7 @@ govuk-platform-health:
     - rubenarakelyan
     - steventux
     - thomasleese
+    - jonodrew
 
   channel:
     "#govuk-platform-health"
