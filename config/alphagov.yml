@@ -124,6 +124,7 @@ govuk-platform-health:
     - steventux
     - thomasleese
     - jonodrew
+    - katstevens
 
   channel:
     "#govuk-platform-health"
