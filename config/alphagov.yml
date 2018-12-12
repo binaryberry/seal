@@ -198,3 +198,30 @@ re-observe:
   exclude_titles:
     - "[DO NOT MERGE]"
     - WIP
+
+govuk-pay:
+  members:
+    - heathd
+    - 46bit
+    - alexbishop1
+    - cobainc0
+    - DanailMinchev
+    - danworth
+    - ejrowley
+    - georgeracu
+    - heathd
+    - IreneLau-GDS
+    - jonheslop
+    - kbottla
+    - mrlumbu
+    - oswaldquek
+    - SandorArpa
+    - simad
+    - stephencdaly
+
+  channel:
+    "#govuk-pay-tech"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - WIP

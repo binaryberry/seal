@@ -10,6 +10,7 @@ teams=(
   govuk-content-pages
   re-infra-internal
   re-observe
+  govuk-pay
 )
 
 for team in ${teams[*]}; do
