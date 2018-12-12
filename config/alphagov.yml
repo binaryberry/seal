@@ -15,6 +15,18 @@ design-system-dev:
     - DO NOT MERGE
     - WIP
 
+digitalmarketplace:
+  members:
+    - benvand
+    - lfdebrux
+    - risicle
+
+  channel:
+    "#dm-review"
+
+  exclude_titles:
+    - WIP
+
 govuk-finding-brexit:
   members:
     - andrewgarner
