@@ -2,6 +2,7 @@
 
 teams=(
   design-system-dev
+  digitalmarketplace
   govuk-data-informed
   govuk-finding-brexit
   govuk-licensing
