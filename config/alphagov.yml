@@ -22,6 +22,8 @@ digitalmarketplace:
     - benvand
     - lfdebrux
     - risicle
+    - jonodrew
+    - katstevens
 
   channel:
     "#dm-review"
@@ -138,8 +140,6 @@ govuk-platform-health:
     - rubenarakelyan
     - steventux
     - thomasleese
-    - jonodrew
-    - katstevens
 
   channel:
     "#govuk-platform-health"
