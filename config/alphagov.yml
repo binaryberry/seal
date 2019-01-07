@@ -40,6 +40,7 @@ govuk-finding-brexit:
     - koetsier
     - MahmudH
     - oscarwyatt
+    - peteglondon
     - sihugh
     - vanitabarrett
     - VitalieMogoreanu
@@ -83,10 +84,9 @@ govuk-data-informed:
   members:
     - chao-xian
     - cbaines
-    - kylemacpherson
     - maxgds
-    - peteglondon
     - pmanrubia
+    - theseanything
 
   channel:
     "#govuk-data-informed"
