@@ -83,10 +83,9 @@ govuk-data-informed:
   members:
     - chao-xian
     - cbaines
-    - kylemacpherson
     - maxgds
-    - peteglondon
     - pmanrubia
+    - theseanything
 
   channel:
     "#govuk-data-informed"
