@@ -31,6 +31,28 @@ digitalmarketplace:
   exclude_titles:
     - WIP
 
+govuk-euexit-ready:
+  members:
+    - vanitabarrett
+    - MuriloDalRi
+    - MahmudH
+    - peteglondon
+    - steventux
+    - leenagupte
+    - DilwoarH
+    - VitalieMogoreanu
+
+  channel:
+    "#govuk-euexit-ready"
+
+  compact: true
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - "[PROTOTYPE]"
+    - WIP
+    - "[WIP]"
+
 govuk-finding-brexit:
   members:
     - andrewgarner
@@ -40,7 +62,6 @@ govuk-finding-brexit:
     - koetsier
     - MahmudH
     - oscarwyatt
-    - peteglondon
     - sihugh
     - vanitabarrett
     - VitalieMogoreanu
