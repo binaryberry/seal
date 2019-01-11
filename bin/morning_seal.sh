@@ -4,6 +4,7 @@ teams=(
   design-system-dev
   digitalmarketplace
   govuk-data-informed
+  govuk-euexit-ready
   govuk-finding-brexit
   govuk-licensing
   govuk-platform-health
