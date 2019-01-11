@@ -60,10 +60,8 @@ govuk-finding-brexit:
     - bilbof
     - karlbaker02
     - koetsier
-    - MahmudH
     - oscarwyatt
     - sihugh
-    - vanitabarrett
     - VitalieMogoreanu
 
   channel:
@@ -82,13 +80,10 @@ govuk-pub-workflow:
     - 1pretz1
     - alex-ju
     - benthorner
-    - DilwoarH
     - emmabeynon
     - erino
     - kevindew
     - kgarwood
-    - leenagupte
-    - MuriloDalRi
     - tijmenb
 
   channel:
@@ -159,7 +154,6 @@ govuk-platform-health:
     - hongoose
     - rosafox
     - rubenarakelyan
-    - steventux
     - thomasleese
 
   channel:
