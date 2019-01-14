@@ -10,6 +10,7 @@ teams=(
   govuk-platform-health
   govuk-pub-workflow
   govuk-content-pages
+  re-autom8
   re-infra-internal
   govuk-pay
 )
