@@ -11,7 +11,6 @@ teams=(
   govuk-pub-workflow
   govuk-content-pages
   re-infra-internal
-  re-observe
   govuk-pay
 )
 

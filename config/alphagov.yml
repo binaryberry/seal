@@ -209,23 +209,6 @@ re-infra-internal:
 
   compact: true
 
-re-observe:
-  members:
-    - idavidmcdonald
-    - issyl0
-    - JonathanHallam
-    - kentsanggds
-    - matthewcullum-gds
-    - philandstuff
-    - venusbb
-
-  channel:
-    "#re-observe"
-
-  exclude_titles:
-    - "[DO NOT MERGE]"
-    - WIP
-
 govuk-pay:
   members:
     - heathd
