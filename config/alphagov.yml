@@ -185,6 +185,29 @@ govuk-platform-health:
 
   compact: true
 
+
+re-autom8:
+  members:
+    - adityapahuja
+    - andy-paine
+    - bartlabo
+    - issyl0
+    - matthewcullum-gds
+    - mmhmm
+    - philandstuff
+    - sakisv
+    - stephengrier
+    - tlwr
+
+  channel:
+    "#re-autom8"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - "WIP"
+
+  compact: true
+
 re-infra-internal:
   members:
     - afda16
@@ -208,23 +231,6 @@ re-infra-internal:
     - "Someone needs to think of some new quotes!"
 
   compact: true
-
-re-observe:
-  members:
-    - idavidmcdonald
-    - issyl0
-    - JonathanHallam
-    - kentsanggds
-    - matthewcullum-gds
-    - philandstuff
-    - venusbb
-
-  channel:
-    "#re-observe"
-
-  exclude_titles:
-    - "[DO NOT MERGE]"
-    - WIP
 
 govuk-pay:
   members:
