@@ -145,9 +145,7 @@ govuk-platform-health:
   members:
     - AlanGabbianelli
     - andreagrandi
-    - barrucadu
     - bevanloon
-    - brucebolt
     - deborahchua
     - edwardkerry
     - elliotcm
@@ -185,6 +183,19 @@ govuk-platform-health:
 
   compact: true
 
+govuk-search-perf:
+  members:
+    - barrucadu
+    - brucebolt
+
+  channel:
+    "#govuk-search-perf"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - "WIP"
+
+  compact: true
 
 re-autom8:
   members:
