@@ -189,15 +189,15 @@ govuk-platform-health:
 re-autom8:
   members:
     - adityapahuja
+    - andy-paine
+    - bartlabo
     - issyl0
     - matthewcullum-gds
+    - mmhmm
     - philandstuff
     - sakisv
-    - tlwr
-    - mmhmm
-    - bartlabo
     - stephengrier
-    - andy-paine
+    - tlwr
 
   channel:
     "#re-autom8"
