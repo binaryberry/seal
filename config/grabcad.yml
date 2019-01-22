@@ -15,7 +15,6 @@ deathclaw:
 
 lighthouse:
   members:
-    - chris-grabcad
     - NigelAtGrabCAD
     - robert-may1
     - hhazi
@@ -30,7 +29,8 @@ lighthouse:
 machine:
   members:
     - priitm
-    - hmak3d
+    - posulliv    
+    - chris-grabcad
 
   channel:
     "#machine"
@@ -95,7 +95,6 @@ pelican:
 jackalope:
   members:
     - jeffmisu
-    - posulliv
     - mrk252
 
   channel:
