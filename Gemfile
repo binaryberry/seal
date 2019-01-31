@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
-ruby "2.5.1"
+ruby '2.5.1'
 
-gem 'slack-poster', '~> 1.0.1'
-gem "octokit", "~> 4.0"
-gem "sinatra"
-gem "thin"
+gem 'slack-poster', '~> 2.2.1'
+gem 'octokit', '~> 4.0'
+gem 'sinatra'
+gem 'thin'
 
 group :test do
   gem 'guard'
