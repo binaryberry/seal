@@ -1,6 +1,6 @@
-require 'slack-poster'
+require 'slack/poster'
 
-class SlackPoster
+class SlackLib
 
   SlackResponseError = Class.new(StandardError)
 

@@ -1,8 +1,8 @@
 require 'spec_helper'
-require './lib/slack_poster'
+require './lib/slack_lib'
 
-describe 'slack_poster' do
-  subject(:slack_poster) { SlackPoster.new(webhook_url, team_channel, mood) }
+describe 'slack_lib' do
+  subject(:slack_lib) { SlackLib.new(webhook_url, team_channel, mood) }
 
   let(:webhook_url) { 'https://slack/webhook' }
   let(:team_channel) { '#angry-seal-bot-test' }
@@ -23,7 +23,7 @@ describe 'slack_poster' do
     context 'successful response' do
       it 'posts to Slack' do
         expect(fake_slack_poster).to receive(:send_message).with(message).and_return(fake_slack_response)
-        expect(slack_poster.send_request(message)).to be nil
+        expect(slack_lib.send_request(message)).to be nil
       end
     end
 
@@ -36,7 +36,7 @@ describe 'slack_poster' do
       end
 
       it 'raises an exception' do
-        expect { slack_poster.send_request(message) }.to raise_error(SlackPoster::SlackResponseError)
+        expect { slack_lib.send_request(message) }.to raise_error(SlackLib::SlackResponseError)
       end
     end
   end
@@ -49,8 +49,8 @@ describe 'slack_poster' do
       end
 
       it "posts as Informative Seal" do
-        slack_poster.send(:mood_hash)
-        expect(slack_poster.send(:mood_hash)).to eq "Informative Seal"
+        slack_lib.send(:mood_hash)
+        expect(slack_lib.send(:mood_hash)).to eq "Informative Seal"
       end
     end
 
@@ -61,12 +61,12 @@ describe 'slack_poster' do
       end
 
       it "knows it is Halloween season" do
-        expect(slack_poster.send(:halloween_season?)).to eq true
+        expect(slack_lib.send(:halloween_season?)).to eq true
       end
 
       it "posts as Halloween Informative Seal" do
-        slack_poster.send(:mood_hash)
-        expect(slack_poster.send(:mood_hash)).to eq "Halloween Informative Seal"
+        slack_lib.send(:mood_hash)
+        expect(slack_lib.send(:mood_hash)).to eq "Halloween Informative Seal"
       end
     end
 
@@ -77,12 +77,12 @@ describe 'slack_poster' do
       end
 
       it "knows it is Festive Season" do
-        expect(slack_poster.send(:festive_season?)).to eq true
+        expect(slack_lib.send(:festive_season?)).to eq true
       end
 
       it "posts as Festive Season Informative Seal" do
-        slack_poster.send(:mood_hash)
-        expect(slack_poster.send(:mood_hash)).to eq "Festive Season Informative Seal"
+        slack_lib.send(:mood_hash)
+        expect(slack_lib.send(:mood_hash)).to eq "Festive Season Informative Seal"
       end
     end
   end
@@ -91,7 +91,7 @@ describe 'slack_poster' do
     let(:mood) { 'baadf00d' }
 
     it 'emits a meaningful error' do
-      expect { slack_poster }.to raise_error(RuntimeError, /Bad mood: baadf00d/)
+      expect { slack_lib }.to raise_error(RuntimeError, /Bad mood: baadf00d/)
     end
   end
 end
