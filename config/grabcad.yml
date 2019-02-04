@@ -1,14 +1,17 @@
 # Please insert new items alphabetically.
 
-deathclaw:
+tribble:
   members:
     - hmak3d
     - evan-grabcad
     - Maxodactyl
     - caseprince
+    - reshadbinharun
+    - mwhearty
+    - anju-james
 
   channel:
-    "#deathclaw-core"
+    "#tribble"
 
   quotes:
     - ":wave:"
