@@ -30,7 +30,7 @@ digitalmarketplace:
 
   exclude_titles:
     - WIP
-    
+
   compact: false
 
 govuk-euexit-ready:
