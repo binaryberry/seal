@@ -11,6 +11,7 @@ teams=(
   govuk-pay
   govuk-platform-health
   govuk-pub-workflow
+  govuk-search-perf
   re-autom8
   re-infra-internal
 )
