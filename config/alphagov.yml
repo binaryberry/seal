@@ -42,7 +42,6 @@ govuk-euexit-ready:
     - DilwoarH
     - VitalieMogoreanu
     - 36degrees
-    - aliuk2012
 
   channel:
     "#govuk-euexit-ready"
@@ -65,6 +64,7 @@ govuk-finding-brexit:
     - oscarwyatt
     - sihugh
     - VitalieMogoreanu
+    - aliuk2012
 
   channel:
     "#govuk-finding-brexit"
