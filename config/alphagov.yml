@@ -81,12 +81,13 @@ govuk-pub-workflow:
   members:
     - 1pretz1
     - alex-ju
+    - benhazell
     - benthorner
     - emmabeynon
     - erino
     - kevindew
     - kgarwood
-    - tijmenb
+    - soniaturcotte
 
   channel:
     "#govuk-pub-workflow"
