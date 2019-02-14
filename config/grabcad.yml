@@ -28,7 +28,6 @@ lighthouse:
 
 machine:
   members:
-    - priitm
     - posulliv    
     - chris-grabcad
 
@@ -115,3 +114,13 @@ alpha:
     
   channel:
     "#alpha"
+
+voyager:
+  members:
+    - priitm
+    - AlexRevin
+    - blabounty
+    - lackovic
+    
+  channel:
+    "#voyager-notifications"
