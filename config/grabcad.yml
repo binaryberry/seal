@@ -68,10 +68,8 @@ solutions:
 
 lacheetah:
   members:
-    - raidokaldma
-    - mlni
-    - meelispr
     - lalomartins
+    - jaxer
 
   channel:
     "#la-cheetah"
@@ -83,14 +81,6 @@ spock:
   channel:
     "#spock-notifications"
 
-pelican:
-  members:
-    - jaxer
-    - mwhearty
-
-  channel:
-    "#pelican"
-    
 jackalope:
   members:
     - jeffmisu
