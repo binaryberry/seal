@@ -100,6 +100,7 @@ finance-dev-money-out:
     - sites-earnings
     - tax-forms
     - tax-forms-client
+    - tax-summaries-coordinator
     - tax_calculator
   use_labels: true
   exclude_labels:
