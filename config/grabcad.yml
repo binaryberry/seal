@@ -114,3 +114,21 @@ voyager:
     
   channel:
     "#voyager-notifications"
+    
+geometry:
+  members:
+    - NigelAtGrabCAD
+    - robert-may1
+    - hhazi
+    - dangrabcad
+    - atardugno
+    - vtravieso
+    - jeffmisu
+    - TiptonBR
+    - mrk252
+
+  channel:
+    "#geometry"
+
+  quotes:
+    - ":wave:"
