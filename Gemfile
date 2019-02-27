@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
-ruby "2.5.1"
+
+ruby File.read(".ruby-version").chomp
 
 gem 'slack-poster', '~> 1.0.1'
 gem "octokit", "~> 4.0"
