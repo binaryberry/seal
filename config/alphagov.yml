@@ -41,7 +41,6 @@ govuk-euexit-ready:
     - leenagupte
     - DilwoarH
     - VitalieMogoreanu
-    - 36degrees
 
   channel:
     "#govuk-euexit-ready"
