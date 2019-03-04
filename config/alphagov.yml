@@ -191,28 +191,6 @@ govuk-search-perf:
 
   compact: true
 
-re-autom8:
-  members:
-    - adityapahuja
-    - andy-paine
-    - bartlabo
-    - issyl0
-    - matthewcullum-gds
-    - mmhmm
-    - philandstuff
-    - sakisv
-    - stephengrier
-    - tlwr
-
-  channel:
-    "#re-autom8"
-
-  exclude_titles:
-    - "[DO NOT MERGE]"
-    - "WIP"
-
-  compact: true
-
 re-infra-internal:
   members:
     - afda16
