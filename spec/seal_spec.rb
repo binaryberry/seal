@@ -1,5 +1,6 @@
 require "spec_helper"
 require_relative "../lib/seal"
+require_relative "../lib/team"
 
 RSpec.describe Seal do
   subject(:seal) { described_class.new(teams) }
