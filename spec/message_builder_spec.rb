@@ -6,7 +6,22 @@ RSpec.describe MessageBuilder do
   let(:github_fetcher) { double(:github_fetcher, list_pull_requests: pull_requests)}
   subject(:message_builder) { MessageBuilder.new(team) }
 
-  let(:no_pull_requests) { {} }
+  let(:no_unapproved_pull_requests) do
+    [
+      {
+        title: 'Some approved PR',
+        link: 'https://github.com/alphagov/whitehall/pull/9999',
+        author: 'helpful_person',
+        repo: 'whitehall',
+        comments_count: 5,
+        thumbs_up: 0,
+        approved: true,
+        updated: Date.parse('2015-07-17 ((2457221j, 0s, 0n), +0s, 2299161j)'),
+        labels: [],
+      },
+    ]
+  end
+
   let(:recent_pull_requests) do
     [
       {
@@ -118,8 +133,8 @@ RSpec.describe MessageBuilder do
     end
   end
 
-  context 'no pull requests' do
-    let(:pull_requests) { no_pull_requests }
+  context 'no unapproved pull requests' do
+    let(:pull_requests) { no_unapproved_pull_requests }
 
     it 'builds seal of approval message' do
       expect(message_builder.build.text).to eq("Aloha team! It's a beautiful day! :happyseal: :happyseal: :happyseal:\n\nNo pull requests to review today! :rainbow: :sunny: :metal: :tada:")

@@ -12,12 +12,12 @@ class MessageBuilder
   end
 
   def build
-    if !old_pull_requests.empty?
+    if old_pull_requests.any?
       Message.new(bark_about_old_pull_requests, mood: "angry")
-    elsif pull_requests.empty?
-      Message.new(no_pull_requests, mood: "approval")
-    else
+    elsif unapproved_pull_requests.any?
       Message.new(list_pull_requests, mood: "informative")
+    else
+      Message.new(no_pull_requests, mood: "approval")
     end
   end
 
