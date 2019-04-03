@@ -46,28 +46,23 @@ class MessageBuilder
     @old_pull_requests ||= pull_requests.select { |pr| rotten?(pr) }
   end
 
+  def unapproved_pull_requests
+    @unapproved_pull_requests ||= pull_requests.reject { |pr| pr[:approved] }
+  end
+
+  def recent_pull_requests
+    @recent_pull_requests ||= unapproved_pull_requests - old_pull_requests
+  end
+
   def bark_about_old_pull_requests
-    @angry_bark = old_pull_requests.map.with_index(1) { |pr, n|
-      present(pr, n)
-    }.join("\n")
-
-    @recent_pull_requests = pull_requests.reject { |pr|
-      rotten?(pr) || pr[:approved]
-    }
-
-    @list_recent_pull_requests = @recent_pull_requests.map.with_index(1) { |pr, n|
-      present(pr, n)
-    }.join("\n")
+    @angry_bark = present_multiple(old_pull_requests)
+    @list_recent_pull_requests = present_multiple(recent_pull_requests)
 
     render "old_pull_requests"
   end
 
   def list_pull_requests
-    @message = pull_requests.reject{ |pr|
-      pr[:approved]
-    }.map.with_index(1) { |pr, n|
-      present(pr, n)
-    }.join("\n")
+    @message = present_multiple(unapproved_pull_requests)
 
     render "list_pull_requests"
   end
@@ -112,6 +107,10 @@ class MessageBuilder
     @approved = @pr[:approved] ? " | :white_check_mark: " : ""
 
     render "_pull_request"
+  end
+
+  def present_multiple(prs)
+    prs.map.with_index(1) { |pr, n| present(pr, n) }.join("\n")
   end
 
   def age_in_days(pull_request)

@@ -4,7 +4,7 @@ AAAAAAARGH! <%= these(old_pull_requests.length) %> <%= pr_plural(old_pull_reques
 
 Remember each time you forget to review your pull requests, a baby seal dies.
 
-<% if !@recent_pull_requests.empty? %>
+<% if recent_pull_requests.any? %>
 There are also these pull requests that need to be reviewed today:
 
 <%= @list_recent_pull_requests %>
