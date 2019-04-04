@@ -191,30 +191,6 @@ govuk-search-perf:
 
   compact: true
 
-re-infra-internal:
-  members:
-    - afda16
-    - deanwilson
-    - fredericfran-gds
-    - jstandring-gds
-    - ronocg
-    - rtrinque
-    - schmie
-    - stephenharker
-    - th31nitiate
-
-  channel:
-    "#re-infra-internal"
-
-  exclude_titles:
-    - "[DO NOT MERGE]"
-    - WIP
-
-  quotes:
-    - "Someone needs to think of some new quotes!"
-
-  compact: true
-
 govuk-pay:
   members:
     - heathd

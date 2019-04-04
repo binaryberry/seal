@@ -12,7 +12,6 @@ teams=(
   govuk-platform-health
   govuk-pub-workflow
   govuk-search-perf
-  re-infra-internal
 )
 
 for team in ${teams[*]}; do
