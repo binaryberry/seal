@@ -17,8 +17,6 @@ lighthouse:
   members:
     - NigelAtGrabCAD
     - robert-may1
-    - hhazi
-    - dangrabcad
 
   channel:
     "#lighthouse"
@@ -85,6 +83,9 @@ jackalope:
   members:
     - jeffmisu
     - mrk252
+    - dangrabcad
+    - hhazi
+    - TiptonBR
 
   channel:
     "#jackalope"
