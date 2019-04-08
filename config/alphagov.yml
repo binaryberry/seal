@@ -31,12 +31,25 @@ digitalmarketplace:
 
   compact: false
 
-govuk-euexit-ready:
+govuk-cookies:
   members:
     - vanitabarrett
-    - MuriloDalRi
+    - chao-xian
+
+  channel:
+    "#govuk-cookie-policy"
+
+  compact: true
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - "[PROTOTYPE]"
+    - WIP
+    - "[WIP]"
+
+govuk-euexit-ready:
+  members:
     - MahmudH
-    - peteglondon
     - steventux
     - leenagupte
     - DilwoarH
@@ -100,7 +113,6 @@ govuk-pub-workflow:
 
 govuk-data-informed:
   members:
-    - chao-xian
     - cbaines
     - maxgds
     - pmanrubia
