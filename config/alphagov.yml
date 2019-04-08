@@ -49,10 +49,12 @@ govuk-cookies:
 
 govuk-euexit-ready:
   members:
-    - MahmudH
-    - steventux
-    - leenagupte
+    - AgaDufrat
+    - brucebolt
     - DilwoarH
+    - leenagupte
+    - oscarwyatt
+    - steventux
     - VitalieMogoreanu
 
   channel:
