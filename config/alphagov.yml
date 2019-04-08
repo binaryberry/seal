@@ -191,20 +191,6 @@ govuk-platform-health:
 
   compact: true
 
-govuk-search-perf:
-  members:
-    - barrucadu
-    - brucebolt
-
-  channel:
-    "#govuk-search-perf"
-
-  exclude_titles:
-    - "[DO NOT MERGE]"
-    - "WIP"
-
-  compact: true
-
 govuk-pay:
   members:
     - heathd
