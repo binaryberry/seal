@@ -3,7 +3,7 @@
 teams=(
   design-system-dev
   digitalmarketplace
-  govuk-content-pages
+  govuk-cookies
   govuk-data-informed
   govuk-euexit-ready
   govuk-finding-brexit
