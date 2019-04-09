@@ -102,6 +102,7 @@ alpha:
   members:
     - jaySSYS
     - erikheide
+    - deyaoren
     
   channel:
     "#alpha"
