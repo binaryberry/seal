@@ -109,7 +109,7 @@ finance-dev-money-out:
 complex-content-delivery:
   channel: '#content-complex-dev'
   repos:
-    - content-ligthouse
+    - content-lighthouse
     - elements-contributors
     - elements-contributors-api
     - elements-daily-report
