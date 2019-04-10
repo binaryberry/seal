@@ -106,16 +106,17 @@ finance-dev-money-out:
   exclude_labels:
     - wip
 
-content-curation:
-  channel: '#content-curation'
+complex-content-delivery:
+  channel: '#content-complex-dev'
   repos:
-    - author-context
-    - author-platform
-    - content-author-facts
-    - content-lighthouse
+    - content-ligthouse
+    - elements-contributors
+    - elements-contributors-api
+    - elements-daily-report
+    - envato-feed_consumer
     - lighthouse-access
-    - loading_bay_backend
-    - photo-qc
+    - themeAudit
+    - wavebreak_media_client
   use_labels: true
   exclude_labels:
     - wip
