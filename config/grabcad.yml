@@ -10,7 +10,7 @@ tribble:
     - anju-james
 
   channel:
-    "#tribble"
+    "#tribble-private"
 
   quotes:
     - ":wave:"
