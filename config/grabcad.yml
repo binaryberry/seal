@@ -19,6 +19,7 @@ lighthouse:
   members:
     - NigelAtGrabCAD
     - robert-may1
+    - DavidJohnMcLean
 
   channel:
     "#lighthouse"
