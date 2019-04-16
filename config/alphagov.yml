@@ -70,15 +70,16 @@ govuk-euexit-ready:
 
 govuk-finding-brexit:
   members:
-    - andrewgarner
     - andysellick
+    - barrucadu
     - bilbof
+    - injms
+    - hannako
     - karlbaker02
     - koetsier
-    - oscarwyatt
+    - SamJamCul
     - sihugh
     - VitalieMogoreanu
-    - aliuk2012
 
   channel:
     "#govuk-finding-brexit"
