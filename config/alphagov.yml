@@ -96,21 +96,14 @@ govuk-pub-workflow:
   members:
     - 1pretz1
     - alex-ju
-    - benhazell
     - benthorner
     - emmabeynon
-    - erino
     - kevindew
-    - kgarwood
-    - soniaturcotte
 
   channel:
-    "#govuk-pub-workflow"
+    "#govuk-pubworkflow-dev"
 
   exclude_titles:
-    - "[DO NOT MERGE]"
-    - "Don't merge"
-    - "DON'T MERGE"
     - "DO NOT MERGE"
     - "WIP"
 
