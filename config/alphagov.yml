@@ -111,7 +111,6 @@ govuk-pub-workflow:
 govuk-data-informed:
   members:
     - maxgds
-    - pmanrubia
     - theseanything
 
   channel:
