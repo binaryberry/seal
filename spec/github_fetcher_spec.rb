@@ -8,7 +8,8 @@ describe 'GithubFetcher' do
                       exclude_labels,
                       exclude_titles,
                       exclude_repos,
-                      include_repos
+                      include_repos,
+                      exclude_reviewed
                      )
   end
 
@@ -63,6 +64,7 @@ describe 'GithubFetcher' do
   let(:exclude_titles) { nil }
   let(:exclude_repos) { nil }
   let(:include_repos) { nil }
+  let(:exclude_reviewed) { nil }
   let(:team_members_accounts) { %w(binaryberry boffbowsh jackscotti tekin elliotcm tommyp mattbostock) }
   let(:pull_2266) do
     double(Sawyer::Resource,
