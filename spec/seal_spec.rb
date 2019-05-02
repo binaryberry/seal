@@ -34,9 +34,9 @@ describe Seal do
       expect(MessageBuilder).to receive(:new)
         .exactly(number_of_teams).times
         .and_return(instance_double(MessageBuilder, build: nil, poster_mood: nil))
-      expect(SlackPoster).to receive(:new)
+      expect(SlackLib).to receive(:new)
         .exactly(number_of_teams).times
-        .and_return(instance_double(SlackPoster, send_request: nil))
+        .and_return(instance_double(SlackLib, send_request: nil))
     end
 
     context 'given a team "tigers"' do

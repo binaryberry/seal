@@ -2,7 +2,7 @@ require 'sinatra'
 require './lib/seal'
 require './lib/github_fetcher'
 require './lib/message_builder'
-require './lib/slack_poster'
+require './lib/slack_lib'
 
 class SealApp < Sinatra::Base
 
