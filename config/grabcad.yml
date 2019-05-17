@@ -20,6 +20,7 @@ lighthouse:
     - NigelAtGrabCAD
     - robert-may1
     - DavidJohnMcLean
+    - gcmatthewarcus
 
   channel:
     "#lighthouse"
@@ -132,6 +133,8 @@ geometry:
     - jeffmisu
     - TiptonBR
     - mrk252
+    - DavidJohnMcLean
+    - gcmatthewarcus
 
   channel:
     "#geometry"
