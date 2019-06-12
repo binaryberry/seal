@@ -68,7 +68,7 @@ govuk-euexit-ready:
     - WIP
     - "[WIP]"
 
-govuk-finding-brexit:
+govuk-searchandnav:
   members:
     - andysellick
     - barrucadu
@@ -82,7 +82,7 @@ govuk-finding-brexit:
     - VitalieMogoreanu
 
   channel:
-    "#govuk-finding-brexit"
+    "#govuk-searchandnav"
 
   compact: true
 

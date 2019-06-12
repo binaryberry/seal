@@ -6,7 +6,7 @@ teams=(
   govuk-cookies
   govuk-data-informed
   govuk-euexit-ready
-  govuk-finding-brexit
+  govuk-searchandnav
   govuk-licensing
   govuk-pay
   govuk-platform-health
