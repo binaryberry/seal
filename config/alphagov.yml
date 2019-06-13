@@ -7,6 +7,7 @@ design-system-dev:
     - joelanman
     - nickcolley
     - timpaul
+    - aliuk2012
 
   channel:
     "#design-system-dev"
