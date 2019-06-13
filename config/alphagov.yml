@@ -1,11 +1,13 @@
 # Please insert new items alphabetically.
 design-system-dev:
   members:
+    - aliuk2012
     - amyhupe
     - dashouse
     - hannalaakso
     - joelanman
     - nickcolley
+    - 36degrees
     - timpaul
 
   channel:
