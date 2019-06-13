@@ -21,7 +21,12 @@ class GithubFetcher
 
   def list_pull_requests
     @repos.each do |repo|
-      response = @github.pull_requests("#{ORGANISATION}/#{repo}", state: "open")
+      begin
+        response = @github.pull_requests("#{ORGANISATION}/#{repo}", state: "open")
+      rescue => e
+        puts "Unable to get pull requests for repo #{repo}: #{e}"
+        next
+      end
       response.reject { |pr| hidden?(pr, repo) }.each do |pull_request|
         @pull_requests[pull_request.title] = {}.tap do |pr|
           pr['title'] = pull_request.title
