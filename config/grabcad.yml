@@ -7,6 +7,7 @@ tribble:
     - caseprince
     - reshadbinharun
     - mwhearty
+    - posulliv
     - anju-james
 
   channel:
@@ -30,7 +31,7 @@ lighthouse:
 
 machine:
   members:
-    - posulliv    
+    - hhazi    
     - chris-grabcad
 
   channel:
@@ -77,10 +78,8 @@ spock:
 
 jackalope:
   members:
-    - jeffmisu
     - mrk252
     - dangrabcad
-    - hhazi
     - TiptonBR
 
   channel:
