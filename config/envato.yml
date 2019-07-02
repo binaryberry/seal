@@ -119,3 +119,22 @@ complex-content-delivery:
   use_labels: true
   exclude_labels:
     - wip
+
+identity:
+  channel: '#identity-dev'
+  repos:
+    - area51-client
+    - area51-server
+    - doclocker
+    - event_sourcery-mysql
+    - identity
+    - identity-admin
+    - identity-infrastructure
+    - identity-team
+    - sso-client
+    - sso-js
+    - sso-reference-implementation
+    - sso-server
+  use_labels: true
+  exclude_labels:
+    - wip
