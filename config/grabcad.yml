@@ -101,17 +101,6 @@ alpha:
     
   channel:
     "#alpha"
-
-voyager:
-  members:
-    - priitm
-    - AlexRevin
-    - blabounty
-    - lackovic
-    - hmak3d
-    
-  channel:
-    "#voyager-notifications"
     
 geometry:
   members:
