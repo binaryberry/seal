@@ -2,7 +2,6 @@
 
 tribble:
   members:
-    - evan-grabcad
     - Maxodactyl
     - caseprince
     - reshadbinharun
@@ -81,17 +80,13 @@ jackalope:
     - mrk252
     - dangrabcad
     - TiptonBR
+    - evan-grabcad
+    - atardugno
+    - vtravieso
+    - RobertMJ
 
   channel:
     "#jackalope"
-
-carpenters:
-  members:
-    - atardugno
-    - vtravieso
-
-  channel:
-    "#carpenters"
     
 alpha:
   members:
