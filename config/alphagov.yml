@@ -109,36 +109,6 @@ govuk-pub-workflow:
     - "DO NOT MERGE"
     - "WIP"
 
-govuk-data-informed:
-  members:
-    - MahmudH
-    - maxgds
-    - peteglondon
-    - theseanything
-
-  channel:
-    "#govuk-data-informed"
-
-  exclude_titles:
-    - "[DO NOT MERGE]"
-    - "Don't merge"
-    - DO NOT MERGE
-    - WIP
-
-  use_labels: true
-
-  exclude_labels:
-    - "[DO NOT MERGE]"
-    - "Don't merge"
-    - DO NOT MERGE
-
-  quotes:
-    - Be the change you want to see!
-    - Be Excellent To Each Other!
-    - Be considerate to remote workers. Ask \#remote-workers for tips.
-    - If you're not well, don't come in to the office. And get some rest!
-    - I AM VENGEANCE! I AM THE NIGHT! I AM BATMAN! :batsignal:
-
 govuk-licensing:
   members:
     - PeteLeaman
