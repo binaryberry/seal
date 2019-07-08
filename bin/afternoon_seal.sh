@@ -5,6 +5,7 @@ teams=(
   govuk-data-informed
   govuk-licensing
   govuk-platform-health
+  govuk-step-by-step
 )
 
 for team in ${teams[*]} ; do
