@@ -49,26 +49,6 @@ govuk-cookies:
     - WIP
     - "[WIP]"
 
-govuk-euexit-ready:
-  members:
-    - AgaDufrat
-    - ChrisBAshton
-    - DilwoarH
-    - leenagupte
-    - oscarwyatt
-    - VitalieMogoreanu
-
-  channel:
-    "#govuk-euexit-ready"
-
-  compact: true
-
-  exclude_titles:
-    - "[DO NOT MERGE]"
-    - "[PROTOTYPE]"
-    - WIP
-    - "[WIP]"
-
 govuk-searchandnav:
   members:
     - andysellick
@@ -201,3 +181,23 @@ govuk-pay:
   exclude_titles:
     - "[DO NOT MERGE]"
     - WIP
+
+govuk-step-by-step:
+  members:
+    - AgaDufrat
+    - ChrisBAshton
+    - DilwoarH
+    - erino
+    - leenagupte
+    - VitalieMogoreanu
+
+  channel:
+    "#govuk-step-by-step"
+
+  compact: true
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - "[PROTOTYPE]"
+    - WIP
+    - "[WIP]"
