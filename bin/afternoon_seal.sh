@@ -1,7 +1,7 @@
 #!/bin/bash
 
 teams=(
-  govuk-cookies
+  govuk-frontend-a11y
   govuk-data-informed
   govuk-licensing
   govuk-platform-health

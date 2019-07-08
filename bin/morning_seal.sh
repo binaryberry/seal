@@ -3,7 +3,7 @@
 teams=(
   design-system-dev
   digitalmarketplace
-  govuk-cookies
+  govuk-frontend-a11y
   govuk-data-informed
   govuk-searchandnav
   govuk-licensing
