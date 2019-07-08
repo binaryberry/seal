@@ -52,7 +52,6 @@ govuk-cookies:
 govuk-euexit-ready:
   members:
     - AgaDufrat
-    - brucebolt
     - ChrisBAshton
     - DilwoarH
     - leenagupte
@@ -99,8 +98,12 @@ govuk-pub-workflow:
     - 1pretz1
     - alex-ju
     - benthorner
+    - brucebolt
     - emmabeynon
+    - JonathanHallam
     - kevindew
+    - Tetrino
+    - theseanything
 
   channel:
     "#govuk-pubworkflow-dev"
