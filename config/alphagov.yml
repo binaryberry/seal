@@ -93,6 +93,22 @@ govuk-searchandnav:
     - WIP
     - "[WIP]"
 
+govuk-taxonomy:
+  members:
+    - oscarwyatt
+    - koetsier
+
+  channel:
+    "#govuk-taxonomy"
+
+  compact: true
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - "[PROTOTYPE]"
+    - WIP
+    - "[WIP]"
+
 govuk-pub-workflow:
   members:
     - 1pretz1
