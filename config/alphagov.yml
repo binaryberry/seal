@@ -33,13 +33,15 @@ digitalmarketplace:
 
   compact: false
 
-govuk-cookies:
+govuk-frontend-a11y:
   members:
-    - vanitabarrett
     - chao-xian
+    - vanitabarrett
+    - injms
+    - maxgds
 
   channel:
-    "#govuk-cookie-policy"
+    "#govuk-frontend-a11y"
 
   compact: true
 
@@ -48,6 +50,11 @@ govuk-cookies:
     - "[PROTOTYPE]"
     - WIP
     - "[WIP]"
+
+  quotes:
+    - "Be Excellent To Each Other!"
+    - ":smiling-batman:"
+    - "Don't be working if you're ill!"
 
 govuk-searchandnav:
   members:
