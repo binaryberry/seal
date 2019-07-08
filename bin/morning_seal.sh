@@ -12,6 +12,7 @@ teams=(
   govuk-platform-health
   govuk-pub-workflow
   govuk-search-perf
+  govuk-taxonomy
 )
 
 for team in ${teams[*]}; do
