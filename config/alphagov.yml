@@ -127,12 +127,13 @@ govuk-platform-health:
     - AlanGabbianelli
     - bevanloon
     - callumknights
+    - cbaines
     - deborahchua
     - edwardkerry
-    - elliotcm
-    - hongoose
     - kentsanggds
+    - MahmudH
     - MuriloDalRi
+    - peteglondon
     - rubenarakelyan
     - thomasleese
 
@@ -174,7 +175,7 @@ govuk-pay:
     - jankowiakmaria
     - sfount
     - RoryMalcolm
-    
+
   channel:
     "#govuk-pay-tech"
 
