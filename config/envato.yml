@@ -138,3 +138,21 @@ identity:
   use_labels: true
   exclude_labels:
     - wip
+
+extensions:
+  channel: '#extensions-dev'
+  repos:
+    - extensions-backend
+    - extensions-frontend
+    - extensions-infrastructure
+    - extensions-wp-plugin
+    - extensions-wp-content-app
+    - mixkit
+    - mixkit-infrastructure
+    - studio
+    - studio-job-client
+    - microlancer-squire
+  use_labels: true
+  exclude_labels:
+    - wip
+    - work-in-progress
