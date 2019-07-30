@@ -76,29 +76,15 @@ jackalope:
 
   channel:
     "#jackalope"
-    
+
 alpha:
   members:
     - jaySSYS
     - erikheide
     - deyaoren
-    
+
   channel:
     "#alpha"
-    
-geometry:
-  members:
-    - NigelAtGrabCAD
-    - robert-may1
-    - hhazi
-    - dangrabcad
-    - atardugno
-    - vtravieso
-    - jeffmisu
-    - TiptonBR
-    - mrk252
-    - DavidJohnMcLean
-    - gcmatthewarcus
 
   channel:
     "#geometry"
