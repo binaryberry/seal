@@ -86,8 +86,5 @@ alpha:
   channel:
     "#alpha"
 
-  channel:
-    "#geometry"
-
   quotes:
     - ":wave:"
