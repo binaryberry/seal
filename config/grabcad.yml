@@ -26,18 +26,6 @@ lighthouse:
   quotes:
     - ":wave:"
 
-solutions:
-  members:
-    - urimike
-    - AvivEshed
-    - slavashtilerman
-
-  channel:
-    "#solutions"
-
-  quotes:
-    - ":wave:"
-
 spock:
   members:
     - johannessiig
@@ -48,10 +36,7 @@ spock:
 jackalope:
   members:
     - mrk252
-    - dangrabcad
-    - TiptonBR
     - evan-grabcad
-    - atardugno
     - vtravieso
     - RobertMJ
 
