@@ -15,17 +15,6 @@ tribble:
   quotes:
     - ":wave:"
 
-lighthouse:
-  members:
-    - NigelAtGrabCAD
-    - DavidJohnMcLean
-
-  channel:
-    "#lighthouse"
-
-  quotes:
-    - ":wave:"
-
 spock:
   members:
     - johannessiig
