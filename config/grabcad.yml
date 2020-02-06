@@ -45,12 +45,26 @@ jackalope:
 
 alpha:
   members:
-    - jaySSYS
     - erikheide
-    - deyaoren
+    - dholzwarth
 
   channel:
     "#alpha"
 
   quotes:
     - ":wave:"
+
+kirin:
+  members:
+    - NigelAtGrabCAD
+    - DavidJohnMcLean
+    - jaySSYS
+    - deyaoren
+    - jeremyhovis
+
+  channel:
+    "#kirin-notifications"
+
+  quotes:
+    - ":wave:"
+    
