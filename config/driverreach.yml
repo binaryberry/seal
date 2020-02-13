@@ -15,7 +15,7 @@ development:
     - alex-rogachev
 
   channel:
-    "#seal-code_review"
+    "#seal_code-review"
 
   exclude_titles:
     - "[DO NOT MERGE]"
