@@ -35,7 +35,9 @@ jackalope:
 alpha:
   members:
     - erikheide
-    - dholzwarth
+    - DavidJohnMcLean
+    - deyaoren
+    - renatarz
 
   channel:
     "#alpha"
@@ -46,9 +48,7 @@ alpha:
 kirin:
   members:
     - NigelAtGrabCAD
-    - DavidJohnMcLean
     - jaySSYS
-    - deyaoren
     - jeremyhovis
 
   channel:
