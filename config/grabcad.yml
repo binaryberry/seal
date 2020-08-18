@@ -28,6 +28,7 @@ jackalope:
     - evan-grabcad
     - vtravieso
     - RobertMJ
+    - atardugno
 
   channel:
     "#jackalope"
