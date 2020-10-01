@@ -45,6 +45,16 @@ alpha:
 
   quotes:
     - ":wave:"
+    
+ibex:
+  members:
+    - NabilStratasys
+    - robert-may1
+    - alexmcarthur
+  
+  channel:
+    "#ibex"
+
 
 kirin:
   members:
