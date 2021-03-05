@@ -32,19 +32,6 @@ jackalope:
 
   channel:
     "#jackalope"
-
-alpha:
-  members:
-    - erikheide
-    - DavidJohnMcLean
-    - deyaoren
-    - renatarz
-
-  channel:
-    "#alpha"
-
-  quotes:
-    - ":wave:"
     
 ibex:
   members:
@@ -55,16 +42,18 @@ ibex:
   channel:
     "#ibex"
 
-
 kirin:
   members:
-    - NigelAtGrabCAD
     - jaySSYS
     - jeremyhovis
+    - erikheide
+    - deyaoren
+    - renatarz
+    - rossstanton
+    - ThomasBeckerStratasys
+    - tomstudanski
+    - mklchum
 
   channel:
     "#kirin-notifications"
 
-  quotes:
-    - ":wave:"
-    
