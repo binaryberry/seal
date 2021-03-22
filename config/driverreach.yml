@@ -4,15 +4,19 @@ development:
   members:
     - kovalevswan
     - mileszs
-    - dstrus
-    - Rvanderbur
     - lnavimanl
     - sam2themax
-    - henadzi
-    - urkle
     - sergey-verevkin
-    - YosipVoloshchuk
-    - alex-rogachev
+    - crgee
+    - indymichelle
+    - degendra
+    - iLucker93
+    - subashkhatri
+    - OleksandrPedchenko
+    - fmd5045
+    - abhinavrisal
+    - subinshrestha7
+    - dreyzman
 
   channel:
     "#seal_code-review"
@@ -33,3 +37,5 @@ development:
     - "in progress"
     - "needs work"
     - "ready for merge"
+    - "go to market"
+    - "blocker"
