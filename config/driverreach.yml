@@ -17,6 +17,7 @@ development:
     - abhinavrisal
     - subinshrestha7
     - dreyzman
+    - thirdshift
 
   channel:
     "#seal_code-review"
