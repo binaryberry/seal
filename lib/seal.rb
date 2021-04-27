@@ -4,7 +4,7 @@ require 'yaml'
 
 require './lib/github_fetcher.rb'
 require './lib/message_builder.rb'
-require './lib/slack_poster.rb'
+require './lib/slack_lib.rb'
 
 # Entry point for the Seal!
 class Seal
@@ -36,7 +36,7 @@ class Seal
     message_builder = MessageBuilder.new(team_params(team), @mode)
     message = message_builder.build
     channel = ENV["SLACK_CHANNEL"] ? ENV["SLACK_CHANNEL"] : team_config(team)['channel']
-    slack = SlackPoster.new(ENV['SLACK_WEBHOOK'], channel, message_builder.poster_mood)
+    slack = SlackLib.new(ENV['SLACK_WEBHOOK'], channel, message_builder.poster_mood)
     slack.send_request(message)
   end
 
@@ -56,6 +56,8 @@ class Seal
       exclude_labels = config['exclude_labels']
       exclude_titles = config['exclude_titles']
       exclude_repos = config['exclude_repos']
+      include_repos = config['include_repos']
+      exclude_reviewed = config['exclude_reviewed']
       @quotes = config['quotes']
     else
       members = ENV['GITHUB_MEMBERS'] ? ENV['GITHUB_MEMBERS'].split(',') : []
@@ -63,19 +65,23 @@ class Seal
       exclude_labels = ENV['GITHUB_EXCLUDE_LABELS'] ? ENV['GITHUB_EXCLUDE_LABELS'].split(',') : nil
       exclude_titles = ENV['GITHUB_EXCLUDE_TITLES'] ? ENV['GITHUB_EXCLUDE_TITLES'].split(',') : nil
       exclude_repos = ENV['GITHUB_EXCLUDE_REPOS'] ? ENV['GITHUB_EXCLUDE_REPOS'].split(',') : nil
+      include_repos = ENV['GITHUB_INCLUDE_REPOS'] ? ENV['GITHUB_INCLUDE_REPOS'].split(',') : nil
+      exclude_reviewed = ENV['GITHUB_EXCLUDE_REVIEWED'] ? true : false
       @quotes = ENV['SEAL_QUOTES'] ? ENV['SEAL_QUOTES'].split(',') : nil
     end
-    return fetch_from_github(members, use_labels, exclude_labels, exclude_titles, exclude_repos) if @mode == nil
+    return fetch_from_github(members, use_labels, exclude_labels, exclude_titles, exclude_repos, include_repos, exclude_reviewed) if @mode == nil
     @quotes
   end
 
 
-  def fetch_from_github(members, use_labels, exclude_labels, exclude_titles, exclude_repos)
+  def fetch_from_github(members, use_labels, exclude_labels, exclude_titles, exclude_repos, include_repos, exclude_reviewed)
     git = GithubFetcher.new(members,
                             use_labels,
                             exclude_labels,
                             exclude_titles,
-                            exclude_repos
+                            exclude_repos,
+                            include_repos,
+                            exclude_reviewed
                            )
     git.list_pull_requests
   end

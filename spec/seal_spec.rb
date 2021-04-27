@@ -11,6 +11,8 @@ describe Seal do
         'exclude_labels' => nil,
         'exclude_titles' => nil,
         'exclude_repos' => nil,
+        'include_repos' => nil,
+        'exclude_reviewed' => nil,
       },
       'tigers' => {
         'members' => [],
@@ -18,6 +20,8 @@ describe Seal do
         'exclude_labels' => nil,
         'exclude_titles' => nil,
         'exclude_repos' => nil,
+        'include_repos' => nil,
+        'exclude_reviewed' => nil,
       }
     }
   end
@@ -32,9 +36,9 @@ describe Seal do
       expect(MessageBuilder).to receive(:new)
         .exactly(number_of_teams).times
         .and_return(instance_double(MessageBuilder, build: nil, poster_mood: nil))
-      expect(SlackPoster).to receive(:new)
+      expect(SlackLib).to receive(:new)
         .exactly(number_of_teams).times
-        .and_return(instance_double(SlackPoster, send_request: nil))
+        .and_return(instance_double(SlackLib, send_request: nil))
     end
 
     context 'given a team "tigers"' do
@@ -44,7 +48,7 @@ describe Seal do
       it 'fetches PRs for the tigers and only the tigers' do
         expect(GithubFetcher)
           .to receive(:new)
-          .with([], nil, nil, nil, nil)
+          .with([], nil, nil, nil, nil, nil, nil)
           .and_return(instance_double(GithubFetcher, list_pull_requests: []))
 
         seal.bark
@@ -60,12 +64,12 @@ describe Seal do
         it 'fetches PRs for the lions and the tigers' do
           expect(GithubFetcher)
             .to receive(:new)
-            .with([], nil, nil, nil, nil)
+            .with([], nil, nil, nil, nil, nil, nil)
             .and_return(instance_double(GithubFetcher, list_pull_requests: []))
 
           expect(GithubFetcher)
             .to receive(:new)
-            .with([], nil, nil, nil, nil)
+            .with([], nil, nil, nil, nil, nil, nil)
             .and_return(instance_double(GithubFetcher, list_pull_requests: []))
 
           seal.bark

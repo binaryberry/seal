@@ -13,6 +13,9 @@
     "GITHUB_TOKEN": {
       "description": "Your Github token (obtainable at https://github.com/settings/tokens)"
     },
+    "GITHUB_API_ENDPOINT": {
+      "description": "OPTIONAL. If you are using a Github Enterprise instance instead of public github.com i.e https://github.yourcompany.com/api/v3"
+    },
     "GITHUB_MEMBERS": {
       "description": "Comma separated list of github members",
       "required": false
