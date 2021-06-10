@@ -7,7 +7,6 @@ development:
     - lnavimanl
     - sam2themax
     - sergey-verevkin
-    - crgee
     - indymichelle
     - degendra
     - iLucker93
@@ -16,7 +15,6 @@ development:
     - fmd5045
     - abhinavrisal
     - subinshrestha7
-    - dreyzman
     - thirdshift
 
   channel:
@@ -42,3 +40,4 @@ development:
     - "ready for merge"
     - "go to market"
     - "blocker"
+    - "ready for QA"
