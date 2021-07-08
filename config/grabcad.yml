@@ -25,6 +25,7 @@ spock:
 jackalope:
   members:
     - mrk252
+    - JDark-GrabCAD
     - GeorgeSheppard
     - vtravieso
     - RobertMJ
