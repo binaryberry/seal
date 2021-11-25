@@ -58,12 +58,3 @@ kirin:
 
   channel:
     "#kirin-notifications"
-
-saya:
-  members:
-    - yosefm
-    - DanMaltaStratasys 
-    - ShaiWaiselStratasys 
-    - shailipo
-  
-  channel: "#saya"
