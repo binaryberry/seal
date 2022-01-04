@@ -33,7 +33,7 @@ jackalope:
     - kostiantynkolesnik
 
   channel:
-    "#jackalope"
+    "#jackalope-private"
     
 ibex:
   members:
