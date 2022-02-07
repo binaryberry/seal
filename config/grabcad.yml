@@ -27,10 +27,8 @@ jackalope:
     - dangrabcad
     - JDark-GrabCAD
     - GeorgeSheppard
-    - vtravieso
     - RobertMJ
     - atardugno
-    - kostiantynkolesnik
 
   channel:
     "#jackalope-private"
