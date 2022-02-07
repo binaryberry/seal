@@ -28,10 +28,17 @@ jackalope:
     - JDark-GrabCAD
     - GeorgeSheppard
     - RobertMJ
-    - atardugno
 
   channel:
     "#jackalope-private"
+
+babel:
+  members:
+    - vtravieso
+    - atardugno
+    
+  channel:
+    "#babel"
     
 ibex:
   members:
