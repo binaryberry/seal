@@ -26,15 +26,15 @@ jackalope:
   members:
     - dangrabcad
     - JDark-GrabCAD
-    - GeorgeSheppard
+    - vtravieso
     - RobertMJ
+    - SvetAtStrataSys
 
   channel:
     "#jackalope-private"
 
 babel:
   members:
-    - vtravieso
     - atardugno
     
   channel:
