@@ -28,6 +28,7 @@ jackalope:
     - vtravieso
     - RobertMJ
     - SvetAtStrataSys
+    - Tom-Mcl
 
   channel:
     "#jackalope-private"
