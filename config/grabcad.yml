@@ -42,12 +42,11 @@ babel:
     
 ibex:
   members:
-    - NabilStratasys
-    - robert-may1
     - alexmcarthur
+    - MaxMuijzert
   
   channel:
-    "#ibex"
+    "#ibex-private"
 
 kirin:
   members:
