@@ -1,0 +1,43 @@
+# Please insert new items alphabetically.
+
+development:
+  members:
+    - kovalevswan
+    - mileszs
+    - lnavimanl
+    - sam2themax
+    - sergey-verevkin
+    - indymichelle
+    - degendra
+    - iLucker93
+    - subashkhatri
+    - OleksandrPedchenko
+    - fmd5045
+    - abhinavrisal
+    - subinshrestha7
+    - thirdshift
+
+  channel:
+    "#seal_code-review"
+
+  exclude_titles:
+    - "[DO NOT MERGE]"
+    - DO NOT MERGE
+    - WIP
+
+  quotes:
+    - I'm pretty sure there's a lot more to life than being really, really, ridiculously good looking. And I plan on finding out what that is.
+    - Where shall we go for lunch?
+    - Where's the data?
+    - I've been kissed by a rose on the gray
+    - Ba-da-da, ba-da-da-da-da-da, ba-da-da
+
+  use_labels: true
+
+  exclude_labels:
+    - "in progress"
+    - "needs work"
+    - "ready for merge"
+    - "go to market"
+    - "blocker"
+    - "ready for QA"
